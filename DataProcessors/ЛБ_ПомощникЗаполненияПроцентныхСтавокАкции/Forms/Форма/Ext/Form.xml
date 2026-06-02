@@ -1,0 +1,502 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.20">
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<Autofill>false</Autofill>
+		<ChildItems>
+			<Button name="КнопкаСохранить" id="65">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.Command.СохранитьИЗакрыть</CommandName>
+				<BackColor>style:ImportantColor</BackColor>
+				<ExtendedTooltip name="КнопкаСохранитьРасширеннаяПодсказка" id="66"/>
+			</Button>
+			<Button name="КнопкаОтмена" id="69">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.Command.Отмена</CommandName>
+				<ExtendedTooltip name="КнопкаОтменаРасширеннаяПодсказка" id="70"/>
+			</Button>
+		</ChildItems>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="ГруппаСхемы" id="63">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа схемы</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа схемы</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>AlwaysHorizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаСхемыРасширеннаяПодсказка" id="64"/>
+			<ChildItems>
+				<UsualGroup name="ГруппаСхемыКредитования" id="103">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа схемы кредитования</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа схемы кредитования</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаСхемыКредитованияРасширеннаяПодсказка" id="104"/>
+					<ChildItems>
+						<Table name="СхемыКредитования" id="105">
+							<AutoInsertNewRow>true</AutoInsertNewRow>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<DataPath>Объект.СхемыКредитования</DataPath>
+							<CommandSet>
+								<ExcludedCommand>Add</ExcludedCommand>
+								<ExcludedCommand>Change</ExcludedCommand>
+								<ExcludedCommand>Copy</ExcludedCommand>
+								<ExcludedCommand>Delete</ExcludedCommand>
+							</CommandSet>
+							<RowFilter xsi:nil="true"/>
+							<ContextMenu name="СхемыКредитованияКонтекстноеМеню" id="106"/>
+							<AutoCommandBar name="СхемыКредитованияКоманднаяПанель" id="107">
+								<Autofill>false</Autofill>
+								<ChildItems>
+									<Button name="СхемыКредитованияПереместитьВверх" id="127">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Item.СхемыКредитования.StandardCommand.MoveUp</CommandName>
+										<ExtendedTooltip name="СхемыКредитованияПереместитьВверхРасширеннаяПодсказка" id="128"/>
+									</Button>
+									<Button name="СхемыКредитованияПереместитьВниз" id="129">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Item.СхемыКредитования.StandardCommand.MoveDown</CommandName>
+										<ExtendedTooltip name="СхемыКредитованияПереместитьВнизРасширеннаяПодсказка" id="130"/>
+									</Button>
+								</ChildItems>
+							</AutoCommandBar>
+							<ExtendedTooltip name="СхемыКредитованияРасширеннаяПодсказка" id="108"/>
+							<SearchStringAddition name="СхемыКредитованияСтрокаПоиска" id="109">
+								<AdditionSource>
+									<Item>СхемыКредитования</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="СхемыКредитованияСтрокаПоискаКонтекстноеМеню" id="110"/>
+								<ExtendedTooltip name="СхемыКредитованияСтрокаПоискаРасширеннаяПодсказка" id="111"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="СхемыКредитованияСостояниеПросмотра" id="112">
+								<AdditionSource>
+									<Item>СхемыКредитования</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="СхемыКредитованияСостояниеПросмотраКонтекстноеМеню" id="113"/>
+								<ExtendedTooltip name="СхемыКредитованияСостояниеПросмотраРасширеннаяПодсказка" id="114"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="СхемыКредитованияУправлениеПоиском" id="115">
+								<AdditionSource>
+									<Item>СхемыКредитования</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="СхемыКредитованияУправлениеПоискомКонтекстноеМеню" id="116"/>
+								<ExtendedTooltip name="СхемыКредитованияУправлениеПоискомРасширеннаяПодсказка" id="117"/>
+							</SearchControlAddition>
+							<ChildItems>
+								<CheckBoxField name="СхемыКредитованияФлВкл" id="121">
+									<DataPath>Объект.СхемыКредитования.ФлВкл</DataPath>
+									<TitleLocation>None</TitleLocation>
+									<EditMode>EnterOnInput</EditMode>
+									<HeaderPicture>
+										<xr:Ref>StdPicture.CheckAll</xr:Ref>
+										<xr:LoadTransparent>true</xr:LoadTransparent>
+									</HeaderPicture>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="СхемыКредитованияФлВклКонтекстноеМеню" id="122"/>
+									<ExtendedTooltip name="СхемыКредитованияФлВклРасширеннаяПодсказка" id="123"/>
+								</CheckBoxField>
+								<InputField name="СхемыКредитованияСхемаКредитования" id="124">
+									<DataPath>Объект.СхемыКредитования.СхемаКредитования</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="СхемыКредитованияСхемаКредитованияКонтекстноеМеню" id="125"/>
+									<ExtendedTooltip name="СхемыКредитованияСхемаКредитованияРасширеннаяПодсказка" id="126"/>
+								</InputField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="ГруппаСтатусыКлиентов" id="24">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Статусы клиентов</v8:content>
+						</v8:item>
+					</Title>
+					<Group>Vertical</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаСтатусыКлиентовРасширеннаяПодсказка" id="25"/>
+					<ChildItems>
+						<Table name="ДеревоСтатусов" id="74">
+							<Representation>Tree</Representation>
+							<AutoInsertNewRow>true</AutoInsertNewRow>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<DataPath>ДеревоСтатусов</DataPath>
+							<CommandSet>
+								<ExcludedCommand>Add</ExcludedCommand>
+								<ExcludedCommand>Change</ExcludedCommand>
+								<ExcludedCommand>Copy</ExcludedCommand>
+								<ExcludedCommand>Delete</ExcludedCommand>
+								<ExcludedCommand>EndEdit</ExcludedCommand>
+							</CommandSet>
+							<ContextMenu name="ДеревоСтатусовКонтекстноеМеню" id="75"/>
+							<AutoCommandBar name="ДеревоСтатусовКоманднаяПанель" id="76">
+								<Autofill>false</Autofill>
+								<ChildItems>
+									<Button name="ДеревоСтатусовПереместитьВверх" id="131">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Item.ДеревоСтатусов.StandardCommand.MoveUp</CommandName>
+										<ExtendedTooltip name="ДеревоСтатусовПереместитьВверхРасширеннаяПодсказка" id="132"/>
+									</Button>
+									<Button name="ДеревоСтатусовПереместитьВниз" id="133">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Item.ДеревоСтатусов.StandardCommand.MoveDown</CommandName>
+										<ExtendedTooltip name="ДеревоСтатусовПереместитьВнизРасширеннаяПодсказка" id="134"/>
+									</Button>
+									<Button name="ДеревоРазвернуть" id="96">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Command.Развернуть</CommandName>
+										<ExtendedTooltip name="ДеревоРазвернутьРасширеннаяПодсказка" id="97"/>
+									</Button>
+									<Button name="ДеревовСвернуть" id="98">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Command.Свернуть</CommandName>
+										<ExtendedTooltip name="ДеревовСвернутьРасширеннаяПодсказка" id="99"/>
+									</Button>
+								</ChildItems>
+							</AutoCommandBar>
+							<ExtendedTooltip name="ДеревоСтатусовРасширеннаяПодсказка" id="77"/>
+							<SearchStringAddition name="ДеревоСтатусовСтрокаПоиска" id="78">
+								<AdditionSource>
+									<Item>ДеревоСтатусов</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ДеревоСтатусовСтрокаПоискаКонтекстноеМеню" id="79"/>
+								<ExtendedTooltip name="ДеревоСтатусовСтрокаПоискаРасширеннаяПодсказка" id="80"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="ДеревоСтатусовСостояниеПросмотра" id="81">
+								<AdditionSource>
+									<Item>ДеревоСтатусов</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ДеревоСтатусовСостояниеПросмотраКонтекстноеМеню" id="82"/>
+								<ExtendedTooltip name="ДеревоСтатусовСостояниеПросмотраРасширеннаяПодсказка" id="83"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="ДеревоСтатусовУправлениеПоиском" id="84">
+								<AdditionSource>
+									<Item>ДеревоСтатусов</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="ДеревоСтатусовУправлениеПоискомКонтекстноеМеню" id="85"/>
+								<ExtendedTooltip name="ДеревоСтатусовУправлениеПоискомРасширеннаяПодсказка" id="86"/>
+							</SearchControlAddition>
+							<ChildItems>
+								<CheckBoxField name="ДеревоСтатусовПометка" id="90">
+									<DataPath>ДеревоСтатусов.Пометка</DataPath>
+									<TitleLocation>None</TitleLocation>
+									<EditMode>EnterOnInput</EditMode>
+									<HeaderPicture>
+										<xr:Ref>StdPicture.CheckAll</xr:Ref>
+										<xr:LoadTransparent>true</xr:LoadTransparent>
+									</HeaderPicture>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="ДеревоСтатусовПометкаКонтекстноеМеню" id="91"/>
+									<ExtendedTooltip name="ДеревоСтатусовПометкаРасширеннаяПодсказка" id="92"/>
+									<Events>
+										<Event name="OnChange">ДеревоСтатусовПометкаПриИзменении</Event>
+									</Events>
+								</CheckBoxField>
+								<InputField name="ДеревоСтатусовСтатусСтрока" id="93">
+									<DataPath>ДеревоСтатусов.СтатусСтрока</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Статус клиента</v8:content>
+										</v8:item>
+									</Title>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ДеревоСтатусовСтатусСтрокаКонтекстноеМеню" id="94"/>
+									<ExtendedTooltip name="ДеревоСтатусовСтатусСтрокаРасширеннаяПодсказка" id="95"/>
+								</InputField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаДиапазоныСумм" id="45">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Диапазоны сумм</v8:content>
+				</v8:item>
+			</Title>
+			<Group>Vertical</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаДиапазоныСуммРасширеннаяПодсказка" id="46"/>
+			<ChildItems>
+				<Table name="ДиапазоныСумм" id="47">
+					<Representation>List</Representation>
+					<HeightControlVariant>UseContentHeight</HeightControlVariant>
+					<AutoInsertNewRow>true</AutoInsertNewRow>
+					<EnableStartDrag>true</EnableStartDrag>
+					<EnableDrag>true</EnableDrag>
+					<DataPath>Объект.ДиапазоныСумм</DataPath>
+					<CommandSet>
+						<ExcludedCommand>Change</ExcludedCommand>
+						<ExcludedCommand>Copy</ExcludedCommand>
+						<ExcludedCommand>EndEdit</ExcludedCommand>
+					</CommandSet>
+					<RowFilter xsi:nil="true"/>
+					<ContextMenu name="ДиапазоныСуммКонтекстноеМеню" id="48"/>
+					<AutoCommandBar name="ДиапазоныСуммКоманднаяПанель" id="49">
+						<Autofill>false</Autofill>
+						<ChildItems>
+							<Button name="ДиапазоныСуммДобавить" id="135">
+								<Type>CommandBarButton</Type>
+								<CommandName>Form.Item.ДиапазоныСумм.StandardCommand.Add</CommandName>
+								<ExtendedTooltip name="ДиапазоныСуммДобавитьРасширеннаяПодсказка" id="136"/>
+							</Button>
+							<Button name="ДиапазоныСуммПереместитьВверх" id="137">
+								<Type>CommandBarButton</Type>
+								<CommandName>Form.Item.ДиапазоныСумм.StandardCommand.MoveUp</CommandName>
+								<ExtendedTooltip name="ДиапазоныСуммПереместитьВверхРасширеннаяПодсказка" id="138"/>
+							</Button>
+							<Button name="ДиапазоныСуммПереместитьВниз" id="139">
+								<Type>CommandBarButton</Type>
+								<CommandName>Form.Item.ДиапазоныСумм.StandardCommand.MoveDown</CommandName>
+								<ExtendedTooltip name="ДиапазоныСуммПереместитьВнизРасширеннаяПодсказка" id="140"/>
+							</Button>
+							<Button name="ДиапазоныСуммКнопкаЗаполнитьПоГруппе" id="67">
+								<Type>CommandBarButton</Type>
+								<CommandName>Form.Command.ЗаполнитьДиапазонПоГруппе</CommandName>
+								<Title>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Заполнить по группе</v8:content>
+									</v8:item>
+								</Title>
+								<ExtendedTooltip name="ДиапазоныСуммКнопкаЗаполнитьПоГруппеРасширеннаяПодсказка" id="68"/>
+							</Button>
+						</ChildItems>
+					</AutoCommandBar>
+					<ExtendedTooltip name="ДиапазоныСуммРасширеннаяПодсказка" id="50"/>
+					<SearchStringAddition name="ДиапазоныСуммСтрокаПоиска" id="51">
+						<AdditionSource>
+							<Item>ДиапазоныСумм</Item>
+							<Type>SearchStringRepresentation</Type>
+						</AdditionSource>
+						<ContextMenu name="ДиапазоныСуммСтрокаПоискаКонтекстноеМеню" id="52"/>
+						<ExtendedTooltip name="ДиапазоныСуммСтрокаПоискаРасширеннаяПодсказка" id="53"/>
+					</SearchStringAddition>
+					<ViewStatusAddition name="ДиапазоныСуммСостояниеПросмотра" id="54">
+						<AdditionSource>
+							<Item>ДиапазоныСумм</Item>
+							<Type>ViewStatusRepresentation</Type>
+						</AdditionSource>
+						<ContextMenu name="ДиапазоныСуммСостояниеПросмотраКонтекстноеМеню" id="55"/>
+						<ExtendedTooltip name="ДиапазоныСуммСостояниеПросмотраРасширеннаяПодсказка" id="56"/>
+					</ViewStatusAddition>
+					<SearchControlAddition name="ДиапазоныСуммУправлениеПоиском" id="57">
+						<AdditionSource>
+							<Item>ДиапазоныСумм</Item>
+							<Type>SearchControl</Type>
+						</AdditionSource>
+						<ContextMenu name="ДиапазоныСуммУправлениеПоискомКонтекстноеМеню" id="58"/>
+						<ExtendedTooltip name="ДиапазоныСуммУправлениеПоискомРасширеннаяПодсказка" id="59"/>
+					</SearchControlAddition>
+					<ChildItems>
+						<InputField name="ДиапазоныСуммДиапазонСумм" id="60">
+							<DataPath>Объект.ДиапазоныСумм.ДиапазонСумм</DataPath>
+							<ReadOnly>true</ReadOnly>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Диапазон сумм займа</v8:content>
+								</v8:item>
+							</Title>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ДиапазоныСуммДиапазонСуммКонтекстноеМеню" id="61"/>
+							<ExtendedTooltip name="ДиапазоныСуммДиапазонСуммРасширеннаяПодсказка" id="62"/>
+						</InputField>
+					</ChildItems>
+				</Table>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:DataProcessorObject.ЛБ_ПомощникЗаполненияПроцентныхСтавокАкции</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+		</Attribute>
+		<Attribute name="ДеревоСтатусов" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Дерево статусов</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTree</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="Статус" id="3">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Статус</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.ЛБ_СтатусыЗалогодателей</v8:Type>
+					</Type>
+				</Column>
+				<Column name="Пометка" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Пометка</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+				<Column name="ЭтоГруппа" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Это группа</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+				<Column name="Родитель" id="4">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Родитель</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.ЛБ_СтатусыЗалогодателей</v8:Type>
+					</Type>
+				</Column>
+				<Column name="СтатусСтрока" id="5">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Статус строка</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>100</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="ЗаполнитьДиапазонПоГруппе" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заполнить диапазон по группе</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заполнить диапазон по группе</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ЗаполнитьДиапазонПоГруппе</Action>
+		</Command>
+		<Command name="СохранитьИЗакрыть" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сохранить и закрыть</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сохранить и закрыть</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>СохранитьИЗакрыть</Action>
+		</Command>
+		<Command name="Отмена" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отмена</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отмена</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>Отмена</Action>
+		</Command>
+		<Command name="Развернуть" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Развернуть</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Развернуть</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>Развернуть</Action>
+		</Command>
+		<Command name="Свернуть" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Свернуть</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Свернуть</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>Свернуть</Action>
+		</Command>
+	</Commands>
+</Form>

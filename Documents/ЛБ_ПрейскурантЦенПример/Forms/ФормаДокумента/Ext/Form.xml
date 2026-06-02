@@ -1,0 +1,391 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.20">
+	<AutoTime>CurrentOrLast</AutoTime>
+	<UsePostingMode>Auto</UsePostingMode>
+	<RepostOnWrite>true</RepostOnWrite>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="BeforeWriteAtServer">ПередЗаписьюНаСервере</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="ГруппаДатаНомер" id="58">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа дата номер</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа дата номер</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаДатаНомерРасширеннаяПодсказка" id="59"/>
+			<ChildItems>
+				<InputField name="Номер" id="1">
+					<DataPath>Объект.Number</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="НомерКонтекстноеМеню" id="2"/>
+					<ExtendedTooltip name="НомерРасширеннаяПодсказка" id="3"/>
+				</InputField>
+				<InputField name="Дата" id="4">
+					<DataPath>Объект.Date</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ДатаКонтекстноеМеню" id="5"/>
+					<ExtendedTooltip name="ДатаРасширеннаяПодсказка" id="6"/>
+				</InputField>
+				<CheckBoxField name="НеПроводитьНулевыеЗначения" id="89">
+					<DataPath>Объект.НеПроводитьНулевыеЗначения</DataPath>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="НеПроводитьНулевыеЗначенияКонтекстноеМеню" id="90"/>
+					<ExtendedTooltip name="НеПроводитьНулевыеЗначенияРасширеннаяПодсказка" id="91"/>
+				</CheckBoxField>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаОсновная" id="56">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа основная</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа основная</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>AlwaysHorizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаОсновнаяРасширеннаяПодсказка" id="57"/>
+			<ChildItems>
+				<UsualGroup name="ГруппаСхемыКредитования" id="30">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Категории</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа схемы кредитования</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>AlwaysHorizontal</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаСхемыКредитованияРасширеннаяПодсказка" id="31"/>
+					<ChildItems>
+						<Table name="СхемыКредитования" id="32">
+							<Representation>List</Representation>
+							<AutoInsertNewRow>true</AutoInsertNewRow>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<DataPath>Объект.СхемыКредитования</DataPath>
+							<CommandSet>
+								<ExcludedCommand>Change</ExcludedCommand>
+								<ExcludedCommand>Copy</ExcludedCommand>
+								<ExcludedCommand>CopyToClipboard</ExcludedCommand>
+								<ExcludedCommand>SearchEverywhere</ExcludedCommand>
+								<ExcludedCommand>SelectAll</ExcludedCommand>
+								<ExcludedCommand>ShowMultipleSelection</ExcludedCommand>
+							</CommandSet>
+							<RowFilter xsi:nil="true"/>
+							<ContextMenu name="СхемыКредитованияКонтекстноеМеню" id="33"/>
+							<AutoCommandBar name="СхемыКредитованияКоманднаяПанель" id="34"/>
+							<ExtendedTooltip name="СхемыКредитованияРасширеннаяПодсказка" id="35"/>
+							<SearchStringAddition name="СхемыКредитованияСтрокаПоиска" id="36">
+								<AdditionSource>
+									<Item>СхемыКредитования</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="СхемыКредитованияСтрокаПоискаКонтекстноеМеню" id="37"/>
+								<ExtendedTooltip name="СхемыКредитованияСтрокаПоискаРасширеннаяПодсказка" id="38"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="СхемыКредитованияСостояниеПросмотра" id="39">
+								<AdditionSource>
+									<Item>СхемыКредитования</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="СхемыКредитованияСостояниеПросмотраКонтекстноеМеню" id="40"/>
+								<ExtendedTooltip name="СхемыКредитованияСостояниеПросмотраРасширеннаяПодсказка" id="41"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="СхемыКредитованияУправлениеПоиском" id="42">
+								<AdditionSource>
+									<Item>СхемыКредитования</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="СхемыКредитованияУправлениеПоискомКонтекстноеМеню" id="43"/>
+								<ExtendedTooltip name="СхемыКредитованияУправлениеПоискомРасширеннаяПодсказка" id="44"/>
+							</SearchControlAddition>
+							<Events>
+								<Event name="BeforeAddRow">СхемыКредитованияПередНачаломДобавления</Event>
+								<Event name="BeforeDeleteRow">СхемыКредитованияПередУдалением</Event>
+								<Event name="BeforeRowChange">СхемыКредитованияПередНачаломИзменения</Event>
+								<Event name="OnStartEdit">СхемыКредитованияПриНачалеРедактирования</Event>
+							</Events>
+							<ChildItems>
+								<LabelField name="КатегорииНомерСтроки" id="45">
+									<DataPath>Объект.СхемыКредитования.LineNumber</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="КатегорииНомерСтрокиКонтекстноеМеню" id="46"/>
+									<ExtendedTooltip name="КатегорииНомерСтрокиРасширеннаяПодсказка" id="47"/>
+								</LabelField>
+								<InputField name="СхемаКредитования" id="48">
+									<DataPath>Объект.СхемыКредитования.СхемаКредитования</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<QuickChoice>true</QuickChoice>
+									<ContextMenu name="СхемаКредитованияКонтекстноеМеню" id="49"/>
+									<ExtendedTooltip name="СхемаКредитованияРасширеннаяПодсказка" id="50"/>
+									<Events>
+										<Event name="OnChange">СхемаКредитованияПриИзменении</Event>
+									</Events>
+								</InputField>
+								<InputField name="КатегорииКлючСтроки" id="51">
+									<DataPath>Объект.СхемыКредитования.КлючСтроки</DataPath>
+									<Visible>false</Visible>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="КатегорииКлючСтрокиКонтекстноеМеню" id="52"/>
+									<ExtendedTooltip name="КатегорииКлючСтрокиРасширеннаяПодсказка" id="53"/>
+								</InputField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="ГруппаФилиалы" id="54">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа филиалы</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа филиалы</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаФилиалыРасширеннаяПодсказка" id="55"/>
+					<ChildItems>
+						<Table name="Филиалы" id="11">
+							<Representation>List</Representation>
+							<AutoInsertNewRow>true</AutoInsertNewRow>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<DataPath>Объект.Ломбарды</DataPath>
+							<RowFilter xsi:nil="true"/>
+							<ContextMenu name="ФилиалыКонтекстноеМеню" id="12"/>
+							<AutoCommandBar name="ФилиалыКоманднаяПанель" id="13"/>
+							<ExtendedTooltip name="ФилиалыРасширеннаяПодсказка" id="14"/>
+							<SearchStringAddition name="ФилиалыСтрокаПоиска" id="15">
+								<AdditionSource>
+									<Item>Филиалы</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ФилиалыСтрокаПоискаКонтекстноеМеню" id="16"/>
+								<ExtendedTooltip name="ФилиалыСтрокаПоискаРасширеннаяПодсказка" id="17"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="ФилиалыСостояниеПросмотра" id="18">
+								<AdditionSource>
+									<Item>Филиалы</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ФилиалыСостояниеПросмотраКонтекстноеМеню" id="19"/>
+								<ExtendedTooltip name="ФилиалыСостояниеПросмотраРасширеннаяПодсказка" id="20"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="ФилиалыУправлениеПоиском" id="21">
+								<AdditionSource>
+									<Item>Филиалы</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="ФилиалыУправлениеПоискомКонтекстноеМеню" id="22"/>
+								<ExtendedTooltip name="ФилиалыУправлениеПоискомРасширеннаяПодсказка" id="23"/>
+							</SearchControlAddition>
+							<ChildItems>
+								<LabelField name="ФилиалыНомерСтроки" id="24">
+									<DataPath>Объект.Ломбарды.LineNumber</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ФилиалыНомерСтрокиКонтекстноеМеню" id="25"/>
+									<ExtendedTooltip name="ФилиалыНомерСтрокиРасширеннаяПодсказка" id="26"/>
+								</LabelField>
+								<InputField name="Ломбард" id="27">
+									<DataPath>Объект.Ломбарды.Ломбард</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Ломбард или группа ломбардов</v8:content>
+										</v8:item>
+									</Title>
+									<EditMode>EnterOnInput</EditMode>
+									<QuickChoice>true</QuickChoice>
+									<ContextMenu name="ЛомбардКонтекстноеМеню" id="28"/>
+									<ExtendedTooltip name="ЛомбардРасширеннаяПодсказка" id="29"/>
+								</InputField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаТовары" id="60">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа товары</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа товары</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаТоварыРасширеннаяПодсказка" id="61"/>
+			<ChildItems>
+				<Table name="ТаблицаЦен" id="62">
+					<Representation>List</Representation>
+					<AutoInsertNewRow>true</AutoInsertNewRow>
+					<EnableStartDrag>true</EnableStartDrag>
+					<EnableDrag>true</EnableDrag>
+					<DataPath>ТаблицаЦен</DataPath>
+					<RowFilter xsi:nil="true"/>
+					<ContextMenu name="ТаблицаЦенКонтекстноеМеню" id="63"/>
+					<AutoCommandBar name="ТаблицаЦенКоманднаяПанель" id="64"/>
+					<ExtendedTooltip name="ТаблицаЦенРасширеннаяПодсказка" id="65"/>
+					<SearchStringAddition name="ТаблицаЦенСтрокаПоиска" id="66">
+						<AdditionSource>
+							<Item>ТаблицаЦен</Item>
+							<Type>SearchStringRepresentation</Type>
+						</AdditionSource>
+						<ContextMenu name="ТаблицаЦенСтрокаПоискаКонтекстноеМеню" id="67"/>
+						<ExtendedTooltip name="ТаблицаЦенСтрокаПоискаРасширеннаяПодсказка" id="68"/>
+					</SearchStringAddition>
+					<ViewStatusAddition name="ТаблицаЦенСостояниеПросмотра" id="69">
+						<AdditionSource>
+							<Item>ТаблицаЦен</Item>
+							<Type>ViewStatusRepresentation</Type>
+						</AdditionSource>
+						<ContextMenu name="ТаблицаЦенСостояниеПросмотраКонтекстноеМеню" id="70"/>
+						<ExtendedTooltip name="ТаблицаЦенСостояниеПросмотраРасширеннаяПодсказка" id="71"/>
+					</ViewStatusAddition>
+					<SearchControlAddition name="ТаблицаЦенУправлениеПоиском" id="72">
+						<AdditionSource>
+							<Item>ТаблицаЦен</Item>
+							<Type>SearchControl</Type>
+						</AdditionSource>
+						<ContextMenu name="ТаблицаЦенУправлениеПоискомКонтекстноеМеню" id="73"/>
+						<ExtendedTooltip name="ТаблицаЦенУправлениеПоискомРасширеннаяПодсказка" id="74"/>
+					</SearchControlAddition>
+					<Events>
+						<Event name="BeforeDeleteRow">ТаблицаЦенПередУдалением</Event>
+					</Events>
+					<ChildItems>
+						<InputField name="ТаблицаЦенПроба" id="75">
+							<DataPath>ТаблицаЦен.Проба</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ChoiceButton>true</ChoiceButton>
+							<QuickChoice>true</QuickChoice>
+							<ContextMenu name="ТаблицаЦенПробаКонтекстноеМеню" id="76"/>
+							<ExtendedTooltip name="ТаблицаЦенПробаРасширеннаяПодсказка" id="77"/>
+						</InputField>
+						<InputField name="ТаблицаЦенКатегория" id="78">
+							<DataPath>ТаблицаЦен.Категория</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<QuickChoice>true</QuickChoice>
+							<ContextMenu name="ТаблицаЦенКатегорияКонтекстноеМеню" id="79"/>
+							<ExtendedTooltip name="ТаблицаЦенКатегорияРасширеннаяПодсказка" id="80"/>
+						</InputField>
+					</ChildItems>
+				</Table>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаПодвал" id="87">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа подвал</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа подвал</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаПодвалРасширеннаяПодсказка" id="88"/>
+			<ChildItems>
+				<InputField name="Комментарий" id="84">
+					<DataPath>Объект.Комментарий</DataPath>
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<ContextMenu name="КомментарийКонтекстноеМеню" id="85"/>
+					<ExtendedTooltip name="КомментарийРасширеннаяПодсказка" id="86"/>
+				</InputField>
+				<InputField name="Ответственный" id="81">
+					<DataPath>Объект.ОтветственныйСотрудник</DataPath>
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<ContextMenu name="ОтветственныйКонтекстноеМеню" id="82"/>
+					<ExtendedTooltip name="ОтветственныйРасширеннаяПодсказка" id="83"/>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:DocumentObject.ЛБ_ПрейскурантЦенПример</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+			<UseAlways>
+				<Field>Объект.RegisterRecords</Field>
+			</UseAlways>
+		</Attribute>
+		<Attribute name="ТаблицаЦен" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Таблица цен</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="Проба" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Проба</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.ЛБ_Пробы</v8:Type>
+					</Type>
+				</Column>
+				<Column name="Категория" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Категория</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.ЛБ_КатегорииОбъектовЗалога</v8:Type>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+	</Attributes>
+</Form>

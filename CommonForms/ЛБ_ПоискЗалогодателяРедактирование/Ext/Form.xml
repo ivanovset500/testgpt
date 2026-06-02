@@ -1,0 +1,472 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.20">
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<ChildItems>
+			<Button name="КнопкаСоздать" id="75">
+				<Type>CommandBarButton</Type>
+				<Representation>PictureAndText</Representation>
+				<CommandName>Form.Command.СоздатьЗалогодателя</CommandName>
+				<Picture>
+					<xr:Ref>StdPicture.CreateListItem</xr:Ref>
+					<xr:LoadTransparent>true</xr:LoadTransparent>
+				</Picture>
+				<Title>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Новый клиент</v8:content>
+					</v8:item>
+				</Title>
+				<ExtendedTooltip name="КнопкаСоздатьРасширеннаяПодсказка" id="76"/>
+			</Button>
+			<Button name="КнопкаОмена" id="131">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.StandardCommand.Close</CommandName>
+				<Title>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Закрыть</v8:content>
+					</v8:item>
+				</Title>
+				<ExtendedTooltip name="КнопкаОменаРасширеннаяПодсказка" id="132"/>
+			</Button>
+		</ChildItems>
+	</AutoCommandBar>
+	<ChildItems>
+		<UsualGroup name="ГруппаОтборФИО" id="43">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отбор по ФИО и/или документу удостоверяющему личность</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа отбор ФИО</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Vertical</Group>
+			<ExtendedTooltip name="ГруппаОтборФИОРасширеннаяПодсказка" id="44"/>
+			<ChildItems>
+				<InputField name="ФИО" id="1">
+					<DataPath>ФИО</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>ФИО</v8:content>
+						</v8:item>
+					</Title>
+					<EditMode>EnterOnInput</EditMode>
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<ClearButton>true</ClearButton>
+					<ContextMenu name="ФИОКонтекстноеМеню" id="2"/>
+					<ExtendedTooltip name="ФИОРасширеннаяПодсказка" id="3"/>
+					<Events>
+						<Event name="EditTextChange">ФамилияИзменениеТекстаРедактирования</Event>
+						<Event name="Clearing">ФИООчистка</Event>
+						<Event name="TextEditEnd">ФамилияОкончаниеВводаТекста</Event>
+					</Events>
+				</InputField>
+				<Button name="КнопкаВыбратьФИО" id="129">
+					<Type>UsualButton</Type>
+					<Visible>false</Visible>
+					<CommandName>Form.Command.Выбор</CommandName>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Выбрать</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="КнопкаВыбратьФИОРасширеннаяПодсказка" id="130"/>
+				</Button>
+				<UsualGroup name="ГруппаДокументы" id="102">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Отбор по серии и номеру документа</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа документы</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаДокументыРасширеннаяПодсказка" id="103"/>
+					<ChildItems>
+						<InputField name="Гражданство" id="133">
+							<DataPath>Гражданство</DataPath>
+							<ClearButton>true</ClearButton>
+							<OpenButton>false</OpenButton>
+							<ContextMenu name="ГражданствоКонтекстноеМеню" id="134"/>
+							<ExtendedTooltip name="ГражданствоРасширеннаяПодсказка" id="135"/>
+							<Events>
+								<Event name="OnChange">ГражданствоПриИзменении</Event>
+								<Event name="Clearing">ГражданствоОчистка</Event>
+							</Events>
+						</InputField>
+						<InputField name="Серия" id="96">
+							<DataPath>Серия</DataPath>
+							<ClearButton>true</ClearButton>
+							<ContextMenu name="СерияКонтекстноеМеню" id="97"/>
+							<ExtendedTooltip name="СерияРасширеннаяПодсказка" id="98"/>
+							<Events>
+								<Event name="EditTextChange">СерияИзменениеТекстаРедактирования</Event>
+								<Event name="Clearing">СерияОчистка</Event>
+							</Events>
+						</InputField>
+						<InputField name="Номер" id="99">
+							<DataPath>Номер</DataPath>
+							<ClearButton>true</ClearButton>
+							<ContextMenu name="НомерКонтекстноеМеню" id="100"/>
+							<ExtendedTooltip name="НомерРасширеннаяПодсказка" id="101"/>
+							<Events>
+								<Event name="EditTextChange">НомерИзменениеТекстаРедактирования</Event>
+								<Event name="Clearing">НомерОчистка</Event>
+							</Events>
+						</InputField>
+						<Button name="КнопкаВыбратьДок" id="141">
+							<Type>UsualButton</Type>
+							<Visible>false</Visible>
+							<CommandName>Form.Command.Выбор</CommandName>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Выбрать</v8:content>
+								</v8:item>
+							</Title>
+							<ExtendedTooltip name="КнопкаВыбратьДокРасширеннаяПодсказка" id="142"/>
+						</Button>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+		<Table name="Залогодатели" id="77">
+			<Representation>List</Representation>
+			<ReadOnly>true</ReadOnly>
+			<AutoInsertNewRow>true</AutoInsertNewRow>
+			<EnableStartDrag>true</EnableStartDrag>
+			<EnableDrag>true</EnableDrag>
+			<DataPath>Залогодатели</DataPath>
+			<CommandSet>
+				<ExcludedCommand>Add</ExcludedCommand>
+				<ExcludedCommand>Change</ExcludedCommand>
+				<ExcludedCommand>Copy</ExcludedCommand>
+				<ExcludedCommand>CopyToClipboard</ExcludedCommand>
+				<ExcludedCommand>Delete</ExcludedCommand>
+				<ExcludedCommand>EndEdit</ExcludedCommand>
+				<ExcludedCommand>FindByCurrentValue</ExcludedCommand>
+				<ExcludedCommand>SearchEverywhere</ExcludedCommand>
+				<ExcludedCommand>SearchHistory</ExcludedCommand>
+				<ExcludedCommand>SelectAll</ExcludedCommand>
+				<ExcludedCommand>ShowMultipleSelection</ExcludedCommand>
+				<ExcludedCommand>ShowRowRearrangement</ExcludedCommand>
+			</CommandSet>
+			<RowFilter xsi:nil="true"/>
+			<ContextMenu name="ЗалогодателиКонтекстноеМеню" id="78"/>
+			<AutoCommandBar name="ЗалогодателиКоманднаяПанель" id="79">
+				<Autofill>false</Autofill>
+			</AutoCommandBar>
+			<ExtendedTooltip name="ЗалогодателиРасширеннаяПодсказка" id="80"/>
+			<SearchStringAddition name="ЗалогодателиСтрокаПоиска" id="81">
+				<AdditionSource>
+					<Item>Залогодатели</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ЗалогодателиСтрокаПоискаКонтекстноеМеню" id="82"/>
+				<ExtendedTooltip name="ЗалогодателиСтрокаПоискаРасширеннаяПодсказка" id="83"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="ЗалогодателиСостояниеПросмотра" id="84">
+				<AdditionSource>
+					<Item>Залогодатели</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ЗалогодателиСостояниеПросмотраКонтекстноеМеню" id="85"/>
+				<ExtendedTooltip name="ЗалогодателиСостояниеПросмотраРасширеннаяПодсказка" id="86"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="ЗалогодателиУправлениеПоиском" id="87">
+				<AdditionSource>
+					<Item>Залогодатели</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="ЗалогодателиУправлениеПоискомКонтекстноеМеню" id="88"/>
+				<ExtendedTooltip name="ЗалогодателиУправлениеПоискомРасширеннаяПодсказка" id="89"/>
+			</SearchControlAddition>
+			<Events>
+				<Event name="Selection">ЗалогодателиВыбор</Event>
+			</Events>
+			<ChildItems>
+				<InputField name="ЗалогодателиЗалогодатель" id="90">
+					<DataPath>Залогодатели.Залогодатель.Ref</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Клиент</v8:content>
+						</v8:item>
+					</Title>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ЗалогодателиЗалогодательКонтекстноеМеню" id="91"/>
+					<ExtendedTooltip name="ЗалогодателиЗалогодательРасширеннаяПодсказка" id="92"/>
+				</InputField>
+				<InputField name="ЗалогодателиДатаРождения" id="143">
+					<DataPath>Залогодатели.ДатаРождения</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ЗалогодателиДатаРожденияКонтекстноеМеню" id="144"/>
+					<ExtendedTooltip name="ЗалогодателиДатаРожденияРасширеннаяПодсказка" id="145"/>
+				</InputField>
+				<InputField name="ЗалогодателиМестоРождения" id="146">
+					<DataPath>Залогодатели.МестоРождения</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ЗалогодателиМестоРожденияКонтекстноеМеню" id="147"/>
+					<ExtendedTooltip name="ЗалогодателиМестоРожденияРасширеннаяПодсказка" id="148"/>
+				</InputField>
+				<InputField name="ЗалогодателиНомерТелефона" id="93">
+					<DataPath>Залогодатели.НомерТелефона</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ЗалогодателиНомерТелефонаКонтекстноеМеню" id="94"/>
+					<ExtendedTooltip name="ЗалогодателиНомерТелефонаРасширеннаяПодсказка" id="95"/>
+				</InputField>
+			</ChildItems>
+		</Table>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="ФИО" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>ФИО</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>100</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="Залогодатели" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Залогодатели</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="Залогодатель" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Залогодатель</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.ЛБ_Залогодатели</v8:Type>
+					</Type>
+				</Column>
+				<Column name="НомерТелефона" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Номер телефона</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>20</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="ДатаРождения" id="3">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Дата рождения</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:dateTime</v8:Type>
+						<v8:DateQualifiers>
+							<v8:DateFractions>Date</v8:DateFractions>
+						</v8:DateQualifiers>
+					</Type>
+				</Column>
+				<Column name="ДатаСмерти" id="4">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Дата смерти</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:dateTime</v8:Type>
+						<v8:DateQualifiers>
+							<v8:DateFractions>Date</v8:DateFractions>
+						</v8:DateQualifiers>
+					</Type>
+				</Column>
+				<Column name="МестоРождения" id="5">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Место рождения</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>500</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="НомерТелефона" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Номер телефона</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>15</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="Серия" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Серия</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>4</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="Номер" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Номер</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>6</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="Гражданство" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Гражданство</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.СтраныМира</v8:Type>
+			</Type>
+		</Attribute>
+		<ConditionalAppearance>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>Залогодатели</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">Залогодатели.ДатаСмерти</dcsset:left>
+						<dcsset:comparisonType>Filled</dcsset:comparisonType>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>ЦветФона</dcscor:parameter>
+						<dcscor:value xsi:type="v8ui:Color">web:Gainsboro</dcscor:value>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+		</ConditionalAppearance>
+	</Attributes>
+	<Commands>
+		<Command name="Выбор" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выбор</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выбор</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>Выбор</Action>
+		</Command>
+		<Command name="ОчиститьФИО" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Очистить ФИО</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Очистить ФИО</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ОчиститьФИО</Action>
+		</Command>
+		<Command name="ОчиститьТелефон" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Очистить телефон</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Очистить телефон</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ОчиститьТелефон</Action>
+		</Command>
+		<Command name="СоздатьЗалогодателя" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Создать залогодателя</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Создать залогодателя</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>СоздатьЗалогодателя</Action>
+		</Command>
+	</Commands>
+</Form>

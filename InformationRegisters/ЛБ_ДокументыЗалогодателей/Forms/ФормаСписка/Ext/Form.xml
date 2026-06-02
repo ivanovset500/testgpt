@@ -1,0 +1,323 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.20">
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<ChildItems>
+		<UsualGroup name="СписокКомпоновщикНастроекПользовательскиеНастройки" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа пользовательских настроек</v8:content>
+				</v8:item>
+			</Title>
+			<VerticalStretch>false</VerticalStretch>
+			<Group>Vertical</Group>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="СписокКомпоновщикНастроекПользовательскиеНастройкиРасширеннаяПодсказка" id="2"/>
+		</UsualGroup>
+		<Table name="Список" id="3">
+			<Representation>List</Representation>
+			<CommandBarLocation>None</CommandBarLocation>
+			<DefaultItem>true</DefaultItem>
+			<UseAlternationRowColor>true</UseAlternationRowColor>
+			<InitialTreeView>ExpandTopLevel</InitialTreeView>
+			<EnableStartDrag>true</EnableStartDrag>
+			<DataPath>Список</DataPath>
+			<RowPictureDataPath>Список.DefaultPicture</RowPictureDataPath>
+			<AutoRefresh>false</AutoRefresh>
+			<AutoRefreshPeriod>60</AutoRefreshPeriod>
+			<Period>
+				<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+				<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+				<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+			</Period>
+			<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+			<RestoreCurrentRow>false</RestoreCurrentRow>
+			<TopLevelParent xsi:nil="true"/>
+			<ShowRoot>true</ShowRoot>
+			<AllowRootChoice>false</AllowRootChoice>
+			<UpdateOnDataChange>Auto</UpdateOnDataChange>
+			<UserSettingsGroup>СписокКомпоновщикНастроекПользовательскиеНастройки</UserSettingsGroup>
+			<AllowGettingCurrentRowURL>true</AllowGettingCurrentRowURL>
+			<ContextMenu name="СписокКонтекстноеМеню" id="4"/>
+			<AutoCommandBar name="СписокКоманднаяПанель" id="5">
+				<Autofill>false</Autofill>
+			</AutoCommandBar>
+			<ExtendedTooltip name="СписокРасширеннаяПодсказка" id="6"/>
+			<SearchStringAddition name="СписокСтрокаПоиска" id="7">
+				<AdditionSource>
+					<Item>Список</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="СписокСтрокаПоискаКонтекстноеМеню" id="8"/>
+				<ExtendedTooltip name="СписокСтрокаПоискаРасширеннаяПодсказка" id="9"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="СписокСостояниеПросмотра" id="10">
+				<AdditionSource>
+					<Item>Список</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="СписокСостояниеПросмотраКонтекстноеМеню" id="11"/>
+				<ExtendedTooltip name="СписокСостояниеПросмотраРасширеннаяПодсказка" id="12"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="СписокУправлениеПоиском" id="13">
+				<AdditionSource>
+					<Item>Список</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="СписокУправлениеПоискомКонтекстноеМеню" id="14"/>
+				<ExtendedTooltip name="СписокУправлениеПоискомРасширеннаяПодсказка" id="15"/>
+			</SearchControlAddition>
+			<ChildItems>
+				<LabelField name="Период" id="16">
+					<DataPath>Список.Период</DataPath>
+					<DefaultItem>true</DefaultItem>
+					<Width>10</Width>
+					<ContextMenu name="ПериодКонтекстноеМеню" id="17"/>
+					<ExtendedTooltip name="ПериодРасширеннаяПодсказка" id="18"/>
+				</LabelField>
+				<LabelField name="Залогодатель" id="28">
+					<DataPath>Список.ДокументЗалогодателя.Owner</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Клиент</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="ЗалогодательКонтекстноеМеню" id="29"/>
+					<ExtendedTooltip name="ЗалогодательРасширеннаяПодсказка" id="30"/>
+				</LabelField>
+				<LabelField name="ДокументЗалогодателя" id="82">
+					<DataPath>Список.ДокументЗалогодателя</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Документ</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="ДокументЗалогодателяКонтекстноеМеню" id="83"/>
+					<ExtendedTooltip name="ДокументЗалогодателяРасширеннаяПодсказка" id="84"/>
+				</LabelField>
+				<LabelField name="ВидДокументаЗалогодателя" id="31">
+					<DataPath>Список.ВидДокументаЗалогодателя</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Вид документа</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="ВидДокументаЗалогодателяКонтекстноеМеню" id="32"/>
+					<ExtendedTooltip name="ВидДокументаЗалогодателяРасширеннаяПодсказка" id="33"/>
+				</LabelField>
+				<LabelField name="ВидДокумента" id="34">
+					<DataPath>Список.ВидДокумента</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Наименование документа</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="ВидДокументаКонтекстноеМеню" id="35"/>
+					<ExtendedTooltip name="ВидДокументаРасширеннаяПодсказка" id="36"/>
+				</LabelField>
+				<CheckBoxField name="ОсновнойДУЛ" id="79">
+					<DataPath>Список.ОсновнойДул</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Основной ДУЛ</v8:content>
+						</v8:item>
+					</Title>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ОсновнойДУЛКонтекстноеМеню" id="80"/>
+					<ExtendedTooltip name="ОсновнойДУЛРасширеннаяПодсказка" id="81"/>
+				</CheckBoxField>
+				<CheckBoxField name="ОсновнойДоп" id="94">
+					<DataPath>Список.ОсновнойДоп</DataPath>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ОсновнойДопКонтекстноеМеню" id="95"/>
+					<ExtendedTooltip name="ОсновнойДопРасширеннаяПодсказка" id="96"/>
+				</CheckBoxField>
+				<LabelField name="Гражданство" id="37">
+					<DataPath>Список.Гражданство</DataPath>
+					<ContextMenu name="ГражданствоКонтекстноеМеню" id="38"/>
+					<ExtendedTooltip name="ГражданствоРасширеннаяПодсказка" id="39"/>
+				</LabelField>
+				<LabelField name="СтранаЭмитент" id="88">
+					<DataPath>~Список.СтранаЭмитент</DataPath>
+					<ContextMenu name="СтранаЭмитентКонтекстноеМеню" id="89"/>
+					<ExtendedTooltip name="СтранаЭмитентРасширеннаяПодсказка" id="90"/>
+				</LabelField>
+				<LabelField name="ДокументСтранаЭмитент" id="91">
+					<DataPath>Список.ДокументСтранаЭмитент</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Страна эмитент</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="ДокументСтранаЭмитентКонтекстноеМеню" id="92"/>
+					<ExtendedTooltip name="ДокументСтранаЭмитентРасширеннаяПодсказка" id="93"/>
+				</LabelField>
+				<LabelField name="ДокументСерия" id="49">
+					<DataPath>Список.ДокументСерия</DataPath>
+					<ContextMenu name="ДокументСерияКонтекстноеМеню" id="50"/>
+					<ExtendedTooltip name="ДокументСерияРасширеннаяПодсказка" id="51"/>
+				</LabelField>
+				<LabelField name="ДокументНомер" id="52">
+					<DataPath>Список.ДокументНомер</DataPath>
+					<ContextMenu name="ДокументНомерКонтекстноеМеню" id="53"/>
+					<ExtendedTooltip name="ДокументНомерРасширеннаяПодсказка" id="54"/>
+				</LabelField>
+				<LabelField name="ДокументДатаВыдачи" id="40">
+					<DataPath>Список.ДокументДатаВыдачи</DataPath>
+					<ContextMenu name="ДокументДатаВыдачиКонтекстноеМеню" id="41"/>
+					<ExtendedTooltip name="ДокументДатаВыдачиРасширеннаяПодсказка" id="42"/>
+				</LabelField>
+				<LabelField name="ДокументКемВыдан" id="43">
+					<DataPath>Список.ДокументКемВыдан</DataPath>
+					<ContextMenu name="ДокументКемВыданКонтекстноеМеню" id="44"/>
+					<ExtendedTooltip name="ДокументКемВыданРасширеннаяПодсказка" id="45"/>
+				</LabelField>
+				<LabelField name="ДокументКодПодразделения" id="46">
+					<DataPath>Список.ДокументКодПодразделения</DataPath>
+					<ContextMenu name="ДокументКодПодразделенияКонтекстноеМеню" id="47"/>
+					<ExtendedTooltip name="ДокументКодПодразделенияРасширеннаяПодсказка" id="48"/>
+				</LabelField>
+				<LabelField name="ДокументНачалоДействия" id="55">
+					<DataPath>Список.ДокументНачалоДействия</DataPath>
+					<ContextMenu name="ДокументНачалоДействияКонтекстноеМеню" id="56"/>
+					<ExtendedTooltip name="ДокументНачалоДействияРасширеннаяПодсказка" id="57"/>
+				</LabelField>
+				<LabelField name="ДокументСрокДействия" id="58">
+					<DataPath>Список.ДокументСрокДействия</DataPath>
+					<ContextMenu name="ДокументСрокДействияКонтекстноеМеню" id="59"/>
+					<ExtendedTooltip name="ДокументСрокДействияРасширеннаяПодсказка" id="60"/>
+				</LabelField>
+				<LabelField name="ДатаСмерти" id="76">
+					<DataPath>Список.ДатаСмерти</DataPath>
+					<ContextMenu name="ДатаСмертиКонтекстноеМеню" id="77"/>
+					<ExtendedTooltip name="ДатаСмертиРасширеннаяПодсказка" id="78"/>
+				</LabelField>
+				<CheckBoxField name="ДокументНеДействителен" id="61">
+					<DataPath>Список.ДокументНеДействителен</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Не действителен</v8:content>
+						</v8:item>
+					</Title>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ДокументНеДействителенКонтекстноеМеню" id="62"/>
+					<ExtendedTooltip name="ДокументНеДействителенРасширеннаяПодсказка" id="63"/>
+				</CheckBoxField>
+				<CheckBoxField name="ДокументДействителен" id="85">
+					<DataPath>Список.ДокументДействителен</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Действителен</v8:content>
+						</v8:item>
+					</Title>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ДокументДействителенКонтекстноеМеню" id="86"/>
+					<ExtendedTooltip name="ДокументДействителенРасширеннаяПодсказка" id="87"/>
+				</CheckBoxField>
+				<LabelField name="Изменения" id="73">
+					<DataPath>Список.Изменения</DataPath>
+					<ContextMenu name="ИзмененияКонтекстноеМеню" id="74"/>
+					<ExtendedTooltip name="ИзмененияРасширеннаяПодсказка" id="75"/>
+				</LabelField>
+				<LabelField name="ПричинаИзменения" id="67">
+					<DataPath>Список.ПричинаИзменения</DataPath>
+					<ContextMenu name="ПричинаИзмененияКонтекстноеМеню" id="68"/>
+					<ExtendedTooltip name="ПричинаИзмененияРасширеннаяПодсказка" id="69"/>
+				</LabelField>
+				<LabelField name="Ответственный" id="70">
+					<DataPath>Список.Ответственный</DataPath>
+					<ContextMenu name="ОтветственныйКонтекстноеМеню" id="71"/>
+					<ExtendedTooltip name="ОтветственныйРасширеннаяПодсказка" id="72"/>
+				</LabelField>
+			</ChildItems>
+		</Table>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Список" id="1">
+			<Type>
+				<v8:Type>cfg:DynamicList</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<Settings xsi:type="DynamicList">
+				<ManualQuery>true</ManualQuery>
+				<DynamicDataRead>true</DynamicDataRead>
+				<QueryText>ВЫБРАТЬ
+	РегистрСведенийЛБ_ДокументыЗалогодателей.Период КАК Период,
+	РегистрСведенийЛБ_ДокументыЗалогодателей.Регистратор КАК Регистратор,
+	РегистрСведенийЛБ_ДокументыЗалогодателей.НомерСтроки КАК НомерСтроки,
+	РегистрСведенийЛБ_ДокументыЗалогодателей.Активность КАК Активность,
+	РегистрСведенийЛБ_ДокументыЗалогодателей.ДокументЗалогодателя КАК ДокументЗалогодателя,
+	РегистрСведенийЛБ_ДокументыЗалогодателей.ВидДокументаЗалогодателя КАК ВидДокументаЗалогодателя,
+	РегистрСведенийЛБ_ДокументыЗалогодателей.ВидДокумента КАК ВидДокумента,
+	РегистрСведенийЛБ_ДокументыЗалогодателей.Гражданство КАК Гражданство,
+	РегистрСведенийЛБ_ДокументыЗалогодателей.ДокументДатаВыдачи КАК ДокументДатаВыдачи,
+	РегистрСведенийЛБ_ДокументыЗалогодателей.ДокументКемВыдан КАК ДокументКемВыдан,
+	РегистрСведенийЛБ_ДокументыЗалогодателей.ДокументКодПодразделения КАК ДокументКодПодразделения,
+	РегистрСведенийЛБ_ДокументыЗалогодателей.ДокументСерия КАК ДокументСерия,
+	РегистрСведенийЛБ_ДокументыЗалогодателей.ДокументНомер КАК ДокументНомер,
+	РегистрСведенийЛБ_ДокументыЗалогодателей.ДокументНачалоДействия КАК ДокументНачалоДействия,
+	РегистрСведенийЛБ_ДокументыЗалогодателей.ДокументСрокДействия КАК ДокументСрокДействия,
+	РегистрСведенийЛБ_ДокументыЗалогодателей.ДокументНеДействителен КАК ДокументНеДействителен,
+	РегистрСведенийЛБ_ДокументыЗалогодателей.ДатаСмерти КАК ДатаСмерти,
+	РегистрСведенийЛБ_ДокументыЗалогодателей.ОсновнойДУЛ КАК ОсновнойДул,
+	РегистрСведенийЛБ_ДокументыЗалогодателей.ОсновнойДоп КАК ОсновнойДоп,
+	РегистрСведенийЛБ_ДокументыЗалогодателей.ДокументДействителен КАК ДокументДействителен,
+	РегистрСведенийЛБ_ДокументыЗалогодателей.ДокументСтранаЭмитент КАК ДокументСтранаЭмитент,
+	РегистрСведенийЛБ_ДокументыЗалогодателей.ДокументНаименованиеИногоДокумента КАК ДокументНаименованиеИногоДокумента,
+	РегистрСведенийЛБ_ДокументыЗалогодателей.ПричинаИзменения КАК ПричинаИзменения,
+	РегистрСведенийЛБ_ДокументыЗалогодателей.Изменения КАК Изменения,
+	РегистрСведенийЛБ_ДокументыЗалогодателей.Ответственный КАК Ответственный,
+	РегистрСведенийЛБ_ДокументыЗалогодателей.МоментВремени КАК МоментВремени
+ИЗ
+	РегистрСведений.ЛБ_ДокументыЗалогодателей КАК РегистрСведенийЛБ_ДокументыЗалогодателей</QueryText>
+				<MainTable>InformationRegister.ЛБ_ДокументыЗалогодателей</MainTable>
+				<ListSettings>
+					<dcsset:filter>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>dfcece9d-5077-440b-b6b3-45a5cb4538eb</dcsset:userSettingID>
+					</dcsset:filter>
+					<dcsset:order>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>88619765-ccb3-46c6-ac52-38e9c992ebd4</dcsset:userSettingID>
+					</dcsset:order>
+					<dcsset:conditionalAppearance>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>b75fecce-942b-4aed-abc9-e6a02e460fb3</dcsset:userSettingID>
+					</dcsset:conditionalAppearance>
+					<dcsset:itemsViewMode>Normal</dcsset:itemsViewMode>
+					<dcsset:itemsUserSettingID>911b6018-f537-43e8-a417-da56b22f9aec</dcsset:itemsUserSettingID>
+				</ListSettings>
+			</Settings>
+		</Attribute>
+		<ConditionalAppearance>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>Список</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">Список.ДокументНеДействителен</dcsset:left>
+						<dcsset:comparisonType>Equal</dcsset:comparisonType>
+						<dcsset:right xsi:type="xs:boolean">true</dcsset:right>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>ЦветТекста</dcscor:parameter>
+						<dcscor:value xsi:type="v8ui:Color">auto</dcscor:value>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+		</ConditionalAppearance>
+	</Attributes>
+</Form>

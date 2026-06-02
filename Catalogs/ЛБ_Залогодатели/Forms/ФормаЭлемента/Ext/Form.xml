@@ -1,0 +1,517 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.20">
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<UseForFoldersAndItems>Items</UseForFoldersAndItems>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="AfterWrite">ПослеЗаписи</Event>
+		<Event name="OnOpen">ПриОткрытии</Event>
+		<Event name="BeforeWrite">ПередЗаписью</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="ИнформацияОКлиенте" id="53">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Информация о клиенте</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Информация о клиенте</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Vertical</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ИнформацияОКлиентеРасширеннаяПодсказка" id="54"/>
+			<ChildItems>
+				<UsualGroup name="ГруппаКодCustomerKey" id="125">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа код customer key</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа код customer key</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>AlwaysHorizontal</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаКодCustomerKeyРасширеннаяПодсказка" id="126"/>
+					<ChildItems>
+						<InputField name="Наименование" id="58">
+							<DataPath>Объект.Description</DataPath>
+							<ReadOnly>true</ReadOnly>
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<ContextMenu name="НаименованиеКонтекстноеМеню" id="59"/>
+							<ExtendedTooltip name="НаименованиеРасширеннаяПодсказка" id="60"/>
+						</InputField>
+						<InputField name="ДатаРождения" id="322">
+							<DataPath>Объект.ДатаРождения</DataPath>
+							<ContextMenu name="ДатаРожденияКонтекстноеМеню" id="323"/>
+							<ExtendedTooltip name="ДатаРожденияРасширеннаяПодсказка" id="324"/>
+						</InputField>
+						<InputField name="Код" id="55">
+							<DataPath>Объект.Code</DataPath>
+							<ContextMenu name="КодКонтекстноеМеню" id="56"/>
+							<ExtendedTooltip name="КодРасширеннаяПодсказка" id="57"/>
+						</InputField>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="ФИО" id="74">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>ФИО</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>ФИО</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>Horizontal</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ФИОРасширеннаяПодсказка" id="75"/>
+					<ChildItems>
+						<InputField name="Фамилия" id="76">
+							<DataPath>Объект.Фамилия</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>ФИО</v8:content>
+								</v8:item>
+							</Title>
+							<HorizontalStretch>true</HorizontalStretch>
+							<ContextMenu name="ФамилияКонтекстноеМеню" id="77"/>
+							<ExtendedTooltip name="ФамилияРасширеннаяПодсказка" id="78"/>
+							<Events>
+								<Event name="OnChange">ФамилияПриИзменении</Event>
+							</Events>
+						</InputField>
+						<InputField name="Имя" id="79">
+							<DataPath>Объект.Имя</DataPath>
+							<TitleLocation>None</TitleLocation>
+							<HorizontalStretch>true</HorizontalStretch>
+							<ContextMenu name="ИмяКонтекстноеМеню" id="80"/>
+							<ExtendedTooltip name="ИмяРасширеннаяПодсказка" id="81"/>
+							<Events>
+								<Event name="OnChange">ИмяПриИзменении</Event>
+							</Events>
+						</InputField>
+						<InputField name="Отчество" id="82">
+							<DataPath>Объект.Отчество</DataPath>
+							<TitleLocation>None</TitleLocation>
+							<HorizontalStretch>true</HorizontalStretch>
+							<ContextMenu name="ОтчествоКонтекстноеМеню" id="83"/>
+							<ExtendedTooltip name="ОтчествоРасширеннаяПодсказка" id="84"/>
+							<Events>
+								<Event name="OnChange">ОтчествоПриИзменении</Event>
+							</Events>
+						</InputField>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="ГруппаДокумент" id="85">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Документы удостоверяющие личность</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа документ</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Behavior>Collapsible</Behavior>
+					<Collapsed>true</Collapsed>
+					<ControlRepresentation>Picture</ControlRepresentation>
+					<Representation>None</Representation>
+					<AssociatedTableElementId xsi:type="xs:string">132:02023637-7868-4a5f-8576-835a76e0c9ba</AssociatedTableElementId>
+					<ExtendedTooltip name="ГруппаДокументРасширеннаяПодсказка" id="86"/>
+					<ChildItems>
+						<Table name="ДокументыЗалогодателя" id="224">
+							<Representation>List</Representation>
+							<MaxWidth>20</MaxWidth>
+							<SelectionMode>SingleRow</SelectionMode>
+							<RowSelectionMode>Row</RowSelectionMode>
+							<UseAlternationRowColor>true</UseAlternationRowColor>
+							<EnableStartDrag>true</EnableStartDrag>
+							<DataPath>ДокументыЗалогодателя</DataPath>
+							<RowPictureDataPath>ДокументыЗалогодателя.DefaultPicture</RowPictureDataPath>
+							<CommandSet>
+								<ExcludedCommand>Change</ExcludedCommand>
+								<ExcludedCommand>CopyToClipboard</ExcludedCommand>
+								<ExcludedCommand>SearchEverywhere</ExcludedCommand>
+							</CommandSet>
+							<AutoRefresh>false</AutoRefresh>
+							<AutoRefreshPeriod>60</AutoRefreshPeriod>
+							<Period>
+								<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+								<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+								<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+							</Period>
+							<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+							<RestoreCurrentRow>false</RestoreCurrentRow>
+							<TopLevelParent xsi:nil="true"/>
+							<ShowRoot>true</ShowRoot>
+							<AllowRootChoice>false</AllowRootChoice>
+							<UpdateOnDataChange>Auto</UpdateOnDataChange>
+							<AllowGettingCurrentRowURL>true</AllowGettingCurrentRowURL>
+							<ContextMenu name="ДокументыЗалогодателяКонтекстноеМеню" id="225"/>
+							<AutoCommandBar name="ДокументыЗалогодателяКоманднаяПанель" id="226"/>
+							<ExtendedTooltip name="ДокументыЗалогодателяРасширеннаяПодсказка" id="227"/>
+							<SearchStringAddition name="ДокументыЗалогодателяСтрокаПоиска" id="228">
+								<AdditionSource>
+									<Item>ДокументыЗалогодателя</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ДокументыЗалогодателяСтрокаПоискаКонтекстноеМеню" id="229"/>
+								<ExtendedTooltip name="ДокументыЗалогодателяСтрокаПоискаРасширеннаяПодсказка" id="230"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="ДокументыЗалогодателяСостояниеПросмотра" id="231">
+								<AdditionSource>
+									<Item>ДокументыЗалогодателя</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ДокументыЗалогодателяСостояниеПросмотраКонтекстноеМеню" id="232"/>
+								<ExtendedTooltip name="ДокументыЗалогодателяСостояниеПросмотраРасширеннаяПодсказка" id="233"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="ДокументыЗалогодателяУправлениеПоиском" id="234">
+								<AdditionSource>
+									<Item>ДокументыЗалогодателя</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="ДокументыЗалогодателяУправлениеПоискомКонтекстноеМеню" id="235"/>
+								<ExtendedTooltip name="ДокументыЗалогодателяУправлениеПоискомРасширеннаяПодсказка" id="236"/>
+							</SearchControlAddition>
+							<Events>
+								<Event name="BeforeAddRow">ДокументыПередНачаломДобавления</Event>
+							</Events>
+							<ChildItems>
+								<LabelField name="ДокументыПериод" id="237">
+									<DataPath>ДокументыЗалогодателя.Period</DataPath>
+									<ContextMenu name="ДокументыПериодКонтекстноеМеню" id="238"/>
+									<ExtendedTooltip name="ДокументыПериодРасширеннаяПодсказка" id="239"/>
+								</LabelField>
+								<LabelField name="ДокументыЗалогодателяВидДокументаЗалогодателя" id="316">
+									<DataPath>ДокументыЗалогодателя.ВидДокументаЗалогодателя</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Вид документа</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="ДокументыЗалогодателяВидДокументаЗалогодателяКонтекстноеМеню" id="317"/>
+									<ExtendedTooltip name="ДокументыЗалогодателяВидДокументаЗалогодателяРасширеннаяПодсказка" id="318"/>
+								</LabelField>
+								<LabelField name="ДокументыВидДокумента" id="243">
+									<DataPath>ДокументыЗалогодателя.ВидДокумента</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Наименование документа</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="ДокументыВидДокументаКонтекстноеМеню" id="244"/>
+									<ExtendedTooltip name="ДокументыВидДокументаРасширеннаяПодсказка" id="245"/>
+								</LabelField>
+								<LabelField name="ДокументыДокументСерия" id="255">
+									<DataPath>ДокументыЗалогодателя.ДокументСерия</DataPath>
+									<ContextMenu name="ДокументыДокументСерияКонтекстноеМеню" id="256"/>
+									<ExtendedTooltip name="ДокументыДокументСерияРасширеннаяПодсказка" id="257"/>
+								</LabelField>
+								<LabelField name="ДокументыДокументНомер" id="258">
+									<DataPath>ДокументыЗалогодателя.ДокументНомер</DataPath>
+									<ContextMenu name="ДокументыДокументНомерКонтекстноеМеню" id="259"/>
+									<ExtendedTooltip name="ДокументыДокументНомерРасширеннаяПодсказка" id="260"/>
+								</LabelField>
+								<LabelField name="ДокументыДокументДатаВыдачи" id="246">
+									<DataPath>ДокументыЗалогодателя.ДокументДатаВыдачи</DataPath>
+									<ContextMenu name="ДокументыДокументДатаВыдачиКонтекстноеМеню" id="247"/>
+									<ExtendedTooltip name="ДокументыДокументДатаВыдачиРасширеннаяПодсказка" id="248"/>
+								</LabelField>
+								<LabelField name="ДокументыДокументКемВыдан" id="249">
+									<DataPath>ДокументыЗалогодателя.ДокументКемВыдан</DataPath>
+									<ContextMenu name="ДокументыДокументКемВыданКонтекстноеМеню" id="250"/>
+									<ExtendedTooltip name="ДокументыДокументКемВыданРасширеннаяПодсказка" id="251"/>
+								</LabelField>
+								<LabelField name="ДокументыДокументКодПодразделения" id="252">
+									<DataPath>ДокументыЗалогодателя.ДокументКодПодразделения</DataPath>
+									<ContextMenu name="ДокументыДокументКодПодразделенияКонтекстноеМеню" id="253"/>
+									<ExtendedTooltip name="ДокументыДокументКодПодразделенияРасширеннаяПодсказка" id="254"/>
+								</LabelField>
+								<LabelField name="ДокументыЗалогодателяДокументНачалоДействия" id="310">
+									<DataPath>ДокументыЗалогодателя.ДокументНачалоДействия</DataPath>
+									<ContextMenu name="ДокументыЗалогодателяДокументНачалоДействияКонтекстноеМеню" id="311"/>
+									<ExtendedTooltip name="ДокументыЗалогодателяДокументНачалоДействияРасширеннаяПодсказка" id="312"/>
+								</LabelField>
+								<LabelField name="ДокументыЗалогодателяДокументСрокДействия" id="313">
+									<DataPath>ДокументыЗалогодателя.ДокументСрокДействия</DataPath>
+									<ContextMenu name="ДокументыЗалогодателяДокументСрокДействияКонтекстноеМеню" id="314"/>
+									<ExtendedTooltip name="ДокументыЗалогодателяДокументСрокДействияРасширеннаяПодсказка" id="315"/>
+								</LabelField>
+								<LabelField name="ДокументыЗалогодателяЗалогодатель" id="319">
+									<DataPath>ДокументыЗалогодателя.ДокументЗалогодателя.Owner</DataPath>
+									<ContextMenu name="ДокументыЗалогодателяЗалогодательКонтекстноеМеню" id="320"/>
+									<ExtendedTooltip name="ДокументыЗалогодателяЗалогодательРасширеннаяПодсказка" id="321"/>
+								</LabelField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="ГруппаКонтактныеДанные" id="112">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Контактная информация </v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа контактные данные</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Behavior>Collapsible</Behavior>
+					<Collapsed>true</Collapsed>
+					<ControlRepresentation>Picture</ControlRepresentation>
+					<Representation>None</Representation>
+					<ExtendedTooltip name="ГруппаКонтактныеДанныеРасширеннаяПодсказка" id="113"/>
+					<ChildItems>
+						<Table name="КонтактнаяИнформацияЗалогодателя" id="261">
+							<Representation>List</Representation>
+							<SelectionMode>SingleRow</SelectionMode>
+							<UseAlternationRowColor>true</UseAlternationRowColor>
+							<EnableStartDrag>true</EnableStartDrag>
+							<DataPath>КонтактнаяИнформацияЗалогодателя</DataPath>
+							<RowPictureDataPath>КонтактнаяИнформацияЗалогодателя.DefaultPicture</RowPictureDataPath>
+							<CommandSet>
+								<ExcludedCommand>Change</ExcludedCommand>
+								<ExcludedCommand>CopyToClipboard</ExcludedCommand>
+								<ExcludedCommand>SearchEverywhere</ExcludedCommand>
+							</CommandSet>
+							<AutoRefresh>false</AutoRefresh>
+							<AutoRefreshPeriod>60</AutoRefreshPeriod>
+							<Period>
+								<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+								<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+								<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+							</Period>
+							<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+							<RestoreCurrentRow>false</RestoreCurrentRow>
+							<TopLevelParent xsi:nil="true"/>
+							<ShowRoot>true</ShowRoot>
+							<AllowRootChoice>false</AllowRootChoice>
+							<UpdateOnDataChange>Auto</UpdateOnDataChange>
+							<AllowGettingCurrentRowURL>true</AllowGettingCurrentRowURL>
+							<ContextMenu name="КонтактнаяИнформацияЗалогодателяКонтекстноеМеню" id="262"/>
+							<AutoCommandBar name="КонтактнаяИнформацияЗалогодателяКоманднаяПанель" id="263"/>
+							<ExtendedTooltip name="КонтактнаяИнформацияЗалогодателяРасширеннаяПодсказка" id="264"/>
+							<SearchStringAddition name="КонтактнаяИнформацияЗалогодателяСтрокаПоиска" id="265">
+								<AdditionSource>
+									<Item>КонтактнаяИнформацияЗалогодателя</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="КонтактнаяИнформацияЗалогодателяСтрокаПоискаКонтекстноеМеню" id="266"/>
+								<ExtendedTooltip name="КонтактнаяИнформацияЗалогодателяСтрокаПоискаРасширеннаяПодсказка" id="267"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="КонтактнаяИнформацияЗалогодателяСостояниеПросмотра" id="268">
+								<AdditionSource>
+									<Item>КонтактнаяИнформацияЗалогодателя</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="КонтактнаяИнформацияЗалогодателяСостояниеПросмотраКонтекстноеМеню" id="269"/>
+								<ExtendedTooltip name="КонтактнаяИнформацияЗалогодателяСостояниеПросмотраРасширеннаяПодсказка" id="270"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="КонтактнаяИнформацияЗалогодателяУправлениеПоиском" id="271">
+								<AdditionSource>
+									<Item>КонтактнаяИнформацияЗалогодателя</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="КонтактнаяИнформацияЗалогодателяУправлениеПоискомКонтекстноеМеню" id="272"/>
+								<ExtendedTooltip name="КонтактнаяИнформацияЗалогодателяУправлениеПоискомРасширеннаяПодсказка" id="273"/>
+							</SearchControlAddition>
+							<Events>
+								<Event name="BeforeAddRow">КонтактнаяИнформацияЗалогодателяПередНачаломДобавления</Event>
+							</Events>
+							<ChildItems>
+								<LabelField name="КонтактнаяИнформацияЗалогодателяПериод" id="274">
+									<DataPath>КонтактнаяИнформацияЗалогодателя.Period</DataPath>
+									<ContextMenu name="КонтактнаяИнформацияЗалогодателяПериодКонтекстноеМеню" id="275"/>
+									<ExtendedTooltip name="КонтактнаяИнформацияЗалогодателяПериодРасширеннаяПодсказка" id="276"/>
+								</LabelField>
+								<LabelField name="КонтактнаяИнформацияЗалогодателяГражданство" id="286">
+									<DataPath>КонтактнаяИнформацияЗалогодателя.Гражданство</DataPath>
+									<ContextMenu name="КонтактнаяИнформацияЗалогодателяГражданствоКонтекстноеМеню" id="287"/>
+									<ExtendedTooltip name="КонтактнаяИнформацияЗалогодателяГражданствоРасширеннаяПодсказка" id="288"/>
+								</LabelField>
+								<LabelField name="КонтактнаяИнформацияЗалогодателяДатаРождения" id="280">
+									<DataPath>КонтактнаяИнформацияЗалогодателя.ДатаРождения</DataPath>
+									<ContextMenu name="КонтактнаяИнформацияЗалогодателяДатаРожденияКонтекстноеМеню" id="281"/>
+									<ExtendedTooltip name="КонтактнаяИнформацияЗалогодателяДатаРожденияРасширеннаяПодсказка" id="282"/>
+								</LabelField>
+								<LabelField name="КонтактнаяИнформацияЗалогодателяМестоРождения" id="283">
+									<DataPath>КонтактнаяИнформацияЗалогодателя.МестоРождения</DataPath>
+									<ContextMenu name="КонтактнаяИнформацияЗалогодателяМестоРожденияКонтекстноеМеню" id="284"/>
+									<ExtendedTooltip name="КонтактнаяИнформацияЗалогодателяМестоРожденияРасширеннаяПодсказка" id="285"/>
+								</LabelField>
+								<LabelField name="КонтактнаяИнформацияЗалогодателяТелефон" id="289">
+									<DataPath>КонтактнаяИнформацияЗалогодателя.Телефон</DataPath>
+									<ContextMenu name="КонтактнаяИнформацияЗалогодателяТелефонКонтекстноеМеню" id="290"/>
+									<ExtendedTooltip name="КонтактнаяИнформацияЗалогодателяТелефонРасширеннаяПодсказка" id="291"/>
+								</LabelField>
+								<LabelField name="КонтактнаяИнформацияЗалогодателяEmail" id="292">
+									<DataPath>КонтактнаяИнформацияЗалогодателя.Email</DataPath>
+									<ContextMenu name="КонтактнаяИнформацияЗалогодателяEmailКонтекстноеМеню" id="293"/>
+									<ExtendedTooltip name="КонтактнаяИнформацияЗалогодателяEmailРасширеннаяПодсказка" id="294"/>
+								</LabelField>
+								<LabelField name="КонтактнаяИнформацияЗалогодателяАдресПоПрописке" id="295">
+									<DataPath>КонтактнаяИнформацияЗалогодателя.АдресПоПрописке</DataPath>
+									<ContextMenu name="КонтактнаяИнформацияЗалогодателяАдресПоПропискеКонтекстноеМеню" id="296"/>
+									<ExtendedTooltip name="КонтактнаяИнформацияЗалогодателяАдресПоПропискеРасширеннаяПодсказка" id="297"/>
+								</LabelField>
+								<CheckBoxField name="КонтактнаяИнформацияЗалогодателяЗапретНаСМСРассылку" id="301">
+									<DataPath>~КонтактнаяИнформацияЗалогодателя.ЗапретНаСМСРассылку</DataPath>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="КонтактнаяИнформацияЗалогодателяЗапретНаСМСРассылкуКонтекстноеМеню" id="302"/>
+									<ExtendedTooltip name="КонтактнаяИнформацияЗалогодателяЗапретНаСМСРассылкуРасширеннаяПодсказка" id="303"/>
+								</CheckBoxField>
+								<LabelField name="КонтактнаяИнформацияЗалогодателяЗалогодатель" id="307">
+									<DataPath>КонтактнаяИнформацияЗалогодателя.Залогодатель</DataPath>
+									<Visible>false</Visible>
+									<ContextMenu name="КонтактнаяИнформацияЗалогодателяЗалогодательКонтекстноеМеню" id="308"/>
+									<ExtendedTooltip name="КонтактнаяИнформацияЗалогодателяЗалогодательРасширеннаяПодсказка" id="309"/>
+								</LabelField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:CatalogObject.ЛБ_Залогодатели</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+		</Attribute>
+		<Attribute name="ДокументыЗалогодателя" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Документы залогодателя</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:DynamicList</v8:Type>
+			</Type>
+			<UseAlways>
+				<Field>~ДокументыЗалогодателя.Залогодатель</Field>
+				<Field>ДокументыЗалогодателя.Period</Field>
+				<Field>ДокументыЗалогодателя.ВидДокумента</Field>
+				<Field>ДокументыЗалогодателя.ДокументДатаВыдачи</Field>
+				<Field>ДокументыЗалогодателя.ДокументКемВыдан</Field>
+				<Field>ДокументыЗалогодателя.ДокументКодПодразделения</Field>
+				<Field>ДокументыЗалогодателя.ДокументНомер</Field>
+				<Field>ДокументыЗалогодателя.ДокументСерия</Field>
+			</UseAlways>
+			<Settings xsi:type="DynamicList">
+				<ManualQuery>false</ManualQuery>
+				<DynamicDataRead>false</DynamicDataRead>
+				<MainTable>InformationRegister.ЛБ_ДокументыЗалогодателей.SliceLast</MainTable>
+				<ListSettings>
+					<dcsset:filter>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>dfcece9d-5077-440b-b6b3-45a5cb4538eb</dcsset:userSettingID>
+					</dcsset:filter>
+					<dcsset:order>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>88619765-ccb3-46c6-ac52-38e9c992ebd4</dcsset:userSettingID>
+					</dcsset:order>
+					<dcsset:conditionalAppearance>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>b75fecce-942b-4aed-abc9-e6a02e460fb3</dcsset:userSettingID>
+					</dcsset:conditionalAppearance>
+					<dcsset:itemsViewMode>Normal</dcsset:itemsViewMode>
+					<dcsset:itemsUserSettingID>911b6018-f537-43e8-a417-da56b22f9aec</dcsset:itemsUserSettingID>
+				</ListSettings>
+			</Settings>
+		</Attribute>
+		<Attribute name="КонтактнаяИнформацияЗалогодателя" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Контактная информация залогодателя</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:DynamicList</v8:Type>
+			</Type>
+			<Settings xsi:type="DynamicList">
+				<ManualQuery>false</ManualQuery>
+				<DynamicDataRead>false</DynamicDataRead>
+				<MainTable>InformationRegister.ЛБ_КонтактнаяИнформацияЗалогодателей.SliceLast</MainTable>
+				<ListSettings>
+					<dcsset:filter>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>dfcece9d-5077-440b-b6b3-45a5cb4538eb</dcsset:userSettingID>
+					</dcsset:filter>
+					<dcsset:order>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>88619765-ccb3-46c6-ac52-38e9c992ebd4</dcsset:userSettingID>
+					</dcsset:order>
+					<dcsset:conditionalAppearance>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>b75fecce-942b-4aed-abc9-e6a02e460fb3</dcsset:userSettingID>
+					</dcsset:conditionalAppearance>
+					<dcsset:itemsViewMode>Normal</dcsset:itemsViewMode>
+					<dcsset:itemsUserSettingID>911b6018-f537-43e8-a417-da56b22f9aec</dcsset:itemsUserSettingID>
+				</ListSettings>
+			</Settings>
+		</Attribute>
+	</Attributes>
+	<CommandInterface>
+		<NavigationPanel>
+			<Item>
+				<Command>InformationRegister.ЛБ_СтатусыЗалогодателей.StandardCommand.OpenByValue.Залогодатель</Command>
+				<Type>Auto</Type>
+				<CommandGroup>FormNavigationPanelGoTo</CommandGroup>
+				<DefaultVisible>false</DefaultVisible>
+				<Visible>
+					<xr:Common>false</xr:Common>
+				</Visible>
+			</Item>
+			<Item>
+				<Command>Catalog.ЛБ_ДокументыЗалогодателя.StandardCommand.OpenByValue</Command>
+				<Type>Auto</Type>
+				<CommandGroup>FormNavigationPanelGoTo</CommandGroup>
+				<Index>1</Index>
+				<DefaultVisible>false</DefaultVisible>
+				<Visible>
+					<xr:Common>false</xr:Common>
+				</Visible>
+			</Item>
+			<Item>
+				<Command>InformationRegister.ЛБ_АнкетаЗалогодателя.StandardCommand.OpenByValue.Залогодатель</Command>
+				<Type>Auto</Type>
+				<DefaultVisible>false</DefaultVisible>
+				<Visible>
+					<xr:Common>false</xr:Common>
+				</Visible>
+			</Item>
+		</NavigationPanel>
+	</CommandInterface>
+</Form>

@@ -1,0 +1,381 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.20">
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<UseForFoldersAndItems>Items</UseForFoldersAndItems>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="OnReadAtServer">ПриЧтенииНаСервере</Event>
+		<Event name="OnOpen">ПриОткрытии</Event>
+		<Event name="BeforeWrite">ПередЗаписью</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+		<Event name="BeforeWriteAtServer">ПередЗаписьюНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="ГруппаНаименование" id="28">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа наименование</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа наименование</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаНаименованиеРасширеннаяПодсказка" id="29"/>
+			<ChildItems>
+				<InputField name="Наименование" id="4">
+					<DataPath>Объект.Description</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<ContextMenu name="НаименованиеКонтекстноеМеню" id="5"/>
+					<ExtendedTooltip name="НаименованиеРасширеннаяПодсказка" id="6"/>
+				</InputField>
+				<InputField name="Дата" id="215">
+					<DataPath>Объект.Дата</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Создан</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+					<ContextMenu name="ДатаКонтекстноеМеню" id="216"/>
+					<ExtendedTooltip name="ДатаРасширеннаяПодсказка" id="217"/>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+		<InputField name="СхемаКредитования" id="209">
+			<DataPath>Объект.СхемаКредитования</DataPath>
+			<AutoMaxWidth>false</AutoMaxWidth>
+			<CreateButton>false</CreateButton>
+			<QuickChoice>true</QuickChoice>
+			<ContextMenu name="СхемаКредитованияКонтекстноеМеню" id="210"/>
+			<ExtendedTooltip name="СхемаКредитованияРасширеннаяПодсказка" id="211"/>
+		</InputField>
+		<UsualGroup name="ГруппаПроцентныеСтавки" id="116">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Ставки %</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа процентные ставки</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Width>50</Width>
+			<Height>5</Height>
+			<Group>Vertical</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаПроцентныеСтавкиРасширеннаяПодсказка" id="117"/>
+			<ChildItems>
+				<Table name="ТаблицаСтавок" id="154">
+					<Representation>List</Representation>
+					<AutoInsertNewRow>true</AutoInsertNewRow>
+					<EnableStartDrag>true</EnableStartDrag>
+					<EnableDrag>true</EnableDrag>
+					<DataPath>Объект.СтавкиПроцентов</DataPath>
+					<RowFilter xsi:nil="true"/>
+					<ContextMenu name="ТаблицаСтавокКонтекстноеМеню" id="155"/>
+					<AutoCommandBar name="ТаблицаСтавокКоманднаяПанель" id="156">
+						<ChildItems>
+							<Popup name="ТаблицаСтавокГруппаМеню" id="184">
+								<Title>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Помощник заполнения</v8:content>
+									</v8:item>
+								</Title>
+								<ToolTip>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Таблица ставок группа меню</v8:content>
+									</v8:item>
+								</ToolTip>
+								<ExtendedTooltip name="ТаблицаСтавокГруппаМенюРасширеннаяПодсказка" id="185"/>
+								<ChildItems>
+									<Button name="ТаблицаСтавокКнопкаЗаполнить" id="182">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Command.ЗаполнениеПроцентныхСтавок</CommandName>
+										<Title>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Заполнить таблицу</v8:content>
+											</v8:item>
+										</Title>
+										<ExtendedTooltip name="ТаблицаСтавокКнопкаЗаполнитьРасширеннаяПодсказка" id="183"/>
+									</Button>
+									<Button name="ТаблицаСтавокКнопкаДобавить" id="186">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Command.ДобавлениеПроцентныхСтавок</CommandName>
+										<Title>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Добавить в таблицу</v8:content>
+											</v8:item>
+										</Title>
+										<ExtendedTooltip name="ТаблицаСтавокКнопкаДобавитьРасширеннаяПодсказка" id="187"/>
+									</Button>
+								</ChildItems>
+							</Popup>
+							<Popup name="ТаблицаСтавокГруппаОчистить" id="203">
+								<Title>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Очистить по</v8:content>
+									</v8:item>
+								</Title>
+								<ToolTip>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Таблица ставок группа очистить</v8:content>
+									</v8:item>
+								</ToolTip>
+								<ExtendedTooltip name="ТаблицаСтавокГруппаОчиститьРасширеннаяПодсказка" id="204"/>
+								<ChildItems>
+									<Button name="ТаблицаСтавокКнопкаОчиститьПоПричинеПрименения" id="205">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Command.ОчиститьПоПричинеПрименения</CommandName>
+										<Title>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>причине применения</v8:content>
+											</v8:item>
+										</Title>
+										<ExtendedTooltip name="ТаблицаСтавокКнопкаОчиститьПоПричинеПримененияРасширеннаяПодсказка" id="206"/>
+									</Button>
+									<Button name="ТаблицаСтавокКнопкаОчиститьПоСтатусуКлиента" id="207">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Command.ОчиститьПоСтатусуКлиента</CommandName>
+										<Title>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>статусу клиента</v8:content>
+											</v8:item>
+										</Title>
+										<ExtendedTooltip name="ТаблицаСтавокКнопкаОчиститьПоСтатусуКлиентаРасширеннаяПодсказка" id="208"/>
+									</Button>
+								</ChildItems>
+							</Popup>
+						</ChildItems>
+					</AutoCommandBar>
+					<ExtendedTooltip name="ТаблицаСтавокРасширеннаяПодсказка" id="157"/>
+					<SearchStringAddition name="ТаблицаСтавокСтрокаПоиска" id="158">
+						<AdditionSource>
+							<Item>ТаблицаСтавок</Item>
+							<Type>SearchStringRepresentation</Type>
+						</AdditionSource>
+						<ContextMenu name="ТаблицаСтавокСтрокаПоискаКонтекстноеМеню" id="159"/>
+						<ExtendedTooltip name="ТаблицаСтавокСтрокаПоискаРасширеннаяПодсказка" id="160"/>
+					</SearchStringAddition>
+					<ViewStatusAddition name="ТаблицаСтавокСостояниеПросмотра" id="161">
+						<AdditionSource>
+							<Item>ТаблицаСтавок</Item>
+							<Type>ViewStatusRepresentation</Type>
+						</AdditionSource>
+						<ContextMenu name="ТаблицаСтавокСостояниеПросмотраКонтекстноеМеню" id="162"/>
+						<ExtendedTooltip name="ТаблицаСтавокСостояниеПросмотраРасширеннаяПодсказка" id="163"/>
+					</ViewStatusAddition>
+					<SearchControlAddition name="ТаблицаСтавокУправлениеПоиском" id="164">
+						<AdditionSource>
+							<Item>ТаблицаСтавок</Item>
+							<Type>SearchControl</Type>
+						</AdditionSource>
+						<ContextMenu name="ТаблицаСтавокУправлениеПоискомКонтекстноеМеню" id="165"/>
+						<ExtendedTooltip name="ТаблицаСтавокУправлениеПоискомРасширеннаяПодсказка" id="166"/>
+					</SearchControlAddition>
+					<ChildItems>
+						<LabelField name="ТаблицаСтавокНомерСтроки" id="188">
+							<DataPath>Объект.СтавкиПроцентов.LineNumber</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ТаблицаСтавокНомерСтрокиКонтекстноеМеню" id="189"/>
+							<ExtendedTooltip name="ТаблицаСтавокНомерСтрокиРасширеннаяПодсказка" id="190"/>
+						</LabelField>
+						<InputField name="ТаблицаСтавокПричинаПрименения" id="191">
+							<DataPath>Объект.СтавкиПроцентов.ПричинаПрименения</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Причина применения % схемы</v8:content>
+								</v8:item>
+							</Title>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ТаблицаСтавокПричинаПримененияКонтекстноеМеню" id="192"/>
+							<ExtendedTooltip name="ТаблицаСтавокПричинаПримененияРасширеннаяПодсказка" id="193"/>
+						</InputField>
+						<InputField name="ТаблицаСтавокДеньНачалаПрименения" id="212">
+							<DataPath>Объект.СтавкиПроцентов.ДеньНачалаПрименения</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ТаблицаСтавокДеньНачалаПримененияКонтекстноеМеню" id="213"/>
+							<ExtendedTooltip name="ТаблицаСтавокДеньНачалаПримененияРасширеннаяПодсказка" id="214"/>
+						</InputField>
+						<InputField name="ТаблицаСтавокСтатусЗалогодателя" id="194">
+							<DataPath>Объект.СтавкиПроцентов.СтатусЗалогодателя</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Статус клиента</v8:content>
+								</v8:item>
+							</Title>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ТаблицаСтавокСтатусЗалогодателяКонтекстноеМеню" id="195"/>
+							<ExtendedTooltip name="ТаблицаСтавокСтатусЗалогодателяРасширеннаяПодсказка" id="196"/>
+						</InputField>
+						<InputField name="ТаблицаСтавокДиапазонСумм" id="197">
+							<DataPath>Объект.СтавкиПроцентов.ДиапазонСумм</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ТаблицаСтавокДиапазонСуммКонтекстноеМеню" id="198"/>
+							<ExtendedTooltip name="ТаблицаСтавокДиапазонСуммРасширеннаяПодсказка" id="199"/>
+						</InputField>
+					</ChildItems>
+				</Table>
+				<CommandBar name="ГруппаМенюИнформацияПроцентныеСтавки" id="149">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа меню процентные ставки</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа меню информация вставки</v8:content>
+						</v8:item>
+					</ToolTip>
+					<CommandSource>Item.ИнформацияПроцентныеСтавки</CommandSource>
+					<ExtendedTooltip name="ГруппаМенюИнформацияПроцентныеСтавкиРасширеннаяПодсказка" id="150"/>
+				</CommandBar>
+				<FormattedDocumentField name="ИнформацияПроцентныеСтавки" id="151">
+					<DataPath>ИнформацияПроцентныеСтавки</DataPath>
+					<TitleLocation>None</TitleLocation>
+					<Height>5</Height>
+					<VerticalStretch>false</VerticalStretch>
+					<ContextMenu name="ИнформацияПроцентныеСтавкиКонтекстноеМеню" id="152"/>
+					<ExtendedTooltip name="ИнформацияПроцентныеСтавкиРасширеннаяПодсказка" id="153"/>
+				</FormattedDocumentField>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаПодвал" id="218">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа подвал</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа подвал</v8:content>
+				</v8:item>
+			</ToolTip>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаПодвалРасширеннаяПодсказка" id="219"/>
+			<ChildItems>
+				<InputField name="Ответственный" id="220">
+					<DataPath>Объект.Ответственный</DataPath>
+					<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+					<ContextMenu name="ОтветственныйКонтекстноеМеню" id="221"/>
+					<ExtendedTooltip name="ОтветственныйРасширеннаяПодсказка" id="222"/>
+				</InputField>
+				<InputField name="Комментарий" id="223">
+					<DataPath>Объект.Комментарий</DataPath>
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+					<ContextMenu name="КомментарийКонтекстноеМеню" id="224"/>
+					<ExtendedTooltip name="КомментарийРасширеннаяПодсказка" id="225"/>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:CatalogObject.ЛБ_ШаблоныПриказовПроцентныеСтавки</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+		</Attribute>
+		<Attribute name="ИнформацияПроцентныеСтавки" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Информация процентные ставки</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type xmlns:fd="http://v8.1c.ru/8.2/data/formatted-document">fd:FormattedDocument</v8:Type>
+			</Type>
+			<SavedData>true</SavedData>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="ЗаполнениеПроцентныхСтавок" id="10">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заполнение процентных ставок</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заполнение процентных ставок</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ЗаполнениеПроцентныхСтавок</Action>
+		</Command>
+		<Command name="ОчиститьПоПричинеПрименения" id="11">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Очистить по причине применения</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Очистить по причине применения</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ОчиститьПоПричинеПрименения</Action>
+		</Command>
+		<Command name="ОчиститьПоСтатусуКлиента" id="12">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Очистить по статусу клиента</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Очистить по статусу клиента</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ОчиститьПоСтатусуКлиента</Action>
+		</Command>
+		<Command name="ДобавлениеПроцентныхСтавок" id="13">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Добавление процентных ставок</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Добавление процентных ставок</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ДобавлениеПроцентныхСтавок</Action>
+		</Command>
+	</Commands>
+</Form>

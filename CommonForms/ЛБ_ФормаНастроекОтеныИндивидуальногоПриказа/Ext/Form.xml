@@ -1,0 +1,944 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.20">
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<Autofill>false</Autofill>
+		<ChildItems>
+			<Button name="ФормаСохранитьИЗакрыть" id="72">
+				<Type>CommandBarButton</Type>
+				<DefaultButton>true</DefaultButton>
+				<CommandName>Form.Command.СохранитьИЗакрыть</CommandName>
+				<ExtendedTooltip name="ФормаСохранитьИЗакрытьРасширеннаяПодсказка" id="73"/>
+			</Button>
+			<Button name="ФормаКнопкаЗакрыть" id="43">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.StandardCommand.Close</CommandName>
+				<ExtendedTooltip name="ФормаКнопкаЗакрытьРасширеннаяПодсказка" id="44"/>
+			</Button>
+		</ChildItems>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="ГруппаПриказ" id="51">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа приказ</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа приказ</v8:content>
+				</v8:item>
+			</ToolTip>
+			<HorizontalStretch>true</HorizontalStretch>
+			<Group>AlwaysHorizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ThroughAlign>DontUse</ThroughAlign>
+			<ExtendedTooltip name="ГруппаПриказРасширеннаяПодсказка" id="52"/>
+			<ChildItems>
+				<Button name="ВыбратьПриказ" id="77">
+					<Type>UsualButton</Type>
+					<GroupHorizontalAlign>Right</GroupHorizontalAlign>
+					<CommandName>Form.Command.ВыбратьПриказ</CommandName>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Загрузить залогодателей из приказа</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="ВыбратьПриказРасширеннаяПодсказка" id="78"/>
+				</Button>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаЗалогодатели" id="53">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа залогодатели</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа залогодатели</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>AlwaysHorizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаЗалогодателиРасширеннаяПодсказка" id="54"/>
+			<ChildItems>
+				<UsualGroup name="ГруппаЗалогодателиКнопка" id="90">
+					<Visible>false</Visible>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа залогодатели кнопка</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа залогодатели кнопка</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>Vertical</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаЗалогодателиКнопкаРасширеннаяПодсказка" id="91"/>
+					<ChildItems>
+						<CheckBoxField name="ОтменаЗалогодателей" id="45">
+							<DataPath>ОтменаЗалогодателей</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>По залогодателям</v8:content>
+								</v8:item>
+							</Title>
+							<CheckBoxType>Tumbler</CheckBoxType>
+							<EditFormat>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>БЛ=Частично; БИ=Всем</v8:content>
+								</v8:item>
+							</EditFormat>
+							<ContextMenu name="ОтменаЗалогодателейКонтекстноеМеню" id="46"/>
+							<ExtendedTooltip name="ОтменаЗалогодателейРасширеннаяПодсказка" id="47"/>
+							<Events>
+								<Event name="OnChange">СписокЗалогодателейПриИзменении</Event>
+							</Events>
+						</CheckBoxField>
+						<LabelDecoration name="ДекорацияЗалогодатели" id="92">
+							<Visible>false</Visible>
+							<TextColor>style:SpecialTextColor</TextColor>
+							<Font ref="style:NormalTextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem" scale="100"/>
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Оставьте в списке только тех, для кого
+необходимо выполнить отмену.
+В списке не отображаются залогодатели
+у которых нечего отменять.</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="ДекорацияЗалогодателиКонтекстноеМеню" id="93"/>
+							<ExtendedTooltip name="ДекорацияЗалогодателиРасширеннаяПодсказка" id="94"/>
+						</LabelDecoration>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаТЧЗалогодателей" id="95">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа ТЧЗалогодателей</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа ТЧЗалогодателей</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>AlwaysHorizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаТЧЗалогодателейРасширеннаяПодсказка" id="96"/>
+			<ChildItems>
+				<UsualGroup name="ГруппаЗалогодателиВДокументеОтмены" id="97">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Залогодатели в отменяемом приказе:</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа залогодатели в документе отмены</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="ГруппаЗалогодателиВДокументеОтменыРасширеннаяПодсказка" id="98"/>
+					<ChildItems>
+						<Table name="Залогодатели" id="99">
+							<Representation>List</Representation>
+							<ReadOnly>true</ReadOnly>
+							<AutoMaxHeight>false</AutoMaxHeight>
+							<MaxHeight>6</MaxHeight>
+							<HeightControlVariant>UseHeightInFormRows</HeightControlVariant>
+							<RowSelectionMode>Row</RowSelectionMode>
+							<Footer>true</Footer>
+							<UseAlternationRowColor>true</UseAlternationRowColor>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<DataPath>Залогодатели</DataPath>
+							<RowFilter xsi:nil="true"/>
+							<ContextMenu name="ЗалогодателиКонтекстноеМеню" id="100"/>
+							<AutoCommandBar name="ЗалогодателиКоманднаяПанель" id="101">
+								<HorizontalAlign>Right</HorizontalAlign>
+								<Autofill>false</Autofill>
+							</AutoCommandBar>
+							<ExtendedTooltip name="ЗалогодателиРасширеннаяПодсказка" id="102"/>
+							<SearchStringAddition name="ЗалогодателиСтрокаПоиска" id="103">
+								<AdditionSource>
+									<Item>Залогодатели</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ЗалогодателиСтрокаПоискаКонтекстноеМеню" id="104"/>
+								<ExtendedTooltip name="ЗалогодателиСтрокаПоискаРасширеннаяПодсказка" id="105"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="ЗалогодателиСостояниеПросмотра" id="106">
+								<AdditionSource>
+									<Item>Залогодатели</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ЗалогодателиСостояниеПросмотраКонтекстноеМеню" id="107"/>
+								<ExtendedTooltip name="ЗалогодателиСостояниеПросмотраРасширеннаяПодсказка" id="108"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="ЗалогодателиУправлениеПоиском" id="109">
+								<AdditionSource>
+									<Item>Залогодатели</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="ЗалогодателиУправлениеПоискомКонтекстноеМеню" id="110"/>
+								<ExtendedTooltip name="ЗалогодателиУправлениеПоискомРасширеннаяПодсказка" id="111"/>
+							</SearchControlAddition>
+							<Events>
+								<Event name="Selection">ЗалогодателиВыбор</Event>
+							</Events>
+							<ChildItems>
+								<InputField name="ЗалогодателиЗалогодатель" id="112">
+									<DataPath>Залогодатели.Залогодатель</DataPath>
+									<ReadOnly>true</ReadOnly>
+									<EditMode>EnterOnInput</EditMode>
+									<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+									<ContextMenu name="ЗалогодателиЗалогодательКонтекстноеМеню" id="113"/>
+									<ExtendedTooltip name="ЗалогодателиЗалогодательРасширеннаяПодсказка" id="114"/>
+								</InputField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="ГруппаКнопки" id="135">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа кнопки</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа кнопки</v8:content>
+						</v8:item>
+					</ToolTip>
+					<GroupVerticalAlign>Center</GroupVerticalAlign>
+					<Group>Vertical</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаКнопкиРасширеннаяПодсказка" id="136"/>
+					<ChildItems>
+						<Button name="ЗалогодателиДобавить" id="115">
+							<Type>UsualButton</Type>
+							<Representation>Picture</Representation>
+							<SkipOnInput>true</SkipOnInput>
+							<GroupHorizontalAlign>Center</GroupHorizontalAlign>
+							<GroupVerticalAlign>Center</GroupVerticalAlign>
+							<CommandName>Form.Command.Добавить</CommandName>
+							<Picture>
+								<xr:Ref>StdPicture.MoveRight</xr:Ref>
+								<xr:LoadTransparent>true</xr:LoadTransparent>
+							</Picture>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Выбрать</v8:content>
+								</v8:item>
+							</Title>
+							<ExtendedTooltip name="ЗалогодателиДобавитьРасширеннаяПодсказка" id="116"/>
+						</Button>
+						<Button name="Удалить" id="137">
+							<Type>UsualButton</Type>
+							<Representation>Picture</Representation>
+							<CommandName>Form.Command.Удалить</CommandName>
+							<ExtendedTooltip name="УдалитьРасширеннаяПодсказка" id="138"/>
+						</Button>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="ГруппаЗалогодателиВыбранные" id="117">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Выбранные залогодатели:</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа залогодатели выбранные</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="ГруппаЗалогодателиВыбранныеРасширеннаяПодсказка" id="118"/>
+					<ChildItems>
+						<Table name="ЗалогодателиВыбранные" id="119">
+							<Representation>List</Representation>
+							<AutoMaxHeight>false</AutoMaxHeight>
+							<MaxHeight>6</MaxHeight>
+							<HeightControlVariant>UseHeightInFormRows</HeightControlVariant>
+							<Footer>true</Footer>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<DataPath>ЗалогодателиВыбранные</DataPath>
+							<RowFilter xsi:nil="true"/>
+							<ContextMenu name="ЗалогодателиВыбранныеКонтекстноеМеню" id="120"/>
+							<AutoCommandBar name="ЗалогодателиВыбранныеКоманднаяПанель" id="121">
+								<HorizontalAlign>Right</HorizontalAlign>
+								<Autofill>false</Autofill>
+							</AutoCommandBar>
+							<ExtendedTooltip name="ЗалогодателиВыбранныеРасширеннаяПодсказка" id="122"/>
+							<SearchStringAddition name="ЗалогодателиВыбранныеСтрокаПоиска" id="123">
+								<AdditionSource>
+									<Item>ЗалогодателиВыбранные</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ЗалогодателиВыбранныеСтрокаПоискаКонтекстноеМеню" id="124"/>
+								<ExtendedTooltip name="ЗалогодателиВыбранныеСтрокаПоискаРасширеннаяПодсказка" id="125"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="ЗалогодателиВыбранныеСостояниеПросмотра" id="126">
+								<AdditionSource>
+									<Item>ЗалогодателиВыбранные</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ЗалогодателиВыбранныеСостояниеПросмотраКонтекстноеМеню" id="127"/>
+								<ExtendedTooltip name="ЗалогодателиВыбранныеСостояниеПросмотраРасширеннаяПодсказка" id="128"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="ЗалогодателиВыбранныеУправлениеПоиском" id="129">
+								<AdditionSource>
+									<Item>ЗалогодателиВыбранные</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="ЗалогодателиВыбранныеУправлениеПоискомКонтекстноеМеню" id="130"/>
+								<ExtendedTooltip name="ЗалогодателиВыбранныеУправлениеПоискомРасширеннаяПодсказка" id="131"/>
+							</SearchControlAddition>
+							<Events>
+								<Event name="Selection">ЗалогодателиВыбранныеВыбор</Event>
+								<Event name="BeforeAddRow">ЗалогодателиВыбранныеПередНачаломДобавления</Event>
+								<Event name="BeforeDeleteRow">ЗалогодателиВыбранныеПередУдалением</Event>
+							</Events>
+							<ChildItems>
+								<InputField name="ЗалогодателиВыбранныеЗалогодатель" id="132">
+									<DataPath>ЗалогодателиВыбранные.Залогодатель</DataPath>
+									<ReadOnly>true</ReadOnly>
+									<EditMode>EnterOnInput</EditMode>
+									<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+									<ContextMenu name="ЗалогодателиВыбранныеЗалогодательКонтекстноеМеню" id="133"/>
+									<ExtendedTooltip name="ЗалогодателиВыбранныеЗалогодательРасширеннаяПодсказка" id="134"/>
+								</InputField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаОтмен" id="79">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа отмен</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа отмен</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаОтменРасширеннаяПодсказка" id="80"/>
+			<ChildItems>
+				<CheckBoxField name="ОтменаСтавок" id="81">
+					<DataPath>ОтменаСтавок</DataPath>
+					<CheckBoxType>Switcher</CheckBoxType>
+					<ContextMenu name="ОтменаСтавокКонтекстноеМеню" id="82"/>
+					<ExtendedTooltip name="ОтменаСтавокРасширеннаяПодсказка" id="83"/>
+					<Events>
+						<Event name="OnChange">ОтменаСтавокПриИзменении</Event>
+					</Events>
+				</CheckBoxField>
+				<CheckBoxField name="ОтменаМеталлов" id="84">
+					<DataPath>ОтменаМеталлов</DataPath>
+					<CheckBoxType>Switcher</CheckBoxType>
+					<ContextMenu name="ОтменаМеталловКонтекстноеМеню" id="85"/>
+					<ExtendedTooltip name="ОтменаМеталловРасширеннаяПодсказка" id="86"/>
+					<Events>
+						<Event name="OnChange">ОтменаМеталловПриИзменении</Event>
+					</Events>
+				</CheckBoxField>
+				<CheckBoxField name="ОтменаВставкок" id="87">
+					<DataPath>ОтменаВставкок</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Отмена вставок</v8:content>
+						</v8:item>
+					</Title>
+					<CheckBoxType>Switcher</CheckBoxType>
+					<ContextMenu name="ОтменаВставкокКонтекстноеМеню" id="88"/>
+					<ExtendedTooltip name="ОтменаВставкокРасширеннаяПодсказка" id="89"/>
+					<Events>
+						<Event name="OnChange">ОтменаВставкокПриИзменении</Event>
+					</Events>
+				</CheckBoxField>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаПриказыДляОтмены" id="185">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Приказы для отмены</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа приказы для отмены</v8:content>
+				</v8:item>
+			</ToolTip>
+			<ExtendedTooltip name="ГруппаПриказыДляОтменыРасширеннаяПодсказка" id="186"/>
+			<ChildItems>
+				<Table name="ПриказыДляОтмены" id="139">
+					<Representation>List</Representation>
+					<ReadOnly>true</ReadOnly>
+					<AutoMaxHeight>false</AutoMaxHeight>
+					<HeightInTableRows>4</HeightInTableRows>
+					<AutoInsertNewRow>true</AutoInsertNewRow>
+					<EnableStartDrag>true</EnableStartDrag>
+					<EnableDrag>true</EnableDrag>
+					<DataPath>ПриказыДляОтмены</DataPath>
+					<RowFilter xsi:nil="true"/>
+					<ContextMenu name="ПриказыДляОтменыКонтекстноеМеню" id="140"/>
+					<AutoCommandBar name="ПриказыДляОтменыКоманднаяПанель" id="141">
+						<Autofill>false</Autofill>
+					</AutoCommandBar>
+					<ExtendedTooltip name="ПриказыДляОтменыРасширеннаяПодсказка" id="142"/>
+					<SearchStringAddition name="ПриказыДляОтменыСтрокаПоиска" id="143">
+						<AdditionSource>
+							<Item>ПриказыДляОтмены</Item>
+							<Type>SearchStringRepresentation</Type>
+						</AdditionSource>
+						<ContextMenu name="ПриказыДляОтменыСтрокаПоискаКонтекстноеМеню" id="144"/>
+						<ExtendedTooltip name="ПриказыДляОтменыСтрокаПоискаРасширеннаяПодсказка" id="145"/>
+					</SearchStringAddition>
+					<ViewStatusAddition name="ПриказыДляОтменыСостояниеПросмотра" id="146">
+						<AdditionSource>
+							<Item>ПриказыДляОтмены</Item>
+							<Type>ViewStatusRepresentation</Type>
+						</AdditionSource>
+						<ContextMenu name="ПриказыДляОтменыСостояниеПросмотраКонтекстноеМеню" id="147"/>
+						<ExtendedTooltip name="ПриказыДляОтменыСостояниеПросмотраРасширеннаяПодсказка" id="148"/>
+					</ViewStatusAddition>
+					<SearchControlAddition name="ПриказыДляОтменыУправлениеПоиском" id="149">
+						<AdditionSource>
+							<Item>ПриказыДляОтмены</Item>
+							<Type>SearchControl</Type>
+						</AdditionSource>
+						<ContextMenu name="ПриказыДляОтменыУправлениеПоискомКонтекстноеМеню" id="150"/>
+						<ExtendedTooltip name="ПриказыДляОтменыУправлениеПоискомРасширеннаяПодсказка" id="151"/>
+					</SearchControlAddition>
+					<ChildItems>
+						<InputField name="ПриказыДляОтменыЗалогодатель" id="187">
+							<DataPath>ПриказыДляОтмены.Залогодатель</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+							<ContextMenu name="ПриказыДляОтменыЗалогодательКонтекстноеМеню" id="188"/>
+							<ExtendedTooltip name="ПриказыДляОтменыЗалогодательРасширеннаяПодсказка" id="189"/>
+						</InputField>
+						<InputField name="ПриказыДляОтменыСистемныйНомер" id="182">
+							<DataPath>ПриказыДляОтмены.СистемныйНомер</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<Width>10</Width>
+							<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+							<ContextMenu name="ПриказыДляОтменыСистемныйНомерКонтекстноеМеню" id="183"/>
+							<ExtendedTooltip name="ПриказыДляОтменыСистемныйНомерРасширеннаяПодсказка" id="184"/>
+						</InputField>
+						<InputField name="ПриказыДляОтменыНомерПриказа" id="164">
+							<DataPath>ПриказыДляОтмены.НомерПриказа</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+							<ContextMenu name="ПриказыДляОтменыНомерПриказаКонтекстноеМеню" id="165"/>
+							<ExtendedTooltip name="ПриказыДляОтменыНомерПриказаРасширеннаяПодсказка" id="166"/>
+						</InputField>
+						<InputField name="ПриказыДляОтменыДатаДокумента" id="173">
+							<DataPath>ПриказыДляОтмены.ДатаДокумента</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<Width>12</Width>
+							<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+							<ContextMenu name="ПриказыДляОтменыДатаДокументаКонтекстноеМеню" id="174"/>
+							<ExtendedTooltip name="ПриказыДляОтменыДатаДокументаРасширеннаяПодсказка" id="175"/>
+						</InputField>
+						<InputField name="ПриказыДляОтменыДатаНачалаДействия" id="179">
+							<DataPath>ПриказыДляОтмены.ДатаНачалаДействия</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<Width>12</Width>
+							<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+							<ContextMenu name="ПриказыДляОтменыДатаНачалаДействияКонтекстноеМеню" id="180"/>
+							<ExtendedTooltip name="ПриказыДляОтменыДатаНачалаДействияРасширеннаяПодсказка" id="181"/>
+						</InputField>
+						<InputField name="ПриказыДляОтменыДатаОкончанияДействия" id="176">
+							<DataPath>ПриказыДляОтмены.ДатаОкончанияДействия</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<Width>12</Width>
+							<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+							<ContextMenu name="ПриказыДляОтменыДатаОкончанияДействияКонтекстноеМеню" id="177"/>
+							<ExtendedTooltip name="ПриказыДляОтменыДатаОкончанияДействияРасширеннаяПодсказка" id="178"/>
+						</InputField>
+						<CheckBoxField name="ПриказыДляОтменыСтавки" id="155">
+							<DataPath>ПриказыДляОтмены.Ставки</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="ПриказыДляОтменыСтавкиКонтекстноеМеню" id="156"/>
+							<ExtendedTooltip name="ПриказыДляОтменыСтавкиРасширеннаяПодсказка" id="157"/>
+						</CheckBoxField>
+						<CheckBoxField name="ПриказыДляОтменыМеталлы" id="158">
+							<DataPath>ПриказыДляОтмены.Металлы</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="ПриказыДляОтменыМеталлыКонтекстноеМеню" id="159"/>
+							<ExtendedTooltip name="ПриказыДляОтменыМеталлыРасширеннаяПодсказка" id="160"/>
+						</CheckBoxField>
+						<CheckBoxField name="ПриказыДляОтменыВставки" id="161">
+							<DataPath>ПриказыДляОтмены.Вставки</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="ПриказыДляОтменыВставкиКонтекстноеМеню" id="162"/>
+							<ExtendedTooltip name="ПриказыДляОтменыВставкиРасширеннаяПодсказка" id="163"/>
+						</CheckBoxField>
+					</ChildItems>
+				</Table>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="ОтменяемыйПриказ" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отменяемый приказ</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:DocumentRef.ЛБ_ПриказИндивидуальныеУсловия</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="Залогодатели" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Залогодатели</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="Залогодатель" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Залогодатель</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.ЛБ_Залогодатели</v8:Type>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="СхемыКредитования" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Схемы кредитования</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="СхемаКредитования" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Схема кредитования</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.ЛБ_СхемыКредитования</v8:Type>
+					</Type>
+				</Column>
+				<Column name="ШаблонПроцентныеСтавки" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Шаблон процентные ставки</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.ЛБ_ШаблоныПриказовПроцентныеСтавки</v8:Type>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="ОтменаЗалогодателей" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отмена залогодателей</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ОтменаМеталлов" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отмена металлов</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ОтменаСтавок" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отмена ставок</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ОтменаВставкок" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отмена вставкок</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ТолькоПросмотр" id="12">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Только просмотр</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ТекущийПриказ" id="13">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Текущий приказ</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:DocumentRef.ЛБ_ПриказИндивидуальныеУсловия</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="СтрокаОтменяемыйПриказ" id="14">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отменяемый приказ</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>50</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ЗалогодателиВыбранные" id="15">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Залогодатели</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="Залогодатель" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Залогодатель</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.ЛБ_Залогодатели</v8:Type>
+					</Type>
+				</Column>
+				<Column name="НетСтавок" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Нет ставок</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+				<Column name="НетМеталлов" id="3">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Нет металлов</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+				<Column name="НетВставок" id="4">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Нет вставок</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="ПриказыДляОтмены" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Приказы для отмены</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="Приказ" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Приказ</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:DocumentRef.ЛБ_ПриказИндивидуальныеУсловия</v8:Type>
+					</Type>
+				</Column>
+				<Column name="Ставки" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Ставки</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+				<Column name="Металлы" id="3">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Металлы</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+				<Column name="Вставки" id="4">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Вставки</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+				<Column name="НомерПриказа" id="5">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Номер приказа</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>10</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="ДатаНачалаДействия" id="7">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Дата начала действия</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:dateTime</v8:Type>
+						<v8:DateQualifiers>
+							<v8:DateFractions>DateTime</v8:DateFractions>
+						</v8:DateQualifiers>
+					</Type>
+				</Column>
+				<Column name="ДатаДокумента" id="8">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Дата документа</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:dateTime</v8:Type>
+						<v8:DateQualifiers>
+							<v8:DateFractions>DateTime</v8:DateFractions>
+						</v8:DateQualifiers>
+					</Type>
+				</Column>
+				<Column name="ДатаОкончанияДействия" id="9">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Дата окончания действия</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:dateTime</v8:Type>
+						<v8:DateQualifiers>
+							<v8:DateFractions>DateTime</v8:DateFractions>
+						</v8:DateQualifiers>
+					</Type>
+				</Column>
+				<Column name="СистемныйНомер" id="6">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Системный номер</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>9</v8:Digits>
+							<v8:FractionDigits>0</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="Залогодатель" id="10">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Залогодатель</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.ЛБ_Залогодатели</v8:Type>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="СохранитьИЗакрыть" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сохранить и закрыть</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сохранить и закрыть</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>СохранитьИЗакрыть</Action>
+		</Command>
+		<Command name="ВыбратьПриказ" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выбрать приказ</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выбрать приказ</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ВыбратьПриказ</Action>
+		</Command>
+		<Command name="Добавить" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Добавить</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Добавить</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>Добавить</Action>
+		</Command>
+		<Command name="Удалить" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Удалить</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Удалить</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.MoveLeft</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>Удалить</Action>
+		</Command>
+	</Commands>
+</Form>

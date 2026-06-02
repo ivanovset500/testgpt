@@ -1,0 +1,222 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.20">
+	<AutoTitle>false</AutoTitle>
+	<ShowTitle>false</ShowTitle>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<Autofill>false</Autofill>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnOpen">ПриОткрытии</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="Шапка" id="11">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Шапка</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Шапка</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Vertical</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ШапкаРасширеннаяПодсказка" id="12"/>
+			<ChildItems>
+				<LabelDecoration name="НадписьСоглашениеОбЭДО" id="3">
+					<Font ref="style:NormalTextFont" height="12" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem" scale="100"/>
+					<Title formatted="false">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Соглашение об ЭДО</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="НадписьСоглашениеОбЭДОКонтекстноеМеню" id="4"/>
+					<ExtendedTooltip name="НадписьСоглашениеОбЭДОРасширеннаяПодсказка" id="5"/>
+				</LabelDecoration>
+				<LabelDecoration name="НадписьФИОКлиента" id="6">
+					<TextColor>style:ГиперссылкаЦвет</TextColor>
+					<Font ref="style:NormalTextFont" height="10" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem" scale="100"/>
+					<ContextMenu name="НадписьФИОКлиентаКонтекстноеМеню" id="7"/>
+					<ExtendedTooltip name="НадписьФИОКлиентаРасширеннаяПодсказка" id="8"/>
+				</LabelDecoration>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ИнформацияОСоглашении" id="35">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Информация о соглашении</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Информация о соглашении</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Vertical</Group>
+			<Representation>StrongSeparation</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ИнформацияОСоглашенииРасширеннаяПодсказка" id="36"/>
+			<ChildItems>
+				<LabelField name="Заключено" id="46">
+					<DataPath>Заключено</DataPath>
+					<TitleTextColor>style:AccentColor</TitleTextColor>
+					<ContextMenu name="ЗаключеноКонтекстноеМеню" id="47"/>
+					<ExtendedTooltip name="ЗаключеноРасширеннаяПодсказка" id="48"/>
+				</LabelField>
+				<LabelField name="ВЛомбарде" id="49">
+					<DataPath>ВЛомбарде</DataPath>
+					<TitleTextColor>style:AccentColor</TitleTextColor>
+					<ContextMenu name="ВЛомбардеКонтекстноеМеню" id="50"/>
+					<ExtendedTooltip name="ВЛомбардеРасширеннаяПодсказка" id="51"/>
+				</LabelField>
+				<LabelField name="ДействуетПо" id="52">
+					<DataPath>ДействуетПо</DataPath>
+					<TitleTextColor>style:AccentColor</TitleTextColor>
+					<ContextMenu name="ДействуетПоКонтекстноеМеню" id="53"/>
+					<ExtendedTooltip name="ДействуетПоРасширеннаяПодсказка" id="54"/>
+				</LabelField>
+			</ChildItems>
+		</UsualGroup>
+		<LabelDecoration name="ВопросЗаявление" id="37">
+			<Title formatted="false">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Распечатать заявление о расторжении?</v8:content>
+				</v8:item>
+			</Title>
+			<GroupHorizontalAlign>Center</GroupHorizontalAlign>
+			<ContextMenu name="ВопросЗаявлениеКонтекстноеМеню" id="38"/>
+			<ExtendedTooltip name="ВопросЗаявлениеРасширеннаяПодсказка" id="39"/>
+		</LabelDecoration>
+		<UsualGroup name="Диалог" id="44">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Диалог</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Диалог</v8:content>
+				</v8:item>
+			</ToolTip>
+			<HorizontalStretch>true</HorizontalStretch>
+			<HorizontalAlign>Center</HorizontalAlign>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ДиалогРасширеннаяПодсказка" id="45"/>
+			<ChildItems>
+				<Button name="Да" id="40">
+					<Type>UsualButton</Type>
+					<CommandName>Form.Command.Да</CommandName>
+					<BackColor>#C0F1C0</BackColor>
+					<ExtendedTooltip name="ДаРасширеннаяПодсказка" id="41"/>
+				</Button>
+				<Button name="Нет" id="42">
+					<Type>UsualButton</Type>
+					<CommandName>Form.Command.Нет</CommandName>
+					<ExtendedTooltip name="НетРасширеннаяПодсказка" id="43"/>
+				</Button>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Клиент" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Клиент</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.ЛБ_Залогодатели</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="Заключено" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заключено</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>20</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ВЛомбарде" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>В ломбарде</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>50</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ДействуетПо" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Действует по</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>20</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="Да" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Да</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Да</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>Да</Action>
+		</Command>
+		<Command name="Нет" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Нет</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Нет</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>Нет</Action>
+		</Command>
+	</Commands>
+</Form>

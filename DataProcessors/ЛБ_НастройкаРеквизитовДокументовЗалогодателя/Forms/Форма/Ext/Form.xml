@@ -1,0 +1,369 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.20">
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<Autofill>false</Autofill>
+		<ChildItems>
+			<Button name="КнопкаОтмена" id="31">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.Command.Отмена</CommandName>
+				<Title>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Закрыть</v8:content>
+					</v8:item>
+				</Title>
+				<ExtendedTooltip name="КнопкаОтменаРасширеннаяПодсказка" id="32"/>
+			</Button>
+		</ChildItems>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<Table name="ТаблицаДокументов" id="40">
+			<Representation>List</Representation>
+			<EnableStartDrag>true</EnableStartDrag>
+			<EnableDrag>true</EnableDrag>
+			<DataPath>Объект.ТаблицаДокументов</DataPath>
+			<CommandSet>
+				<ExcludedCommand>Copy</ExcludedCommand>
+				<ExcludedCommand>Delete</ExcludedCommand>
+				<ExcludedCommand>EndEdit</ExcludedCommand>
+				<ExcludedCommand>ShowRowRearrangement</ExcludedCommand>
+			</CommandSet>
+			<RowFilter xsi:nil="true"/>
+			<ContextMenu name="ТаблицаДокументовКонтекстноеМеню" id="41"/>
+			<AutoCommandBar name="ТаблицаДокументовКоманднаяПанель" id="42"/>
+			<ExtendedTooltip name="ТаблицаДокументовРасширеннаяПодсказка" id="43"/>
+			<SearchStringAddition name="ТаблицаДокументовСтрокаПоиска" id="44">
+				<AdditionSource>
+					<Item>ТаблицаДокументов</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ТаблицаДокументовСтрокаПоискаКонтекстноеМеню" id="45"/>
+				<ExtendedTooltip name="ТаблицаДокументовСтрокаПоискаРасширеннаяПодсказка" id="46"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="ТаблицаДокументовСостояниеПросмотра" id="47">
+				<AdditionSource>
+					<Item>ТаблицаДокументов</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ТаблицаДокументовСостояниеПросмотраКонтекстноеМеню" id="48"/>
+				<ExtendedTooltip name="ТаблицаДокументовСостояниеПросмотраРасширеннаяПодсказка" id="49"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="ТаблицаДокументовУправлениеПоиском" id="50">
+				<AdditionSource>
+					<Item>ТаблицаДокументов</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="ТаблицаДокументовУправлениеПоискомКонтекстноеМеню" id="51"/>
+				<ExtendedTooltip name="ТаблицаДокументовУправлениеПоискомРасширеннаяПодсказка" id="52"/>
+			</SearchControlAddition>
+			<Events>
+				<Event name="OnEditEnd">ТаблицаДокументовПриОкончанииРедактирования</Event>
+				<Event name="BeforeAddRow">ТаблицаДокументовПередНачаломДобавления</Event>
+				<Event name="BeforeDeleteRow">ТаблицаДокументовПередУдалением</Event>
+				<Event name="OnActivateRow">ТаблицаДокументовПриАктивизацииСтроки</Event>
+				<Event name="OnStartEdit">ТаблицаДокументовПриНачалеРедактирования</Event>
+			</Events>
+			<ChildItems>
+				<InputField name="ТаблицаДокументовВидДокумента" id="59">
+					<DataPath>Объект.ТаблицаДокументов.ВидДокумента</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Наименование документа</v8:content>
+						</v8:item>
+					</Title>
+					<EditMode>EnterOnInput</EditMode>
+					<OpenButton>false</OpenButton>
+					<ListChoiceMode>true</ListChoiceMode>
+					<HeightControlVariant>UseContentHeight</HeightControlVariant>
+					<ContextMenu name="ТаблицаДокументовВидДокументаКонтекстноеМеню" id="60"/>
+					<ExtendedTooltip name="ТаблицаДокументовВидДокументаРасширеннаяПодсказка" id="61"/>
+					<Events>
+						<Event name="OnChange">ТаблицаДокументовВидДокументаПриИзменении</Event>
+					</Events>
+				</InputField>
+				<InputField name="ТаблицаДокументовВидГражданства" id="65">
+					<DataPath>Объект.ТаблицаДокументов.ВидГражданства</DataPath>
+					<ReadOnly>true</ReadOnly>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ТаблицаДокументовВидГражданстваКонтекстноеМеню" id="66"/>
+					<ExtendedTooltip name="ТаблицаДокументовВидГражданстваРасширеннаяПодсказка" id="67"/>
+				</InputField>
+				<InputField name="ТаблицаДокументовВидДокументаЗалогодателя" id="56">
+					<DataPath>Объект.ТаблицаДокументов.ВидДокументаЗалогодателя</DataPath>
+					<ReadOnly>true</ReadOnly>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Вид документа</v8:content>
+						</v8:item>
+					</Title>
+					<EditMode>EnterOnInput</EditMode>
+					<OpenButton>false</OpenButton>
+					<ContextMenu name="ТаблицаДокументовВидДокументаЗалогодателяКонтекстноеМеню" id="57"/>
+					<ExtendedTooltip name="ТаблицаДокументовВидДокументаЗалогодателяРасширеннаяПодсказка" id="58"/>
+				</InputField>
+			</ChildItems>
+		</Table>
+		<Table name="ТаблицаРеквизиты" id="4">
+			<Representation>List</Representation>
+			<AutoInsertNewRow>true</AutoInsertNewRow>
+			<EnableStartDrag>true</EnableStartDrag>
+			<EnableDrag>true</EnableDrag>
+			<DataPath>Объект.ТаблицаРеквизиты</DataPath>
+			<RowFilter xsi:nil="true"/>
+			<ContextMenu name="ТаблицаРеквизитыКонтекстноеМеню" id="5"/>
+			<AutoCommandBar name="ТаблицаРеквизитыКоманднаяПанель" id="6">
+				<Autofill>false</Autofill>
+				<ChildItems>
+					<Button name="ТаблицаРеквизитыКнопкаОтметитьВсе" id="33">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Command.ОтметитьВсе</CommandName>
+						<Picture>
+							<xr:Ref>StdPicture.CheckAll</xr:Ref>
+							<xr:LoadTransparent>true</xr:LoadTransparent>
+						</Picture>
+						<ExtendedTooltip name="ТаблицаРеквизитыКнопкаОтметитьВсеРасширеннаяПодсказка" id="34"/>
+					</Button>
+					<Button name="ТаблицаРеквизитыКнопкаУдалитьОтметку" id="35">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Command.УдалитьОтметку</CommandName>
+						<Picture>
+							<xr:Ref>StdPicture.UncheckAll</xr:Ref>
+							<xr:LoadTransparent>true</xr:LoadTransparent>
+						</Picture>
+						<ExtendedTooltip name="ТаблицаРеквизитыКнопкаУдалитьОтметкуРасширеннаяПодсказка" id="36"/>
+					</Button>
+				</ChildItems>
+			</AutoCommandBar>
+			<ExtendedTooltip name="ТаблицаРеквизитыРасширеннаяПодсказка" id="7"/>
+			<SearchStringAddition name="ТаблицаРеквизитыСтрокаПоиска" id="8">
+				<AdditionSource>
+					<Item>ТаблицаРеквизиты</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ТаблицаРеквизитыСтрокаПоискаКонтекстноеМеню" id="9"/>
+				<ExtendedTooltip name="ТаблицаРеквизитыСтрокаПоискаРасширеннаяПодсказка" id="10"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="ТаблицаРеквизитыСостояниеПросмотра" id="11">
+				<AdditionSource>
+					<Item>ТаблицаРеквизиты</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ТаблицаРеквизитыСостояниеПросмотраКонтекстноеМеню" id="12"/>
+				<ExtendedTooltip name="ТаблицаРеквизитыСостояниеПросмотраРасширеннаяПодсказка" id="13"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="ТаблицаРеквизитыУправлениеПоиском" id="14">
+				<AdditionSource>
+					<Item>ТаблицаРеквизиты</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="ТаблицаРеквизитыУправлениеПоискомКонтекстноеМеню" id="15"/>
+				<ExtendedTooltip name="ТаблицаРеквизитыУправлениеПоискомРасширеннаяПодсказка" id="16"/>
+			</SearchControlAddition>
+			<Events>
+				<Event name="OnEditEnd">ТаблицаРеквизитыПриОкончанииРедактирования</Event>
+			</Events>
+			<ChildItems>
+				<InputField name="РеквизитыРеквизит" id="20">
+					<DataPath>Объект.ТаблицаРеквизиты.Реквизит</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="РеквизитыРеквизитКонтекстноеМеню" id="21"/>
+					<ExtendedTooltip name="РеквизитыРеквизитРасширеннаяПодсказка" id="22"/>
+				</InputField>
+				<CheckBoxField name="РеквизитыОбязателен" id="26">
+					<DataPath>Объект.ТаблицаРеквизиты.Обязателен</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="РеквизитыОбязателенКонтекстноеМеню" id="27"/>
+					<ExtendedTooltip name="РеквизитыОбязателенРасширеннаяПодсказка" id="28"/>
+					<Events>
+						<Event name="OnChange">РеквизитыОбязателенПриИзменении</Event>
+					</Events>
+				</CheckBoxField>
+				<CheckBoxField name="РеквизитыВидимость" id="23">
+					<DataPath>Объект.ТаблицаРеквизиты.Видимость</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="РеквизитыВидимостьКонтекстноеМеню" id="24"/>
+					<ExtendedTooltip name="РеквизитыВидимостьРасширеннаяПодсказка" id="25"/>
+				</CheckBoxField>
+				<InputField name="РеквизитыКоличествоСимволов" id="37">
+					<DataPath>Объект.ТаблицаРеквизиты.КоличествоСимволов</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Кол. символов</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="РеквизитыКоличествоСимволовКонтекстноеМеню" id="38"/>
+					<ExtendedTooltip name="РеквизитыКоличествоСимволовРасширеннаяПодсказка" id="39"/>
+				</InputField>
+				<CheckBoxField name="РеквизитыТолькоЦифры" id="62">
+					<DataPath>Объект.ТаблицаРеквизиты.ТолькоЦифры</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="РеквизитыТолькоЦифрыКонтекстноеМеню" id="63"/>
+					<ExtendedTooltip name="РеквизитыТолькоЦифрыРасширеннаяПодсказка" id="64"/>
+				</CheckBoxField>
+			</ChildItems>
+		</Table>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:DataProcessorObject.ЛБ_НастройкаРеквизитовДокументовЗалогодателя</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+		</Attribute>
+		<ConditionalAppearance>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>РеквизитыВидимость</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">Объект.ТаблицаРеквизиты.Обязателен</dcsset:left>
+						<dcsset:comparisonType>Equal</dcsset:comparisonType>
+						<dcsset:right xsi:type="xs:boolean">true</dcsset:right>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>ТолькоПросмотр</dcscor:parameter>
+						<dcscor:value xsi:type="xs:boolean">true</dcscor:value>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>РеквизитыКоличествоСимволов</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">Объект.ТаблицаРеквизиты.Реквизит</dcsset:left>
+						<dcsset:comparisonType>InList</dcsset:comparisonType>
+						<dcsset:right xsi:type="dcscor:DesignTimeValue">Справочник.ЛБ_РеквизитыДокументовЗалогодателя.ДокументГражданство</dcsset:right>
+						<dcsset:right xsi:type="dcscor:DesignTimeValue">Справочник.ЛБ_РеквизитыДокументовЗалогодателя.ДокументДатаВыдачи</dcsset:right>
+						<dcsset:right xsi:type="dcscor:DesignTimeValue">Справочник.ЛБ_РеквизитыДокументовЗалогодателя.ДокументКемВыдан</dcsset:right>
+						<dcsset:right xsi:type="dcscor:DesignTimeValue">Справочник.ЛБ_РеквизитыДокументовЗалогодателя.ДокументСрокДействия</dcsset:right>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>Доступность</dcscor:parameter>
+						<dcscor:value xsi:type="xs:boolean">false</dcscor:value>
+					</dcscor:item>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:use>false</dcscor:use>
+						<dcscor:parameter>ТолькоПросмотр</dcscor:parameter>
+						<dcscor:value xsi:type="xs:boolean">true</dcscor:value>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>ТаблицаДокументовВидДокументаЗалогодателя</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">Объект.ТаблицаДокументов.ВидДокумента</dcsset:left>
+						<dcsset:comparisonType>Equal</dcsset:comparisonType>
+						<dcsset:right xsi:type="dcscor:DesignTimeValue">Справочник.ВидыДокументовФизическихЛиц.ВидНаЖительство</dcsset:right>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>Доступность</dcscor:parameter>
+						<dcscor:value xsi:type="xs:boolean">true</dcscor:value>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>РеквизитыТолькоЦифры</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">Объект.ТаблицаРеквизиты.Реквизит</dcsset:left>
+						<dcsset:comparisonType>InList</dcsset:comparisonType>
+						<dcsset:right xsi:type="dcscor:DesignTimeValue">Справочник.ЛБ_РеквизитыДокументовЗалогодателя.ДокументГражданство</dcsset:right>
+						<dcsset:right xsi:type="dcscor:DesignTimeValue">Справочник.ЛБ_РеквизитыДокументовЗалогодателя.ДокументДатаВыдачи</dcsset:right>
+						<dcsset:right xsi:type="dcscor:DesignTimeValue">Справочник.ЛБ_РеквизитыДокументовЗалогодателя.ДокументКемВыдан</dcsset:right>
+						<dcsset:right xsi:type="dcscor:DesignTimeValue">Справочник.ЛБ_РеквизитыДокументовЗалогодателя.ДокументСрокДействия</dcsset:right>
+						<dcsset:right xsi:type="dcscor:DesignTimeValue">Справочник.ЛБ_РеквизитыДокументовЗалогодателя.ДокументКодПодразделения</dcsset:right>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>Доступность</dcscor:parameter>
+						<dcscor:value xsi:type="xs:boolean">false</dcscor:value>
+					</dcscor:item>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:use>false</dcscor:use>
+						<dcscor:parameter>ТолькоПросмотр</dcscor:parameter>
+						<dcscor:value xsi:type="xs:boolean">true</dcscor:value>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+		</ConditionalAppearance>
+	</Attributes>
+	<Commands>
+		<Command name="Отмена" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отмена</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отмена</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>Отмена</Action>
+		</Command>
+		<Command name="ОтметитьВсе" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отметить все</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отметить все</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ОтметитьВсе</Action>
+		</Command>
+		<Command name="УдалитьОтметку" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Удалить отметку</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Удалить отметку</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>УдалитьОтметку</Action>
+		</Command>
+	</Commands>
+</Form>

@@ -1,0 +1,829 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.20">
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<UseForFoldersAndItems>Items</UseForFoldersAndItems>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="ГруппаНаименование" id="110">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа наименование</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа наименование</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаНаименованиеРасширеннаяПодсказка" id="111"/>
+			<ChildItems>
+				<InputField name="Наименование" id="4">
+					<DataPath>Объект.Description</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<MaxWidth>50</MaxWidth>
+					<ContextMenu name="НаименованиеКонтекстноеМеню" id="5"/>
+					<ExtendedTooltip name="НаименованиеРасширеннаяПодсказка" id="6"/>
+				</InputField>
+				<InputField name="ЕдиницаИзмерения" id="104">
+					<DataPath>Объект.ЕдиницаИзмерения</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Ед. веса</v8:content>
+						</v8:item>
+					</Title>
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<MaxWidth>7</MaxWidth>
+					<HorizontalStretch>false</HorizontalStretch>
+					<OpenButton>false</OpenButton>
+					<CreateButton>false</CreateButton>
+					<QuickChoice>true</QuickChoice>
+					<ContextMenu name="ЕдиницаИзмеренияКонтекстноеМеню" id="105"/>
+					<ExtendedTooltip name="ЕдиницаИзмеренияРасширеннаяПодсказка" id="106"/>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаОбщиеДанные" id="13">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа общие данные</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа общие данные</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Horizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаОбщиеДанныеРасширеннаяПодсказка" id="14"/>
+			<ChildItems>
+				<InputField name="КраткоеНаименование" id="10">
+					<DataPath>Объект.КраткоеНаименование</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Сокращение</v8:content>
+						</v8:item>
+					</Title>
+					<EditMode>EnterOnInput</EditMode>
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<HorizontalStretch>false</HorizontalStretch>
+					<ContextMenu name="КраткоеНаименованиеКонтекстноеМеню" id="11"/>
+					<ExtendedTooltip name="КраткоеНаименованиеРасширеннаяПодсказка" id="12"/>
+				</InputField>
+				<LabelDecoration name="Декорация1" id="112">
+					<Width>1</Width>
+					<ContextMenu name="Декорация1КонтекстноеМеню" id="113"/>
+					<ExtendedTooltip name="Декорация1РасширеннаяПодсказка" id="114"/>
+				</LabelDecoration>
+				<InputField name="ВидКамня" id="7">
+					<DataPath>Объект.ВидКамня</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<HorizontalStretch>false</HorizontalStretch>
+					<ContextMenu name="ВидКамняКонтекстноеМеню" id="8"/>
+					<ExtendedTooltip name="ВидКамняРасширеннаяПодсказка" id="9"/>
+				</InputField>
+				<CheckBoxField name="НеОценивается" id="107">
+					<DataPath>Объект.НеОценивается</DataPath>
+					<TitleLocation>Right</TitleLocation>
+					<CheckBoxType>Switcher</CheckBoxType>
+					<ContextMenu name="НеОцениваетсяКонтекстноеМеню" id="108"/>
+					<ExtendedTooltip name="НеОцениваетсяРасширеннаяПодсказка" id="109"/>
+					<Events>
+						<Event name="OnChange">НеОцениваетсяПриИзменении</Event>
+					</Events>
+				</CheckBoxField>
+			</ChildItems>
+		</UsualGroup>
+		<Pages name="Страницы" id="62">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Страницы</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Страницы</v8:content>
+				</v8:item>
+			</ToolTip>
+			<PagesRepresentation>TabsOnTop</PagesRepresentation>
+			<ExtendedTooltip name="СтраницыРасширеннаяПодсказка" id="63"/>
+			<ChildItems>
+				<Page name="Страница0" id="76">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Допустимые формы и виды огранки</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Страница0</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="Страница0РасширеннаяПодсказка" id="77"/>
+					<ChildItems>
+						<Table name="НастройкаОграниченияВыбораВидовОгранки" id="78">
+							<UseAlternationRowColor>true</UseAlternationRowColor>
+							<EnableStartDrag>true</EnableStartDrag>
+							<DataPath>НастройкаОграниченияВыбораВидовОгранки</DataPath>
+							<RowPictureDataPath>НастройкаОграниченияВыбораВидовОгранки.DefaultPicture</RowPictureDataPath>
+							<CommandSet>
+								<ExcludedCommand>Create</ExcludedCommand>
+							</CommandSet>
+							<AutoRefresh>false</AutoRefresh>
+							<AutoRefreshPeriod>60</AutoRefreshPeriod>
+							<Period>
+								<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+								<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+								<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+							</Period>
+							<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+							<RestoreCurrentRow>false</RestoreCurrentRow>
+							<TopLevelParent xsi:nil="true"/>
+							<ShowRoot>true</ShowRoot>
+							<AllowRootChoice>false</AllowRootChoice>
+							<UpdateOnDataChange>Auto</UpdateOnDataChange>
+							<AllowGettingCurrentRowURL>true</AllowGettingCurrentRowURL>
+							<ContextMenu name="НастройкаОграниченияВыбораВидовОгранкиКонтекстноеМеню" id="79"/>
+							<AutoCommandBar name="НастройкаОграниченияВыбораВидовОгранкиКоманднаяПанель" id="80">
+								<Autofill>false</Autofill>
+								<ChildItems>
+									<Button name="НастройкаОграниченияВыбораВидовОгранкиСоздатьНастройкуВО" id="100">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Command.СоздатьНастройкуВО</CommandName>
+										<Title>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Создать</v8:content>
+											</v8:item>
+										</Title>
+										<ExtendedTooltip name="НастройкаОграниченияВыбораВидовОгранкиСоздатьНастройкуВОРасширеннаяПодсказка" id="101"/>
+									</Button>
+									<Button name="НастройкаОграниченияВыбораВидовОгранкиКопировать" id="102">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Item.НастройкаОграниченияВыбораВидовОгранки.StandardCommand.Copy</CommandName>
+										<ExtendedTooltip name="НастройкаОграниченияВыбораВидовОгранкиКопироватьРасширеннаяПодсказка" id="103"/>
+									</Button>
+								</ChildItems>
+							</AutoCommandBar>
+							<ExtendedTooltip name="НастройкаОграниченияВыбораВидовОгранкиРасширеннаяПодсказка" id="81"/>
+							<SearchStringAddition name="НастройкаОграниченияВыбораВидовОгранкиСтрокаПоиска" id="82">
+								<AdditionSource>
+									<Item>НастройкаОграниченияВыбораВидовОгранки</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="НастройкаОграниченияВыбораВидовОгранкиСтрокаПоискаКонтекстноеМеню" id="83"/>
+								<ExtendedTooltip name="НастройкаОграниченияВыбораВидовОгранкиСтрокаПоискаРасширеннаяПодсказка" id="84"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="НастройкаОграниченияВыбораВидовОгранкиСостояниеПросмотра" id="85">
+								<AdditionSource>
+									<Item>НастройкаОграниченияВыбораВидовОгранки</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="НастройкаОграниченияВыбораВидовОгранкиСостояниеПросмотраКонтекстноеМеню" id="86"/>
+								<ExtendedTooltip name="НастройкаОграниченияВыбораВидовОгранкиСостояниеПросмотраРасширеннаяПодсказка" id="87"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="НастройкаОграниченияВыбораВидовОгранкиУправлениеПоиском" id="88">
+								<AdditionSource>
+									<Item>НастройкаОграниченияВыбораВидовОгранки</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="НастройкаОграниченияВыбораВидовОгранкиУправлениеПоискомКонтекстноеМеню" id="89"/>
+								<ExtendedTooltip name="НастройкаОграниченияВыбораВидовОгранкиУправлениеПоискомРасширеннаяПодсказка" id="90"/>
+							</SearchControlAddition>
+							<ChildItems>
+								<LabelField name="НастройкаОграниченияВыбораВидовОгранкиВидКамня" id="91">
+									<DataPath>НастройкаОграниченияВыбораВидовОгранки.ВидКамня</DataPath>
+									<Visible>false</Visible>
+									<ContextMenu name="НастройкаОграниченияВыбораВидовОгранкиВидКамняКонтекстноеМеню" id="92"/>
+									<ExtendedTooltip name="НастройкаОграниченияВыбораВидовОгранкиВидКамняРасширеннаяПодсказка" id="93"/>
+								</LabelField>
+								<LabelField name="НастройкаОграниченияВыбораВидовОгранкиФормаОгранки" id="94">
+									<DataPath>НастройкаОграниченияВыбораВидовОгранки.ФормаОгранки</DataPath>
+									<ContextMenu name="НастройкаОграниченияВыбораВидовОгранкиФормаОгранкиКонтекстноеМеню" id="95"/>
+									<ExtendedTooltip name="НастройкаОграниченияВыбораВидовОгранкиФормаОгранкиРасширеннаяПодсказка" id="96"/>
+								</LabelField>
+								<LabelField name="НастройкаОграниченияВыбораВидовОгранкиВидОгранки" id="97">
+									<DataPath>НастройкаОграниченияВыбораВидовОгранки.ВидОгранки</DataPath>
+									<ContextMenu name="НастройкаОграниченияВыбораВидовОгранкиВидОгранкиКонтекстноеМеню" id="98"/>
+									<ExtendedTooltip name="НастройкаОграниченияВыбораВидовОгранкиВидОгранкиРасширеннаяПодсказка" id="99"/>
+								</LabelField>
+								<LabelField name="НастройкаОграниченияВыбораВидовОгранкиСпособРасчетаВеса" id="115">
+									<DataPath>НастройкаОграниченияВыбораВидовОгранки.СпособРасчетаВеса</DataPath>
+									<ContextMenu name="НастройкаОграниченияВыбораВидовОгранкиСпособРасчетаВесаКонтекстноеМеню" id="116"/>
+									<ExtendedTooltip name="НастройкаОграниченияВыбораВидовОгранкиСпособРасчетаВесаРасширеннаяПодсказка" id="117"/>
+								</LabelField>
+								<CheckBoxField name="НастройкаОграниченияВыбораВидовОгранкиОграниченныйСписокВидовОгранки" id="155">
+									<DataPath>НастройкаОграниченияВыбораВидовОгранки.ОграниченныйСписокВидовОгранки</DataPath>
+									<ReadOnly>true</ReadOnly>
+									<TitleLocation>None</TitleLocation>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="НастройкаОграниченияВыбораВидовОгранкиОграниченныйСписокВидовОгранкиКонтекстноеМеню" id="156"/>
+									<ExtendedTooltip name="НастройкаОграниченияВыбораВидовОгранкиОграниченныйСписокВидовОгранкиРасширеннаяПодсказка" id="157"/>
+								</CheckBoxField>
+								<LabelField name="НастройкаОграниченияВыбораВидовОгранкиФормула" id="118">
+									<DataPath>НастройкаОграниченияВыбораВидовОгранки.Формула</DataPath>
+									<ContextMenu name="НастройкаОграниченияВыбораВидовОгранкиФормулаКонтекстноеМеню" id="119"/>
+									<ExtendedTooltip name="НастройкаОграниченияВыбораВидовОгранкиФормулаРасширеннаяПодсказка" id="120"/>
+								</LabelField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</Page>
+				<Page name="Страница1" id="64">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Настройка допустимых форм огранки</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Страница1</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="Страница1РасширеннаяПодсказка" id="65"/>
+					<ChildItems>
+						<Table name="НастройкаВыбораФормОгранки" id="15">
+							<UseAlternationRowColor>true</UseAlternationRowColor>
+							<EnableStartDrag>true</EnableStartDrag>
+							<DataPath>НастройкаВыбораФормОгранки</DataPath>
+							<RowPictureDataPath>НастройкаВыбораФормОгранки.DefaultPicture</RowPictureDataPath>
+							<CommandSet>
+								<ExcludedCommand>Create</ExcludedCommand>
+							</CommandSet>
+							<AutoRefresh>false</AutoRefresh>
+							<AutoRefreshPeriod>60</AutoRefreshPeriod>
+							<Period>
+								<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+								<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+								<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+							</Period>
+							<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+							<RestoreCurrentRow>false</RestoreCurrentRow>
+							<TopLevelParent xsi:nil="true"/>
+							<ShowRoot>true</ShowRoot>
+							<AllowRootChoice>false</AllowRootChoice>
+							<UpdateOnDataChange>Auto</UpdateOnDataChange>
+							<AllowGettingCurrentRowURL>true</AllowGettingCurrentRowURL>
+							<ContextMenu name="НастройкаВыбораФормОгранкиКонтекстноеМеню" id="16"/>
+							<AutoCommandBar name="НастройкаВыбораФормОгранкиКоманднаяПанель" id="17">
+								<Autofill>false</Autofill>
+								<ChildItems>
+									<Button name="НастройкаВыбораФормОгранкиСоздатьНастройкуФО" id="68">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Command.СоздатьНастройкуФО</CommandName>
+										<Title>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Создать</v8:content>
+											</v8:item>
+										</Title>
+										<ExtendedTooltip name="НастройкаВыбораФормОгранкиСоздатьНастройкуФОРасширеннаяПодсказка" id="69"/>
+									</Button>
+									<Button name="НастройкаВыбораФормОгранкиКопировать" id="70">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Item.НастройкаВыбораФормОгранки.StandardCommand.Copy</CommandName>
+										<ExtendedTooltip name="НастройкаВыбораФормОгранкиКопироватьРасширеннаяПодсказка" id="71"/>
+									</Button>
+								</ChildItems>
+							</AutoCommandBar>
+							<ExtendedTooltip name="НастройкаВыбораФормОгранкиРасширеннаяПодсказка" id="18"/>
+							<SearchStringAddition name="НастройкаВыбораФормОгранкиСтрокаПоиска" id="19">
+								<AdditionSource>
+									<Item>НастройкаВыбораФормОгранки</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="НастройкаВыбораФормОгранкиСтрокаПоискаКонтекстноеМеню" id="20"/>
+								<ExtendedTooltip name="НастройкаВыбораФормОгранкиСтрокаПоискаРасширеннаяПодсказка" id="21"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="НастройкаВыбораФормОгранкиСостояниеПросмотра" id="22">
+								<AdditionSource>
+									<Item>НастройкаВыбораФормОгранки</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="НастройкаВыбораФормОгранкиСостояниеПросмотраКонтекстноеМеню" id="23"/>
+								<ExtendedTooltip name="НастройкаВыбораФормОгранкиСостояниеПросмотраРасширеннаяПодсказка" id="24"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="НастройкаВыбораФормОгранкиУправлениеПоиском" id="25">
+								<AdditionSource>
+									<Item>НастройкаВыбораФормОгранки</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="НастройкаВыбораФормОгранкиУправлениеПоискомКонтекстноеМеню" id="26"/>
+								<ExtendedTooltip name="НастройкаВыбораФормОгранкиУправлениеПоискомРасширеннаяПодсказка" id="27"/>
+							</SearchControlAddition>
+							<ChildItems>
+								<LabelField name="НастройкаВыбораФормОгранкиВидКамня" id="28">
+									<DataPath>НастройкаВыбораФормОгранки.ВидКамня</DataPath>
+									<Visible>false</Visible>
+									<ContextMenu name="НастройкаВыбораФормОгранкиВидКамняКонтекстноеМеню" id="29"/>
+									<ExtendedTooltip name="НастройкаВыбораФормОгранкиВидКамняРасширеннаяПодсказка" id="30"/>
+								</LabelField>
+								<LabelField name="НастройкаВыбораФормОгранкиКатегорияОбъектаЗалога" id="31">
+									<DataPath>НастройкаВыбораФормОгранки.КатегорияОбъектаЗалога</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Категория залога</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="НастройкаВыбораФормОгранкиКатегорияОбъектаЗалогаКонтекстноеМеню" id="32"/>
+									<ExtendedTooltip name="НастройкаВыбораФормОгранкиКатегорияОбъектаЗалогаРасширеннаяПодсказка" id="33"/>
+								</LabelField>
+								<CheckBoxField name="НастройкаВыбораФормОгранкиОграниченныйСписокВидовОгранки" id="158">
+									<DataPath>НастройкаВыбораФормОгранки.ОграниченныйСписокВидовОгранки</DataPath>
+									<TitleLocation>None</TitleLocation>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="НастройкаВыбораФормОгранкиОграниченныйСписокВидовОгранкиКонтекстноеМеню" id="159"/>
+									<ExtendedTooltip name="НастройкаВыбораФормОгранкиОграниченныйСписокВидовОгранкиРасширеннаяПодсказка" id="160"/>
+								</CheckBoxField>
+								<LabelField name="НастройкаВыбораФормОгранкиФормаОгранки" id="34">
+									<DataPath>НастройкаВыбораФормОгранки.ФормаОгранки</DataPath>
+									<ContextMenu name="НастройкаВыбораФормОгранкиФормаОгранкиКонтекстноеМеню" id="35"/>
+									<ExtendedTooltip name="НастройкаВыбораФормОгранкиФормаОгранкиРасширеннаяПодсказка" id="36"/>
+								</LabelField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</Page>
+				<Page name="Страница2" id="66">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Настройка допустимых качеств огранки</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Страница2</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="Страница2РасширеннаяПодсказка" id="67"/>
+					<ChildItems>
+						<Table name="НастройкаВыбораКачестваОгранки" id="37">
+							<UseAlternationRowColor>true</UseAlternationRowColor>
+							<EnableStartDrag>true</EnableStartDrag>
+							<DataPath>НастройкаВыбораКачестваОгранки</DataPath>
+							<RowPictureDataPath>НастройкаВыбораКачестваОгранки.DefaultPicture</RowPictureDataPath>
+							<CommandSet>
+								<ExcludedCommand>Create</ExcludedCommand>
+							</CommandSet>
+							<AutoRefresh>false</AutoRefresh>
+							<AutoRefreshPeriod>60</AutoRefreshPeriod>
+							<Period>
+								<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+								<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+								<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+							</Period>
+							<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+							<RestoreCurrentRow>false</RestoreCurrentRow>
+							<TopLevelParent xsi:nil="true"/>
+							<ShowRoot>true</ShowRoot>
+							<AllowRootChoice>false</AllowRootChoice>
+							<UpdateOnDataChange>Auto</UpdateOnDataChange>
+							<AllowGettingCurrentRowURL>true</AllowGettingCurrentRowURL>
+							<ContextMenu name="НастройкаВыбораКачестваОгранкиКонтекстноеМеню" id="38"/>
+							<AutoCommandBar name="НастройкаВыбораКачестваОгранкиКоманднаяПанель" id="39">
+								<Autofill>false</Autofill>
+								<ChildItems>
+									<Button name="НастройкаВыбораКачестваОгранкиСоздатьНастройкуКО" id="72">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Command.СоздатьНастройкуКО</CommandName>
+										<Title>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Создать</v8:content>
+											</v8:item>
+										</Title>
+										<ExtendedTooltip name="НастройкаВыбораКачестваОгранкиСоздатьНастройкуКОРасширеннаяПодсказка" id="73"/>
+									</Button>
+									<Button name="НастройкаВыбораКачестваОгранкиКопировать" id="74">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Item.НастройкаВыбораКачестваОгранки.StandardCommand.Copy</CommandName>
+										<ExtendedTooltip name="НастройкаВыбораКачестваОгранкиКопироватьРасширеннаяПодсказка" id="75"/>
+									</Button>
+								</ChildItems>
+							</AutoCommandBar>
+							<ExtendedTooltip name="НастройкаВыбораКачестваОгранкиРасширеннаяПодсказка" id="40"/>
+							<SearchStringAddition name="НастройкаВыбораКачестваОгранкиСтрокаПоиска" id="41">
+								<AdditionSource>
+									<Item>НастройкаВыбораКачестваОгранки</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="НастройкаВыбораКачестваОгранкиСтрокаПоискаКонтекстноеМеню" id="42"/>
+								<ExtendedTooltip name="НастройкаВыбораКачестваОгранкиСтрокаПоискаРасширеннаяПодсказка" id="43"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="НастройкаВыбораКачестваОгранкиСостояниеПросмотра" id="44">
+								<AdditionSource>
+									<Item>НастройкаВыбораКачестваОгранки</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="НастройкаВыбораКачестваОгранкиСостояниеПросмотраКонтекстноеМеню" id="45"/>
+								<ExtendedTooltip name="НастройкаВыбораКачестваОгранкиСостояниеПросмотраРасширеннаяПодсказка" id="46"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="НастройкаВыбораКачестваОгранкиУправлениеПоиском" id="47">
+								<AdditionSource>
+									<Item>НастройкаВыбораКачестваОгранки</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="НастройкаВыбораКачестваОгранкиУправлениеПоискомКонтекстноеМеню" id="48"/>
+								<ExtendedTooltip name="НастройкаВыбораКачестваОгранкиУправлениеПоискомРасширеннаяПодсказка" id="49"/>
+							</SearchControlAddition>
+							<ChildItems>
+								<LabelField name="НастройкаВыбораКачестваОгранкиВидКамня" id="50">
+									<DataPath>НастройкаВыбораКачестваОгранки.ВидКамня</DataPath>
+									<Visible>false</Visible>
+									<ContextMenu name="НастройкаВыбораКачестваОгранкиВидКамняКонтекстноеМеню" id="51"/>
+									<ExtendedTooltip name="НастройкаВыбораКачестваОгранкиВидКамняРасширеннаяПодсказка" id="52"/>
+								</LabelField>
+								<LabelField name="НастройкаВыбораКачестваОгранкиКатегорияОбъектаЗалога" id="53">
+									<DataPath>НастройкаВыбораКачестваОгранки.КатегорияОбъектаЗалога</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Категория залога</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="НастройкаВыбораКачестваОгранкиКатегорияОбъектаЗалогаКонтекстноеМеню" id="54"/>
+									<ExtendedTooltip name="НастройкаВыбораКачестваОгранкиКатегорияОбъектаЗалогаРасширеннаяПодсказка" id="55"/>
+								</LabelField>
+								<LabelField name="НастройкаВыбораКачестваОгранкиКлеймо" id="56">
+									<DataPath>НастройкаВыбораКачестваОгранки.Именник</DataPath>
+									<ContextMenu name="НастройкаВыбораКачестваОгранкиКлеймоКонтекстноеМеню" id="57"/>
+									<ExtendedTooltip name="НастройкаВыбораКачестваОгранкиКлеймоРасширеннаяПодсказка" id="58"/>
+								</LabelField>
+								<LabelField name="НастройкаВыбораКачестваОгранкиФормаОгранки" id="149">
+									<DataPath>НастройкаВыбораКачестваОгранки.ФормаОгранки</DataPath>
+									<ContextMenu name="НастройкаВыбораКачестваОгранкиФормаОгранкиКонтекстноеМеню" id="150"/>
+									<ExtendedTooltip name="НастройкаВыбораКачестваОгранкиФормаОгранкиРасширеннаяПодсказка" id="151"/>
+								</LabelField>
+								<LabelField name="НастройкаВыбораКачестваОгранкиВидОгранки" id="152">
+									<DataPath>НастройкаВыбораКачестваОгранки.ВидОгранки</DataPath>
+									<ContextMenu name="НастройкаВыбораКачестваОгранкиВидОгранкиКонтекстноеМеню" id="153"/>
+									<ExtendedTooltip name="НастройкаВыбораКачестваОгранкиВидОгранкиРасширеннаяПодсказка" id="154"/>
+								</LabelField>
+								<LabelField name="НастройкаВыбораКачестваОгранкиКачествоОгранки" id="59">
+									<DataPath>НастройкаВыбораКачестваОгранки.КачествоОгранки</DataPath>
+									<ContextMenu name="НастройкаВыбораКачестваОгранкиКачествоОгранкиКонтекстноеМеню" id="60"/>
+									<ExtendedTooltip name="НастройкаВыбораКачестваОгранкиКачествоОгранкиРасширеннаяПодсказка" id="61"/>
+								</LabelField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</Page>
+				<Page name="СтраницаЗ" id="121">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Параметры оценки вставок в объектах залога</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Страница З</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="СтраницаЗРасширеннаяПодсказка" id="122"/>
+					<ChildItems>
+						<Table name="ПараметрыОенкиВставок" id="123">
+							<UseAlternationRowColor>true</UseAlternationRowColor>
+							<EnableStartDrag>true</EnableStartDrag>
+							<DataPath>ПараметрыОенкиВставок</DataPath>
+							<RowPictureDataPath>ПараметрыОенкиВставок.DefaultPicture</RowPictureDataPath>
+							<CommandSet>
+								<ExcludedCommand>Create</ExcludedCommand>
+							</CommandSet>
+							<AutoRefresh>false</AutoRefresh>
+							<AutoRefreshPeriod>60</AutoRefreshPeriod>
+							<Period>
+								<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+								<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+								<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+							</Period>
+							<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+							<RestoreCurrentRow>false</RestoreCurrentRow>
+							<TopLevelParent xsi:nil="true"/>
+							<ShowRoot>true</ShowRoot>
+							<AllowRootChoice>false</AllowRootChoice>
+							<UpdateOnDataChange>Auto</UpdateOnDataChange>
+							<AllowGettingCurrentRowURL>true</AllowGettingCurrentRowURL>
+							<ContextMenu name="ПараметрыОенкиВставокКонтекстноеМеню" id="124"/>
+							<AutoCommandBar name="ПараметрыОенкиВставокКоманднаяПанель" id="125">
+								<Autofill>false</Autofill>
+								<ChildItems>
+									<Button name="ПараметрыОенкиВставокСоздатьПараметрыОценки" id="145">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Command.СоздатьПараметрыОценки</CommandName>
+										<Title>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Создать</v8:content>
+											</v8:item>
+										</Title>
+										<ExtendedTooltip name="ПараметрыОенкиВставокСоздатьПараметрыОценкиРасширеннаяПодсказка" id="146"/>
+									</Button>
+									<Button name="ПараметрыОенкиВставокКопировать" id="147">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Item.ПараметрыОенкиВставок.StandardCommand.Copy</CommandName>
+										<ExtendedTooltip name="ПараметрыОенкиВставокКопироватьРасширеннаяПодсказка" id="148"/>
+									</Button>
+								</ChildItems>
+							</AutoCommandBar>
+							<ExtendedTooltip name="ПараметрыОенкиВставокРасширеннаяПодсказка" id="126"/>
+							<SearchStringAddition name="ПараметрыОенкиВставокСтрокаПоиска" id="127">
+								<AdditionSource>
+									<Item>ПараметрыОенкиВставок</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ПараметрыОенкиВставокСтрокаПоискаКонтекстноеМеню" id="128"/>
+								<ExtendedTooltip name="ПараметрыОенкиВставокСтрокаПоискаРасширеннаяПодсказка" id="129"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="ПараметрыОенкиВставокСостояниеПросмотра" id="130">
+								<AdditionSource>
+									<Item>ПараметрыОенкиВставок</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ПараметрыОенкиВставокСостояниеПросмотраКонтекстноеМеню" id="131"/>
+								<ExtendedTooltip name="ПараметрыОенкиВставокСостояниеПросмотраРасширеннаяПодсказка" id="132"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="ПараметрыОенкиВставокУправлениеПоиском" id="133">
+								<AdditionSource>
+									<Item>ПараметрыОенкиВставок</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="ПараметрыОенкиВставокУправлениеПоискомКонтекстноеМеню" id="134"/>
+								<ExtendedTooltip name="ПараметрыОенкиВставокУправлениеПоискомРасширеннаяПодсказка" id="135"/>
+							</SearchControlAddition>
+							<ChildItems>
+								<LabelField name="ПараметрыОенкиВставокВидВставки" id="136">
+									<DataPath>~ПараметрыОенкиВставок.ВидВставки</DataPath>
+									<Visible>false</Visible>
+									<ContextMenu name="ПараметрыОенкиВставокВидВставкиКонтекстноеМеню" id="137"/>
+									<ExtendedTooltip name="ПараметрыОенкиВставокВидВставкиРасширеннаяПодсказка" id="138"/>
+								</LabelField>
+								<LabelField name="ПараметрыОенкиВставокКатегорияОбъектаЗалога" id="139">
+									<DataPath>ПараметрыОенкиВставок.КатегорияОбъектаЗалога</DataPath>
+									<ContextMenu name="ПараметрыОенкиВставокКатегорияОбъектаЗалогаКонтекстноеМеню" id="140"/>
+									<ExtendedTooltip name="ПараметрыОенкиВставокКатегорияОбъектаЗалогаРасширеннаяПодсказка" id="141"/>
+								</LabelField>
+								<CheckBoxField name="ПараметрыОенкиВставокОценивается" id="142">
+									<DataPath>ПараметрыОенкиВставок.Оценивается</DataPath>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="ПараметрыОенкиВставокОцениваетсяКонтекстноеМеню" id="143"/>
+									<ExtendedTooltip name="ПараметрыОенкиВставокОцениваетсяРасширеннаяПодсказка" id="144"/>
+								</CheckBoxField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</Page>
+			</ChildItems>
+		</Pages>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:CatalogObject.ЛБ_ДрагоценныеКамни</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+		</Attribute>
+		<Attribute name="НастройкаВыбораФормОгранки" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Настройка выбора форм огранки</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:DynamicList</v8:Type>
+			</Type>
+			<Settings xsi:type="DynamicList">
+				<ManualQuery>false</ManualQuery>
+				<DynamicDataRead>true</DynamicDataRead>
+				<MainTable>InformationRegister.ЛБ_НастройкаДопустимыхФормОгранки</MainTable>
+				<ListSettings>
+					<dcsset:filter>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>dfcece9d-5077-440b-b6b3-45a5cb4538eb</dcsset:userSettingID>
+					</dcsset:filter>
+					<dcsset:order>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>88619765-ccb3-46c6-ac52-38e9c992ebd4</dcsset:userSettingID>
+					</dcsset:order>
+					<dcsset:conditionalAppearance>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>b75fecce-942b-4aed-abc9-e6a02e460fb3</dcsset:userSettingID>
+					</dcsset:conditionalAppearance>
+					<dcsset:itemsViewMode>Normal</dcsset:itemsViewMode>
+					<dcsset:itemsUserSettingID>911b6018-f537-43e8-a417-da56b22f9aec</dcsset:itemsUserSettingID>
+				</ListSettings>
+			</Settings>
+		</Attribute>
+		<Attribute name="НастройкаВыбораКачестваОгранки" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Настройка выбора форм огранки</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:DynamicList</v8:Type>
+			</Type>
+			<Settings xsi:type="DynamicList">
+				<ManualQuery>false</ManualQuery>
+				<DynamicDataRead>true</DynamicDataRead>
+				<MainTable>InformationRegister.ЛБ_НастройкаДопустимыхКачествОгранки</MainTable>
+				<ListSettings>
+					<dcsset:filter>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>dfcece9d-5077-440b-b6b3-45a5cb4538eb</dcsset:userSettingID>
+					</dcsset:filter>
+					<dcsset:order>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>88619765-ccb3-46c6-ac52-38e9c992ebd4</dcsset:userSettingID>
+					</dcsset:order>
+					<dcsset:conditionalAppearance>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>b75fecce-942b-4aed-abc9-e6a02e460fb3</dcsset:userSettingID>
+					</dcsset:conditionalAppearance>
+					<dcsset:itemsViewMode>Normal</dcsset:itemsViewMode>
+					<dcsset:itemsUserSettingID>911b6018-f537-43e8-a417-da56b22f9aec</dcsset:itemsUserSettingID>
+				</ListSettings>
+			</Settings>
+		</Attribute>
+		<Attribute name="НастройкаОграниченияВыбораВидовОгранки" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Настройка ограничения выбора видов огранки</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:DynamicList</v8:Type>
+			</Type>
+			<Settings xsi:type="DynamicList">
+				<ManualQuery>false</ManualQuery>
+				<DynamicDataRead>true</DynamicDataRead>
+				<MainTable>InformationRegister.ЛБ_НастройкаДопустимыхВидовОгранки</MainTable>
+				<ListSettings>
+					<dcsset:filter>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>dfcece9d-5077-440b-b6b3-45a5cb4538eb</dcsset:userSettingID>
+					</dcsset:filter>
+					<dcsset:order>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>88619765-ccb3-46c6-ac52-38e9c992ebd4</dcsset:userSettingID>
+					</dcsset:order>
+					<dcsset:conditionalAppearance>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>b75fecce-942b-4aed-abc9-e6a02e460fb3</dcsset:userSettingID>
+					</dcsset:conditionalAppearance>
+					<dcsset:itemsViewMode>Normal</dcsset:itemsViewMode>
+					<dcsset:itemsUserSettingID>911b6018-f537-43e8-a417-da56b22f9aec</dcsset:itemsUserSettingID>
+				</ListSettings>
+			</Settings>
+		</Attribute>
+		<Attribute name="ПараметрыОенкиВставок" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Параметры оенки вставок</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:DynamicList</v8:Type>
+			</Type>
+			<Settings xsi:type="DynamicList">
+				<ManualQuery>false</ManualQuery>
+				<DynamicDataRead>true</DynamicDataRead>
+				<MainTable>InformationRegister.ЛБ_ПараметрыОценкиВставокВОбъектахЗалога</MainTable>
+				<ListSettings>
+					<dcsset:filter>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>dfcece9d-5077-440b-b6b3-45a5cb4538eb</dcsset:userSettingID>
+					</dcsset:filter>
+					<dcsset:order>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>88619765-ccb3-46c6-ac52-38e9c992ebd4</dcsset:userSettingID>
+					</dcsset:order>
+					<dcsset:conditionalAppearance>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>b75fecce-942b-4aed-abc9-e6a02e460fb3</dcsset:userSettingID>
+					</dcsset:conditionalAppearance>
+					<dcsset:itemsViewMode>Normal</dcsset:itemsViewMode>
+					<dcsset:itemsUserSettingID>911b6018-f537-43e8-a417-da56b22f9aec</dcsset:itemsUserSettingID>
+				</ListSettings>
+			</Settings>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="СоздатьНастройкуФО" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Создать настройку ФО</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Создать настройку ФО</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>СоздатьНастройкуФО</Action>
+		</Command>
+		<Command name="СоздатьНастройкуКО" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Создать настройку ФО</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Создать настройку ФО</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>СоздатьНастройкуКО</Action>
+		</Command>
+		<Command name="СоздатьНастройкуВО" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Создать настройку ВО</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Создать настройку ВО</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>СоздатьНастройкуВО</Action>
+		</Command>
+		<Command name="СоздатьПараметрыОценки" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Создать параметры оценки</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Создать параметры оценки</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>СоздатьПараметрыОценки</Action>
+		</Command>
+	</Commands>
+	<CommandInterface>
+		<NavigationPanel>
+			<Item>
+				<Command>InformationRegister.ЛБ_ПрейскурантЦенНаДрагоценныеКамни.StandardCommand.OpenByValue.ВидВставки</Command>
+				<Type>Auto</Type>
+				<CommandGroup>FormNavigationPanelGoTo</CommandGroup>
+				<DefaultVisible>false</DefaultVisible>
+				<Visible>
+					<xr:Common>false</xr:Common>
+				</Visible>
+			</Item>
+			<Item>
+				<Command>Catalog.ЛБ_ГруппаКачества.StandardCommand.OpenByValue</Command>
+				<Type>Auto</Type>
+				<DefaultVisible>false</DefaultVisible>
+				<Visible>
+					<xr:Common>false</xr:Common>
+				</Visible>
+			</Item>
+			<Item>
+				<Command>Catalog.ЛБ_ГруппаЦвета.StandardCommand.OpenByValue</Command>
+				<Type>Auto</Type>
+				<DefaultVisible>false</DefaultVisible>
+				<Visible>
+					<xr:Common>false</xr:Common>
+				</Visible>
+			</Item>
+		</NavigationPanel>
+	</CommandInterface>
+</Form>

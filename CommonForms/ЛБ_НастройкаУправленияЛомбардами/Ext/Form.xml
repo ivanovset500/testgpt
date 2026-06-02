@@ -1,0 +1,660 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.20">
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="BeforeWrite">ПередЗаписью</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<Pages name="ГруппаСтраницы" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа страницы</v8:content>
+				</v8:item>
+			</Title>
+			<TitleFont ref="style:NormalTextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа страницы</v8:content>
+				</v8:item>
+			</ToolTip>
+			<PagesRepresentation>TabsOnLeftHorizontal</PagesRepresentation>
+			<ExtendedTooltip name="ГруппаСтраницыРасширеннаяПодсказка" id="8"/>
+			<ChildItems>
+				<Page name="ГруппаОсновные" id="11">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Основные</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа основные</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="ГруппаОсновныеРасширеннаяПодсказка" id="12"/>
+					<ChildItems>
+						<InputField name="ЛБ_ОсновнаяОрганизация" id="13">
+							<DataPath>НаборКонстант.ЛБ_ОсновнаяОрганизация</DataPath>
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<OpenButton>false</OpenButton>
+							<CreateButton>false</CreateButton>
+							<QuickChoice>true</QuickChoice>
+							<ContextMenu name="ЛБ_ОсновнаяОрганизацияКонтекстноеМеню" id="14"/>
+							<ExtendedTooltip name="ЛБ_ОсновнаяОрганизацияРасширеннаяПодсказка" id="15"/>
+						</InputField>
+						<InputField name="ЛБ_ОсновнойДиапазонСуммЗайма" id="39">
+							<DataPath>НаборКонстант.ЛБ_ОсновнойДиапазонСуммЗайма</DataPath>
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<OpenButton>false</OpenButton>
+							<CreateButton>false</CreateButton>
+							<QuickChoice>true</QuickChoice>
+							<ContextMenu name="ЛБ_ОсновнойДиапазонСуммЗаймаКонтекстноеМеню" id="40"/>
+							<ExtendedTooltip name="ЛБ_ОсновнойДиапазонСуммЗаймаРасширеннаяПодсказка" id="41"/>
+						</InputField>
+						<InputField name="ЛБ_ТекущийНомерПачки" id="42">
+							<DataPath>НаборКонстант.ЛБ_ТекущийНомерПачки</DataPath>
+							<Visible>false</Visible>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Текущий № пачки зал. билетов</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="ЛБ_ТекущийНомерПачкиКонтекстноеМеню" id="43"/>
+							<ExtendedTooltip name="ЛБ_ТекущийНомерПачкиРасширеннаяПодсказка" id="44"/>
+						</InputField>
+					</ChildItems>
+				</Page>
+				<Page name="НастройкаЗайма" id="45">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Настройки займа</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Настройка займа</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="НастройкаЗаймаРасширеннаяПодсказка" id="46"/>
+					<ChildItems>
+						<Table name="НастройкиЗайма" id="47">
+							<UseAlternationRowColor>true</UseAlternationRowColor>
+							<EnableStartDrag>true</EnableStartDrag>
+							<DataPath>НастройкиЗайма</DataPath>
+							<RowPictureDataPath>НастройкиЗайма.DefaultPicture</RowPictureDataPath>
+							<AutoRefresh>false</AutoRefresh>
+							<AutoRefreshPeriod>60</AutoRefreshPeriod>
+							<Period>
+								<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+								<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+								<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+							</Period>
+							<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+							<RestoreCurrentRow>false</RestoreCurrentRow>
+							<TopLevelParent xsi:nil="true"/>
+							<ShowRoot>true</ShowRoot>
+							<AllowRootChoice>false</AllowRootChoice>
+							<UpdateOnDataChange>Auto</UpdateOnDataChange>
+							<AllowGettingCurrentRowURL>true</AllowGettingCurrentRowURL>
+							<ContextMenu name="НастройкиЗаймаКонтекстноеМеню" id="48"/>
+							<AutoCommandBar name="НастройкиЗаймаКоманднаяПанель" id="49"/>
+							<ExtendedTooltip name="НастройкиЗаймаРасширеннаяПодсказка" id="50"/>
+							<SearchStringAddition name="НастройкиЗаймаСтрокаПоиска" id="51">
+								<AdditionSource>
+									<Item>НастройкиЗайма</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="НастройкиЗаймаСтрокаПоискаКонтекстноеМеню" id="52"/>
+								<ExtendedTooltip name="НастройкиЗаймаСтрокаПоискаРасширеннаяПодсказка" id="53"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="НастройкиЗаймаСостояниеПросмотра" id="54">
+								<AdditionSource>
+									<Item>НастройкиЗайма</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="НастройкиЗаймаСостояниеПросмотраКонтекстноеМеню" id="55"/>
+								<ExtendedTooltip name="НастройкиЗаймаСостояниеПросмотраРасширеннаяПодсказка" id="56"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="НастройкиЗаймаУправлениеПоиском" id="57">
+								<AdditionSource>
+									<Item>НастройкиЗайма</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="НастройкиЗаймаУправлениеПоискомКонтекстноеМеню" id="58"/>
+								<ExtendedTooltip name="НастройкиЗаймаУправлениеПоискомРасширеннаяПодсказка" id="59"/>
+							</SearchControlAddition>
+							<ChildItems>
+								<LabelField name="НастройкиЗаймаПериод" id="66">
+									<DataPath>НастройкиЗайма.Период</DataPath>
+									<ContextMenu name="НастройкиЗаймаПериодКонтекстноеМеню" id="67"/>
+									<ExtendedTooltip name="НастройкиЗаймаПериодРасширеннаяПодсказка" id="68"/>
+								</LabelField>
+								<LabelField name="НастройкиЗаймаНастройка" id="63">
+									<DataPath>НастройкиЗайма.Настройка</DataPath>
+									<ContextMenu name="НастройкиЗаймаНастройкаКонтекстноеМеню" id="64"/>
+									<ExtendedTooltip name="НастройкиЗаймаНастройкаРасширеннаяПодсказка" id="65"/>
+								</LabelField>
+								<CheckBoxField name="НастройкиЗаймаЗначение" id="60">
+									<DataPath>НастройкиЗайма.Значение</DataPath>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="НастройкиЗаймаЗначениеКонтекстноеМеню" id="61"/>
+									<ExtendedTooltip name="НастройкиЗаймаЗначениеРасширеннаяПодсказка" id="62"/>
+								</CheckBoxField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</Page>
+				<Page name="ВыдачаЗайма" id="69">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Выдача займа</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Выдача займа</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="ВыдачаЗаймаРасширеннаяПодсказка" id="70"/>
+					<ChildItems>
+						<UsualGroup name="ГруппаОграничение1" id="86">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Ограничение оценки залога (верхняя граница)</v8:content>
+								</v8:item>
+							</Title>
+							<TitleFont ref="style:NormalTextFont" height="10" kind="StyleItem" scale="100"/>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа ограничение1</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Group>Vertical</Group>
+							<Representation>StrongSeparation</Representation>
+							<ExtendedTooltip name="ГруппаОграничение1РасширеннаяПодсказка" id="87"/>
+							<ChildItems>
+								<UsualGroup name="ГруппаОграничение11" id="136">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа ограничение11</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа ограничение11</v8:content>
+										</v8:item>
+									</ToolTip>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ГруппаОграничение11РасширеннаяПодсказка" id="137"/>
+									<ChildItems>
+										<CheckBoxField name="ЛБ_ОграничениеОценкиВерхняяГраница" id="71">
+											<DataPath>НаборКонстант.ЛБ_ОграничениеОценкиВерхняяГраница</DataPath>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Ограничить оценку залога </v8:content>
+												</v8:item>
+											</Title>
+											<TitleLocation>Right</TitleLocation>
+											<CheckBoxType>Switcher</CheckBoxType>
+											<ContextMenu name="ЛБ_ОграничениеОценкиВерхняяГраницаКонтекстноеМеню" id="72"/>
+											<ExtendedTooltip name="ЛБ_ОграничениеОценкиВерхняяГраницаРасширеннаяПодсказка" id="73"/>
+										</CheckBoxField>
+										<LabelDecoration name="ДекорацияОграничение11" id="90">
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>суммой меньше</v8:content>
+												</v8:item>
+											</Title>
+											<ContextMenu name="ДекорацияОграничение11КонтекстноеМеню" id="91"/>
+											<ExtendedTooltip name="ДекорацияОграничение11РасширеннаяПодсказка" id="92"/>
+										</LabelDecoration>
+										<InputField name="ЛБ_ОценкаВерхняяГраница" id="74">
+											<DataPath>НаборКонстант.ЛБ_ОценкаВерхняяГраница</DataPath>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>от</v8:content>
+												</v8:item>
+											</Title>
+											<TitleLocation>None</TitleLocation>
+											<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+											<ContextMenu name="ЛБ_ОценкаВерхняяГраницаКонтекстноеМеню" id="75"/>
+											<ExtendedTooltip name="ЛБ_ОценкаВерхняяГраницаРасширеннаяПодсказка" id="76"/>
+										</InputField>
+										<LabelDecoration name="ДекорацияОграничение13" id="100">
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>руб.</v8:content>
+												</v8:item>
+											</Title>
+											<ContextMenu name="ДекорацияОграничение13КонтекстноеМеню" id="101"/>
+											<ExtendedTooltip name="ДекорацияОграничение13РасширеннаяПодсказка" id="102"/>
+										</LabelDecoration>
+									</ChildItems>
+								</UsualGroup>
+								<InputField name="ЛБ_СообщениеОграничениеЗаймаЗБ" id="133">
+									<DataPath>НаборКонстант.ЛБ_СообщениеОграничениеЗаймаЗБ</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Сообщение пользователю (верхняя оценка)</v8:content>
+										</v8:item>
+									</Title>
+									<TitleLocation>Top</TitleLocation>
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<Height>2</Height>
+									<AutoMaxHeight>false</AutoMaxHeight>
+									<MaxHeight>2</MaxHeight>
+									<MultiLine>true</MultiLine>
+									<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+									<HeightControlVariant>UseContentHeight</HeightControlVariant>
+									<ContextMenu name="ЛБ_СообщениеОграничениеЗаймаЗБКонтекстноеМеню" id="134"/>
+									<ExtendedTooltip name="ЛБ_СообщениеОграничениеЗаймаЗБРасширеннаяПодсказка" id="135"/>
+								</InputField>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ГруппаОграничение2" id="88">
+							<Visible>false</Visible>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Ограничение оценки залога (включение в один залоговый билет)</v8:content>
+								</v8:item>
+							</Title>
+							<TitleFont ref="style:NormalTextFont" height="10" kind="StyleItem" scale="100"/>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа ограничение2</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Group>Vertical</Group>
+							<Representation>StrongSeparation</Representation>
+							<ExtendedTooltip name="ГруппаОграничение2РасширеннаяПодсказка" id="89"/>
+							<ChildItems>
+								<UsualGroup name="ГруппаОграничение21" id="96">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа ограничение21</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа ограничение21</v8:content>
+										</v8:item>
+									</ToolTip>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ГруппаОграничение21РасширеннаяПодсказка" id="97"/>
+									<ChildItems>
+										<CheckBoxField name="ЛБ_ОграничениеОценкиВключениеЗБ" id="77">
+											<DataPath>НаборКонстант.ЛБ_ОграничениеОценкиВключениеЗБ</DataPath>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Ограничить включение в один ЗБ изделий с оценкой:</v8:content>
+												</v8:item>
+											</Title>
+											<TitleLocation>Right</TitleLocation>
+											<CheckBoxType>Switcher</CheckBoxType>
+											<ContextMenu name="ЛБ_ОграничениеОценкиВключениеЗБКонтекстноеМеню" id="78"/>
+											<ExtendedTooltip name="ЛБ_ОграничениеОценкиВключениеЗБРасширеннаяПодсказка" id="79"/>
+										</CheckBoxField>
+										<InputField name="ЛБ_ОценкаВключениеЗБ" id="80">
+											<DataPath>НаборКонстант.ЛБ_ОценкаВключениеЗБ</DataPath>
+											<TitleLocation>None</TitleLocation>
+											<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+											<ContextMenu name="ЛБ_ОценкаВключениеЗБКонтекстноеМеню" id="81"/>
+											<ExtendedTooltip name="ЛБ_ОценкаВключениеЗБРасширеннаяПодсказка" id="82"/>
+										</InputField>
+										<LabelDecoration name="ДекорацияОграничение12" id="93">
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>руб. и ниже этой оценки</v8:content>
+												</v8:item>
+											</Title>
+											<ContextMenu name="ДекорацияОграничение12КонтекстноеМеню" id="94"/>
+											<ExtendedTooltip name="ДекорацияОграничение12РасширеннаяПодсказка" id="95"/>
+										</LabelDecoration>
+									</ChildItems>
+								</UsualGroup>
+								<InputField name="ЛБ_СообщениеВключениеЗБ" id="83">
+									<DataPath>НаборКонстант.ЛБ_СообщениеВключениеЗБ</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Сообщение пользователю (включение в один залоговый билет)</v8:content>
+										</v8:item>
+									</Title>
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<Height>2</Height>
+									<VerticalStretch>false</VerticalStretch>
+									<MultiLine>true</MultiLine>
+									<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+									<HeightControlVariant>UseContentHeight</HeightControlVariant>
+									<ContextMenu name="ЛБ_СообщениеВключениеЗБКонтекстноеМеню" id="84"/>
+									<ExtendedTooltip name="ЛБ_СообщениеВключениеЗБРасширеннаяПодсказка" id="85"/>
+								</InputField>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ГруппаСотрудники" id="103">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Условия займа для сотрудников</v8:content>
+								</v8:item>
+							</Title>
+							<TitleFont ref="style:NormalTextFont" height="10" kind="StyleItem" scale="100"/>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа сотрудники</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Group>Vertical</Group>
+							<Representation>StrongSeparation</Representation>
+							<ExtendedTooltip name="ГруппаСотрудникиРасширеннаяПодсказка" id="104"/>
+							<ChildItems>
+								<UsualGroup name="ГруппаСотрудники1" id="114">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа сотрудники1</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа сотрудники1</v8:content>
+										</v8:item>
+									</ToolTip>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ГруппаСотрудники1РасширеннаяПодсказка" id="115"/>
+									<ChildItems>
+										<CheckBoxField name="ЛБ_ЕстьЛьготыСотрудникам" id="127">
+											<DataPath>НаборКонстант.ЛБ_ЕстьЛьготыСотрудникам</DataPath>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Есть льготы для сотрудников если задолженность по всем ЗБ не превышает</v8:content>
+												</v8:item>
+											</Title>
+											<TitleLocation>Right</TitleLocation>
+											<CheckBoxType>Switcher</CheckBoxType>
+											<ContextMenu name="ЛБ_ЕстьЛьготыСотрудникамКонтекстноеМеню" id="128"/>
+											<ExtendedTooltip name="ЛБ_ЕстьЛьготыСотрудникамРасширеннаяПодсказка" id="129"/>
+										</CheckBoxField>
+										<InputField name="ЛБ_ОграничениеСуммыЗаймаСотрудники" id="108">
+											<DataPath>НаборКонстант.ЛБ_ОграничениеСуммыЗаймаСотрудники</DataPath>
+											<TitleLocation>None</TitleLocation>
+											<Width>10</Width>
+											<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+											<ContextMenu name="ЛБ_ОграничениеСуммыЗаймаСотрудникиКонтекстноеМеню" id="109"/>
+											<ExtendedTooltip name="ЛБ_ОграничениеСуммыЗаймаСотрудникиРасширеннаяПодсказка" id="110"/>
+										</InputField>
+										<LabelDecoration name="ДекорацияСтавка2" id="124">
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>руб.</v8:content>
+												</v8:item>
+											</Title>
+											<ContextMenu name="ДекорацияСтавка2КонтекстноеМеню" id="125"/>
+											<ExtendedTooltip name="ДекорацияСтавка2РасширеннаяПодсказка" id="126"/>
+										</LabelDecoration>
+									</ChildItems>
+								</UsualGroup>
+								<InputField name="ЛБ_ДопСтатусСотрудника" id="130">
+									<DataPath>НаборКонстант.ЛБ_ДопСтатусСотрудника</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Доп. стаус сотрудника для выбора условий займа</v8:content>
+										</v8:item>
+									</Title>
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<OpenButton>false</OpenButton>
+									<CreateButton>false</CreateButton>
+									<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+									<QuickChoice>true</QuickChoice>
+									<TextEdit>false</TextEdit>
+									<ContextMenu name="ЛБ_ДопСтатусСотрудникаКонтекстноеМеню" id="131"/>
+									<ExtendedTooltip name="ЛБ_ДопСтатусСотрудникаРасширеннаяПодсказка" id="132"/>
+								</InputField>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</Page>
+				<Page name="ТехСтраница" id="9">
+					<Visible>false</Visible>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Тех. константы</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Тех страница</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="ТехСтраницаРасширеннаяПодсказка" id="10"/>
+					<ChildItems>
+						<InputField name="ЛБ_ОсновнаяЕдиницаМеталлы" id="1">
+							<DataPath>НаборКонстант.ЛБ_ОсновнаяЕдиницаМеталлы</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<DropListButton>true</DropListButton>
+							<OpenButton>false</OpenButton>
+							<CreateButton>false</CreateButton>
+							<ListChoiceMode>true</ListChoiceMode>
+							<QuickChoice>true</QuickChoice>
+							<ContextMenu name="ЛБ_ОсновнаяЕдиницаМеталлыКонтекстноеМеню" id="2"/>
+							<ExtendedTooltip name="ЛБ_ОсновнаяЕдиницаМеталлыРасширеннаяПодсказка" id="3"/>
+						</InputField>
+						<InputField name="ЛБ_ОсновнаяЕдиницаКамни" id="4">
+							<DataPath>НаборКонстант.ЛБ_ОсновнаяЕдиницаКамни</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<DropListButton>true</DropListButton>
+							<OpenButton>false</OpenButton>
+							<CreateButton>false</CreateButton>
+							<ListChoiceMode>true</ListChoiceMode>
+							<QuickChoice>true</QuickChoice>
+							<ContextMenu name="ЛБ_ОсновнаяЕдиницаКамниКонтекстноеМеню" id="5"/>
+							<ExtendedTooltip name="ЛБ_ОсновнаяЕдиницаКамниРасширеннаяПодсказка" id="6"/>
+						</InputField>
+						<InputField name="ЛБ_ОсновнойЛомбард" id="33">
+							<DataPath>НаборКонстант.ЛБ_ОсновнойЛомбард</DataPath>
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<OpenButton>false</OpenButton>
+							<CreateButton>false</CreateButton>
+							<QuickChoice>true</QuickChoice>
+							<ContextMenu name="ЛБ_ОсновнойЛомбардКонтекстноеМеню" id="34"/>
+							<ExtendedTooltip name="ЛБ_ОсновнойЛомбардРасширеннаяПодсказка" id="35"/>
+						</InputField>
+						<InputField name="ЛБ_ОсновнаяСхемаКредитования" id="16">
+							<DataPath>НаборКонстант.ЛБ_ОсновнаяСхемаКредитования</DataPath>
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<OpenButton>false</OpenButton>
+							<CreateButton>false</CreateButton>
+							<QuickChoice>true</QuickChoice>
+							<ContextMenu name="ЛБ_ОсновнаяСхемаКредитованияКонтекстноеМеню" id="17"/>
+							<ExtendedTooltip name="ЛБ_ОсновнаяСхемаКредитованияРасширеннаяПодсказка" id="18"/>
+						</InputField>
+					</ChildItems>
+				</Page>
+				<Page name="ГруппаНастройкиПечати" id="138">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Настройки печати</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа настройки печати</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="ГруппаНастройкиПечатиРасширеннаяПодсказка" id="139"/>
+					<ChildItems>
+						<InputField name="ЛБ_НачальникОРБ" id="140">
+							<DataPath>НаборКонстант.ЛБ_НачальникОРБ</DataPath>
+							<ClearButton>true</ClearButton>
+							<OpenButton>false</OpenButton>
+							<CreateButton>false</CreateButton>
+							<ListChoiceMode>true</ListChoiceMode>
+							<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+							<ContextMenu name="ЛБ_НачальникОРБКонтекстноеМеню" id="141"/>
+							<ExtendedTooltip name="ЛБ_НачальникОРБРасширеннаяПодсказка" id="142"/>
+						</InputField>
+						<InputField name="ЛБ_ОтветственноеЛицоОРБ" id="143">
+							<DataPath>НаборКонстант.ЛБ_ОтветственноеЛицоОРБ</DataPath>
+							<ClearButton>true</ClearButton>
+							<OpenButton>false</OpenButton>
+							<CreateButton>false</CreateButton>
+							<ListChoiceMode>true</ListChoiceMode>
+							<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+							<ContextMenu name="ЛБ_ОтветственноеЛицоОРБКонтекстноеМеню" id="144"/>
+							<ExtendedTooltip name="ЛБ_ОтветственноеЛицоОРБРасширеннаяПодсказка" id="145"/>
+						</InputField>
+						<InputField name="ЛБ_НачальникОДО" id="146">
+							<DataPath>НаборКонстант.ЛБ_НачальникОДО</DataPath>
+							<ClearButton>true</ClearButton>
+							<OpenButton>false</OpenButton>
+							<CreateButton>false</CreateButton>
+							<ListChoiceMode>true</ListChoiceMode>
+							<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+							<ContextMenu name="ЛБ_НачальникОДОКонтекстноеМеню" id="147"/>
+							<ExtendedTooltip name="ЛБ_НачальникОДОРасширеннаяПодсказка" id="148"/>
+						</InputField>
+						<InputField name="ЛБ_ОтветственноеЛицоРеклама" id="149">
+							<DataPath>НаборКонстант.ЛБ_ОтветственноеЛицоРеклама</DataPath>
+							<ClearButton>true</ClearButton>
+							<OpenButton>false</OpenButton>
+							<CreateButton>false</CreateButton>
+							<ListChoiceMode>true</ListChoiceMode>
+							<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+							<ContextMenu name="ЛБ_ОтветственноеЛицоРекламаКонтекстноеМеню" id="150"/>
+							<ExtendedTooltip name="ЛБ_ОтветственноеЛицоРекламаРасширеннаяПодсказка" id="151"/>
+						</InputField>
+						<InputField name="ЛБ_Подписант" id="152">
+							<DataPath>НаборКонстант.ЛБ_Подписант</DataPath>
+							<ClearButton>true</ClearButton>
+							<OpenButton>false</OpenButton>
+							<CreateButton>false</CreateButton>
+							<ListChoiceMode>true</ListChoiceMode>
+							<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+							<ContextMenu name="ЛБ_ПодписантКонтекстноеМеню" id="153"/>
+							<ExtendedTooltip name="ЛБ_ПодписантРасширеннаяПодсказка" id="154"/>
+						</InputField>
+					</ChildItems>
+				</Page>
+				<Page name="ГруппаПроизводственныеКалендари" id="155">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Производственные календари</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа производственные календари</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="ГруппаПроизводственныеКалендариРасширеннаяПодсказка" id="156"/>
+					<ChildItems>
+						<InputField name="ЛБ_ПроизводственныйКалендарьДляЗаймов" id="157">
+							<DataPath>НаборКонстант.ЛБ_ПроизводственныйКалендарьДляЗаймов</DataPath>
+							<ClearButton>true</ClearButton>
+							<OpenButton>false</OpenButton>
+							<CreateButton>false</CreateButton>
+							<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+							<ContextMenu name="ЛБ_ПроизводственныйКалендарьДляЗаймовКонтекстноеМеню" id="158"/>
+							<ExtendedTooltip name="ЛБ_ПроизводственныйКалендарьДляЗаймовРасширеннаяПодсказка" id="159"/>
+						</InputField>
+						<InputField name="ЛБ_ПроизводственныйКалендарьДляЛимитов" id="160">
+							<DataPath>НаборКонстант.ЛБ_ПроизводственныйКалендарьДляЛимитов</DataPath>
+							<ClearButton>true</ClearButton>
+							<OpenButton>false</OpenButton>
+							<CreateButton>false</CreateButton>
+							<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+							<ContextMenu name="ЛБ_ПроизводственныйКалендарьДляЛимитовКонтекстноеМеню" id="161"/>
+							<ExtendedTooltip name="ЛБ_ПроизводственныйКалендарьДляЛимитовРасширеннаяПодсказка" id="162"/>
+						</InputField>
+					</ChildItems>
+				</Page>
+			</ChildItems>
+		</Pages>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="НаборКонстант" id="1">
+			<Type>
+				<v8:Type>cfg:ConstantsSet</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+		</Attribute>
+		<Attribute name="НастройкиЗайма" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Настройки займа</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:DynamicList</v8:Type>
+			</Type>
+			<Settings xsi:type="DynamicList">
+				<ManualQuery>true</ManualQuery>
+				<DynamicDataRead>false</DynamicDataRead>
+				<QueryText>ВЫБРАТЬ
+	ЛБ_НастройкаЗайма.Период КАК Период,
+	ЛБ_НастройкаЗайма.Настройка КАК Настройка,
+	ЛБ_НастройкаЗайма.Значение КАК Значение
+ИЗ
+	РегистрСведений.ЛБ_НастройкаЗайма КАК ЛБ_НастройкаЗайма</QueryText>
+				<MainTable>InformationRegister.ЛБ_НастройкаЗайма</MainTable>
+				<ListSettings>
+					<dcsset:filter>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>dfcece9d-5077-440b-b6b3-45a5cb4538eb</dcsset:userSettingID>
+					</dcsset:filter>
+					<dcsset:order>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>88619765-ccb3-46c6-ac52-38e9c992ebd4</dcsset:userSettingID>
+					</dcsset:order>
+					<dcsset:conditionalAppearance>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>b75fecce-942b-4aed-abc9-e6a02e460fb3</dcsset:userSettingID>
+					</dcsset:conditionalAppearance>
+					<dcsset:itemsViewMode>Normal</dcsset:itemsViewMode>
+					<dcsset:itemsUserSettingID>911b6018-f537-43e8-a417-da56b22f9aec</dcsset:itemsUserSettingID>
+				</ListSettings>
+			</Settings>
+		</Attribute>
+	</Attributes>
+</Form>

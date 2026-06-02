@@ -1,0 +1,1093 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.20">
+	<AutoTime>CurrentOrLast</AutoTime>
+	<UsePostingMode>Auto</UsePostingMode>
+	<RepostOnWrite>true</RepostOnWrite>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="AfterWriteAtServer">ПослеЗаписиНаСервере</Event>
+		<Event name="OnOpen">ПриОткрытии</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="Группа1" id="497">
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="Группа1РасширеннаяПодсказка" id="498"/>
+			<ChildItems>
+				<InputField name="Номер" id="1">
+					<DataPath>Объект.Number</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+					<ContextMenu name="НомерКонтекстноеМеню" id="2"/>
+					<ExtendedTooltip name="НомерРасширеннаяПодсказка" id="3"/>
+				</InputField>
+				<InputField name="Дата" id="4">
+					<DataPath>Объект.Date</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>от</v8:content>
+						</v8:item>
+					</Title>
+					<EditMode>EnterOnInput</EditMode>
+					<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+					<ContextMenu name="ДатаКонтекстноеМеню" id="5"/>
+					<ExtendedTooltip name="ДатаРасширеннаяПодсказка" id="6"/>
+				</InputField>
+				<InputField name="СтатусДокумента" id="523">
+					<DataPath>СтатусДокумента</DataPath>
+					<ReadOnly>true</ReadOnly>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Статус</v8:content>
+						</v8:item>
+					</Title>
+					<TitleLocation>Left</TitleLocation>
+					<Width>6</Width>
+					<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+					<Font ref="style:NormalTextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem" scale="100"/>
+					<ContextMenu name="СтатусДокументаКонтекстноеМеню" id="524"/>
+					<ExtendedTooltip name="СтатусДокументаРасширеннаяПодсказка" id="525"/>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="Группа2" id="499">
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="Группа2РасширеннаяПодсказка" id="500"/>
+			<ChildItems>
+				<InputField name="МесяцРегистрацииСтрокой" id="494">
+					<DataPath>МесяцРегистрацииСтрокой</DataPath>
+					<ChoiceButton>true</ChoiceButton>
+					<SpinButton>true</SpinButton>
+					<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+					<ContextMenu name="МесяцРегистрацииСтрокойКонтекстноеМеню" id="495"/>
+					<ExtendedTooltip name="МесяцРегистрацииСтрокойРасширеннаяПодсказка" id="496"/>
+					<Events>
+						<Event name="OnChange">МесяцРегистрацииСтрокойПриИзменении</Event>
+						<Event name="AutoComplete">МесяцРегистрацииСтрокойАвтоПодбор</Event>
+						<Event name="StartChoice">МесяцРегистрацииСтрокойНачалоВыбора</Event>
+						<Event name="Tuning">МесяцРегистрацииСтрокойРегулирование</Event>
+						<Event name="TextEditEnd">МесяцРегистрацииСтрокойОкончаниеВводаТекста</Event>
+					</Events>
+				</InputField>
+				<InputField name="Отделение" id="514">
+					<DataPath>Объект.Отделение</DataPath>
+					<DropListButton>false</DropListButton>
+					<ChoiceButton>true</ChoiceButton>
+					<ChoiceButtonRepresentation>ShowInInputField</ChoiceButtonRepresentation>
+					<ClearButton>false</ClearButton>
+					<SpinButton>false</SpinButton>
+					<OpenButton>false</OpenButton>
+					<CreateButton>false</CreateButton>
+					<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+					<TextEdit>false</TextEdit>
+					<ChoiceHistoryOnInput>DontUse</ChoiceHistoryOnInput>
+					<ContextMenu name="ОтделениеКонтекстноеМеню" id="515"/>
+					<ExtendedTooltip name="ОтделениеРасширеннаяПодсказка" id="516"/>
+					<Events>
+						<Event name="OnChange">ОтделениеПриИзменении</Event>
+						<Event name="StartChoice">Отделение1НачалоВыбора</Event>
+					</Events>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+		<LabelDecoration name="Декорация1" id="509">
+			<Width>80</Width>
+			<TextColor>style:FieldSelectionBackColor</TextColor>
+			<Title formatted="false">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Установить время работы - "Пробел". Клавиши: "В" - выходной, "ОТ" - отпуск, "Б" - больничный, "Х" - очистить, "У" - увольнение</v8:content>
+				</v8:item>
+			</Title>
+			<ContextMenu name="Декорация1КонтекстноеМеню" id="510"/>
+			<ExtendedTooltip name="Декорация1РасширеннаяПодсказка" id="511"/>
+		</LabelDecoration>
+		<Table name="ДанныеОВремени" id="10">
+			<Representation>List</Representation>
+			<AutoInsertNewRow>true</AutoInsertNewRow>
+			<EnableStartDrag>true</EnableStartDrag>
+			<EnableDrag>true</EnableDrag>
+			<DataPath>Объект.ДанныеОВремени</DataPath>
+			<RowFilter xsi:nil="true"/>
+			<ContextMenu name="ДанныеОВремениКонтекстноеМеню" id="11"/>
+			<AutoCommandBar name="ДанныеОВремениКоманднаяПанель" id="12">
+				<Autofill>false</Autofill>
+				<ChildItems>
+					<Button name="КнопкаДобавитьСотрудника" id="512">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Command.ДобавитьСтроку</CommandName>
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Добавить</v8:content>
+							</v8:item>
+						</Title>
+						<ExtendedTooltip name="КнопкаДобавитьСотрудникаРасширеннаяПодсказка" id="513"/>
+					</Button>
+					<Button name="кнопкаЗаполнитьИзГрафика" id="501">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Command.ЗаполнитьИзГрафика</CommandName>
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Начальное заполнение</v8:content>
+							</v8:item>
+						</Title>
+						<ExtendedTooltip name="кнопкаЗаполнитьИзГрафикаРасширеннаяПодсказка" id="502"/>
+					</Button>
+				</ChildItems>
+			</AutoCommandBar>
+			<ExtendedTooltip name="ДанныеОВремениРасширеннаяПодсказка" id="13"/>
+			<SearchStringAddition name="ДанныеОВремениСтрокаПоиска" id="14">
+				<AdditionSource>
+					<Item>ДанныеОВремени</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ДанныеОВремениСтрокаПоискаКонтекстноеМеню" id="15"/>
+				<ExtendedTooltip name="ДанныеОВремениСтрокаПоискаРасширеннаяПодсказка" id="16"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="ДанныеОВремениСостояниеПросмотра" id="17">
+				<AdditionSource>
+					<Item>ДанныеОВремени</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ДанныеОВремениСостояниеПросмотраКонтекстноеМеню" id="18"/>
+				<ExtendedTooltip name="ДанныеОВремениСостояниеПросмотраРасширеннаяПодсказка" id="19"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="ДанныеОВремениУправлениеПоиском" id="20">
+				<AdditionSource>
+					<Item>ДанныеОВремени</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="ДанныеОВремениУправлениеПоискомКонтекстноеМеню" id="21"/>
+				<ExtendedTooltip name="ДанныеОВремениУправлениеПоискомРасширеннаяПодсказка" id="22"/>
+			</SearchControlAddition>
+			<Events>
+				<Event name="Selection">ДанныеОВремениВыбор</Event>
+				<Event name="BeforeRowChange">ДанныеОВремениПередНачаломИзменения</Event>
+				<Event name="AfterDeleteRow">ДанныеОВремениПослеУдаления</Event>
+			</Events>
+			<ChildItems>
+				<LabelField name="ДанныеОВремениНомерСтроки" id="23">
+					<DataPath>Объект.ДанныеОВремени.LineNumber</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<Width>2</Width>
+					<ContextMenu name="ДанныеОВремениНомерСтрокиКонтекстноеМеню" id="24"/>
+					<ExtendedTooltip name="ДанныеОВремениНомерСтрокиРасширеннаяПодсказка" id="25"/>
+				</LabelField>
+				<InputField name="ДанныеОВремениЛомбард" id="503">
+					<DataPath>Объект.ДанныеОВремени.Ломбард</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Л-д</v8:content>
+						</v8:item>
+					</Title>
+					<EditMode>EnterOnInput</EditMode>
+					<Width>6</Width>
+					<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+					<ContextMenu name="ДанныеОВремениЛомбардКонтекстноеМеню" id="504"/>
+					<ExtendedTooltip name="ДанныеОВремениЛомбардРасширеннаяПодсказка" id="505"/>
+					<Events>
+						<Event name="OnChange">ДанныеОВремениЛомбардПриИзменении</Event>
+						<Event name="StartChoice">ДанныеОВремениЛомбардНачалоВыбора</Event>
+					</Events>
+				</InputField>
+				<InputField name="ДанныеОВремениСотрудник" id="26">
+					<DataPath>Объект.ДанныеОВремени.Сотрудник</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<DropListButton>true</DropListButton>
+					<ChoiceButton>true</ChoiceButton>
+					<ListChoiceMode>true</ListChoiceMode>
+					<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+					<ContextMenu name="ДанныеОВремениСотрудникКонтекстноеМеню" id="27"/>
+					<ExtendedTooltip name="ДанныеОВремениСотрудникРасширеннаяПодсказка" id="28"/>
+					<Events>
+						<Event name="OnChange">ДанныеОВремениСотрудникПриИзменении</Event>
+						<Event name="StartChoice">ДанныеОВремениСотрудникНачалоВыбора</Event>
+					</Events>
+				</InputField>
+				<InputField name="ДанныеОВремениНормаПоПриказу" id="520">
+					<DataPath>Объект.ДанныеОВремени.НормаПоПриказу</DataPath>
+					<ReadOnly>true</ReadOnly>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Приказ</v8:content>
+						</v8:item>
+					</Title>
+					<EditMode>EnterOnInput</EditMode>
+					<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+					<ContextMenu name="ДанныеОВремениНормаПоПриказуКонтекстноеМеню" id="521"/>
+					<ExtendedTooltip name="ДанныеОВремениНормаПоПриказуРасширеннаяПодсказка" id="522"/>
+				</InputField>
+				<InputField name="ДанныеОВремениИтогоЧасов" id="506">
+					<DataPath>Объект.ДанныеОВремени.ИтогоЧасов</DataPath>
+					<ReadOnly>true</ReadOnly>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>График</v8:content>
+						</v8:item>
+					</Title>
+					<HorizontalAlign>Center</HorizontalAlign>
+					<EditMode>EnterOnInput</EditMode>
+					<HeaderHorizontalAlign>Center</HeaderHorizontalAlign>
+					<Width>5</Width>
+					<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+					<ContextMenu name="ДанныеОВремениИтогоЧасовКонтекстноеМеню" id="507"/>
+					<ExtendedTooltip name="ДанныеОВремениИтогоЧасовРасширеннаяПодсказка" id="508"/>
+				</InputField>
+				<InputField name="ВремяПредставление1" id="401">
+					<DataPath>Объект.ДанныеОВремени.ВремяПредставление1</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>1</v8:content>
+						</v8:item>
+					</Title>
+					<HorizontalAlign>Center</HorizontalAlign>
+					<EditMode>Directly</EditMode>
+					<HeaderHorizontalAlign>Center</HeaderHorizontalAlign>
+					<Width>5</Width>
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<MaxWidth>5</MaxWidth>
+					<HorizontalStretch>false</HorizontalStretch>
+					<VerticalStretch>false</VerticalStretch>
+					<ExtendedEdit>false</ExtendedEdit>
+					<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+					<ContextMenu name="ВремяПредставление1КонтекстноеМеню" id="402"/>
+					<ExtendedTooltip name="ВремяПредставление1РасширеннаяПодсказка" id="403"/>
+					<Events>
+						<Event name="EditTextChange">ВремяПредставление1ИзменениеТекстаРедактирования</Event>
+						<Event name="Clearing">ВремяПредставление1Очистка</Event>
+					</Events>
+				</InputField>
+				<InputField name="ВремяПредставление2" id="404">
+					<DataPath>Объект.ДанныеОВремени.ВремяПредставление2</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>2</v8:content>
+						</v8:item>
+					</Title>
+					<HorizontalAlign>Center</HorizontalAlign>
+					<EditMode>Directly</EditMode>
+					<HeaderHorizontalAlign>Center</HeaderHorizontalAlign>
+					<Width>5</Width>
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<MaxWidth>5</MaxWidth>
+					<HorizontalStretch>false</HorizontalStretch>
+					<VerticalStretch>false</VerticalStretch>
+					<ExtendedEdit>false</ExtendedEdit>
+					<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+					<ContextMenu name="ВремяПредставление2КонтекстноеМеню" id="405"/>
+					<ExtendedTooltip name="ВремяПредставление2РасширеннаяПодсказка" id="406"/>
+					<Events>
+						<Event name="EditTextChange">ВремяПредставление2ИзменениеТекстаРедактирования</Event>
+						<Event name="Clearing">ВремяПредставление2Очистка</Event>
+					</Events>
+				</InputField>
+				<InputField name="ВремяПредставление3" id="407">
+					<DataPath>Объект.ДанныеОВремени.ВремяПредставление3</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>3</v8:content>
+						</v8:item>
+					</Title>
+					<HorizontalAlign>Center</HorizontalAlign>
+					<EditMode>Directly</EditMode>
+					<HeaderHorizontalAlign>Center</HeaderHorizontalAlign>
+					<Width>5</Width>
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<MaxWidth>5</MaxWidth>
+					<HorizontalStretch>false</HorizontalStretch>
+					<VerticalStretch>false</VerticalStretch>
+					<ExtendedEdit>false</ExtendedEdit>
+					<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+					<ContextMenu name="ВремяПредставление3КонтекстноеМеню" id="408"/>
+					<ExtendedTooltip name="ВремяПредставление3РасширеннаяПодсказка" id="409"/>
+					<Events>
+						<Event name="EditTextChange">ВремяПредставление3ИзменениеТекстаРедактирования</Event>
+						<Event name="Clearing">ВремяПредставление3Очистка</Event>
+					</Events>
+				</InputField>
+				<InputField name="ВремяПредставление4" id="410">
+					<DataPath>Объект.ДанныеОВремени.ВремяПредставление4</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>4</v8:content>
+						</v8:item>
+					</Title>
+					<HorizontalAlign>Center</HorizontalAlign>
+					<EditMode>Directly</EditMode>
+					<HeaderHorizontalAlign>Center</HeaderHorizontalAlign>
+					<Width>5</Width>
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<MaxWidth>5</MaxWidth>
+					<HorizontalStretch>false</HorizontalStretch>
+					<VerticalStretch>false</VerticalStretch>
+					<ExtendedEdit>false</ExtendedEdit>
+					<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+					<ContextMenu name="ВремяПредставление4КонтекстноеМеню" id="411"/>
+					<ExtendedTooltip name="ВремяПредставление4РасширеннаяПодсказка" id="412"/>
+					<Events>
+						<Event name="EditTextChange">ВремяПредставление4ИзменениеТекстаРедактирования</Event>
+						<Event name="Clearing">ВремяПредставление4Очистка</Event>
+					</Events>
+				</InputField>
+				<InputField name="ВремяПредставление5" id="413">
+					<DataPath>Объект.ДанныеОВремени.ВремяПредставление5</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>5</v8:content>
+						</v8:item>
+					</Title>
+					<HorizontalAlign>Center</HorizontalAlign>
+					<EditMode>Directly</EditMode>
+					<HeaderHorizontalAlign>Center</HeaderHorizontalAlign>
+					<Width>5</Width>
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<MaxWidth>5</MaxWidth>
+					<HorizontalStretch>false</HorizontalStretch>
+					<VerticalStretch>false</VerticalStretch>
+					<ExtendedEdit>false</ExtendedEdit>
+					<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+					<ContextMenu name="ВремяПредставление5КонтекстноеМеню" id="414"/>
+					<ExtendedTooltip name="ВремяПредставление5РасширеннаяПодсказка" id="415"/>
+					<Events>
+						<Event name="EditTextChange">ВремяПредставление5ИзменениеТекстаРедактирования</Event>
+						<Event name="Clearing">ВремяПредставление5Очистка</Event>
+					</Events>
+				</InputField>
+				<InputField name="ВремяПредставление6" id="416">
+					<DataPath>Объект.ДанныеОВремени.ВремяПредставление6</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>6</v8:content>
+						</v8:item>
+					</Title>
+					<HorizontalAlign>Center</HorizontalAlign>
+					<EditMode>Directly</EditMode>
+					<HeaderHorizontalAlign>Center</HeaderHorizontalAlign>
+					<Width>5</Width>
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<MaxWidth>5</MaxWidth>
+					<HorizontalStretch>false</HorizontalStretch>
+					<VerticalStretch>false</VerticalStretch>
+					<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+					<ContextMenu name="ВремяПредставление6КонтекстноеМеню" id="417"/>
+					<ExtendedTooltip name="ВремяПредставление6РасширеннаяПодсказка" id="418"/>
+					<Events>
+						<Event name="EditTextChange">ВремяПредставление6ИзменениеТекстаРедактирования</Event>
+						<Event name="Clearing">ВремяПредставление6Очистка</Event>
+					</Events>
+				</InputField>
+				<InputField name="ВремяПредставление7" id="419">
+					<DataPath>Объект.ДанныеОВремени.ВремяПредставление7</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>7</v8:content>
+						</v8:item>
+					</Title>
+					<HorizontalAlign>Center</HorizontalAlign>
+					<EditMode>Directly</EditMode>
+					<HeaderHorizontalAlign>Center</HeaderHorizontalAlign>
+					<Width>5</Width>
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<MaxWidth>5</MaxWidth>
+					<HorizontalStretch>false</HorizontalStretch>
+					<VerticalStretch>false</VerticalStretch>
+					<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+					<ContextMenu name="ВремяПредставление7КонтекстноеМеню" id="420"/>
+					<ExtendedTooltip name="ВремяПредставление7РасширеннаяПодсказка" id="421"/>
+					<Events>
+						<Event name="EditTextChange">ВремяПредставление7ИзменениеТекстаРедактирования</Event>
+						<Event name="Clearing">ВремяПредставление7Очистка</Event>
+					</Events>
+				</InputField>
+				<InputField name="ВремяПредставление8" id="422">
+					<DataPath>Объект.ДанныеОВремени.ВремяПредставление8</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>8</v8:content>
+						</v8:item>
+					</Title>
+					<HorizontalAlign>Center</HorizontalAlign>
+					<EditMode>Directly</EditMode>
+					<HeaderHorizontalAlign>Center</HeaderHorizontalAlign>
+					<Width>5</Width>
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<MaxWidth>5</MaxWidth>
+					<HorizontalStretch>false</HorizontalStretch>
+					<VerticalStretch>false</VerticalStretch>
+					<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+					<ContextMenu name="ВремяПредставление8КонтекстноеМеню" id="423"/>
+					<ExtendedTooltip name="ВремяПредставление8РасширеннаяПодсказка" id="424"/>
+					<Events>
+						<Event name="EditTextChange">ВремяПредставление8ИзменениеТекстаРедактирования</Event>
+						<Event name="Clearing">ВремяПредставление8Очистка</Event>
+					</Events>
+				</InputField>
+				<InputField name="ВремяПредставление9" id="425">
+					<DataPath>Объект.ДанныеОВремени.ВремяПредставление9</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>9</v8:content>
+						</v8:item>
+					</Title>
+					<HorizontalAlign>Center</HorizontalAlign>
+					<EditMode>Directly</EditMode>
+					<HeaderHorizontalAlign>Center</HeaderHorizontalAlign>
+					<Width>5</Width>
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<MaxWidth>5</MaxWidth>
+					<HorizontalStretch>false</HorizontalStretch>
+					<VerticalStretch>false</VerticalStretch>
+					<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+					<ContextMenu name="ВремяПредставление9КонтекстноеМеню" id="426"/>
+					<ExtendedTooltip name="ВремяПредставление9РасширеннаяПодсказка" id="427"/>
+					<Events>
+						<Event name="EditTextChange">ВремяПредставление9ИзменениеТекстаРедактирования</Event>
+						<Event name="Clearing">ВремяПредставление9Очистка</Event>
+					</Events>
+				</InputField>
+				<InputField name="ВремяПредставление10" id="428">
+					<DataPath>Объект.ДанныеОВремени.ВремяПредставление10</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>10</v8:content>
+						</v8:item>
+					</Title>
+					<HorizontalAlign>Center</HorizontalAlign>
+					<EditMode>Directly</EditMode>
+					<HeaderHorizontalAlign>Center</HeaderHorizontalAlign>
+					<Width>5</Width>
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<MaxWidth>5</MaxWidth>
+					<HorizontalStretch>false</HorizontalStretch>
+					<VerticalStretch>false</VerticalStretch>
+					<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+					<ContextMenu name="ВремяПредставление10КонтекстноеМеню" id="429"/>
+					<ExtendedTooltip name="ВремяПредставление10РасширеннаяПодсказка" id="430"/>
+					<Events>
+						<Event name="EditTextChange">ВремяПредставление10ИзменениеТекстаРедактирования</Event>
+						<Event name="Clearing">ВремяПредставление10Очистка</Event>
+					</Events>
+				</InputField>
+				<InputField name="ВремяПредставление11" id="431">
+					<DataPath>Объект.ДанныеОВремени.ВремяПредставление11</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>11</v8:content>
+						</v8:item>
+					</Title>
+					<HorizontalAlign>Center</HorizontalAlign>
+					<EditMode>Directly</EditMode>
+					<HeaderHorizontalAlign>Center</HeaderHorizontalAlign>
+					<Width>5</Width>
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<MaxWidth>5</MaxWidth>
+					<HorizontalStretch>false</HorizontalStretch>
+					<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+					<ContextMenu name="ВремяПредставление11КонтекстноеМеню" id="432"/>
+					<ExtendedTooltip name="ВремяПредставление11РасширеннаяПодсказка" id="433"/>
+					<Events>
+						<Event name="EditTextChange">ВремяПредставление11ИзменениеТекстаРедактирования</Event>
+						<Event name="Clearing">ВремяПредставление11Очистка</Event>
+					</Events>
+				</InputField>
+				<InputField name="ВремяПредставление12" id="434">
+					<DataPath>Объект.ДанныеОВремени.ВремяПредставление12</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>12</v8:content>
+						</v8:item>
+					</Title>
+					<HorizontalAlign>Center</HorizontalAlign>
+					<EditMode>Directly</EditMode>
+					<HeaderHorizontalAlign>Center</HeaderHorizontalAlign>
+					<Width>5</Width>
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<MaxWidth>5</MaxWidth>
+					<HorizontalStretch>false</HorizontalStretch>
+					<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+					<ContextMenu name="ВремяПредставление12КонтекстноеМеню" id="435"/>
+					<ExtendedTooltip name="ВремяПредставление12РасширеннаяПодсказка" id="436"/>
+					<Events>
+						<Event name="EditTextChange">ВремяПредставление12ИзменениеТекстаРедактирования</Event>
+						<Event name="Clearing">ВремяПредставление12Очистка</Event>
+					</Events>
+				</InputField>
+				<InputField name="ВремяПредставление13" id="437">
+					<DataPath>Объект.ДанныеОВремени.ВремяПредставление13</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>13</v8:content>
+						</v8:item>
+					</Title>
+					<HorizontalAlign>Center</HorizontalAlign>
+					<EditMode>Directly</EditMode>
+					<HeaderHorizontalAlign>Center</HeaderHorizontalAlign>
+					<Width>5</Width>
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<MaxWidth>5</MaxWidth>
+					<HorizontalStretch>false</HorizontalStretch>
+					<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+					<ContextMenu name="ВремяПредставление13КонтекстноеМеню" id="438"/>
+					<ExtendedTooltip name="ВремяПредставление13РасширеннаяПодсказка" id="439"/>
+					<Events>
+						<Event name="EditTextChange">ВремяПредставление13ИзменениеТекстаРедактирования</Event>
+						<Event name="Clearing">ВремяПредставление13Очистка</Event>
+					</Events>
+				</InputField>
+				<InputField name="ВремяПредставление14" id="440">
+					<DataPath>Объект.ДанныеОВремени.ВремяПредставление14</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>14</v8:content>
+						</v8:item>
+					</Title>
+					<HorizontalAlign>Center</HorizontalAlign>
+					<EditMode>Directly</EditMode>
+					<HeaderHorizontalAlign>Center</HeaderHorizontalAlign>
+					<Width>5</Width>
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<MaxWidth>5</MaxWidth>
+					<HorizontalStretch>false</HorizontalStretch>
+					<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+					<ContextMenu name="ВремяПредставление14КонтекстноеМеню" id="441"/>
+					<ExtendedTooltip name="ВремяПредставление14РасширеннаяПодсказка" id="442"/>
+					<Events>
+						<Event name="EditTextChange">ВремяПредставление14ИзменениеТекстаРедактирования</Event>
+						<Event name="Clearing">ВремяПредставление14Очистка</Event>
+					</Events>
+				</InputField>
+				<InputField name="ВремяПредставление15" id="443">
+					<DataPath>Объект.ДанныеОВремени.ВремяПредставление15</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>15</v8:content>
+						</v8:item>
+					</Title>
+					<HorizontalAlign>Center</HorizontalAlign>
+					<EditMode>Directly</EditMode>
+					<HeaderHorizontalAlign>Center</HeaderHorizontalAlign>
+					<Width>5</Width>
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<MaxWidth>5</MaxWidth>
+					<HorizontalStretch>false</HorizontalStretch>
+					<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+					<ContextMenu name="ВремяПредставление15КонтекстноеМеню" id="444"/>
+					<ExtendedTooltip name="ВремяПредставление15РасширеннаяПодсказка" id="445"/>
+					<Events>
+						<Event name="EditTextChange">ВремяПредставление15ИзменениеТекстаРедактирования</Event>
+						<Event name="Clearing">ВремяПредставление15Очистка</Event>
+					</Events>
+				</InputField>
+				<InputField name="ВремяПредставление16" id="446">
+					<DataPath>Объект.ДанныеОВремени.ВремяПредставление16</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>16</v8:content>
+						</v8:item>
+					</Title>
+					<HorizontalAlign>Center</HorizontalAlign>
+					<EditMode>Directly</EditMode>
+					<HeaderHorizontalAlign>Center</HeaderHorizontalAlign>
+					<Width>5</Width>
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<MaxWidth>5</MaxWidth>
+					<HorizontalStretch>false</HorizontalStretch>
+					<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+					<ContextMenu name="ВремяПредставление16КонтекстноеМеню" id="447"/>
+					<ExtendedTooltip name="ВремяПредставление16РасширеннаяПодсказка" id="448"/>
+					<Events>
+						<Event name="EditTextChange">ВремяПредставление16ИзменениеТекстаРедактирования</Event>
+						<Event name="Clearing">ВремяПредставление16Очистка</Event>
+					</Events>
+				</InputField>
+				<InputField name="ВремяПредставление17" id="449">
+					<DataPath>Объект.ДанныеОВремени.ВремяПредставление17</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>17</v8:content>
+						</v8:item>
+					</Title>
+					<HorizontalAlign>Center</HorizontalAlign>
+					<EditMode>Directly</EditMode>
+					<HeaderHorizontalAlign>Center</HeaderHorizontalAlign>
+					<Width>5</Width>
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<MaxWidth>5</MaxWidth>
+					<HorizontalStretch>false</HorizontalStretch>
+					<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+					<ContextMenu name="ВремяПредставление17КонтекстноеМеню" id="450"/>
+					<ExtendedTooltip name="ВремяПредставление17РасширеннаяПодсказка" id="451"/>
+					<Events>
+						<Event name="EditTextChange">ВремяПредставление17ИзменениеТекстаРедактирования</Event>
+						<Event name="Clearing">ВремяПредставление17Очистка</Event>
+					</Events>
+				</InputField>
+				<InputField name="ВремяПредставление18" id="452">
+					<DataPath>Объект.ДанныеОВремени.ВремяПредставление18</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>18</v8:content>
+						</v8:item>
+					</Title>
+					<HorizontalAlign>Center</HorizontalAlign>
+					<EditMode>Directly</EditMode>
+					<HeaderHorizontalAlign>Center</HeaderHorizontalAlign>
+					<Width>5</Width>
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<MaxWidth>5</MaxWidth>
+					<HorizontalStretch>false</HorizontalStretch>
+					<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+					<ContextMenu name="ВремяПредставление18КонтекстноеМеню" id="453"/>
+					<ExtendedTooltip name="ВремяПредставление18РасширеннаяПодсказка" id="454"/>
+					<Events>
+						<Event name="EditTextChange">ВремяПредставление18ИзменениеТекстаРедактирования</Event>
+						<Event name="Clearing">ВремяПредставление18Очистка</Event>
+					</Events>
+				</InputField>
+				<InputField name="ВремяПредставление19" id="455">
+					<DataPath>Объект.ДанныеОВремени.ВремяПредставление19</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>19</v8:content>
+						</v8:item>
+					</Title>
+					<HorizontalAlign>Center</HorizontalAlign>
+					<EditMode>Directly</EditMode>
+					<HeaderHorizontalAlign>Center</HeaderHorizontalAlign>
+					<Width>5</Width>
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<MaxWidth>5</MaxWidth>
+					<HorizontalStretch>false</HorizontalStretch>
+					<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+					<ContextMenu name="ВремяПредставление19КонтекстноеМеню" id="456"/>
+					<ExtendedTooltip name="ВремяПредставление19РасширеннаяПодсказка" id="457"/>
+					<Events>
+						<Event name="EditTextChange">ВремяПредставление19ИзменениеТекстаРедактирования</Event>
+						<Event name="Clearing">ВремяПредставление19Очистка</Event>
+					</Events>
+				</InputField>
+				<InputField name="ВремяПредставление20" id="458">
+					<DataPath>Объект.ДанныеОВремени.ВремяПредставление20</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>20</v8:content>
+						</v8:item>
+					</Title>
+					<HorizontalAlign>Center</HorizontalAlign>
+					<EditMode>Directly</EditMode>
+					<HeaderHorizontalAlign>Center</HeaderHorizontalAlign>
+					<Width>5</Width>
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<MaxWidth>5</MaxWidth>
+					<HorizontalStretch>false</HorizontalStretch>
+					<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+					<ContextMenu name="ВремяПредставление20КонтекстноеМеню" id="459"/>
+					<ExtendedTooltip name="ВремяПредставление20РасширеннаяПодсказка" id="460"/>
+					<Events>
+						<Event name="EditTextChange">ВремяПредставление20ИзменениеТекстаРедактирования</Event>
+						<Event name="Clearing">ВремяПредставление20Очистка</Event>
+					</Events>
+				</InputField>
+				<InputField name="ВремяПредставление21" id="461">
+					<DataPath>Объект.ДанныеОВремени.ВремяПредставление21</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>21</v8:content>
+						</v8:item>
+					</Title>
+					<HorizontalAlign>Center</HorizontalAlign>
+					<EditMode>Directly</EditMode>
+					<HeaderHorizontalAlign>Center</HeaderHorizontalAlign>
+					<Width>5</Width>
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<MaxWidth>5</MaxWidth>
+					<HorizontalStretch>false</HorizontalStretch>
+					<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+					<ContextMenu name="ВремяПредставление21КонтекстноеМеню" id="462"/>
+					<ExtendedTooltip name="ВремяПредставление21РасширеннаяПодсказка" id="463"/>
+					<Events>
+						<Event name="EditTextChange">ВремяПредставление21ИзменениеТекстаРедактирования</Event>
+						<Event name="Clearing">ВремяПредставление21Очистка</Event>
+					</Events>
+				</InputField>
+				<InputField name="ВремяПредставление22" id="464">
+					<DataPath>Объект.ДанныеОВремени.ВремяПредставление22</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>22</v8:content>
+						</v8:item>
+					</Title>
+					<HorizontalAlign>Center</HorizontalAlign>
+					<EditMode>Directly</EditMode>
+					<HeaderHorizontalAlign>Center</HeaderHorizontalAlign>
+					<Width>5</Width>
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<MaxWidth>5</MaxWidth>
+					<HorizontalStretch>false</HorizontalStretch>
+					<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+					<ContextMenu name="ВремяПредставление22КонтекстноеМеню" id="465"/>
+					<ExtendedTooltip name="ВремяПредставление22РасширеннаяПодсказка" id="466"/>
+					<Events>
+						<Event name="EditTextChange">ВремяПредставление22ИзменениеТекстаРедактирования</Event>
+						<Event name="Clearing">ВремяПредставление22Очистка</Event>
+					</Events>
+				</InputField>
+				<InputField name="ВремяПредставление23" id="467">
+					<DataPath>Объект.ДанныеОВремени.ВремяПредставление23</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>23</v8:content>
+						</v8:item>
+					</Title>
+					<HorizontalAlign>Center</HorizontalAlign>
+					<EditMode>Directly</EditMode>
+					<HeaderHorizontalAlign>Center</HeaderHorizontalAlign>
+					<Width>5</Width>
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<MaxWidth>5</MaxWidth>
+					<HorizontalStretch>false</HorizontalStretch>
+					<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+					<ContextMenu name="ВремяПредставление23КонтекстноеМеню" id="468"/>
+					<ExtendedTooltip name="ВремяПредставление23РасширеннаяПодсказка" id="469"/>
+					<Events>
+						<Event name="EditTextChange">ВремяПредставление23ИзменениеТекстаРедактирования</Event>
+						<Event name="Clearing">ВремяПредставление23Очистка</Event>
+					</Events>
+				</InputField>
+				<InputField name="ВремяПредставление24" id="470">
+					<DataPath>Объект.ДанныеОВремени.ВремяПредставление24</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>24</v8:content>
+						</v8:item>
+					</Title>
+					<HorizontalAlign>Center</HorizontalAlign>
+					<EditMode>Directly</EditMode>
+					<HeaderHorizontalAlign>Center</HeaderHorizontalAlign>
+					<Width>5</Width>
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<MaxWidth>5</MaxWidth>
+					<HorizontalStretch>false</HorizontalStretch>
+					<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+					<ContextMenu name="ВремяПредставление24КонтекстноеМеню" id="471"/>
+					<ExtendedTooltip name="ВремяПредставление24РасширеннаяПодсказка" id="472"/>
+					<Events>
+						<Event name="EditTextChange">ВремяПредставление24ИзменениеТекстаРедактирования</Event>
+						<Event name="Clearing">ВремяПредставление24Очистка</Event>
+					</Events>
+				</InputField>
+				<InputField name="ВремяПредставление25" id="473">
+					<DataPath>Объект.ДанныеОВремени.ВремяПредставление25</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>25</v8:content>
+						</v8:item>
+					</Title>
+					<HorizontalAlign>Center</HorizontalAlign>
+					<EditMode>Directly</EditMode>
+					<HeaderHorizontalAlign>Center</HeaderHorizontalAlign>
+					<Width>5</Width>
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<MaxWidth>5</MaxWidth>
+					<HorizontalStretch>false</HorizontalStretch>
+					<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+					<ContextMenu name="ВремяПредставление25КонтекстноеМеню" id="474"/>
+					<ExtendedTooltip name="ВремяПредставление25РасширеннаяПодсказка" id="475"/>
+					<Events>
+						<Event name="EditTextChange">ВремяПредставление25ИзменениеТекстаРедактирования</Event>
+						<Event name="Clearing">ВремяПредставление25Очистка</Event>
+					</Events>
+				</InputField>
+				<InputField name="ВремяПредставление26" id="476">
+					<DataPath>Объект.ДанныеОВремени.ВремяПредставление26</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>26</v8:content>
+						</v8:item>
+					</Title>
+					<HorizontalAlign>Center</HorizontalAlign>
+					<EditMode>Directly</EditMode>
+					<HeaderHorizontalAlign>Center</HeaderHorizontalAlign>
+					<Width>5</Width>
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<MaxWidth>5</MaxWidth>
+					<HorizontalStretch>false</HorizontalStretch>
+					<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+					<ContextMenu name="ВремяПредставление26КонтекстноеМеню" id="477"/>
+					<ExtendedTooltip name="ВремяПредставление26РасширеннаяПодсказка" id="478"/>
+					<Events>
+						<Event name="EditTextChange">ВремяПредставление26ИзменениеТекстаРедактирования</Event>
+						<Event name="Clearing">ВремяПредставление26Очистка</Event>
+					</Events>
+				</InputField>
+				<InputField name="ВремяПредставление27" id="479">
+					<DataPath>Объект.ДанныеОВремени.ВремяПредставление27</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>27</v8:content>
+						</v8:item>
+					</Title>
+					<HorizontalAlign>Center</HorizontalAlign>
+					<EditMode>Directly</EditMode>
+					<HeaderHorizontalAlign>Center</HeaderHorizontalAlign>
+					<Width>5</Width>
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<MaxWidth>5</MaxWidth>
+					<HorizontalStretch>false</HorizontalStretch>
+					<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+					<ContextMenu name="ВремяПредставление27КонтекстноеМеню" id="480"/>
+					<ExtendedTooltip name="ВремяПредставление27РасширеннаяПодсказка" id="481"/>
+					<Events>
+						<Event name="EditTextChange">ВремяПредставление27ИзменениеТекстаРедактирования</Event>
+						<Event name="Clearing">ВремяПредставление27Очистка</Event>
+					</Events>
+				</InputField>
+				<InputField name="ВремяПредставление28" id="482">
+					<DataPath>Объект.ДанныеОВремени.ВремяПредставление28</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>28</v8:content>
+						</v8:item>
+					</Title>
+					<HorizontalAlign>Center</HorizontalAlign>
+					<EditMode>Directly</EditMode>
+					<HeaderHorizontalAlign>Center</HeaderHorizontalAlign>
+					<Width>5</Width>
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<MaxWidth>5</MaxWidth>
+					<HorizontalStretch>false</HorizontalStretch>
+					<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+					<ContextMenu name="ВремяПредставление28КонтекстноеМеню" id="483"/>
+					<ExtendedTooltip name="ВремяПредставление28РасширеннаяПодсказка" id="484"/>
+					<Events>
+						<Event name="EditTextChange">ВремяПредставление28ИзменениеТекстаРедактирования</Event>
+						<Event name="Clearing">ВремяПредставление28Очистка</Event>
+					</Events>
+				</InputField>
+				<InputField name="ВремяПредставление29" id="485">
+					<DataPath>Объект.ДанныеОВремени.ВремяПредставление29</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>29</v8:content>
+						</v8:item>
+					</Title>
+					<HorizontalAlign>Center</HorizontalAlign>
+					<EditMode>Directly</EditMode>
+					<HeaderHorizontalAlign>Center</HeaderHorizontalAlign>
+					<Width>5</Width>
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<MaxWidth>5</MaxWidth>
+					<HorizontalStretch>false</HorizontalStretch>
+					<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+					<ContextMenu name="ВремяПредставление29КонтекстноеМеню" id="486"/>
+					<ExtendedTooltip name="ВремяПредставление29РасширеннаяПодсказка" id="487"/>
+					<Events>
+						<Event name="EditTextChange">ВремяПредставление29ИзменениеТекстаРедактирования</Event>
+						<Event name="Clearing">ВремяПредставление29Очистка</Event>
+					</Events>
+				</InputField>
+				<InputField name="ВремяПредставление30" id="488">
+					<DataPath>Объект.ДанныеОВремени.ВремяПредставление30</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>30</v8:content>
+						</v8:item>
+					</Title>
+					<HorizontalAlign>Center</HorizontalAlign>
+					<EditMode>Directly</EditMode>
+					<HeaderHorizontalAlign>Center</HeaderHorizontalAlign>
+					<Width>5</Width>
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<MaxWidth>5</MaxWidth>
+					<HorizontalStretch>false</HorizontalStretch>
+					<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+					<ContextMenu name="ВремяПредставление30КонтекстноеМеню" id="489"/>
+					<ExtendedTooltip name="ВремяПредставление30РасширеннаяПодсказка" id="490"/>
+					<Events>
+						<Event name="EditTextChange">ВремяПредставление30ИзменениеТекстаРедактирования</Event>
+						<Event name="Clearing">ВремяПредставление30Очистка</Event>
+					</Events>
+				</InputField>
+				<InputField name="ВремяПредставление31" id="491">
+					<DataPath>Объект.ДанныеОВремени.ВремяПредставление31</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>31</v8:content>
+						</v8:item>
+					</Title>
+					<HorizontalAlign>Center</HorizontalAlign>
+					<EditMode>Directly</EditMode>
+					<HeaderHorizontalAlign>Center</HeaderHorizontalAlign>
+					<Width>5</Width>
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<MaxWidth>5</MaxWidth>
+					<HorizontalStretch>false</HorizontalStretch>
+					<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+					<ContextMenu name="ВремяПредставление31КонтекстноеМеню" id="492"/>
+					<ExtendedTooltip name="ВремяПредставление31РасширеннаяПодсказка" id="493"/>
+					<Events>
+						<Event name="EditTextChange">ВремяПредставление31ИзменениеТекстаРедактирования</Event>
+						<Event name="Clearing">ВремяПредставление31Очистка</Event>
+					</Events>
+				</InputField>
+			</ChildItems>
+		</Table>
+		<InputField name="Ответственный" id="517">
+			<DataPath>Объект.ОтветственныйСотрудник</DataPath>
+			<ReadOnly>true</ReadOnly>
+			<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+			<ContextMenu name="ОтветственныйКонтекстноеМеню" id="518"/>
+			<ExtendedTooltip name="ОтветственныйРасширеннаяПодсказка" id="519"/>
+		</InputField>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:DocumentObject.ЛБ_ЭлектронныйГрафикРаботы</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+			<UseAlways>
+				<Field>Объект.RegisterRecords</Field>
+			</UseAlways>
+		</Attribute>
+		<Attribute name="МесяцРегистрацииСтрокой" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Месяц</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>15</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+			<Edit>
+				<xr:Common>false</xr:Common>
+				<xr:Value name="Role.ПолныеПрава">true</xr:Value>
+			</Edit>
+			<SavedData>true</SavedData>
+			<FillCheck>ShowError</FillCheck>
+		</Attribute>
+		<Attribute name="СтрокаСвертки" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Строка свертки</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>500</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="СтатусДокумента" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Статус документа</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>6</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="ЗаполнитьИзГрафика" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заполнить из графика</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заполнить из графика</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ЗаполнитьИзГрафика</Action>
+		</Command>
+		<Command name="ДобавитьСтроку" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Добавить строку</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Добавить строку</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ДобавитьСтроку</Action>
+		</Command>
+		<Command name="Редактировать" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Редактировать</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Редактировать</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>Редактировать</Action>
+		</Command>
+	</Commands>
+</Form>

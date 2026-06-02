@@ -1,0 +1,2760 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.20">
+	<AutoTitle>false</AutoTitle>
+	<ShowTitle>false</ShowTitle>
+	<ShowCloseButton>false</ShowCloseButton>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<Autofill>false</Autofill>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnOpen">ПриОткрытии</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="ГруппаОсновная" id="137">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа основная</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа основная</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>AlwaysHorizontal</Group>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаОсновнаяРасширеннаяПодсказка" id="138"/>
+			<ChildItems>
+				<UsualGroup name="ГруппаОсновная1" id="139">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа основная1</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа основная1</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>Vertical</Group>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаОсновная1РасширеннаяПодсказка" id="140"/>
+					<ChildItems>
+						<UsualGroup name="ГруппаКлиент" id="4">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Клиент</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа клиент</v8:content>
+								</v8:item>
+							</ToolTip>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаКлиентРасширеннаяПодсказка" id="5"/>
+							<ChildItems>
+								<LabelField name="Залогодатель" id="6">
+									<DataPath>ФИО</DataPath>
+									<TitleLocation>None</TitleLocation>
+									<ToolTipRepresentation>None</ToolTipRepresentation>
+									<EditMode>EnterOnInput</EditMode>
+									<TextColor>web:DarkGreen</TextColor>
+									<Font ref="style:NormalTextFont" height="14" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem" scale="100"/>
+									<ContextMenu name="ЗалогодательКонтекстноеМеню" id="7"/>
+									<ExtendedTooltip name="ЗалогодательРасширеннаяПодсказка" id="8">
+										<Title formatted="true">
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Поиск залогодателя возможен по 2-м вариантам:
+1. По &lt;b&gt;ФИО&lt;/&gt;;
+2. По &lt;b&gt;серии и номеру &lt;/&gt;документа. В этом случае возможно вводить только цифры и пробелы. Для поиска по номеру, необходимо использовать символ "№".
+Примеры поиска по серии/номеру:
+1. "12 34 №567890" - здесь серия "12 34", а номер "567890"
+2. "№123456" - поиск по номеру
+3. "12" - поиск залогодателя по цифрам серии либо номера.</v8:content>
+											</v8:item>
+										</Title>
+									</ExtendedTooltip>
+									<Events>
+										<Event name="OnChange">ЗалогодательПриИзменении</Event>
+									</Events>
+								</LabelField>
+								<Button name="КомандаПоискЗалогодателя" id="9">
+									<Type>UsualButton</Type>
+									<CommandName>Form.Command.ПоискЗалогодателя</CommandName>
+									<BackColor>style:ActivityColor</BackColor>
+									<Font ref="style:NormalTextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem" scale="100"/>
+									<ExtendedTooltip name="КомандаПоискЗалогодателяРасширеннаяПодсказка" id="10"/>
+								</Button>
+								<Button name="КарточкаКлиента" id="153">
+									<Type>UsualButton</Type>
+									<CommandName>Form.Command.КарточкаКлиента</CommandName>
+									<BackColor>web:HoneyDew</BackColor>
+									<ExtendedTooltip name="КарточкаКлиентаРасширеннаяПодсказка" id="154"/>
+								</Button>
+								<Button name="НовыйКлиент" id="308">
+									<Type>UsualButton</Type>
+									<CommandName>Form.Command.НовыйКлиент</CommandName>
+									<ExtendedTooltip name="НовыйКлиентРасширеннаяПодсказка" id="309"/>
+								</Button>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ГруппаИнформация" id="14">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа информация</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа информация</v8:content>
+								</v8:item>
+							</ToolTip>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаИнформацияРасширеннаяПодсказка" id="15"/>
+							<ChildItems>
+								<UsualGroup name="ГруппаОсн" id="121">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа осн</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа осн</v8:content>
+										</v8:item>
+									</ToolTip>
+									<Group>Vertical</Group>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ГруппаОснРасширеннаяПодсказка" id="122"/>
+									<ChildItems>
+										<SpreadSheetDocumentField name="ИнформацияОКлиенте" id="1">
+											<DataPath>ИнформацияОКлиенте</DataPath>
+											<ReadOnly>true</ReadOnly>
+											<TitleLocation>None</TitleLocation>
+											<Height>4</Height>
+											<MaxHeight>6</MaxHeight>
+											<VerticalStretch>false</VerticalStretch>
+											<VerticalScrollBar>false</VerticalScrollBar>
+											<HorizontalScrollBar>false</HorizontalScrollBar>
+											<Protection>true</Protection>
+											<SelectionShowMode>DontShow</SelectionShowMode>
+											<PointerType>Regular</PointerType>
+											<ShowGroups>false</ShowGroups>
+											<EnableStartDrag>false</EnableStartDrag>
+											<EnableDrag>false</EnableDrag>
+											<BorderColor>style:FormBackColor</BorderColor>
+											<ContextMenu name="ИнформацияОКлиентеКонтекстноеМеню" id="2"/>
+											<ExtendedTooltip name="ИнформацияОКлиентеРасширеннаяПодсказка" id="3"/>
+										</SpreadSheetDocumentField>
+										<LabelDecoration name="ДекорацияСтатусы" id="191">
+											<Visible>false</Visible>
+											<TextColor>web:DarkGreen</TextColor>
+											<Font ref="style:NormalTextFont" height="11" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem" scale="100"/>
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Статусы клиента:</v8:content>
+												</v8:item>
+											</Title>
+											<VerticalAlign>Top</VerticalAlign>
+											<ContextMenu name="ДекорацияСтатусыКонтекстноеМеню" id="192"/>
+											<ExtendedTooltip name="ДекорацияСтатусыРасширеннаяПодсказка" id="193"/>
+										</LabelDecoration>
+										<UsualGroup name="Группа1" id="145">
+											<ShowTitle>false</ShowTitle>
+											<ExtendedTooltip name="Группа1РасширеннаяПодсказка" id="146"/>
+											<ChildItems>
+												<SpreadSheetDocumentField name="СтатусыКлиента" id="188">
+													<DataPath>СтатусыКлиента</DataPath>
+													<TitleLocation>None</TitleLocation>
+													<Width>60</Width>
+													<Height>3</Height>
+													<HorizontalStretch>false</HorizontalStretch>
+													<VerticalStretch>false</VerticalStretch>
+													<VerticalScrollBar>false</VerticalScrollBar>
+													<HorizontalScrollBar>false</HorizontalScrollBar>
+													<SelectionShowMode>DontShow</SelectionShowMode>
+													<PointerType>Regular</PointerType>
+													<BorderColor>style:FormBackColor</BorderColor>
+													<ContextMenu name="СтатусыКлиентаКонтекстноеМеню" id="189"/>
+													<ExtendedTooltip name="СтатусыКлиентаРасширеннаяПодсказка" id="190"/>
+												</SpreadSheetDocumentField>
+												<LabelDecoration name="Декорация2" id="175">
+													<Width>2</Width>
+													<Title formatted="false">
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>   </v8:content>
+														</v8:item>
+													</Title>
+													<ContextMenu name="Декорация2КонтекстноеМеню" id="176"/>
+													<ExtendedTooltip name="Декорация2РасширеннаяПодсказка" id="177"/>
+												</LabelDecoration>
+												<UsualGroup name="Группа2" id="147">
+													<Group>Vertical</Group>
+													<ShowTitle>false</ShowTitle>
+													<ExtendedTooltip name="Группа2РасширеннаяПодсказка" id="148"/>
+													<ChildItems>
+														<Button name="СтатистикаОбращений" id="155">
+															<Type>UsualButton</Type>
+															<CommandName>Form.Command.СтатистикаОбращений</CommandName>
+															<BackColor>style:ReportGroup2BackColor</BackColor>
+															<ExtendedTooltip name="СтатистикаОбращенийРасширеннаяПодсказка" id="156"/>
+														</Button>
+													</ChildItems>
+												</UsualGroup>
+												<LabelDecoration name="Декорация1" id="164">
+													<Width>3</Width>
+													<Title formatted="false">
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>   </v8:content>
+														</v8:item>
+													</Title>
+													<ContextMenu name="Декорация1КонтекстноеМеню" id="165"/>
+													<ExtendedTooltip name="Декорация1РасширеннаяПодсказка" id="166"/>
+												</LabelDecoration>
+												<UsualGroup name="Группа3" id="157">
+													<Group>Vertical</Group>
+													<ShowTitle>false</ShowTitle>
+													<ExtendedTooltip name="Группа3РасширеннаяПодсказка" id="158"/>
+													<ChildItems>
+														<UsualGroup name="Группа31" id="162">
+															<Title>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Группа31</v8:content>
+																</v8:item>
+															</Title>
+															<ToolTip>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Группа31</v8:content>
+																</v8:item>
+															</ToolTip>
+															<ShowTitle>false</ShowTitle>
+															<ExtendedTooltip name="Группа31РасширеннаяПодсказка" id="163"/>
+															<ChildItems>
+																<CommandBar name="ГруппаЭДО" id="149">
+																	<Title>
+																		<v8:item>
+																			<v8:lang>ru</v8:lang>
+																			<v8:content>Группа ЭДО</v8:content>
+																		</v8:item>
+																	</Title>
+																	<ToolTip>
+																		<v8:item>
+																			<v8:lang>ru</v8:lang>
+																			<v8:content>Группа ЭДО</v8:content>
+																		</v8:item>
+																	</ToolTip>
+																	<HorizontalStretch>false</HorizontalStretch>
+																	<ExtendedTooltip name="ГруппаЭДОРасширеннаяПодсказка" id="150"/>
+																	<ChildItems>
+																		<Popup name="ЭДО" id="151">
+																			<Title>
+																				<v8:item>
+																					<v8:lang>ru</v8:lang>
+																					<v8:content>ЭДО</v8:content>
+																				</v8:item>
+																			</Title>
+																			<ToolTip>
+																				<v8:item>
+																					<v8:lang>ru</v8:lang>
+																					<v8:content>ЭДО</v8:content>
+																				</v8:item>
+																			</ToolTip>
+																			<ExtendedTooltip name="ЭДОРасширеннаяПодсказка" id="152"/>
+																			<ChildItems>
+																				<Button name="ЗаключитьЭДО" id="167">
+																					<Type>CommandBarButton</Type>
+																					<CommandName>Form.Command.ЗаключитьЭДО</CommandName>
+																					<ExtendedTooltip name="ЗаключитьЭДОРасширеннаяПодсказка" id="168"/>
+																				</Button>
+																				<Button name="РасторгнутьЭДОКлиент" id="169">
+																					<Type>CommandBarButton</Type>
+																					<CommandName>Form.Command.РасторгнутьЭДОКлиент</CommandName>
+																					<Title>
+																						<v8:item>
+																							<v8:lang>ru</v8:lang>
+																							<v8:content>Расторгнуть ЭДО (инициатива клиента)</v8:content>
+																						</v8:item>
+																					</Title>
+																					<ExtendedTooltip name="РасторгнутьЭДОКлиентРасширеннаяПодсказка" id="170"/>
+																				</Button>
+																				<Button name="РасторгнутьЭДОЦО" id="171">
+																					<Type>CommandBarButton</Type>
+																					<Visible>false</Visible>
+																					<CommandName>Form.Command.РасторгнутьЭДОЦО</CommandName>
+																					<ExtendedTooltip name="РасторгнутьЭДОЦОРасширеннаяПодсказка" id="172"/>
+																				</Button>
+																				<Button name="УдалитьЭДО" id="173">
+																					<Type>CommandBarButton</Type>
+																					<CommandName>Form.Command.УдалитьЭДО</CommandName>
+																					<ExtendedTooltip name="УдалитьЭДОРасширеннаяПодсказка" id="174"/>
+																				</Button>
+																			</ChildItems>
+																		</Popup>
+																	</ChildItems>
+																</CommandBar>
+																<LabelDecoration name="СтатусЭДО" id="297">
+																	<TextColor>style:FieldSelectionBackColor</TextColor>
+																	<Font ref="style:NormalTextFont" height="12" kind="StyleItem" scale="100"/>
+																	<Hyperlink>true</Hyperlink>
+																	<ContextMenu name="СтатусЭДОКонтекстноеМеню" id="298"/>
+																	<ExtendedTooltip name="СтатусЭДОРасширеннаяПодсказка" id="299"/>
+																	<Events>
+																		<Event name="Click">СтатусЭДОНажатие</Event>
+																	</Events>
+																</LabelDecoration>
+																<CommandBar name="КоманднаяПанельСогласия" id="314">
+																	<Title>
+																		<v8:item>
+																			<v8:lang>ru</v8:lang>
+																			<v8:content>Командная панель ЭДО</v8:content>
+																		</v8:item>
+																	</Title>
+																	<ToolTip>
+																		<v8:item>
+																			<v8:lang>ru</v8:lang>
+																			<v8:content>Командная панель ЭДО</v8:content>
+																		</v8:item>
+																	</ToolTip>
+																	<HorizontalStretch>false</HorizontalStretch>
+																	<ExtendedTooltip name="КоманднаяПанельСогласияРасширеннаяПодсказка" id="315"/>
+																	<ChildItems>
+																		<Popup name="Согласие" id="316">
+																			<Title>
+																				<v8:item>
+																					<v8:lang>ru</v8:lang>
+																					<v8:content>Согласие</v8:content>
+																				</v8:item>
+																			</Title>
+																			<ToolTip>
+																				<v8:item>
+																					<v8:lang>ru</v8:lang>
+																					<v8:content>Согласие</v8:content>
+																				</v8:item>
+																			</ToolTip>
+																			<HorizontalStretch>true</HorizontalStretch>
+																			<ExtendedTooltip name="СогласиеРасширеннаяПодсказка" id="317"/>
+																			<ChildItems>
+																				<Button name="ЗаключитьСогласие" id="318">
+																					<Type>CommandBarButton</Type>
+																					<CommandName>Form.Command.ЗаключитьСогласие</CommandName>
+																					<ExtendedTooltip name="ЗаключитьСогласиеРасширеннаяПодсказка" id="319"/>
+																				</Button>
+																				<Button name="ОтозватьСогласие" id="320">
+																					<Type>CommandBarButton</Type>
+																					<CommandName>Form.Command.ОтозватьСогласие</CommandName>
+																					<ExtendedTooltip name="ОтозватьСогласиеРасширеннаяПодсказка" id="321"/>
+																				</Button>
+																				<Button name="УдалитьСогласие" id="322">
+																					<Type>CommandBarButton</Type>
+																					<CommandName>Form.Command.УдалитьСогласие</CommandName>
+																					<Title>
+																						<v8:item>
+																							<v8:lang>ru</v8:lang>
+																							<v8:content>Удалить ошибочное согласие/отзыв</v8:content>
+																						</v8:item>
+																					</Title>
+																					<ExtendedTooltip name="УдалитьСогласиеРасширеннаяПодсказка" id="323"/>
+																				</Button>
+																			</ChildItems>
+																		</Popup>
+																	</ChildItems>
+																</CommandBar>
+																<LabelDecoration name="СтатусСогласия" id="324">
+																	<TextColor>style:FieldSelectionBackColor</TextColor>
+																	<Font ref="style:NormalTextFont" height="12" kind="StyleItem" scale="100"/>
+																	<Hyperlink>true</Hyperlink>
+																	<ContextMenu name="СтатусСогласияКонтекстноеМеню" id="325"/>
+																	<ExtendedTooltip name="СтатусСогласияРасширеннаяПодсказка" id="326"/>
+																	<Events>
+																		<Event name="Click">СтатусСогласияНажатие</Event>
+																	</Events>
+																</LabelDecoration>
+															</ChildItems>
+														</UsualGroup>
+													</ChildItems>
+												</UsualGroup>
+											</ChildItems>
+										</UsualGroup>
+									</ChildItems>
+								</UsualGroup>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="ГруппаКнопки" id="98">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа кнопки</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа кнопки</v8:content>
+						</v8:item>
+					</ToolTip>
+					<GroupHorizontalAlign>Right</GroupHorizontalAlign>
+					<Group>Vertical</Group>
+					<VerticalSpacing>Half</VerticalSpacing>
+					<HorizontalAlign>Right</HorizontalAlign>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаКнопкиРасширеннаяПодсказка" id="99"/>
+					<ChildItems>
+						<CommandBar name="ГруппаПечатьЗаявлений" id="271">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа печать заявлений</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа печать заявлений</v8:content>
+								</v8:item>
+							</ToolTip>
+							<HorizontalStretch>false</HorizontalStretch>
+							<GroupHorizontalAlign>Right</GroupHorizontalAlign>
+							<ExtendedTooltip name="ГруппаПечатьЗаявленийРасширеннаяПодсказка" id="272"/>
+							<ChildItems>
+								<Popup name="ФормаГруппаПечатьЗаявлений" id="209">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>   Печатные формы заявлений       </v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Форма группа печать заявлений</v8:content>
+										</v8:item>
+									</ToolTip>
+									<HorizontalStretch>false</HorizontalStretch>
+									<Picture>
+										<xr:Ref>StdPicture.Print</xr:Ref>
+										<xr:LoadTransparent>true</xr:LoadTransparent>
+									</Picture>
+									<ExtendedTooltip name="ФормаГруппаПечатьЗаявленийРасширеннаяПодсказка" id="210"/>
+									<ChildItems>
+										<Button name="СогласиеНаОпробование" id="302">
+											<Type>CommandBarButton</Type>
+											<CommandName>Form.Command.СогласиеНаОпробование</CommandName>
+											<ExtendedTooltip name="СогласиеНаОпробованиеРасширеннаяПодсказка" id="303"/>
+										</Button>
+										<Button name="ФормаЗаявлениеНаВозврат" id="215">
+											<Type>CommandBarButton</Type>
+											<CommandName>Form.Command.ЗаявлениеНаВозврат</CommandName>
+											<ExtendedTooltip name="ФормаЗаявлениеНаВозвратРасширеннаяПодсказка" id="216"/>
+										</Button>
+										<Button name="ФормаШаблонЗаявления" id="217">
+											<Type>CommandBarButton</Type>
+											<CommandName>Form.Command.ШаблонЗаявления</CommandName>
+											<ExtendedTooltip name="ФормаШаблонЗаявленияРасширеннаяПодсказка" id="218"/>
+										</Button>
+										<Button name="ФормаЗаявлениеОПредоставленииСведений" id="219">
+											<Type>CommandBarButton</Type>
+											<CommandName>Form.Command.ЗаявлениеОПредоставленииСведений</CommandName>
+											<ExtendedTooltip name="ФормаЗаявлениеОПредоставленииСведенийРасширеннаяПодсказка" id="220"/>
+										</Button>
+										<Button name="ФормаАктНаследник" id="221">
+											<Type>CommandBarButton</Type>
+											<CommandName>Form.Command.АктНаследник</CommandName>
+											<ExtendedTooltip name="ФормаАктНаследникРасширеннаяПодсказка" id="222"/>
+										</Button>
+										<Button name="ФормаСвободнаяФорма" id="223">
+											<Type>CommandBarButton</Type>
+											<CommandName>Form.Command.СвободнаяФорма</CommandName>
+											<ExtendedTooltip name="ФормаСвободнаяФормаРасширеннаяПодсказка" id="224"/>
+										</Button>
+									</ChildItems>
+								</Popup>
+							</ChildItems>
+						</CommandBar>
+						<Button name="ЖурналКО" id="100">
+							<Type>UsualButton</Type>
+							<CommandName>Form.Command.ЖурналКО</CommandName>
+							<Font ref="style:NormalTextFont" height="9" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem" scale="100"/>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Журнал кассовых операций</v8:content>
+								</v8:item>
+							</Title>
+							<ExtendedTooltip name="ЖурналКОРасширеннаяПодсказка" id="101"/>
+						</Button>
+						<Button name="ЖурналНакладных" id="123">
+							<Type>UsualButton</Type>
+							<CommandName>Form.Command.ЖурналНакладных</CommandName>
+							<Font ref="style:NormalTextFont" height="9" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem" scale="100"/>
+							<ExtendedTooltip name="ЖурналНакладныхРасширеннаяПодсказка" id="124"/>
+						</Button>
+						<Button name="ЖурналПеремещений" id="125">
+							<Type>UsualButton</Type>
+							<CommandName>Form.Command.ЖурналПеремещений</CommandName>
+							<Font ref="style:NormalTextFont" height="9" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem" scale="100"/>
+							<ExtendedTooltip name="ЖурналПеремещенийРасширеннаяПодсказка" id="126"/>
+						</Button>
+						<Button name="УчетОтходовДМ" id="127">
+							<Type>UsualButton</Type>
+							<CommandName>Form.Command.УчетОтходовДМ</CommandName>
+							<Font ref="style:NormalTextFont" height="9" kind="StyleItem" scale="100"/>
+							<ExtendedTooltip name="УчетОтходовДМРасширеннаяПодсказка" id="128"/>
+						</Button>
+						<Button name="СправочникТары" id="129">
+							<Type>UsualButton</Type>
+							<CommandName>Form.Command.СправочникТары</CommandName>
+							<Font ref="style:NormalTextFont" height="9" kind="StyleItem" scale="100"/>
+							<ExtendedTooltip name="СправочникТарыРасширеннаяПодсказка" id="130"/>
+						</Button>
+						<Button name="Прейскурант" id="131">
+							<Type>UsualButton</Type>
+							<CommandName>Form.Command.Прейскурант</CommandName>
+							<Font ref="style:NormalTextFont" height="9" kind="StyleItem" scale="100"/>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Прейскуранты ломбарда</v8:content>
+								</v8:item>
+							</Title>
+							<ExtendedTooltip name="ПрейскурантРасширеннаяПодсказка" id="132"/>
+						</Button>
+						<CommandBar name="ГруппаИнвентаризация" id="273">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа инвентаризация</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа инвентаризация</v8:content>
+								</v8:item>
+							</ToolTip>
+							<HorizontalStretch>false</HorizontalStretch>
+							<GroupHorizontalAlign>Right</GroupHorizontalAlign>
+							<ExtendedTooltip name="ГруппаИнвентаризацияРасширеннаяПодсказка" id="274"/>
+							<ChildItems>
+								<Popup name="Инвентаризация" id="281">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>               Инвентаризация                 </v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Инвентаризация</v8:content>
+										</v8:item>
+									</ToolTip>
+									<ExtendedTooltip name="ИнвентаризацияРасширеннаяПодсказка" id="282"/>
+									<ChildItems>
+										<Button name="ИнвентризацияОЗ" id="275">
+											<Type>CommandBarButton</Type>
+											<CommandName>Form.Command.ИнвентризацияОЗ</CommandName>
+											<ExtendedTooltip name="ИнвентризацияОЗРасширеннаяПодсказка" id="276"/>
+										</Button>
+										<Button name="ИнвентаризацияДС" id="277">
+											<Type>CommandBarButton</Type>
+											<CommandName>Form.Command.ИнвентаризацияДС</CommandName>
+											<ExtendedTooltip name="ИнвентаризацияДСРасширеннаяПодсказка" id="278"/>
+										</Button>
+										<Button name="ИнвентаризацияОтходовДМ" id="279">
+											<Type>CommandBarButton</Type>
+											<CommandName>Form.Command.ИнвентаризацияОтходовДМ</CommandName>
+											<ExtendedTooltip name="ИнвентаризацияОтходовДМРасширеннаяПодсказка" id="280"/>
+										</Button>
+									</ChildItems>
+								</Popup>
+							</ChildItems>
+						</CommandBar>
+						<Button name="МаршрутныйЛист" id="329">
+							<Type>UsualButton</Type>
+							<CommandName>Form.Command.МаршрутныйЛист</CommandName>
+							<ExtendedTooltip name="МаршрутныйЛистРасширеннаяПодсказка" id="330"/>
+						</Button>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+		<LabelDecoration name="ДекорацияРазделитель" id="185">
+			<Visible>false</Visible>
+			<AutoMaxWidth>false</AutoMaxWidth>
+			<AutoMaxHeight>false</AutoMaxHeight>
+			<ContextMenu name="ДекорацияРазделительКонтекстноеМеню" id="186"/>
+			<ExtendedTooltip name="ДекорацияРазделительРасширеннаяПодсказка" id="187"/>
+		</LabelDecoration>
+		<CommandBar name="КомандыТаблицыЗБ" id="269">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Команды таблицы ЗБ</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Команды таблицы ЗБ</v8:content>
+				</v8:item>
+			</ToolTip>
+			<ExtendedTooltip name="КомандыТаблицыЗБРасширеннаяПодсказка" id="270"/>
+			<ChildItems>
+				<Popup name="ФормаГруппаОпераций" id="237">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Операции</v8:content>
+						</v8:item>
+					</Title>
+					<TitleFont ref="style:NormalTextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem" scale="100"/>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Форма группа операций</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Picture>
+						<xr:Ref>CommonPicture.ЛБ_ЗначокПлюс</xr:Ref>
+						<xr:LoadTransparent>true</xr:LoadTransparent>
+					</Picture>
+					<ExtendedTooltip name="ФормаГруппаОперацийРасширеннаяПодсказка" id="238"/>
+					<ChildItems>
+						<Button name="ФормаВыдачаЗайма" id="239">
+							<Type>CommandBarButton</Type>
+							<CommandName>Form.Command.ВыдачаЗайма</CommandName>
+							<ExtendedTooltip name="ФормаВыдачаЗаймаРасширеннаяПодсказка" id="240"/>
+						</Button>
+						<Button name="ОплатаПроцентов" id="283">
+							<Type>CommandBarButton</Type>
+							<CommandName>Form.Command.ОплатаПроцентов</CommandName>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Прием оплаты</v8:content>
+								</v8:item>
+							</Title>
+							<ExtendedTooltip name="ОплатаПроцентовРасширеннаяПодсказка" id="284"/>
+						</Button>
+						<Button name="Переоформление" id="291">
+							<Type>CommandBarButton</Type>
+							<CommandName>Form.Command.Переоформление</CommandName>
+							<ExtendedTooltip name="ПереоформлениеРасширеннаяПодсказка" id="292"/>
+						</Button>
+						<Button name="ВыдачаОХ" id="285">
+							<Type>CommandBarButton</Type>
+							<CommandName>Form.Command.ВыдачаОХ</CommandName>
+							<ExtendedTooltip name="ВыдачаОХРасширеннаяПодсказка" id="286"/>
+						</Button>
+						<Button name="Изъятие" id="287">
+							<Type>CommandBarButton</Type>
+							<CommandName>Form.Command.Изъятие</CommandName>
+							<ExtendedTooltip name="ИзъятиеРасширеннаяПодсказка" id="288"/>
+						</Button>
+						<Button name="ВозвратИзъятого" id="289">
+							<Type>CommandBarButton</Type>
+							<CommandName>Form.Command.ВозвратИзъятого</CommandName>
+							<ExtendedTooltip name="ВозвратИзъятогоРасширеннаяПодсказка" id="290"/>
+						</Button>
+						<Button name="СоздатьОтменуОперацииПоЗайму" id="293">
+							<Type>CommandBarButton</Type>
+							<CommandName>Form.Command.СоздатьОтменуОперацииПоЗайму</CommandName>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Отмена операции по займу</v8:content>
+								</v8:item>
+							</Title>
+							<ExtendedTooltip name="СоздатьОтменуОперацииПоЗаймуРасширеннаяПодсказка" id="294"/>
+						</Button>
+					</ChildItems>
+				</Popup>
+				<Button name="ТекущееСостояниеЗБ" id="27">
+					<Type>CommandBarButton</Type>
+					<CommandName>Form.Command.ТекущееСостояниеЗБ</CommandName>
+					<BackColor>style:ReportGroup2BackColor</BackColor>
+					<ExtendedTooltip name="ТекущееСостояниеЗБРасширеннаяПодсказка" id="28"/>
+				</Button>
+				<Button name="ИсторияЗБ" id="29">
+					<Type>CommandBarButton</Type>
+					<CommandName>Form.Command.ИсторияЗБ</CommandName>
+					<BackColor>web:HoneyDew</BackColor>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>История операций по ЗБ</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="ИсторияЗБРасширеннаяПодсказка" id="30"/>
+				</Button>
+				<Button name="Расчеты" id="194">
+					<Type>CommandBarButton</Type>
+					<CommandName>Form.Command.Расчеты</CommandName>
+					<BackColor>web:MediumGreen</BackColor>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Расчеты</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="РасчетыРасширеннаяПодсказка" id="195"/>
+				</Button>
+				<Button name="ФормаРеестрДС" id="263">
+					<Type>CommandBarButton</Type>
+					<CommandName>Form.Command.РеестрДС</CommandName>
+					<ExtendedTooltip name="ФормаРеестрДСРасширеннаяПодсказка" id="264"/>
+				</Button>
+				<Button name="Доверенность" id="295">
+					<Type>CommandBarButton</Type>
+					<CommandName>Form.Command.Доверенность</CommandName>
+					<Font ref="style:NormalTextFont" kind="StyleItem" scale="100"/>
+					<ExtendedTooltip name="ДоверенностьРасширеннаяПодсказка" id="296"/>
+				</Button>
+				<Popup name="ФормаГруппаПечатьЗБ" id="253">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Печатные формы ЗБ</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Форма группа печать1</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Picture>
+						<xr:Ref>StdPicture.Print</xr:Ref>
+						<xr:LoadTransparent>true</xr:LoadTransparent>
+					</Picture>
+					<ExtendedTooltip name="ФормаГруппаПечатьЗБРасширеннаяПодсказка" id="254"/>
+					<ChildItems>
+						<Button name="ФормаПечатьЗБ" id="255">
+							<Type>CommandBarButton</Type>
+							<CommandName>Form.Command.ПечатьЗБ</CommandName>
+							<ExtendedTooltip name="ФормаПечатьЗБРасширеннаяПодсказка" id="256"/>
+						</Button>
+						<Button name="ФормаПечатьДубликатаЗБ" id="257">
+							<Type>CommandBarButton</Type>
+							<CommandName>Form.Command.ПечатьДубликатаЗБ</CommandName>
+							<ExtendedTooltip name="ФормаПечатьДубликатаЗБРасширеннаяПодсказка" id="258"/>
+						</Button>
+						<Button name="ФормаПечатьДС" id="259">
+							<Type>CommandBarButton</Type>
+							<CommandName>Form.Command.ПечатьДС</CommandName>
+							<ExtendedTooltip name="ФормаПечатьДСРасширеннаяПодсказка" id="260"/>
+						</Button>
+						<Button name="ФормаПечатьДубликатаДС" id="261">
+							<Type>CommandBarButton</Type>
+							<CommandName>Form.Command.ПечатьДубликатаДС</CommandName>
+							<ExtendedTooltip name="ФормаПечатьДубликатаДСРасширеннаяПодсказка" id="262"/>
+						</Button>
+						<Button name="ПечатьСогласиеНаОбработкуПД" id="327">
+							<Type>CommandBarButton</Type>
+							<CommandName>Form.Command.ПечатьСогласиеНаОбработкуПД_ЗБ</CommandName>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Согласие на обработку персональных данных (ЗБ)</v8:content>
+								</v8:item>
+							</Title>
+							<ExtendedTooltip name="ПечатьСогласиеНаОбработкуПДРасширеннаяПодсказка" id="328"/>
+						</Button>
+					</ChildItems>
+				</Popup>
+				<Popup name="ФормаГруппаОтчеты" id="300">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Отчеты</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Форма группа отчеты</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="ФормаГруппаОтчетыРасширеннаяПодсказка" id="301"/>
+					<ChildItems>
+						<Button name="ФормаОтчетОНачисленныхПроцентах" id="267">
+							<Type>CommandBarButton</Type>
+							<CommandName>Form.Command.ОтчетОНачисленныхПроцентах</CommandName>
+							<ExtendedTooltip name="ФормаОтчетОНачисленныхПроцентахРасширеннаяПодсказка" id="268"/>
+						</Button>
+					</ChildItems>
+				</Popup>
+			</ChildItems>
+		</CommandBar>
+		<UsualGroup name="ГруппаВыбораЗБ" id="16">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа выбора ЗБ</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа выбора ЗБ</v8:content>
+				</v8:item>
+			</ToolTip>
+			<HorizontalStretch>true</HorizontalStretch>
+			<Group>AlwaysHorizontal</Group>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаВыбораЗБРасширеннаяПодсказка" id="17"/>
+			<ChildItems>
+				<Button name="СортироватьВ" id="304">
+					<Type>UsualButton</Type>
+					<Representation>Picture</Representation>
+					<Width>3</Width>
+					<CommandName>Form.Command.СортироватьВ</CommandName>
+					<Picture>
+						<xr:Ref>StdPicture.SortListAsc</xr:Ref>
+						<xr:LoadTransparent>true</xr:LoadTransparent>
+					</Picture>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Сортировать по возрастанию</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="СортироватьВРасширеннаяПодсказка" id="305"/>
+				</Button>
+				<Button name="СортироватьУ" id="306">
+					<Type>UsualButton</Type>
+					<Representation>Picture</Representation>
+					<Width>3</Width>
+					<CommandName>Form.Command.СортироватьУ</CommandName>
+					<Picture>
+						<xr:Ref>StdPicture.SortListDesc</xr:Ref>
+						<xr:LoadTransparent>true</xr:LoadTransparent>
+					</Picture>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Сортировать по убыванию</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="СортироватьУРасширеннаяПодсказка" id="307"/>
+				</Button>
+				<InputField name="Ломбард" id="24">
+					<DataPath>Ломбард</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Отбор по ломбарду</v8:content>
+						</v8:item>
+					</Title>
+					<TitleTextColor>web:DarkGreen</TitleTextColor>
+					<HorizontalStretch>false</HorizontalStretch>
+					<ChoiceButtonRepresentation>ShowInDropList</ChoiceButtonRepresentation>
+					<OpenButton>false</OpenButton>
+					<CreateButton>false</CreateButton>
+					<ListChoiceMode>true</ListChoiceMode>
+					<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+					<TextEdit>false</TextEdit>
+					<ContextMenu name="ЛомбардКонтекстноеМеню" id="25"/>
+					<ExtendedTooltip name="ЛомбардРасширеннаяПодсказка" id="26"/>
+					<Events>
+						<Event name="OnChange">ЛомбардПриИзменении</Event>
+					</Events>
+				</InputField>
+				<RadioButtonField name="ВыборЗБ" id="18">
+					<DataPath>ВыборЗБ</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Залоговые билеты</v8:content>
+						</v8:item>
+					</Title>
+					<TitleTextColor>web:DarkGreen</TitleTextColor>
+					<TitleFont ref="style:NormalTextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem" scale="100"/>
+					<TitleLocation>Left</TitleLocation>
+					<GroupHorizontalAlign>Left</GroupHorizontalAlign>
+					<RadioButtonType>Auto</RadioButtonType>
+					<ChoiceList>
+						<xr:Item>
+							<xr:Presentation/>
+							<xr:CheckState>0</xr:CheckState>
+							<xr:Value xsi:type="FormChoiceListDesTimeValue">
+								<Presentation>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>все</v8:content>
+									</v8:item>
+								</Presentation>
+								<Value xsi:type="xs:decimal">1</Value>
+							</xr:Value>
+						</xr:Item>
+						<xr:Item>
+							<xr:Presentation/>
+							<xr:CheckState>0</xr:CheckState>
+							<xr:Value xsi:type="FormChoiceListDesTimeValue">
+								<Presentation>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>действующие</v8:content>
+									</v8:item>
+								</Presentation>
+								<Value xsi:type="xs:decimal">2</Value>
+							</xr:Value>
+						</xr:Item>
+						<xr:Item>
+							<xr:Presentation/>
+							<xr:CheckState>0</xr:CheckState>
+							<xr:Value xsi:type="FormChoiceListDesTimeValue">
+								<Presentation>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>один</v8:content>
+									</v8:item>
+								</Presentation>
+								<Value xsi:type="xs:decimal">3</Value>
+							</xr:Value>
+						</xr:Item>
+					</ChoiceList>
+					<Font ref="style:NormalTextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem" scale="100"/>
+					<ContextMenu name="ВыборЗБКонтекстноеМеню" id="19"/>
+					<ExtendedTooltip name="ВыборЗБРасширеннаяПодсказка" id="20"/>
+					<Events>
+						<Event name="OnChange">ВыборЗБПриИзменении</Event>
+					</Events>
+				</RadioButtonField>
+				<LabelField name="НомерЗБ" id="21">
+					<DataPath>НомерЗБ</DataPath>
+					<Visible>false</Visible>
+					<ReadOnly>true</ReadOnly>
+					<TitleLocation>None</TitleLocation>
+					<Width>8</Width>
+					<HorizontalStretch>false</HorizontalStretch>
+					<TextColor>style:SpecialTextColor</TextColor>
+					<ContextMenu name="НомерЗБКонтекстноеМеню" id="22"/>
+					<ExtendedTooltip name="НомерЗБРасширеннаяПодсказка" id="23"/>
+				</LabelField>
+				<Button name="Найти" id="310">
+					<Type>UsualButton</Type>
+					<Representation>PictureAndText</Representation>
+					<CommandName>Form.Item.ТаблицаЗБ.StandardCommand.Find</CommandName>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Поиск по значению</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="НайтиРасширеннаяПодсказка" id="311"/>
+				</Button>
+				<Button name="ОтменитьПоиск" id="312">
+					<Type>UsualButton</Type>
+					<Representation>Picture</Representation>
+					<Width>3</Width>
+					<CommandName>Form.Item.ТаблицаЗБ.StandardCommand.CancelSearch</CommandName>
+					<ExtendedTooltip name="ОтменитьПоискРасширеннаяПодсказка" id="313"/>
+				</Button>
+			</ChildItems>
+		</UsualGroup>
+		<Table name="ТаблицаЗБ" id="31">
+			<Representation>List</Representation>
+			<ReadOnly>true</ReadOnly>
+			<HeaderHeight>2</HeaderHeight>
+			<Footer>true</Footer>
+			<AutoInsertNewRow>true</AutoInsertNewRow>
+			<EnableStartDrag>true</EnableStartDrag>
+			<EnableDrag>true</EnableDrag>
+			<DataPath>ТаблицаЗБ</DataPath>
+			<RowFilter xsi:nil="true"/>
+			<ContextMenu name="ТаблицаЗБКонтекстноеМеню" id="32"/>
+			<AutoCommandBar name="ТаблицаЗБКоманднаяПанель" id="33">
+				<Autofill>false</Autofill>
+			</AutoCommandBar>
+			<ExtendedTooltip name="ТаблицаЗБРасширеннаяПодсказка" id="34"/>
+			<SearchStringAddition name="ТаблицаЗБСтрокаПоиска" id="35">
+				<AdditionSource>
+					<Item>ТаблицаЗБ</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ТаблицаЗБСтрокаПоискаКонтекстноеМеню" id="36"/>
+				<ExtendedTooltip name="ТаблицаЗБСтрокаПоискаРасширеннаяПодсказка" id="37"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="ТаблицаЗБСостояниеПросмотра" id="38">
+				<AdditionSource>
+					<Item>ТаблицаЗБ</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ТаблицаЗБСостояниеПросмотраКонтекстноеМеню" id="39"/>
+				<ExtendedTooltip name="ТаблицаЗБСостояниеПросмотраРасширеннаяПодсказка" id="40"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="ТаблицаЗБУправлениеПоиском" id="41">
+				<AdditionSource>
+					<Item>ТаблицаЗБ</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="ТаблицаЗБУправлениеПоискомКонтекстноеМеню" id="42"/>
+				<ExtendedTooltip name="ТаблицаЗБУправлениеПоискомРасширеннаяПодсказка" id="43"/>
+			</SearchControlAddition>
+			<Events>
+				<Event name="Selection">ТаблицаЗБВыбор</Event>
+				<Event name="OnActivateRow">ТаблицаЗБПриАктивизацииСтроки</Event>
+			</Events>
+			<ChildItems>
+				<InputField name="ТаблицаЗБЛомбард" id="62">
+					<DataPath>ТаблицаЗБ.Ломбард.НомерЛомбарда</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>№ ломб.</v8:content>
+						</v8:item>
+					</Title>
+					<TitleBackColor>style:ReportGroup2BackColor</TitleBackColor>
+					<HorizontalAlign>Center</HorizontalAlign>
+					<EditMode>EnterOnInput</EditMode>
+					<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+					<ContextMenu name="ТаблицаЗБЛомбардКонтекстноеМеню" id="63"/>
+					<ExtendedTooltip name="ТаблицаЗБЛомбардРасширеннаяПодсказка" id="64"/>
+				</InputField>
+				<InputField name="ТаблицаЗБНомерЗБ" id="44">
+					<DataPath>ТаблицаЗБ.НомерЗБ</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>№ ЗБ</v8:content>
+						</v8:item>
+					</Title>
+					<TitleBackColor>style:ReportGroup2BackColor</TitleBackColor>
+					<HorizontalAlign>Center</HorizontalAlign>
+					<EditMode>EnterOnInput</EditMode>
+					<Width>8</Width>
+					<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+					<ContextMenu name="ТаблицаЗБНомерЗБКонтекстноеМеню" id="45"/>
+					<ExtendedTooltip name="ТаблицаЗБНомерЗБРасширеннаяПодсказка" id="46"/>
+				</InputField>
+				<InputField name="ТаблицаЗБСуммаЗайма" id="50">
+					<DataPath>ТаблицаЗБ.СуммаЗайма</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Сумма займа</v8:content>
+						</v8:item>
+					</Title>
+					<TitleBackColor>style:ReportGroup2BackColor</TitleBackColor>
+					<EditMode>EnterOnInput</EditMode>
+					<Width>8</Width>
+					<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+					<ContextMenu name="ТаблицаЗБСуммаЗаймаКонтекстноеМеню" id="51"/>
+					<ExtendedTooltip name="ТаблицаЗБСуммаЗаймаРасширеннаяПодсказка" id="52"/>
+				</InputField>
+				<InputField name="ТаблицаЗБСуммаОценки" id="53">
+					<DataPath>ТаблицаЗБ.СуммаОценки</DataPath>
+					<TitleBackColor>style:ReportGroup2BackColor</TitleBackColor>
+					<EditMode>EnterOnInput</EditMode>
+					<Width>8</Width>
+					<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+					<ContextMenu name="ТаблицаЗБСуммаОценкиКонтекстноеМеню" id="54"/>
+					<ExtendedTooltip name="ТаблицаЗБСуммаОценкиРасширеннаяПодсказка" id="55"/>
+				</InputField>
+				<InputField name="ТаблицаЗБДатаЗБ" id="95">
+					<DataPath>ТаблицаЗБ.ДатаЗБ</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Дата выдачи</v8:content>
+						</v8:item>
+					</Title>
+					<TitleBackColor>style:ReportGroup2BackColor</TitleBackColor>
+					<EditMode>EnterOnInput</EditMode>
+					<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+					<ContextMenu name="ТаблицаЗБДатаЗБКонтекстноеМеню" id="96"/>
+					<ExtendedTooltip name="ТаблицаЗБДатаЗБРасширеннаяПодсказка" id="97"/>
+				</InputField>
+				<InputField name="ТаблицаЗБДатаВозврата" id="56">
+					<DataPath>ТаблицаЗБ.ДатаВозврата</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Срок возврата</v8:content>
+						</v8:item>
+					</Title>
+					<TitleBackColor>style:ReportGroup2BackColor</TitleBackColor>
+					<HorizontalAlign>Center</HorizontalAlign>
+					<EditMode>EnterOnInput</EditMode>
+					<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+					<ContextMenu name="ТаблицаЗБДатаВозвратаКонтекстноеМеню" id="57"/>
+					<ExtendedTooltip name="ТаблицаЗБДатаВозвратаРасширеннаяПодсказка" id="58"/>
+				</InputField>
+				<InputField name="ТаблицаЗБДатаВозвратаЛьготная" id="59">
+					<DataPath>ТаблицаЗБ.ДатаВозвратаЛьготная</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Срок льготный</v8:content>
+						</v8:item>
+					</Title>
+					<TitleBackColor>style:ReportGroup2BackColor</TitleBackColor>
+					<HorizontalAlign>Center</HorizontalAlign>
+					<EditMode>EnterOnInput</EditMode>
+					<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+					<ContextMenu name="ТаблицаЗБДатаВозвратаЛьготнаяКонтекстноеМеню" id="60"/>
+					<ExtendedTooltip name="ТаблицаЗБДатаВозвратаЛьготнаяРасширеннаяПодсказка" id="61"/>
+				</InputField>
+				<InputField name="ТаблицаЗБТекСрокЗайма" id="68">
+					<DataPath>ТаблицаЗБ.ТекСрокЗайма</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Срок текущий (дн.)</v8:content>
+						</v8:item>
+					</Title>
+					<TitleBackColor>style:ReportGroup2BackColor</TitleBackColor>
+					<HorizontalAlign>Center</HorizontalAlign>
+					<EditMode>EnterOnInput</EditMode>
+					<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+					<Format>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>ЧН=0</v8:content>
+						</v8:item>
+					</Format>
+					<EditFormat>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>ЧН=0</v8:content>
+						</v8:item>
+					</EditFormat>
+					<ContextMenu name="ТаблицаЗБТекСрокЗаймаКонтекстноеМеню" id="69"/>
+					<ExtendedTooltip name="ТаблицаЗБТекСрокЗаймаРасширеннаяПодсказка" id="70"/>
+				</InputField>
+				<InputField name="ТаблицаЗБПСЗ" id="71">
+					<DataPath>ТаблицаЗБ.ПСЗ</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>ПСЗ дата (дн.)</v8:content>
+						</v8:item>
+					</Title>
+					<TitleBackColor>style:ReportGroup2BackColor</TitleBackColor>
+					<EditMode>EnterOnInput</EditMode>
+					<Width>10</Width>
+					<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+					<ContextMenu name="ТаблицаЗБПСЗКонтекстноеМеню" id="72"/>
+					<ExtendedTooltip name="ТаблицаЗБПСЗРасширеннаяПодсказка" id="73"/>
+				</InputField>
+				<InputField name="ТаблицаЗБСтатусЗалоговогоБилета" id="202">
+					<DataPath>ТаблицаЗБ.СтатусЗалоговогоБилета</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Статус ЗБ</v8:content>
+						</v8:item>
+					</Title>
+					<TitleBackColor>style:ReportGroup2BackColor</TitleBackColor>
+					<EditMode>EnterOnInput</EditMode>
+					<Width>17</Width>
+					<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+					<ContextMenu name="ТаблицаЗБСтатусЗалоговогоБилетаКонтекстноеМеню" id="203"/>
+					<ExtendedTooltip name="ТаблицаЗБСтатусЗалоговогоБилетаРасширеннаяПодсказка" id="204"/>
+				</InputField>
+				<InputField name="ТаблицаЗБВидСрок" id="74">
+					<DataPath>ТаблицаЗБ.ВидСрок</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Вид/Срок (дн)</v8:content>
+						</v8:item>
+					</Title>
+					<TitleBackColor>style:ReportGroup2BackColor</TitleBackColor>
+					<EditMode>EnterOnInput</EditMode>
+					<Width>10</Width>
+					<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+					<ContextMenu name="ТаблицаЗБВидСрокКонтекстноеМеню" id="75"/>
+					<ExtendedTooltip name="ТаблицаЗБВидСрокРасширеннаяПодсказка" id="76"/>
+				</InputField>
+				<CheckBoxField name="ТаблицаЗБГибкийПроцент" id="77">
+					<DataPath>ТаблицаЗБ.ГибкийПроцент</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Гибкий
+процент</v8:content>
+						</v8:item>
+					</Title>
+					<TitleBackColor>style:ReportGroup2BackColor</TitleBackColor>
+					<EditMode>EnterOnInput</EditMode>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ТаблицаЗБГибкийПроцентКонтекстноеМеню" id="78"/>
+					<ExtendedTooltip name="ТаблицаЗБГибкийПроцентРасширеннаяПодсказка" id="79"/>
+				</CheckBoxField>
+				<InputField name="ТаблицаЗБЭЗБ" id="80">
+					<DataPath>ТаблицаЗБ.ЭЗБ</DataPath>
+					<TitleBackColor>style:ReportGroup2BackColor</TitleBackColor>
+					<EditMode>EnterOnInput</EditMode>
+					<Width>3</Width>
+					<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+					<ContextMenu name="ТаблицаЗБЭЗБКонтекстноеМеню" id="81"/>
+					<ExtendedTooltip name="ТаблицаЗБЭЗБРасширеннаяПодсказка" id="82"/>
+				</InputField>
+				<InputField name="ТаблицаЗБДолг" id="89">
+					<DataPath>ТаблицаЗБ.Долг</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Остаток долга</v8:content>
+						</v8:item>
+					</Title>
+					<TitleBackColor>style:ReportGroup2BackColor</TitleBackColor>
+					<EditMode>EnterOnInput</EditMode>
+					<Width>8</Width>
+					<MaxWidth>8</MaxWidth>
+					<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+					<ContextMenu name="ТаблицаЗБДолгКонтекстноеМеню" id="90"/>
+					<ExtendedTooltip name="ТаблицаЗБДолгРасширеннаяПодсказка" id="91"/>
+				</InputField>
+				<InputField name="ТаблицаЗБПроцентнаяСтавка" id="83">
+					<DataPath>ТаблицаЗБ.ПроцентнаяСтавка</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>% ставка</v8:content>
+						</v8:item>
+					</Title>
+					<TitleBackColor>style:ReportGroup2BackColor</TitleBackColor>
+					<HorizontalAlign>Center</HorizontalAlign>
+					<EditMode>EnterOnInput</EditMode>
+					<Width>5</Width>
+					<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+					<ContextMenu name="ТаблицаЗБПроцентнаяСтавкаКонтекстноеМеню" id="84"/>
+					<ExtendedTooltip name="ТаблицаЗБПроцентнаяСтавкаРасширеннаяПодсказка" id="85"/>
+				</InputField>
+				<InputField name="ТаблицаЗБСуммаПроцентовВДень" id="86">
+					<DataPath>ТаблицаЗБ.СуммаПроцентовВДень</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Сумма %, руб/день</v8:content>
+						</v8:item>
+					</Title>
+					<TitleBackColor>style:ReportGroup2BackColor</TitleBackColor>
+					<HorizontalAlign>Right</HorizontalAlign>
+					<EditMode>EnterOnInput</EditMode>
+					<HeaderHorizontalAlign>Center</HeaderHorizontalAlign>
+					<Width>8</Width>
+					<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+					<ContextMenu name="ТаблицаЗБСуммаПроцентовВДеньКонтекстноеМеню" id="87"/>
+					<ExtendedTooltip name="ТаблицаЗБСуммаПроцентовВДеньРасширеннаяПодсказка" id="88"/>
+				</InputField>
+				<CheckBoxField name="ТаблицаЗБДоверенность" id="92">
+					<DataPath>ТаблицаЗБ.Доверенность</DataPath>
+					<TitleBackColor>style:ReportGroup2BackColor</TitleBackColor>
+					<EditMode>EnterOnInput</EditMode>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ТаблицаЗБДоверенностьКонтекстноеМеню" id="93"/>
+					<ExtendedTooltip name="ТаблицаЗБДоверенностьРасширеннаяПодсказка" id="94"/>
+				</CheckBoxField>
+			</ChildItems>
+		</Table>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="ИнформацияОКлиенте" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Информация о клиенте</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type xmlns:mxl="http://v8.1c.ru/8.2/data/spreadsheet">mxl:SpreadsheetDocument</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="Залогодатель" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Залогодатель</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.ЛБ_Залогодатели</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ТаблицаЗБ" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Таблица ЗБ</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="ЗалоговыйБилет" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Залоговый билет</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:DocumentRef.ЛБ_ОперацияПоЗалогу</v8:Type>
+					</Type>
+				</Column>
+				<Column name="СтатусЗалоговогоБилета" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Статус залогового билета</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:EnumRef.ЛБ_СтатусыЗалоговыхБилетов</v8:Type>
+					</Type>
+				</Column>
+				<Column name="СуммаЗайма" id="3">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Сумма займа</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>15</v8:Digits>
+							<v8:FractionDigits>2</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="СуммаОценки" id="4">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Сумма оценки</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>15</v8:Digits>
+							<v8:FractionDigits>2</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="ДатаВозврата" id="5">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Дата возврата</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:dateTime</v8:Type>
+						<v8:DateQualifiers>
+							<v8:DateFractions>Date</v8:DateFractions>
+						</v8:DateQualifiers>
+					</Type>
+				</Column>
+				<Column name="ДатаВозвратаЛьготная" id="6">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Дата возврата льготная</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:dateTime</v8:Type>
+						<v8:DateQualifiers>
+							<v8:DateFractions>Date</v8:DateFractions>
+						</v8:DateQualifiers>
+					</Type>
+				</Column>
+				<Column name="Ломбард" id="7">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Ломбард</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.ЛБ_Ломбарды</v8:Type>
+					</Type>
+				</Column>
+				<Column name="Действующий" id="8">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Действующий</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+				<Column name="ТекСрокЗайма" id="9">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Тек срок займа</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>4</v8:Digits>
+							<v8:FractionDigits>0</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="ПСЗ" id="10">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>ПСЗ</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>30</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="ВидСрок" id="11">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Вид срок</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>30</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="ГибкийПроцент" id="12">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Гибкий процент</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+				<Column name="ЭЗБ" id="13">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>ЭЗБ</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>10</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="ПроцентнаяСтавка" id="14">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Процентная ставка</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>10</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="СуммаПроцентовВДень" id="15">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Сумма процентов в день</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>15</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="Долг" id="16">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Долг</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>15</v8:Digits>
+							<v8:FractionDigits>2</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="Доверенность" id="17">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Доверенность</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+				<Column name="ДатаЗБ" id="18">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Дата ЗБ</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:dateTime</v8:Type>
+						<v8:DateQualifiers>
+							<v8:DateFractions>DateTime</v8:DateFractions>
+						</v8:DateQualifiers>
+					</Type>
+				</Column>
+				<Column name="НомерЗБ" id="19">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Номер ЗБ</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>20</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="ПричинаПрименения" id="20">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Причина применения</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:EnumRef.ЛБ_ПричиныПримененияПроцентнойСхемы</v8:Type>
+					</Type>
+				</Column>
+				<Column name="ДатаНачалаРасчетаПроцентов" id="21">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Дата начала расчета процентов</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:dateTime</v8:Type>
+						<v8:DateQualifiers>
+							<v8:DateFractions>Date</v8:DateFractions>
+						</v8:DateQualifiers>
+					</Type>
+				</Column>
+				<Column name="ПСЗДни" id="22">
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>4</v8:Digits>
+							<v8:FractionDigits>0</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="ТаблицаСтатусов" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Таблица статусов</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="НаименованиеСтатуса" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Наименование статуса</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>50</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="Статус" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Статус</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>50</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="ВыборЗБ" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выбор ЗБ</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>1</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="НомерЗБ" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Номер ЗБ</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>20</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="Ломбард" id="9">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Ломбард</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.ЛБ_Ломбарды</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ТекущийВыборЗБ" id="10">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Текущий выбор ЗБ</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>1</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ФИО" id="11">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>ФИО</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>100</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ДатаРождения" id="12">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Дата рождения</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:dateTime</v8:Type>
+				<v8:DateQualifiers>
+					<v8:DateFractions>Date</v8:DateFractions>
+				</v8:DateQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="Пол" id="13">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Пол</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:EnumRef.ПолФизическогоЛица</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ДатаСмерти" id="14">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Дата смерти</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:dateTime</v8:Type>
+				<v8:DateQualifiers>
+					<v8:DateFractions>Date</v8:DateFractions>
+				</v8:DateQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="СтатусыКлиента" id="15">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Статусы клиента</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type xmlns:mxl="http://v8.1c.ru/8.2/data/spreadsheet">mxl:SpreadsheetDocument</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="Имя" id="16">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Имя</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>50</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="Фамилия" id="17">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Фамилия</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>100</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="Отчество" id="18">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отчество</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>100</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="АдресПоПрописке" id="19">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Адрес по прописке</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="Телефон" id="20">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Телефон</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>100</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ФактическийАдрес" id="21">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Фактический адрес</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ТекущийЛомбард" id="22">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Текущий ломбард</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.ЛБ_Ломбарды</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ДокументыЗалогодателяДоп" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Документы залогодателя доп</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="ВидДокумента" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Вид документа</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.ВидыДокументовФизическихЛиц</v8:Type>
+					</Type>
+				</Column>
+				<Column name="ДокументСрокДействия" id="3">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Документ срок действия</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:dateTime</v8:Type>
+						<v8:DateQualifiers>
+							<v8:DateFractions>Date</v8:DateFractions>
+						</v8:DateQualifiers>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="ИдентификаторЗадания" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Идентификатор задания</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:UUID</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ОсновнойДУЛ" id="23">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Основной ДУЛ</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.ЛБ_ДокументыЗалогодателя</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ОсновнойДУЛГражданство" id="24">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Основной ДУЛГражданство</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.СтраныМира</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ДокументыЗалогодателяДоп1" id="25">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Документы залогодателя доп</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="ВидДокумента" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Вид документа</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.ВидыДокументовФизическихЛиц</v8:Type>
+					</Type>
+				</Column>
+				<Column name="ДокументСрокДействия" id="3">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Документ срок действия</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:dateTime</v8:Type>
+						<v8:DateQualifiers>
+							<v8:DateFractions>Date</v8:DateFractions>
+						</v8:DateQualifiers>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<ConditionalAppearance>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>ТаблицаЗБ</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemGroup">
+						<dcsset:groupType>OrGroup</dcsset:groupType>
+						<dcsset:item xsi:type="dcsset:FilterItemComparison">
+							<dcsset:left xsi:type="dcscor:Field">ТаблицаЗБ.СтатусЗалоговогоБилета</dcsset:left>
+							<dcsset:comparisonType>Equal</dcsset:comparisonType>
+							<dcsset:right xsi:type="dcscor:DesignTimeValue">Перечисление.ЛБ_СтатусыЗалоговыхБилетов.Закрыт</dcsset:right>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:FilterItemComparison">
+							<dcsset:left xsi:type="dcscor:Field">ТаблицаЗБ.СтатусЗалоговогоБилета</dcsset:left>
+							<dcsset:comparisonType>Equal</dcsset:comparisonType>
+							<dcsset:right xsi:type="dcscor:DesignTimeValue">Перечисление.ЛБ_СтатусыЗалоговыхБилетов.Реализован</dcsset:right>
+						</dcsset:item>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>ЦветФона</dcscor:parameter>
+						<dcscor:value xsi:type="v8ui:Color">web:MediumGreen</dcscor:value>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>ТаблицаЗБ</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">ТаблицаЗБ.СтатусЗалоговогоБилета</dcsset:left>
+						<dcsset:comparisonType>Equal</dcsset:comparisonType>
+						<dcsset:right xsi:type="dcscor:DesignTimeValue">Перечисление.ЛБ_СтатусыЗалоговыхБилетов.ОтказОтОформления</dcsset:right>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>ЦветФона</dcscor:parameter>
+						<dcscor:value xsi:type="v8ui:Color">web:Gainsboro</dcscor:value>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>ТаблицаЗБ</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">ТаблицаЗБ.СтатусЗалоговогоБилета</dcsset:left>
+						<dcsset:comparisonType>Equal</dcsset:comparisonType>
+						<dcsset:right xsi:type="dcscor:DesignTimeValue">Перечисление.ЛБ_СтатусыЗалоговыхБилетов.ОтвественноеХранение</dcsset:right>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>ЦветФона</dcscor:parameter>
+						<dcscor:value xsi:type="v8ui:Color">web:LightCyan</dcscor:value>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+		</ConditionalAppearance>
+	</Attributes>
+	<Commands>
+		<Command name="ПоискЗалогодателя" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Поиск</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Поиск залогодателя</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ПоискЗалогодателя</Action>
+		</Command>
+		<Command name="ЖурналКО" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Журнал КО</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Журнал КО</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ЖурналКО</Action>
+		</Command>
+		<Command name="ЖурналНакладных" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Журнал накладных на отгрузку</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Журнал накладных</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ЖурналНакладных</Action>
+		</Command>
+		<Command name="ЖурналПеремещений" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Журнал перемещений объектов залога</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Журнал перемещений</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ЖурналПеремещений</Action>
+		</Command>
+		<Command name="УчетОтходовДМ" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Учет отходов драгоценных металлов</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Учет отходов ДМ</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>УчетОтходовДМ</Action>
+		</Command>
+		<Command name="СправочникТары" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Справочник тары для хранения отходов</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Справочник тары</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>СправочникТары</Action>
+		</Command>
+		<Command name="Прейскурант" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Прейскурант</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Прейскурант</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>Прейскурант</Action>
+		</Command>
+		<Command name="ИнвентризацияОЗ" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Инвентаризация объектов залога</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Инвентризация ОЗ</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ИнвентризацияОЗ</Action>
+		</Command>
+		<Command name="ИнвентаризацияДС" id="9">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Инвентаризация денежных средств</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Инвентаризация ДС</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ИнвентаризацияДС</Action>
+		</Command>
+		<Command name="ИнвентаризацияОтходовДМ" id="10">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Инвентаризация отходов ДМ</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Инвентаризация отходов ДМ</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ИнвентаризацияОтходовДМ</Action>
+		</Command>
+		<Command name="КарточкаКлиента" id="11">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Карточка клиента</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Карточка клиента</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>КарточкаКлиента</Action>
+		</Command>
+		<Command name="СтатистикаОбращений" id="12">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Статистика обращений</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Статистика обращений</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>СтатистикаОбращений</Action>
+		</Command>
+		<Command name="ЗаключитьЭДО" id="13">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заключить ЭДО</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заключить ЭДО</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ЗаключитьЭДО</Action>
+		</Command>
+		<Command name="РасторгнутьЭДОКлиент" id="14">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Расторгнуть ЭДО Клиент</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Расторгнуть ЭДОКлиент</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>РасторгнутьЭДОКлиент</Action>
+		</Command>
+		<Command name="РасторгнутьЭДОЦО" id="15">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Расторгнуть ЭДО (инициатива ЦО)</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Расторгнуть ЭДОЦО</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>РасторгнутьЭДО_ЦО</Action>
+		</Command>
+		<Command name="УдалитьЭДО" id="16">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Удалить ошибочное заключение/расторжение ЭДО</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Удалить ЭДО</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>УдалитьЭДО</Action>
+		</Command>
+		<Command name="СогласиеНаИнформирование" id="17">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Согласие на информирование</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Согласие на информирование</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>СогласиеНаИнформирование</Action>
+		</Command>
+		<Command name="ТекущееСостояниеЗБ" id="18">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Текущее состояние ЗБ</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Текущее состояние ЗБ</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ТекущееСостояниеЗБ</Action>
+		</Command>
+		<Command name="ИсторияЗБ" id="19">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>История ЗБ</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>История ЗБ</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ИсторияЗБ</Action>
+		</Command>
+		<Command name="Расчеты" id="20">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Расчеты</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Расчеты</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>Расчеты</Action>
+		</Command>
+		<Command name="ВыдачаЗайма" id="21">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выдача займа</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выдача займа</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ВыдачаЗайма</Action>
+		</Command>
+		<Command name="ЗаявлениеНаВозврат" id="22">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заявление на возврат безналичной оплаты (заемщик) </v8:content>
+				</v8:item>
+			</Title>
+			<Action>ЗаявлениеНаВозврат</Action>
+		</Command>
+		<Command name="ШаблонЗаявления" id="23">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Шаблон заявления на возврат безналичной оплаты (для заполнения) </v8:content>
+				</v8:item>
+			</Title>
+			<Action>ШаблонЗаявления</Action>
+		</Command>
+		<Command name="ЗаявлениеОПредоставленииСведений" id="24">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заявление о предоставлении сведений о наличии обязательств имущественного характера</v8:content>
+				</v8:item>
+			</Title>
+			<Action>ЗаявлениеОПредоставленииСведений</Action>
+		</Command>
+		<Command name="АктНаследник" id="25">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Акт о получении изделий наследниками</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Акт наследник</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>АктНаследник</Action>
+		</Command>
+		<Command name="СвободнаяФорма" id="26">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заявление в свободной форме (для заполнения)</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Свободная форма</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>СвободнаяФорма</Action>
+		</Command>
+		<Command name="ПечатьЗБ" id="27">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Печатная форма ЗБ</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Печать ЗБ</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ПечатьЗБ</Action>
+		</Command>
+		<Command name="ПечатьДубликатаЗБ" id="28">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Печатная форма дубликата ЗБ</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Печать дубликата ЗБ</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ПечатьДубликатаЗБ</Action>
+		</Command>
+		<Command name="ПечатьДС" id="29">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Печатная форма ДС</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Печать ДС</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ПечатьДС</Action>
+		</Command>
+		<Command name="ПечатьДубликатаДС" id="30">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Печатная форма дубликата ДС</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Печать дубликата ДС</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ПечатьДубликатаДС</Action>
+		</Command>
+		<Command name="РеестрДС" id="31">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Реестр дополнительных соглашений</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Реестр ДС</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>РеестрДС</Action>
+		</Command>
+		<Command name="ОтчетОНачисленныхПроцентах" id="32">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отчет о начисленных процентах</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отчет о начисленных процентах</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ОтчетОНачисленныхПроцентах</Action>
+		</Command>
+		<Command name="ВозвратИзъятого" id="33">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Возврат изъятого</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Возврат изъятого</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ВозвратИзъятого</Action>
+		</Command>
+		<Command name="ВыдачаОХ" id="34">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выдача с ОХ</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выдача ОХ</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ВыдачаОХ</Action>
+		</Command>
+		<Command name="Изъятие" id="35">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Изъятие (выемка)</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Изъятие</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>Изъятие</Action>
+		</Command>
+		<Command name="ОплатаПроцентов" id="36">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Оплата процентов</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Оплата процентов</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ОплатаПроцентов</Action>
+		</Command>
+		<Command name="Переоформление" id="37">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Переоформление</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Переоформление</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>Переоформление</Action>
+		</Command>
+		<Command name="СоздатьОтменуОперацииПоЗайму" id="38">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Создать отмену операции по займу</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Создать отмену операции по займу</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>СоздатьОтменуОперацииПоЗайму</Action>
+		</Command>
+		<Command name="Доверенность" id="39">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Доверенность</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Доверенность</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>Доверенность</Action>
+		</Command>
+		<Command name="СогласиеНаОпробование" id="40">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Согласие на опробование</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Согласие на опробование</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>СогласиеНаОпробование</Action>
+		</Command>
+		<Command name="СортироватьВ" id="41">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сортировать В</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сортировать текущую колонку по возрастанию</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>СортироватьВ</Action>
+		</Command>
+		<Command name="СортироватьУ" id="42">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сортировать У</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сортировать текущую колонку по убыванию</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>СортироватьУ</Action>
+		</Command>
+		<Command name="НовыйКлиент" id="43">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Новый клиент</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Новый клиент</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>НовыйКлиент</Action>
+		</Command>
+		<Command name="ЗаключитьСогласие" id="44">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заключить согласие</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заключить согласие</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ЗаключитьСогласие</Action>
+		</Command>
+		<Command name="ОтозватьСогласие" id="45">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отозвать согласие</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отозвать согласие</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ОтозватьСогласие</Action>
+		</Command>
+		<Command name="УдалитьСогласие" id="46">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Удалить согласие</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Удалить согласие</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>УдалитьСогласие</Action>
+		</Command>
+		<Command name="ПечатьСогласиеНаОбработкуПД_ЗБ" id="47">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Печать согласие на обработку п д ЗБ</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Печать согласие на обработку п д ЗБ</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ПечатьСогласиеНаОбработкуПД</Action>
+		</Command>
+		<Command name="МаршрутныйЛист" id="48">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Маршрутный лист</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Маршрутный лист</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>МаршрутныйЛист</Action>
+		</Command>
+	</Commands>
+</Form>

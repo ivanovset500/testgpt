@@ -1,0 +1,148 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.20">
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<ChildItems>
+			<Button name="КнопкаСоздать" id="10">
+				<Type>CommandBarButton</Type>
+				<DefaultButton>true</DefaultButton>
+				<CommandName>Form.Command.Создать</CommandName>
+				<BackColor>style:ToolTipBackColor</BackColor>
+				<Title>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Сохранить</v8:content>
+					</v8:item>
+				</Title>
+				<ExtendedTooltip name="КнопкаСоздатьРасширеннаяПодсказка" id="11"/>
+			</Button>
+			<Button name="КнопкаОтмена" id="24">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.Command.Отмена</CommandName>
+				<ExtendedTooltip name="КнопкаОтменаРасширеннаяПодсказка" id="25"/>
+			</Button>
+		</ChildItems>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnOpen">ПриОткрытии</Event>
+		<Event name="BeforeClose">ПередЗакрытием</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<InputField name="МестоРожденияСтрана" id="12">
+			<DataPath>Объект.МестоРожденияСтрана</DataPath>
+			<TitleFont ref="style:NormalTextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
+			<AutoMaxWidth>false</AutoMaxWidth>
+			<ContextMenu name="МестоРожденияСтранаКонтекстноеМеню" id="13"/>
+			<ExtendedTooltip name="МестоРожденияСтранаРасширеннаяПодсказка" id="14"/>
+			<Events>
+				<Event name="OnChange">МестоРожденияСтранаПриИзменении</Event>
+			</Events>
+		</InputField>
+		<InputField name="МестоРожденияОбласть" id="15">
+			<DataPath>Объект.МестоРожденияОбласть</DataPath>
+			<AutoMaxWidth>false</AutoMaxWidth>
+			<ContextMenu name="МестоРожденияОбластьКонтекстноеМеню" id="16"/>
+			<ExtendedTooltip name="МестоРожденияОбластьРасширеннаяПодсказка" id="17"/>
+			<Events>
+				<Event name="OnChange">МестоРожденияОбластьПриИзменении</Event>
+			</Events>
+		</InputField>
+		<InputField name="МестоРожденияРайон" id="18">
+			<DataPath>Объект.МестоРожденияРайон</DataPath>
+			<AutoMaxWidth>false</AutoMaxWidth>
+			<ContextMenu name="МестоРожденияРайонКонтекстноеМеню" id="19"/>
+			<ExtendedTooltip name="МестоРожденияРайонРасширеннаяПодсказка" id="20"/>
+			<Events>
+				<Event name="OnChange">МестоРожденияРайонПриИзменении</Event>
+			</Events>
+		</InputField>
+		<InputField name="МестоРожденияНаселенныйПункт" id="21">
+			<DataPath>Объект.МестоРожденияНаселенныйПункт</DataPath>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Город (Населенный пункт)</v8:content>
+				</v8:item>
+			</Title>
+			<TitleFont ref="style:NormalTextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
+			<AutoMaxWidth>false</AutoMaxWidth>
+			<ContextMenu name="МестоРожденияНаселенныйПунктКонтекстноеМеню" id="22"/>
+			<ExtendedTooltip name="МестоРожденияНаселенныйПунктРасширеннаяПодсказка" id="23"/>
+			<Events>
+				<Event name="OnChange">МестоРожденияНаселенныйПунктПриИзменении</Event>
+			</Events>
+		</InputField>
+		<CheckBoxField name="ОсобоеМестоРождения" id="29">
+			<DataPath>ОсобоеМестоРождения</DataPath>
+			<CheckBoxType>Switcher</CheckBoxType>
+			<ContextMenu name="ОсобоеМестоРожденияКонтекстноеМеню" id="30"/>
+			<ExtendedTooltip name="ОсобоеМестоРожденияРасширеннаяПодсказка" id="31"/>
+			<Events>
+				<Event name="OnChange">ОсобоеМестоРожденияПриИзменении</Event>
+			</Events>
+		</CheckBoxField>
+		<InputField name="МестоРожденияСтрока" id="26">
+			<DataPath>Объект.МестоРожденияСтрока</DataPath>
+			<TitleLocation>None</TitleLocation>
+			<AutoMaxWidth>false</AutoMaxWidth>
+			<VerticalStretch>false</VerticalStretch>
+			<MultiLine>false</MultiLine>
+			<ContextMenu name="МестоРожденияСтрокаКонтекстноеМеню" id="27"/>
+			<ExtendedTooltip name="МестоРожденияСтрокаРасширеннаяПодсказка" id="28"/>
+			<Events>
+				<Event name="OnChange">МестоРожденияСтрокаПриИзменении</Event>
+			</Events>
+		</InputField>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:DataProcessorObject.ЛБ_ПомощникВводаМестаРождения</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+		</Attribute>
+		<Attribute name="ОсобоеМестоРождения" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Особое место рождения</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="Создать" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Создать</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Создать</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>Создать</Action>
+		</Command>
+		<Command name="Отмена" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отмена</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отмена</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>Отмена</Action>
+		</Command>
+	</Commands>
+</Form>

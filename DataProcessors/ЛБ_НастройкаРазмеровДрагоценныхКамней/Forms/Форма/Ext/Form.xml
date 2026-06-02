@@ -1,0 +1,225 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.20">
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<Autofill>false</Autofill>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<Table name="ДрагоценныеВставки" id="1">
+			<ReadOnly>true</ReadOnly>
+			<AutoInsertNewRow>true</AutoInsertNewRow>
+			<EnableStartDrag>true</EnableStartDrag>
+			<EnableDrag>true</EnableDrag>
+			<DataPath>Объект.ДрагоценныеВставки</DataPath>
+			<CommandSet>
+				<ExcludedCommand>Add</ExcludedCommand>
+				<ExcludedCommand>Change</ExcludedCommand>
+				<ExcludedCommand>Copy</ExcludedCommand>
+				<ExcludedCommand>EndEdit</ExcludedCommand>
+			</CommandSet>
+			<RowFilter xsi:nil="true"/>
+			<ContextMenu name="ДрагоценныеВставкиКонтекстноеМеню" id="2"/>
+			<AutoCommandBar name="ДрагоценныеВставкиКоманднаяПанель" id="3">
+				<Autofill>false</Autofill>
+				<ChildItems>
+					<Button name="ДрагоценныеВставкиДобавитьСтроку" id="48">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Command.ДобавитьСтроку</CommandName>
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Добавить</v8:content>
+							</v8:item>
+						</Title>
+						<ExtendedTooltip name="ДрагоценныеВставкиДобавитьСтрокуРасширеннаяПодсказка" id="49"/>
+					</Button>
+					<Button name="ДрагоценныеВставкиКопироватьСтроку" id="52">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Command.КопироватьСтроку</CommandName>
+						<Picture>
+							<xr:Ref>StdPicture.CloneListItem</xr:Ref>
+							<xr:LoadTransparent>true</xr:LoadTransparent>
+						</Picture>
+						<ExtendedTooltip name="ДрагоценныеВставкиКопироватьСтрокуРасширеннаяПодсказка" id="53"/>
+					</Button>
+					<Button name="ДрагоценныеВставкиУдалить" id="50">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Command.УдалитьСтроку</CommandName>
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Удалить</v8:content>
+							</v8:item>
+						</Title>
+						<ExtendedTooltip name="ДрагоценныеВставкиУдалитьРасширеннаяПодсказка" id="51"/>
+					</Button>
+				</ChildItems>
+			</AutoCommandBar>
+			<ExtendedTooltip name="ДрагоценныеВставкиРасширеннаяПодсказка" id="4"/>
+			<SearchStringAddition name="ДрагоценныеВставкиСтрокаПоиска" id="5">
+				<AdditionSource>
+					<Item>ДрагоценныеВставки</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ДрагоценныеВставкиСтрокаПоискаКонтекстноеМеню" id="6"/>
+				<ExtendedTooltip name="ДрагоценныеВставкиСтрокаПоискаРасширеннаяПодсказка" id="7"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="ДрагоценныеВставкиСостояниеПросмотра" id="8">
+				<AdditionSource>
+					<Item>ДрагоценныеВставки</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ДрагоценныеВставкиСостояниеПросмотраКонтекстноеМеню" id="9"/>
+				<ExtendedTooltip name="ДрагоценныеВставкиСостояниеПросмотраРасширеннаяПодсказка" id="10"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="ДрагоценныеВставкиУправлениеПоиском" id="11">
+				<AdditionSource>
+					<Item>ДрагоценныеВставки</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="ДрагоценныеВставкиУправлениеПоискомКонтекстноеМеню" id="12"/>
+				<ExtendedTooltip name="ДрагоценныеВставкиУправлениеПоискомРасширеннаяПодсказка" id="13"/>
+			</SearchControlAddition>
+			<Events>
+				<Event name="OnActivateRow">ДрагоценныеВставкиПриАктивизацииСтроки</Event>
+			</Events>
+			<ChildItems>
+				<InputField name="ДрагоценныеВставкиВидКамня" id="17">
+					<DataPath>Объект.ДрагоценныеВставки.ВидКамня</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ДрагоценныеВставкиВидКамняКонтекстноеМеню" id="18"/>
+					<ExtendedTooltip name="ДрагоценныеВставкиВидКамняРасширеннаяПодсказка" id="19"/>
+				</InputField>
+				<InputField name="ДрагоценныеВставкиФормаОгранки" id="20">
+					<DataPath>Объект.ДрагоценныеВставки.ФормаОгранки</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ДрагоценныеВставкиФормаОгранкиКонтекстноеМеню" id="21"/>
+					<ExtendedTooltip name="ДрагоценныеВставкиФормаОгранкиРасширеннаяПодсказка" id="22"/>
+				</InputField>
+				<InputField name="ДрагоценныеВставкиВидОгранки" id="23">
+					<DataPath>Объект.ДрагоценныеВставки.ВидОгранки</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ДрагоценныеВставкиВидОгранкиКонтекстноеМеню" id="24"/>
+					<ExtendedTooltip name="ДрагоценныеВставкиВидОгранкиРасширеннаяПодсказка" id="25"/>
+				</InputField>
+			</ChildItems>
+		</Table>
+		<Table name="Размеры" id="26">
+			<AutoInsertNewRow>true</AutoInsertNewRow>
+			<EnableStartDrag>true</EnableStartDrag>
+			<EnableDrag>true</EnableDrag>
+			<DataPath>Объект.Размеры</DataPath>
+			<RowFilter xsi:nil="true"/>
+			<ContextMenu name="РазмерыКонтекстноеМеню" id="27"/>
+			<AutoCommandBar name="РазмерыКоманднаяПанель" id="28">
+				<Autofill>false</Autofill>
+			</AutoCommandBar>
+			<ExtendedTooltip name="РазмерыРасширеннаяПодсказка" id="29"/>
+			<SearchStringAddition name="РазмерыСтрокаПоиска" id="30">
+				<AdditionSource>
+					<Item>Размеры</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="РазмерыСтрокаПоискаКонтекстноеМеню" id="31"/>
+				<ExtendedTooltip name="РазмерыСтрокаПоискаРасширеннаяПодсказка" id="32"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="РазмерыСостояниеПросмотра" id="33">
+				<AdditionSource>
+					<Item>Размеры</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="РазмерыСостояниеПросмотраКонтекстноеМеню" id="34"/>
+				<ExtendedTooltip name="РазмерыСостояниеПросмотраРасширеннаяПодсказка" id="35"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="РазмерыУправлениеПоиском" id="36">
+				<AdditionSource>
+					<Item>Размеры</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="РазмерыУправлениеПоискомКонтекстноеМеню" id="37"/>
+				<ExtendedTooltip name="РазмерыУправлениеПоискомРасширеннаяПодсказка" id="38"/>
+			</SearchControlAddition>
+			<ChildItems>
+				<CheckBoxField name="РазмерыИспользуется" id="45">
+					<DataPath>Объект.Размеры.Используется</DataPath>
+					<TitleLocation>None</TitleLocation>
+					<EditMode>EnterOnInput</EditMode>
+					<HeaderPicture>
+						<xr:Ref>StdPicture.CheckAll</xr:Ref>
+						<xr:LoadTransparent>true</xr:LoadTransparent>
+					</HeaderPicture>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="РазмерыИспользуетсяКонтекстноеМеню" id="46"/>
+					<ExtendedTooltip name="РазмерыИспользуетсяРасширеннаяПодсказка" id="47"/>
+					<Events>
+						<Event name="OnChange">РазмерыИспользуетсяПриИзменении</Event>
+					</Events>
+				</CheckBoxField>
+				<InputField name="РазмерыРазмер" id="42">
+					<DataPath>Объект.Размеры.Размер</DataPath>
+					<ReadOnly>true</ReadOnly>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="РазмерыРазмерКонтекстноеМеню" id="43"/>
+					<ExtendedTooltip name="РазмерыРазмерРасширеннаяПодсказка" id="44"/>
+				</InputField>
+			</ChildItems>
+		</Table>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:DataProcessorObject.ЛБ_НастройкаРазмеровДрагоценныхКамней</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="ДобавитьСтроку" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Добавить строку</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Добавить строку</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ДобавитьСтроку</Action>
+		</Command>
+		<Command name="УдалитьСтроку" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Удалить строку</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Удалить строку</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>УдалитьСтроку</Action>
+		</Command>
+		<Command name="КопироватьСтроку" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Копировать строку</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Копировать строку</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>КопироватьСтроку</Action>
+		</Command>
+	</Commands>
+</Form>

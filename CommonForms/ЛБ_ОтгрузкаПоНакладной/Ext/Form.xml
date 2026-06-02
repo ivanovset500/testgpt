@@ -1,0 +1,214 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.20">
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<Autofill>false</Autofill>
+		<ChildItems>
+			<Button name="Отгрузить" id="13">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.Command.Отгрузить</CommandName>
+				<BackColor>style:ImportantColor</BackColor>
+				<ExtendedTooltip name="ОтгрузитьРасширеннаяПодсказка" id="14"/>
+			</Button>
+			<Button name="Отмена" id="15">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.Command.Отмена</CommandName>
+				<ExtendedTooltip name="ОтменаРасширеннаяПодсказка" id="16"/>
+			</Button>
+		</ChildItems>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<InputField name="Инкассатор" id="1">
+			<DataPath>Инкассатор</DataPath>
+			<AutoMaxWidth>false</AutoMaxWidth>
+			<OpenButton>false</OpenButton>
+			<CreateButton>false</CreateButton>
+			<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+			<AutoMarkIncomplete>true</AutoMarkIncomplete>
+			<ContextMenu name="ИнкассаторКонтекстноеМеню" id="2"/>
+			<ExtendedTooltip name="ИнкассаторРасширеннаяПодсказка" id="3"/>
+			<Events>
+				<Event name="StartChoice">ИнкассаторНачалоВыбора</Event>
+				<Event name="ChoiceProcessing">ИнкассаторОбработкаВыбора</Event>
+			</Events>
+		</InputField>
+		<InputField name="ДатаОтгрузки" id="17">
+			<DataPath>ДатаОтгрузки</DataPath>
+			<ReadOnly>true</ReadOnly>
+			<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+			<ContextMenu name="ДатаОтгрузкиКонтекстноеМеню" id="18"/>
+			<ExtendedTooltip name="ДатаОтгрузкиРасширеннаяПодсказка" id="19"/>
+		</InputField>
+		<InputField name="НакладнаяНаОтгрузкуПредставлениеНомераНакладной" id="7">
+			<DataPath>НакладнаяНаОтгрузку.ПредставлениеНомераНакладной</DataPath>
+			<ReadOnly>true</ReadOnly>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Номер накладной</v8:content>
+				</v8:item>
+			</Title>
+			<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+			<ContextMenu name="НакладнаяНаОтгрузкуПредставлениеНомераНакладнойКонтекстноеМеню" id="8"/>
+			<ExtendedTooltip name="НакладнаяНаОтгрузкуПредставлениеНомераНакладнойРасширеннаяПодсказка" id="9"/>
+		</InputField>
+		<InputField name="НакладнаяНаОтгрузкуДата" id="10">
+			<DataPath>НакладнаяНаОтгрузку.Date</DataPath>
+			<ReadOnly>true</ReadOnly>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Дата накладной</v8:content>
+				</v8:item>
+			</Title>
+			<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+			<AutoMarkIncomplete>false</AutoMarkIncomplete>
+			<ContextMenu name="НакладнаяНаОтгрузкуДатаКонтекстноеМеню" id="11"/>
+			<ExtendedTooltip name="НакладнаяНаОтгрузкуДатаРасширеннаяПодсказка" id="12"/>
+		</InputField>
+		<InputField name="Получатель" id="4">
+			<DataPath>Получатель</DataPath>
+			<AutoMaxWidth>false</AutoMaxWidth>
+			<CreateButton>false</CreateButton>
+			<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+			<AutoMarkIncomplete>true</AutoMarkIncomplete>
+			<TextEdit>false</TextEdit>
+			<ContextMenu name="ПолучательКонтекстноеМеню" id="5"/>
+			<ExtendedTooltip name="ПолучательРасширеннаяПодсказка" id="6"/>
+			<Events>
+				<Event name="StartChoice">ПолучательНачалоВыбора</Event>
+			</Events>
+		</InputField>
+		<InputField name="СкладПолучатель" id="20">
+			<DataPath>СкладПолучатель</DataPath>
+			<AutoMaxWidth>false</AutoMaxWidth>
+			<CreateButton>false</CreateButton>
+			<ListChoiceMode>true</ListChoiceMode>
+			<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+			<AutoMarkIncomplete>true</AutoMarkIncomplete>
+			<TypeLink>
+				<xr:DataPath>Получатель</xr:DataPath>
+				<xr:LinkItem>0</xr:LinkItem>
+			</TypeLink>
+			<ContextMenu name="СкладПолучательКонтекстноеМеню" id="21"/>
+			<ExtendedTooltip name="СкладПолучательРасширеннаяПодсказка" id="22"/>
+		</InputField>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Инкассатор" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Инкассатор</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef._ДемоКонтрагенты</v8:Type>
+				<v8:Type>cfg:CatalogRef.ЛБ_Сотрудники</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ДатаОтгрузки" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Дата отгрузки</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:dateTime</v8:Type>
+				<v8:DateQualifiers>
+					<v8:DateFractions>DateTime</v8:DateFractions>
+				</v8:DateQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="НакладнаяНаОтгрузку" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Накладная на отгрузку</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:DocumentRef.ЛБ_НакладнаяНаОтгрузку</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="Получатель" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Получатель</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.ЛБ_Ломбарды</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ОтделениеЛомбарда" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отделение ломбарда</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.ЛБ_ОтделенияЛомбардов</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="Ломбард" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Ломбард</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.ЛБ_Ломбарды</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="СкладПолучатель" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Склад получатель</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.ЛБ_Склады</v8:Type>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="Отгрузить" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отгрузить</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отгрузить</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>Отгрузить</Action>
+		</Command>
+		<Command name="Отмена" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отмена</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отмена</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>Отмена</Action>
+		</Command>
+	</Commands>
+</Form>

@@ -1,0 +1,945 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.20">
+	<Title>
+		<v8:item>
+			<v8:lang>ru</v8:lang>
+			<v8:content>Операции по займу</v8:content>
+		</v8:item>
+	</Title>
+	<CommandBarLocation>None</CommandBarLocation>
+	<CommandSet>
+		<ExcludedCommand>CancelSearch</ExcludedCommand>
+		<ExcludedCommand>Copy</ExcludedCommand>
+		<ExcludedCommand>Create</ExcludedCommand>
+		<ExcludedCommand>Delete</ExcludedCommand>
+		<ExcludedCommand>Find</ExcludedCommand>
+	</CommandSet>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="OnOpen">ПриОткрытии</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<CommandBar name="ГруппаКоманднаяПанель" id="100">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Командная панель</v8:content>
+				</v8:item>
+			</Title>
+			<ExtendedTooltip name="ГруппаКоманднаяПанельExtendedTooltip" id="101"/>
+			<ChildItems>
+				<Popup name="ПодменюСоздать" id="102">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Операция по займу</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Подменю создать</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Picture>
+						<xr:Ref>StdPicture.CreateListItem</xr:Ref>
+						<xr:LoadTransparent>true</xr:LoadTransparent>
+					</Picture>
+					<ExtendedTooltip name="ПодменюСоздатьРасширеннаяПодсказка" id="103"/>
+					<ChildItems>
+						<Button name="СоздатьЗалог" id="104">
+							<Type>CommandBarButton</Type>
+							<CommandName>Form.Command.СоздатьЗалог</CommandName>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Выдача займа</v8:content>
+								</v8:item>
+							</Title>
+							<ExtendedTooltip name="СоздатьЗалогРасширеннаяПодсказка" id="105"/>
+						</Button>
+						<Button name="СоздатьОплатуПроцентов" id="128">
+							<Type>CommandBarButton</Type>
+							<CommandName>Form.Command.СоздатьОплатуПроцентов</CommandName>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Оплата % или выкуп</v8:content>
+								</v8:item>
+							</Title>
+							<ExtendedTooltip name="СоздатьОплатуПроцентовРасширеннаяПодсказка" id="129"/>
+						</Button>
+						<Button name="СоздатьПереоформление" id="144">
+							<Type>CommandBarButton</Type>
+							<CommandName>Form.Command.СоздатьПереоформление</CommandName>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Переоформление займа</v8:content>
+								</v8:item>
+							</Title>
+							<ExtendedTooltip name="СоздатьПереоформлениеРасширеннаяПодсказка" id="145"/>
+						</Button>
+						<Button name="СоздатьВыдачуЗалога" id="154">
+							<Type>CommandBarButton</Type>
+							<CommandName>Form.Command.СоздатьВыдачуЗалога</CommandName>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Выдача объектов залога</v8:content>
+								</v8:item>
+							</Title>
+							<ExtendedTooltip name="СоздатьВыдачуЗалогаРасширеннаяПодсказка" id="155"/>
+						</Button>
+						<Button name="СоздатьИзъятиеОбъектовЗалога" id="177">
+							<Type>CommandBarButton</Type>
+							<CommandName>Form.Command.СоздатьИзъятиеОбъектовЗалога</CommandName>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Изъятие объектов залога</v8:content>
+								</v8:item>
+							</Title>
+							<ExtendedTooltip name="СоздатьИзъятиеОбъектовЗалогаРасширеннаяПодсказка" id="178"/>
+						</Button>
+						<Button name="СоздатьВозвратОбъектовЗалога" id="179">
+							<Type>CommandBarButton</Type>
+							<CommandName>Form.Command.СоздатьВозвратОбъектовЗалога</CommandName>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Возврат объектов залога</v8:content>
+								</v8:item>
+							</Title>
+							<ExtendedTooltip name="СоздатьВозвратОбъектовЗалогаРасширеннаяПодсказка" id="180"/>
+						</Button>
+						<Button name="СоздатьОтменуЗалога" id="181">
+							<Type>CommandBarButton</Type>
+							<Visible>false</Visible>
+							<CommandName>Form.Command.СоздатьОтменуЗалога</CommandName>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Отмена выдачи займа</v8:content>
+								</v8:item>
+							</Title>
+							<ExtendedTooltip name="СоздатьОтменуЗалогаРасширеннаяПодсказка" id="182"/>
+						</Button>
+						<Button name="СоздатьОтменуПереоформления" id="188">
+							<Type>CommandBarButton</Type>
+							<Visible>false</Visible>
+							<CommandName>Form.Command.СоздатьОтменуПереоформления</CommandName>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Отмена переоформления займа</v8:content>
+								</v8:item>
+							</Title>
+							<ExtendedTooltip name="СоздатьОтменуПереоформленияРасширеннаяПодсказка" id="189"/>
+						</Button>
+						<Button name="СоздатьОстановкуНачисленияПроцентов" id="183">
+							<Type>CommandBarButton</Type>
+							<CommandName>Form.Command.СоздатьОстановкуНачисленияПроцентов</CommandName>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Остановка начисления процентов</v8:content>
+								</v8:item>
+							</Title>
+							<ExtendedTooltip name="СоздатьОстановкуНачисленияПроцентовРасширеннаяПодсказка" id="184"/>
+						</Button>
+						<Button name="СоздатьОтменуОперацииПоЗайму" id="190">
+							<Type>CommandBarButton</Type>
+							<CommandName>Form.Command.СоздатьОтменуОперацииПоЗайму</CommandName>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Отмена операции по займу</v8:content>
+								</v8:item>
+							</Title>
+							<ExtendedTooltip name="СоздатьОтменуОперацииПоЗаймуРасширеннаяПодсказка" id="191"/>
+						</Button>
+					</ChildItems>
+				</Popup>
+				<Button name="УстановитьИнтервал" id="171">
+					<Type>CommandBarButton</Type>
+					<Representation>Picture</Representation>
+					<CommandName>Form.Item.Список.StandardCommand.SetDateInterval</CommandName>
+					<LocationInCommandBar>InCommandBar</LocationInCommandBar>
+					<ExtendedTooltip name="УстановитьИнтервалРасширеннаяПодсказка" id="172"/>
+				</Button>
+				<Popup name="ПодменюПечать" id="173">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Подменю печать</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Подменю печать</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Picture>
+						<xr:Ref>StdPicture.Print</xr:Ref>
+						<xr:LoadTransparent>true</xr:LoadTransparent>
+					</Picture>
+					<ExtendedTooltip name="ПодменюПечатьРасширеннаяПодсказка" id="174"/>
+				</Popup>
+				<Popup name="ПодменюОтчеты" id="175">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Отчеты</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="ПодменюОтчетыРасширеннаяПодсказка" id="176"/>
+				</Popup>
+				<Button name="ФормаСправка" id="126">
+					<Type>CommandBarButton</Type>
+					<CommandName>Form.StandardCommand.Help</CommandName>
+					<LocationInCommandBar>InCommandBarAndInAdditionalSubmenu</LocationInCommandBar>
+					<ExtendedTooltip name="ФормаСправкаРасширеннаяПодсказка" id="127"/>
+				</Button>
+			</ChildItems>
+		</CommandBar>
+		<UsualGroup name="СписокКомпоновщикНастроекПользовательскиеНастройки" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа пользовательских настроек</v8:content>
+				</v8:item>
+			</Title>
+			<VerticalStretch>false</VerticalStretch>
+			<Group>Vertical</Group>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="СписокКомпоновщикНастроекПользовательскиеНастройкиРасширеннаяПодсказка" id="2"/>
+		</UsualGroup>
+		<Table name="Список" id="3">
+			<Representation>List</Representation>
+			<CommandBarLocation>None</CommandBarLocation>
+			<DefaultItem>true</DefaultItem>
+			<UseAlternationRowColor>true</UseAlternationRowColor>
+			<InitialTreeView>ExpandTopLevel</InitialTreeView>
+			<EnableStartDrag>true</EnableStartDrag>
+			<FileDragMode>AsFile</FileDragMode>
+			<DataPath>Список</DataPath>
+			<RowPictureDataPath>Список.DefaultPicture</RowPictureDataPath>
+			<CommandSet>
+				<ExcludedCommand>Delete</ExcludedCommand>
+			</CommandSet>
+			<AutoRefresh>false</AutoRefresh>
+			<AutoRefreshPeriod>60</AutoRefreshPeriod>
+			<Period>
+				<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+				<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+				<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+			</Period>
+			<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+			<RestoreCurrentRow>false</RestoreCurrentRow>
+			<TopLevelParent xsi:nil="true"/>
+			<ShowRoot>true</ShowRoot>
+			<AllowRootChoice>false</AllowRootChoice>
+			<UpdateOnDataChange>Auto</UpdateOnDataChange>
+			<UserSettingsGroup>СписокКомпоновщикНастроекПользовательскиеНастройки</UserSettingsGroup>
+			<AllowGettingCurrentRowURL>true</AllowGettingCurrentRowURL>
+			<ContextMenu name="СписокКонтекстноеМеню" id="4"/>
+			<AutoCommandBar name="СписокКоманднаяПанель" id="5">
+				<Autofill>false</Autofill>
+			</AutoCommandBar>
+			<ExtendedTooltip name="СписокРасширеннаяПодсказка" id="6"/>
+			<SearchStringAddition name="СписокСтрокаПоиска" id="7">
+				<AdditionSource>
+					<Item>Список</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="СписокСтрокаПоискаКонтекстноеМеню" id="10"/>
+				<ExtendedTooltip name="СписокСтрокаПоискаРасширеннаяПодсказка" id="11"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="СписокСостояниеПросмотра" id="12">
+				<AdditionSource>
+					<Item>Список</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="СписокСостояниеПросмотраКонтекстноеМеню" id="15"/>
+				<ExtendedTooltip name="СписокСостояниеПросмотраРасширеннаяПодсказка" id="16"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="СписокУправлениеПоиском" id="17">
+				<AdditionSource>
+					<Item>Список</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="СписокУправлениеПоискомКонтекстноеМеню" id="20"/>
+				<ExtendedTooltip name="СписокУправлениеПоискомРасширеннаяПодсказка" id="21"/>
+			</SearchControlAddition>
+			<Events>
+				<Event name="Selection">СписокВыбор</Event>
+				<Event name="BeforeDeleteRow">СписокПередУдалением</Event>
+				<Event name="OnActivateRow">СписокПриАктивизацииСтроки</Event>
+			</Events>
+			<ChildItems>
+				<LabelField name="Дата" id="22">
+					<DataPath>Список.Дата</DataPath>
+					<DefaultItem>true</DefaultItem>
+					<ContextMenu name="ДатаКонтекстноеМеню" id="23"/>
+					<ExtendedTooltip name="ДатаРасширеннаяПодсказка" id="24"/>
+				</LabelField>
+				<LabelField name="Номер" id="25">
+					<DataPath>Список.Номер</DataPath>
+					<ContextMenu name="НомерКонтекстноеМеню" id="26"/>
+					<ExtendedTooltip name="НомерРасширеннаяПодсказка" id="27"/>
+				</LabelField>
+				<LabelField name="ВидОперации" id="28">
+					<DataPath>Список.ВидОперации</DataPath>
+					<ContextMenu name="ВидОперацииКонтекстноеМеню" id="29"/>
+					<ExtendedTooltip name="ВидОперацииРасширеннаяПодсказка" id="30"/>
+				</LabelField>
+				<LabelField name="Залогодатель" id="31">
+					<DataPath>Список.Залогодатель</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Клиент</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="ЗалогодательКонтекстноеМеню" id="32"/>
+					<ExtendedTooltip name="ЗалогодательРасширеннаяПодсказка" id="33"/>
+				</LabelField>
+				<LabelField name="Заемщик" id="185">
+					<DataPath>Список.Заемщик</DataPath>
+					<ContextMenu name="ЗаемщикКонтекстноеМеню" id="186"/>
+					<ExtendedTooltip name="ЗаемщикРасширеннаяПодсказка" id="187"/>
+				</LabelField>
+				<LabelField name="Ломбард" id="133">
+					<DataPath>Список.Ломбард</DataPath>
+					<ContextMenu name="ЛомбардКонтекстноеМеню" id="134"/>
+					<ExtendedTooltip name="ЛомбардРасширеннаяПодсказка" id="135"/>
+				</LabelField>
+				<LabelField name="НомерЗалоговогоБилета" id="136">
+					<DataPath>Список.НомерЗалоговогоБилета</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>№ залогового билета</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="НомерЗалоговогоБилетаКонтекстноеМеню" id="137"/>
+					<ExtendedTooltip name="НомерЗалоговогоБилетаРасширеннаяПодсказка" id="138"/>
+				</LabelField>
+				<LabelField name="СтатусЗалоговогоБилета" id="149">
+					<DataPath>Список.СтатусЗалоговогоБилета</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Статус залогового билета</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="СтатусЗалоговогоБилетаКонтекстноеМеню" id="150"/>
+					<ExtendedTooltip name="СтатусЗалоговогоБилетаРасширеннаяПодсказка" id="151"/>
+				</LabelField>
+				<LabelField name="СуммаСсуды" id="34">
+					<DataPath>Список.СуммаСсуды</DataPath>
+					<ContextMenu name="СуммаСсудыКонтекстноеМеню" id="35"/>
+					<ExtendedTooltip name="СуммаСсудыРасширеннаяПодсказка" id="36"/>
+				</LabelField>
+				<LabelField name="СуммаОплаты" id="146">
+					<DataPath>Список.СуммаОплаты</DataPath>
+					<ContextMenu name="СуммаОплатыКонтекстноеМеню" id="147"/>
+					<ExtendedTooltip name="СуммаОплатыРасширеннаяПодсказка" id="148"/>
+				</LabelField>
+				<LabelField name="Ответственный" id="52">
+					<DataPath>Список.Ответственный</DataPath>
+					<ContextMenu name="ОтветственныйКонтекстноеМеню" id="53"/>
+					<ExtendedTooltip name="ОтветственныйРасширеннаяПодсказка" id="54"/>
+				</LabelField>
+				<LabelField name="ДокументЗалогодателя" id="162">
+					<DataPath>Список.ДокументЗалогодателя</DataPath>
+					<Visible>false</Visible>
+					<ContextMenu name="ДокументЗалогодателяКонтекстноеМеню" id="163"/>
+					<ExtendedTooltip name="ДокументЗалогодателяРасширеннаяПодсказка" id="164"/>
+				</LabelField>
+				<LabelField name="Ссылка" id="168">
+					<DataPath>Список.Ссылка</DataPath>
+					<ContextMenu name="СсылкаКонтекстноеМеню" id="169"/>
+					<ExtendedTooltip name="СсылкаРасширеннаяПодсказка" id="170"/>
+				</LabelField>
+			</ChildItems>
+		</Table>
+		<UsualGroup name="ГруппаДоверенности" id="139">
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа доверенности</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Vertical</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаДоверенностиРасширеннаяПодсказка" id="140"/>
+			<ChildItems>
+				<LabelField name="ДокументКлиента" id="165">
+					<DataPath>ДокументКлиента</DataPath>
+					<TitleLocation>None</TitleLocation>
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<BackColor>style:AuxiliaryNavigationColor</BackColor>
+					<ContextMenu name="ДокументКлиентаКонтекстноеМеню" id="166"/>
+					<ExtendedTooltip name="ДокументКлиентаРасширеннаяПодсказка" id="167"/>
+				</LabelField>
+				<LabelDecoration name="ДекорацияДоверенности" id="141">
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<Title formatted="false">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Декорация доверенности</v8:content>
+						</v8:item>
+					</Title>
+					<Hyperlink>true</Hyperlink>
+					<ContextMenu name="ДекорацияДоверенностиКонтекстноеМеню" id="142"/>
+					<ExtendedTooltip name="ДекорацияДоверенностиРасширеннаяПодсказка" id="143"/>
+					<Events>
+						<Event name="Click">ДекорацияДоверенностиНажатие</Event>
+					</Events>
+				</LabelDecoration>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Список" id="1">
+			<Type>
+				<v8:Type>cfg:DynamicList</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<Settings xsi:type="DynamicList">
+				<ManualQuery>true</ManualQuery>
+				<DynamicDataRead>false</DynamicDataRead>
+				<QueryText>ВЫБРАТЬ РАЗЛИЧНЫЕ
+	ДокументЛБ_ОперацияПоЗалогу.Номер КАК Номер,
+	ДокументЛБ_ОперацияПоЗалогу.Дата КАК Дата,
+	ДокументЛБ_ОперацияПоЗалогу.ПометкаУдаления КАК ПометкаУдаления,
+	ДокументЛБ_ОперацияПоЗалогу.Проведен КАК Проведен,
+	ДокументЛБ_ОперацияПоЗалогу.ВидОперации КАК ВидОперации,
+	ДокументЛБ_ОперацияПоЗалогу.Залогодатель КАК Залогодатель,
+	ДокументЛБ_ОперацияПоЗалогу.ОтветственныйСотрудник КАК Ответственный,
+	ДокументЛБ_ОперацияПоЗалогу.Представитель КАК Представитель,
+	ДокументЛБ_ОперацияПоЗалогу.ПредыдущаяОперация КАК ПредыдущаяОперация,
+	ЛБ_СостояниеЗалоговогоБилетаСрезПоследних.СуммаЗайма КАК СуммаСсуды,
+	ДокументЛБ_ОперацияПоЗалогу.СуммаОплаты КАК СуммаОплаты,
+	ДокументЛБ_ОперацияПоЗалогу.НомерЗалоговогоБилета КАК НомерЗалоговогоБилета,
+	ВЫБОР
+		КОГДА ЛБ_СостояниеЗалоговогоБилетаСрезПоследних.СтатусЗалоговогоБилета = NULL
+			ТОГДА ЗНАЧЕНИЕ(Перечисление.ЛБ_СтатусыЗалоговыхБилетов.ПустаяСсылка)
+		ИНАЧЕ ЛБ_СостояниеЗалоговогоБилетаСрезПоследних.СтатусЗалоговогоБилета
+	КОНЕЦ КАК СтатусЗалоговогоБилета,
+	ВЫБОР
+		КОГДА ДокументЛБ_ОперацияПоЗалогу.ВидОперации = ЗНАЧЕНИЕ(Перечисление.ЛБ_ВидыОперацийОперацияПоЗалогу.Залог)
+				ИЛИ ДокументЛБ_ОперацияПоЗалогу.ВидОперации = ЗНАЧЕНИЕ(Перечисление.ЛБ_ВидыОперацийОперацияПоЗалогу.Переоформление)
+			ТОГДА ДокументЛБ_ОперацияПоЗалогу.Залогодатель
+		ИНАЧЕ ДокументЛБ_ОперацияПоЗалогу.ПредыдущаяОперация.Залогодатель
+	КОНЕЦ КАК Заемщик,
+	ДокументЛБ_ОперацияПоЗалогу.Ломбард КАК Ломбард,
+	ДокументЛБ_ОперацияПоЗалогу.СхемаКредитования КАК СхемаКредитования,
+	ДокументЛБ_ОперацияПоЗалогу.СтатусЗалогодателя КАК СтатусЗалогодателя,
+	ДокументЛБ_ОперацияПоЗалогу.Организация КАК Организация,
+	ДокументЛБ_ОперацияПоЗалогу.Ссылка КАК Ссылка,
+	ДокументЛБ_ОперацияПоЗалогу.ДокументЗалогодателя КАК ДокументЗалогодателя
+ИЗ
+	Документ.ЛБ_ОперацияПоЗалогу КАК ДокументЛБ_ОперацияПоЗалогу
+		ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.ЛБ_СостояниеЗалоговогоБилета КАК ЛБ_СостояниеЗалоговогоБилетаСрезПоследних
+		ПО ДокументЛБ_ОперацияПоЗалогу.Ссылка = ЛБ_СостояниеЗалоговогоБилетаСрезПоследних.Регистратор
+			И (ВЫБОР
+				КОГДА ДокументЛБ_ОперацияПоЗалогу.ВидОперации = ЗНАЧЕНИЕ(Перечисление.ЛБ_ВидыОперацийОперацияПоЗалогу.Залог)
+						ИЛИ ДокументЛБ_ОперацияПоЗалогу.ВидОперации = ЗНАЧЕНИЕ(Перечисление.ЛБ_ВидыОперацийОперацияПоЗалогу.Переоформление)
+					ТОГДА ДокументЛБ_ОперацияПоЗалогу.Ссылка = ЛБ_СостояниеЗалоговогоБилетаСрезПоследних.ЗалоговыйБилет
+				ИНАЧЕ ДокументЛБ_ОперацияПоЗалогу.ПредыдущаяОперация = ЛБ_СостояниеЗалоговогоБилетаСрезПоследних.ЗалоговыйБилет
+			КОНЕЦ)</QueryText>
+				<MainTable>Document.ЛБ_ОперацияПоЗалогу</MainTable>
+				<ListSettings>
+					<dcsset:filter>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+					</dcsset:filter>
+					<dcsset:order>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+					</dcsset:order>
+					<dcsset:conditionalAppearance>
+						<dcsset:item>
+							<dcsset:selection>
+								<dcsset:item>
+									<dcsset:field>ВидОперации</dcsset:field>
+								</dcsset:item>
+								<dcsset:item>
+									<dcsset:field>Дата</dcsset:field>
+								</dcsset:item>
+								<dcsset:item>
+									<dcsset:field>Залогодатель</dcsset:field>
+								</dcsset:item>
+								<dcsset:item>
+									<dcsset:field>Комментарий</dcsset:field>
+								</dcsset:item>
+								<dcsset:item>
+									<dcsset:field>Ломбард</dcsset:field>
+								</dcsset:item>
+								<dcsset:item>
+									<dcsset:field>Номер</dcsset:field>
+								</dcsset:item>
+								<dcsset:item>
+									<dcsset:field>НомерЗалоговогоБилета</dcsset:field>
+								</dcsset:item>
+								<dcsset:item>
+									<dcsset:field>Ответственный</dcsset:field>
+								</dcsset:item>
+								<dcsset:item>
+									<dcsset:field>СтатусЗалоговогоБилета</dcsset:field>
+								</dcsset:item>
+								<dcsset:item>
+									<dcsset:field>СуммаОплаты</dcsset:field>
+								</dcsset:item>
+								<dcsset:item>
+									<dcsset:field>СуммаСсуды</dcsset:field>
+								</dcsset:item>
+								<dcsset:item>
+									<dcsset:field>СхемаКредитования</dcsset:field>
+								</dcsset:item>
+								<dcsset:item>
+									<dcsset:field>Ссылка</dcsset:field>
+								</dcsset:item>
+								<dcsset:item>
+									<dcsset:field>Заемщик</dcsset:field>
+								</dcsset:item>
+							</dcsset:selection>
+							<dcsset:filter>
+								<dcsset:item xsi:type="dcsset:FilterItemComparison">
+									<dcsset:left xsi:type="dcscor:Field">СтатусЗалоговогоБилета</dcsset:left>
+									<dcsset:comparisonType>Equal</dcsset:comparisonType>
+									<dcsset:right xsi:type="dcscor:DesignTimeValue">Перечисление.ЛБ_СтатусыЗалоговыхБилетов.Закрыт</dcsset:right>
+								</dcsset:item>
+							</dcsset:filter>
+							<dcsset:appearance>
+								<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+									<dcscor:parameter>ЦветФона</dcscor:parameter>
+									<dcscor:value xsi:type="v8ui:Color">web:MediumGreen</dcscor:value>
+								</dcscor:item>
+							</dcsset:appearance>
+							<dcsset:viewMode>Normal</dcsset:viewMode>
+						</dcsset:item>
+						<dcsset:item>
+							<dcsset:selection>
+								<dcsset:item>
+									<dcsset:field>ВидОперации</dcsset:field>
+								</dcsset:item>
+								<dcsset:item>
+									<dcsset:field>Дата</dcsset:field>
+								</dcsset:item>
+								<dcsset:item>
+									<dcsset:field>Залогодатель</dcsset:field>
+								</dcsset:item>
+								<dcsset:item>
+									<dcsset:field>Комментарий</dcsset:field>
+								</dcsset:item>
+								<dcsset:item>
+									<dcsset:field>Ломбард</dcsset:field>
+								</dcsset:item>
+								<dcsset:item>
+									<dcsset:field>Номер</dcsset:field>
+								</dcsset:item>
+								<dcsset:item>
+									<dcsset:field>НомерЗалоговогоБилета</dcsset:field>
+								</dcsset:item>
+								<dcsset:item>
+									<dcsset:field>Ответственный</dcsset:field>
+								</dcsset:item>
+								<dcsset:item>
+									<dcsset:field>СтатусЗалоговогоБилета</dcsset:field>
+								</dcsset:item>
+								<dcsset:item>
+									<dcsset:field>СуммаОплаты</dcsset:field>
+								</dcsset:item>
+								<dcsset:item>
+									<dcsset:field>СуммаСсуды</dcsset:field>
+								</dcsset:item>
+								<dcsset:item>
+									<dcsset:field>СхемаКредитования</dcsset:field>
+								</dcsset:item>
+								<dcsset:item>
+									<dcsset:field>Ссылка</dcsset:field>
+								</dcsset:item>
+								<dcsset:item>
+									<dcsset:field>Заемщик</dcsset:field>
+								</dcsset:item>
+							</dcsset:selection>
+							<dcsset:filter>
+								<dcsset:item xsi:type="dcsset:FilterItemGroup">
+									<dcsset:groupType>AndGroup</dcsset:groupType>
+									<dcsset:item xsi:type="dcsset:FilterItemComparison">
+										<dcsset:left xsi:type="dcscor:Field">Проведен</dcsset:left>
+										<dcsset:comparisonType>Equal</dcsset:comparisonType>
+										<dcsset:right xsi:type="xs:boolean">false</dcsset:right>
+									</dcsset:item>
+									<dcsset:item xsi:type="dcsset:FilterItemComparison">
+										<dcsset:left xsi:type="dcscor:Field">ПометкаУдаления</dcsset:left>
+										<dcsset:comparisonType>Equal</dcsset:comparisonType>
+										<dcsset:right xsi:type="xs:boolean">true</dcsset:right>
+									</dcsset:item>
+								</dcsset:item>
+							</dcsset:filter>
+							<dcsset:appearance>
+								<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+									<dcscor:parameter>ЦветФона</dcscor:parameter>
+									<dcscor:value xsi:type="v8ui:Color">web:LightPink</dcscor:value>
+								</dcscor:item>
+							</dcsset:appearance>
+							<dcsset:viewMode>Normal</dcsset:viewMode>
+						</dcsset:item>
+						<dcsset:item>
+							<dcsset:selection>
+								<dcsset:item>
+									<dcsset:field>ВидОперации</dcsset:field>
+								</dcsset:item>
+								<dcsset:item>
+									<dcsset:field>Дата</dcsset:field>
+								</dcsset:item>
+								<dcsset:item>
+									<dcsset:field>Залогодатель</dcsset:field>
+								</dcsset:item>
+								<dcsset:item>
+									<dcsset:field>Комментарий</dcsset:field>
+								</dcsset:item>
+								<dcsset:item>
+									<dcsset:field>Ломбард</dcsset:field>
+								</dcsset:item>
+								<dcsset:item>
+									<dcsset:field>Номер</dcsset:field>
+								</dcsset:item>
+								<dcsset:item>
+									<dcsset:field>НомерЗалоговогоБилета</dcsset:field>
+								</dcsset:item>
+								<dcsset:item>
+									<dcsset:field>Ответственный</dcsset:field>
+								</dcsset:item>
+								<dcsset:item>
+									<dcsset:field>СтатусЗалоговогоБилета</dcsset:field>
+								</dcsset:item>
+								<dcsset:item>
+									<dcsset:field>СуммаОплаты</dcsset:field>
+								</dcsset:item>
+								<dcsset:item>
+									<dcsset:field>СуммаСсуды</dcsset:field>
+								</dcsset:item>
+								<dcsset:item>
+									<dcsset:field>СхемаКредитования</dcsset:field>
+								</dcsset:item>
+								<dcsset:item>
+									<dcsset:field>Ссылка</dcsset:field>
+								</dcsset:item>
+								<dcsset:item>
+									<dcsset:field>Заемщик</dcsset:field>
+								</dcsset:item>
+							</dcsset:selection>
+							<dcsset:filter>
+								<dcsset:item xsi:type="dcsset:FilterItemGroup">
+									<dcsset:groupType>AndGroup</dcsset:groupType>
+									<dcsset:item xsi:type="dcsset:FilterItemComparison">
+										<dcsset:left xsi:type="dcscor:Field">Проведен</dcsset:left>
+										<dcsset:comparisonType>Equal</dcsset:comparisonType>
+										<dcsset:right xsi:type="xs:boolean">false</dcsset:right>
+									</dcsset:item>
+									<dcsset:item xsi:type="dcsset:FilterItemComparison">
+										<dcsset:left xsi:type="dcscor:Field">ПометкаУдаления</dcsset:left>
+										<dcsset:comparisonType>Equal</dcsset:comparisonType>
+										<dcsset:right xsi:type="xs:boolean">false</dcsset:right>
+									</dcsset:item>
+								</dcsset:item>
+							</dcsset:filter>
+							<dcsset:appearance>
+								<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+									<dcscor:parameter>ЦветФона</dcscor:parameter>
+									<dcscor:value xsi:type="v8ui:Color">web:Lavender</dcscor:value>
+								</dcscor:item>
+							</dcsset:appearance>
+							<dcsset:viewMode>Normal</dcsset:viewMode>
+						</dcsset:item>
+						<dcsset:item>
+							<dcsset:selection>
+								<dcsset:item>
+									<dcsset:field>ВидОперации</dcsset:field>
+								</dcsset:item>
+								<dcsset:item>
+									<dcsset:field>Дата</dcsset:field>
+								</dcsset:item>
+								<dcsset:item>
+									<dcsset:field>Залогодатель</dcsset:field>
+								</dcsset:item>
+								<dcsset:item>
+									<dcsset:field>Комментарий</dcsset:field>
+								</dcsset:item>
+								<dcsset:item>
+									<dcsset:field>Ломбард</dcsset:field>
+								</dcsset:item>
+								<dcsset:item>
+									<dcsset:field>Номер</dcsset:field>
+								</dcsset:item>
+								<dcsset:item>
+									<dcsset:field>НомерЗалоговогоБилета</dcsset:field>
+								</dcsset:item>
+								<dcsset:item>
+									<dcsset:field>Ответственный</dcsset:field>
+								</dcsset:item>
+								<dcsset:item>
+									<dcsset:field>СтатусЗалоговогоБилета</dcsset:field>
+								</dcsset:item>
+								<dcsset:item>
+									<dcsset:field>СуммаОплаты</dcsset:field>
+								</dcsset:item>
+								<dcsset:item>
+									<dcsset:field>СуммаСсуды</dcsset:field>
+								</dcsset:item>
+								<dcsset:item>
+									<dcsset:field>СхемаКредитования</dcsset:field>
+								</dcsset:item>
+								<dcsset:item>
+									<dcsset:field>Ссылка</dcsset:field>
+								</dcsset:item>
+								<dcsset:item>
+									<dcsset:field>Заемщик</dcsset:field>
+								</dcsset:item>
+							</dcsset:selection>
+							<dcsset:filter>
+								<dcsset:item xsi:type="dcsset:FilterItemGroup">
+									<dcsset:groupType>OrGroup</dcsset:groupType>
+									<dcsset:item xsi:type="dcsset:FilterItemComparison">
+										<dcsset:left xsi:type="dcscor:Field">СтатусЗалоговогоБилета</dcsset:left>
+										<dcsset:comparisonType>Equal</dcsset:comparisonType>
+										<dcsset:right xsi:type="dcscor:DesignTimeValue">Перечисление.ЛБ_СтатусыЗалоговыхБилетов.ОтвественноеХранение</dcsset:right>
+									</dcsset:item>
+									<dcsset:item xsi:type="dcsset:FilterItemComparison">
+										<dcsset:left xsi:type="dcscor:Field">СтатусЗалоговогоБилета</dcsset:left>
+										<dcsset:comparisonType>Equal</dcsset:comparisonType>
+										<dcsset:right xsi:type="dcscor:DesignTimeValue">Перечисление.ЛБ_СтатусыЗалоговыхБилетов.ГотовКОтправкеОХ</dcsset:right>
+									</dcsset:item>
+								</dcsset:item>
+							</dcsset:filter>
+							<dcsset:appearance>
+								<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+									<dcscor:parameter>ЦветФона</dcscor:parameter>
+									<dcscor:value xsi:type="v8ui:Color">web:LightCyan</dcscor:value>
+								</dcscor:item>
+							</dcsset:appearance>
+							<dcsset:viewMode>Normal</dcsset:viewMode>
+						</dcsset:item>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+					</dcsset:conditionalAppearance>
+					<dcsset:itemsViewMode>Normal</dcsset:itemsViewMode>
+				</ListSettings>
+			</Settings>
+		</Attribute>
+		<Attribute name="СписокДоверенностей" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Список доверенностей</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ДокументКлиента" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Документ клиента</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.ЛБ_ДокументыЗалогодателя</v8:Type>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="СоздатьЗалог" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Создать залог</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Создать залог</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>СоздатьЗалог</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="СоздатьОплатуПроцентов" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Оплата процентов</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Создать оплату процентов</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>СоздатьОплатуПроцентов</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="СоздатьПереоформление" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Создать переоформление</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Создать переоформление</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>СоздатьПереоформление</Action>
+		</Command>
+		<Command name="УстановитьПериод" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Установить период</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Установить период</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>УстановитьПериод</Action>
+		</Command>
+		<Command name="СоздатьВыдачуЗалога" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Создать выдачу залога</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Создать выдачу залога</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>СоздатьВыдачуЗалога</Action>
+		</Command>
+		<Command name="СоздатьИзъятиеОбъектовЗалога" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Создать изъятие объектов залога</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Создать изъятие объектов залога</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>СоздатьИзъятиеОбъектовЗалога</Action>
+		</Command>
+		<Command name="СоздатьВозвратОбъектовЗалога" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Создать возврат объектов залога</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Создать возврат объектов залога</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>СоздатьВозвратОбъектовЗалога</Action>
+		</Command>
+		<Command name="СоздатьОтменуЗалога" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Создать отмену залога</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Создать отмену залога</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>СоздатьОтменуЗалога</Action>
+		</Command>
+		<Command name="СоздатьОстановкуНачисленияПроцентов" id="9">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Создать остановку начисления процентов</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Создать остановку начисления процентов</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>СоздатьОстановкуНачисленияПроцентов</Action>
+		</Command>
+		<Command name="СоздатьОтменуПереоформления" id="10">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Создать отмену переоформления</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Создать отмену переоформления</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>СоздатьОтменуПереоформления</Action>
+		</Command>
+		<Command name="СоздатьОтменуОперацииПоЗайму" id="11">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Создать отмену операции по займу</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Создать отмену операции по займу</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>СоздатьОтменуОперацииПоЗайму</Action>
+		</Command>
+	</Commands>
+	<CommandInterface>
+		<CommandBar>
+			<Item>
+				<Command>CommonCommand.ПоказатьДвиженияДокумента</Command>
+				<Type>Auto</Type>
+				<CommandGroup>FormCommandBarImportant</CommandGroup>
+				<DefaultVisible>false</DefaultVisible>
+				<Visible>
+					<xr:Common>false</xr:Common>
+				</Visible>
+			</Item>
+		</CommandBar>
+	</CommandInterface>
+</Form>

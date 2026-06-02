@@ -1,0 +1,2801 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.20">
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<Autofill>false</Autofill>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnOpen">ПриОткрытии</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="ГруппаШапка" id="77">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отбор</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа шапка</v8:content>
+				</v8:item>
+			</ToolTip>
+			<ControlRepresentation>Picture</ControlRepresentation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаШапкаРасширеннаяПодсказка" id="78"/>
+			<ChildItems>
+				<InputField name="ДатаНач" id="79">
+					<DataPath>ДатаНач</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Период с</v8:content>
+						</v8:item>
+					</Title>
+					<HorizontalStretch>false</HorizontalStretch>
+					<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+					<ContextMenu name="ДатаНачКонтекстноеМеню" id="80"/>
+					<ExtendedTooltip name="ДатаНачРасширеннаяПодсказка" id="81"/>
+					<Events>
+						<Event name="OnChange">ДатаНачПриИзменении</Event>
+					</Events>
+				</InputField>
+				<InputField name="ДатаКон" id="82">
+					<DataPath>ДатаКон</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>по</v8:content>
+						</v8:item>
+					</Title>
+					<HorizontalStretch>false</HorizontalStretch>
+					<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+					<ContextMenu name="ДатаКонКонтекстноеМеню" id="83"/>
+					<ExtendedTooltip name="ДатаКонРасширеннаяПодсказка" id="84"/>
+					<Events>
+						<Event name="OnChange">ДатаКонПриИзменении</Event>
+					</Events>
+				</InputField>
+				<Button name="КнопкаИнтервал" id="85">
+					<Type>UsualButton</Type>
+					<Representation>Picture</Representation>
+					<Width>3</Width>
+					<CommandName>Form.Command.УстановитьИнтервал</CommandName>
+					<Picture>
+						<xr:Ref>StdPicture.Calendar</xr:Ref>
+						<xr:LoadTransparent>true</xr:LoadTransparent>
+					</Picture>
+					<ExtendedTooltip name="КнопкаИнтервалРасширеннаяПодсказка" id="86"/>
+				</Button>
+				<InputField name="ФайлЗагрузки" id="68">
+					<DataPath>ФайлЗагрузки</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Файл загрузки</v8:content>
+						</v8:item>
+					</Title>
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<ChoiceButton>true</ChoiceButton>
+					<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+					<ContextMenu name="ФайлЗагрузкиКонтекстноеМеню" id="69"/>
+					<ExtendedTooltip name="ФайлЗагрузкиРасширеннаяПодсказка" id="70"/>
+					<Events>
+						<Event name="StartChoice">ФайлНачалоВыбора</Event>
+					</Events>
+				</InputField>
+				<Button name="ЗагрузитьБН" id="71">
+					<Type>UsualButton</Type>
+					<CommandName>Form.Command.ЗагрузитьБН</CommandName>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Загрузить</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="ЗагрузитьБНРасширеннаяПодсказка" id="72"/>
+				</Button>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаКнопок" id="262">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа кнопок</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа кнопок</v8:content>
+				</v8:item>
+			</ToolTip>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаКнопокРасширеннаяПодсказка" id="263"/>
+			<ChildItems>
+				<CommandBar name="ГруппаКнопокЛево" id="264">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа кнопок лево</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа кнопок лево</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="ГруппаКнопокЛевоРасширеннаяПодсказка" id="265"/>
+					<ChildItems>
+						<Button name="РеестрыПлатежейОбновить" id="250">
+							<Type>CommandBarButton</Type>
+							<Representation>PictureAndText</Representation>
+							<CommandName>Form.Command.Обновить</CommandName>
+							<Picture>
+								<xr:Ref>StdPicture.Refresh</xr:Ref>
+								<xr:LoadTransparent>true</xr:LoadTransparent>
+							</Picture>
+							<ExtendedTooltip name="РеестрыПлатежейОбновитьРасширеннаяПодсказка" id="251"/>
+						</Button>
+						<Button name="РеестрыПлатежейПоискПоНомеруЗБ" id="193">
+							<Type>CommandBarButton</Type>
+							<Representation>PictureAndText</Representation>
+							<CommandName>Form.Command.ПоискПоНомеруЗБ</CommandName>
+							<TextColor>style:FieldSelectionBackColor</TextColor>
+							<Font ref="style:NormalTextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem" scale="100"/>
+							<Picture>
+								<xr:Ref>StdPicture.Find</xr:Ref>
+								<xr:LoadTransparent>true</xr:LoadTransparent>
+							</Picture>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Поиск по номеру залогового билета</v8:content>
+								</v8:item>
+							</Title>
+							<ExtendedTooltip name="РеестрыПлатежейПоискПоНомеруЗБРасширеннаяПодсказка" id="194"/>
+						</Button>
+						<Button name="РеестрыПлатежейОтменитьПоискПоНомеруЗБ" id="197">
+							<Type>CommandBarButton</Type>
+							<CommandName>Form.Command.ОтменитьПоискПоНомеруЗБ</CommandName>
+							<Picture>
+								<xr:Ref>StdPicture.CancelSearch</xr:Ref>
+								<xr:LoadTransparent>true</xr:LoadTransparent>
+							</Picture>
+							<ExtendedTooltip name="РеестрыПлатежейОтменитьПоискПоНомеруЗБРасширеннаяПодсказка" id="198"/>
+						</Button>
+						<Button name="РеестрыПлатежейПлатежиЛККОтмене" id="248">
+							<Type>CommandBarButton</Type>
+							<HorizontalStretch>true</HorizontalStretch>
+							<CommandName>Form.Command.ПлатежиЛККОтмене</CommandName>
+							<TextColor>style:ПодтверждениеОперацииОписаниеЦвет</TextColor>
+							<BackColor>style:FieldAlternativeBackColor</BackColor>
+							<BorderColor>web:PaleTurquoise</BorderColor>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Отмененные платежи из личного кабинета</v8:content>
+								</v8:item>
+							</Title>
+							<ShapeRepresentation>Always</ShapeRepresentation>
+							<ExtendedTooltip name="РеестрыПлатежейПлатежиЛККОтменеРасширеннаяПодсказка" id="249"/>
+						</Button>
+					</ChildItems>
+				</CommandBar>
+				<CommandBar name="ГруппаКнопокПраво" id="266">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа кнопок право</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа кнопок право</v8:content>
+						</v8:item>
+					</ToolTip>
+					<HorizontalLocation>Right</HorizontalLocation>
+					<ExtendedTooltip name="ГруппаКнопокПравоРасширеннаяПодсказка" id="267"/>
+					<ChildItems>
+						<Button name="РеестрыПлатежейОтменитьРеестр" id="195">
+							<Type>CommandBarButton</Type>
+							<GroupHorizontalAlign>Right</GroupHorizontalAlign>
+							<CommandName>Form.Command.ОтменитьРеестр</CommandName>
+							<TextColor>style:SpecialTextColor</TextColor>
+							<BackColor>web:Gainsboro</BackColor>
+							<LocationInCommandBar>InCommandBar</LocationInCommandBar>
+							<ExtendedTooltip name="РеестрыПлатежейОтменитьРеестрРасширеннаяПодсказка" id="196"/>
+						</Button>
+					</ChildItems>
+				</CommandBar>
+			</ChildItems>
+		</UsualGroup>
+		<Table name="РеестрыПлатежей" id="1">
+			<AutoMaxHeight>false</AutoMaxHeight>
+			<MaxHeight>14</MaxHeight>
+			<InitialListView>Beginning</InitialListView>
+			<EnableStartDrag>true</EnableStartDrag>
+			<DataPath>РеестрыПлатежей</DataPath>
+			<AutoRefresh>false</AutoRefresh>
+			<AutoRefreshPeriod>60</AutoRefreshPeriod>
+			<Period>
+				<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+				<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+				<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+			</Period>
+			<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+			<RestoreCurrentRow>true</RestoreCurrentRow>
+			<TopLevelParent xsi:nil="true"/>
+			<ShowRoot>true</ShowRoot>
+			<AllowRootChoice>false</AllowRootChoice>
+			<UpdateOnDataChange>Auto</UpdateOnDataChange>
+			<AllowGettingCurrentRowURL>true</AllowGettingCurrentRowURL>
+			<ContextMenu name="РеестрыПлатежейКонтекстноеМеню" id="2"/>
+			<AutoCommandBar name="РеестрыПлатежейКоманднаяПанель" id="3">
+				<Autofill>false</Autofill>
+			</AutoCommandBar>
+			<ExtendedTooltip name="РеестрыПлатежейРасширеннаяПодсказка" id="4"/>
+			<SearchStringAddition name="РеестрыПлатежейСтрокаПоиска" id="5">
+				<AdditionSource>
+					<Item>РеестрыПлатежей</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="РеестрыПлатежейСтрокаПоискаКонтекстноеМеню" id="6"/>
+				<ExtendedTooltip name="РеестрыПлатежейСтрокаПоискаРасширеннаяПодсказка" id="7"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="РеестрыПлатежейСостояниеПросмотра" id="8">
+				<AdditionSource>
+					<Item>РеестрыПлатежей</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="РеестрыПлатежейСостояниеПросмотраКонтекстноеМеню" id="9"/>
+				<ExtendedTooltip name="РеестрыПлатежейСостояниеПросмотраРасширеннаяПодсказка" id="10"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="РеестрыПлатежейУправлениеПоиском" id="11">
+				<AdditionSource>
+					<Item>РеестрыПлатежей</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="РеестрыПлатежейУправлениеПоискомКонтекстноеМеню" id="12"/>
+				<ExtendedTooltip name="РеестрыПлатежейУправлениеПоискомРасширеннаяПодсказка" id="13"/>
+			</SearchControlAddition>
+			<Events>
+				<Event name="Selection">РеестрыПлатежейВыбор</Event>
+				<Event name="OnActivateRow">РеестрыПлатежейПриАктивизацииСтроки</Event>
+			</Events>
+			<ChildItems>
+				<PictureField name="РеестрыПлатежейОбработано" id="259">
+					<DataPath>РеестрыПлатежей.Обработано</DataPath>
+					<TitleBackColor>style:ReportGroup1BackColor</TitleBackColor>
+					<TitleLocation>None</TitleLocation>
+					<HeaderPicture>
+						<xr:Ref>CommonPicture.Успешно</xr:Ref>
+						<xr:LoadTransparent>true</xr:LoadTransparent>
+					</HeaderPicture>
+					<Width>2</Width>
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<MaxWidth>2</MaxWidth>
+					<HorizontalStretch>false</HorizontalStretch>
+					<ValuesPicture>
+						<xr:Ref>CommonPicture.СтатусыСопоставленияОбъектов</xr:Ref>
+						<xr:LoadTransparent>true</xr:LoadTransparent>
+					</ValuesPicture>
+					<ContextMenu name="РеестрыПлатежейОбработаноКонтекстноеМеню" id="260"/>
+					<ExtendedTooltip name="РеестрыПлатежейОбработаноРасширеннаяПодсказка" id="261"/>
+				</PictureField>
+				<ColumnGroup name="РеестрыПлатежейГруппа1" id="56">
+					<ExtendedTooltip name="РеестрыПлатежейГруппа1РасширеннаяПодсказка" id="57"/>
+					<ChildItems>
+						<InputField name="РеестрыПлатежейСтатус" id="14">
+							<DataPath>РеестрыПлатежей.СтатусРеестра</DataPath>
+							<TitleBackColor>style:ReportGroup1BackColor</TitleBackColor>
+							<TitleFont ref="style:NormalTextFont" height="9" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem" scale="100"/>
+							<EditMode>EnterOnInput</EditMode>
+							<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+							<ContextMenu name="РеестрыПлатежейСтатусКонтекстноеМеню" id="15"/>
+							<ExtendedTooltip name="РеестрыПлатежейСтатусРасширеннаяПодсказка" id="16"/>
+						</InputField>
+						<InputField name="РеестрыПлатежейНомерРеестра" id="23">
+							<DataPath>РеестрыПлатежей.НомерРеестра</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>№ реестра</v8:content>
+								</v8:item>
+							</Title>
+							<TitleBackColor>style:ReportGroup1BackColor</TitleBackColor>
+							<TitleFont ref="style:NormalTextFont" height="9" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem" scale="100"/>
+							<EditMode>EnterOnInput</EditMode>
+							<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+							<ContextMenu name="РеестрыПлатежейНомерРеестраКонтекстноеМеню" id="24"/>
+							<ExtendedTooltip name="РеестрыПлатежейНомерРеестраРасширеннаяПодсказка" id="25"/>
+						</InputField>
+					</ChildItems>
+				</ColumnGroup>
+				<ColumnGroup name="РеестрыПлатежейГруппа2" id="58">
+					<ExtendedTooltip name="РеестрыПлатежейГруппа2РасширеннаяПодсказка" id="59"/>
+					<ChildItems>
+						<InputField name="РеестрыПлатежейНомер" id="17">
+							<DataPath>РеестрыПлатежей.Номер</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>№ системный</v8:content>
+								</v8:item>
+							</Title>
+							<TitleBackColor>style:ReportGroup1BackColor</TitleBackColor>
+							<TitleFont ref="style:NormalTextFont" height="9" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem" scale="100"/>
+							<HorizontalAlign>Left</HorizontalAlign>
+							<EditMode>EnterOnInput</EditMode>
+							<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+							<ContextMenu name="РеестрыПлатежейНомерКонтекстноеМеню" id="18"/>
+							<ExtendedTooltip name="РеестрыПлатежейНомерРасширеннаяПодсказка" id="19"/>
+						</InputField>
+						<InputField name="РеестрыПлатежейДата" id="20">
+							<DataPath>РеестрыПлатежей.Дата</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Дата загрузки</v8:content>
+								</v8:item>
+							</Title>
+							<TitleBackColor>style:ReportGroup1BackColor</TitleBackColor>
+							<TitleFont ref="style:NormalTextFont" height="9" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem" scale="100"/>
+							<EditMode>EnterOnInput</EditMode>
+							<Width>10</Width>
+							<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+							<ContextMenu name="РеестрыПлатежейДатаКонтекстноеМеню" id="21"/>
+							<ExtendedTooltip name="РеестрыПлатежейДатаРасширеннаяПодсказка" id="22"/>
+						</InputField>
+					</ChildItems>
+				</ColumnGroup>
+				<ColumnGroup name="РеестрыПлатежейГруппа3" id="60">
+					<ExtendedTooltip name="РеестрыПлатежейГруппа3РасширеннаяПодсказка" id="61"/>
+					<ChildItems>
+						<InputField name="РеестрыПлатежейОтветственный" id="29">
+							<DataPath>РеестрыПлатежей.Ответственный</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Исполнитель (загрузка)</v8:content>
+								</v8:item>
+							</Title>
+							<TitleBackColor>style:ReportGroup1BackColor</TitleBackColor>
+							<TitleFont ref="style:NormalTextFont" height="9" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem" scale="100"/>
+							<EditMode>EnterOnInput</EditMode>
+							<Width>20</Width>
+							<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+							<ContextMenu name="РеестрыПлатежейОтветственныйКонтекстноеМеню" id="30"/>
+							<ExtendedTooltip name="РеестрыПлатежейОтветственныйРасширеннаяПодсказка" id="31"/>
+						</InputField>
+						<InputField name="РеестрыПлатежейФайлЗагрузки" id="26">
+							<DataPath>РеестрыПлатежей.ИмяФайла</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Имя файла загрузки</v8:content>
+								</v8:item>
+							</Title>
+							<TitleBackColor>style:ReportGroup1BackColor</TitleBackColor>
+							<TitleFont ref="style:NormalTextFont" height="9" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem" scale="100"/>
+							<EditMode>EnterOnInput</EditMode>
+							<Width>20</Width>
+							<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+							<ContextMenu name="РеестрыПлатежейФайлЗагрузкиКонтекстноеМеню" id="27"/>
+							<ExtendedTooltip name="РеестрыПлатежейФайлЗагрузкиРасширеннаяПодсказка" id="28"/>
+						</InputField>
+					</ChildItems>
+				</ColumnGroup>
+				<InputField name="РеестрыПлатежейСуммаПлатежа" id="32">
+					<DataPath>РеестрыПлатежей.СуммаПлатежей</DataPath>
+					<TitleBackColor>style:ReportGroup1BackColor</TitleBackColor>
+					<TitleFont ref="style:NormalTextFont" height="9" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem" scale="100"/>
+					<EditMode>EnterOnInput</EditMode>
+					<Width>10</Width>
+					<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+					<ContextMenu name="РеестрыПлатежейСуммаПлатежаКонтекстноеМеню" id="33"/>
+					<ExtendedTooltip name="РеестрыПлатежейСуммаПлатежаРасширеннаяПодсказка" id="34"/>
+				</InputField>
+				<ColumnGroup name="РеестрыПлатежейГруппа4" id="62">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Зачислено</v8:content>
+						</v8:item>
+					</Title>
+					<TitleFont ref="style:NormalTextFont" height="9" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem" scale="100"/>
+					<Group>Horizontal</Group>
+					<TitleBackColor>style:ReportGroup1BackColor</TitleBackColor>
+					<ShowInHeader>true</ShowInHeader>
+					<ExtendedTooltip name="РеестрыПлатежейГруппа4РасширеннаяПодсказка" id="63"/>
+					<ChildItems>
+						<InputField name="РеестрыПлатежейЗачисленоПроценты" id="35">
+							<DataPath>РеестрыПлатежей.ОплатаПроценты</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>%%</v8:content>
+								</v8:item>
+							</Title>
+							<TitleBackColor>style:ReportGroup1BackColor</TitleBackColor>
+							<EditMode>EnterOnInput</EditMode>
+							<Width>8</Width>
+							<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+							<Format>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=2</v8:content>
+								</v8:item>
+							</Format>
+							<EditFormat>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=2</v8:content>
+								</v8:item>
+							</EditFormat>
+							<ContextMenu name="РеестрыПлатежейЗачисленоПроцентыКонтекстноеМеню" id="36"/>
+							<ExtendedTooltip name="РеестрыПлатежейЗачисленоПроцентыРасширеннаяПодсказка" id="37"/>
+						</InputField>
+						<InputField name="РеестрыПлатежейЗачисленоЗайм" id="38">
+							<DataPath>РеестрыПлатежей.ОплатаЗайм</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>займ</v8:content>
+								</v8:item>
+							</Title>
+							<TitleBackColor>style:ReportGroup1BackColor</TitleBackColor>
+							<EditMode>EnterOnInput</EditMode>
+							<Width>8</Width>
+							<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+							<Format>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=2</v8:content>
+								</v8:item>
+							</Format>
+							<EditFormat>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=2</v8:content>
+								</v8:item>
+							</EditFormat>
+							<ContextMenu name="РеестрыПлатежейЗачисленоЗаймКонтекстноеМеню" id="39"/>
+							<ExtendedTooltip name="РеестрыПлатежейЗачисленоЗаймРасширеннаяПодсказка" id="40"/>
+						</InputField>
+					</ChildItems>
+				</ColumnGroup>
+				<InputField name="РеестрыПлатежейПереплата" id="41">
+					<DataPath>РеестрыПлатежей.Переплата</DataPath>
+					<TitleTextColor>style:SpecialTextColor</TitleTextColor>
+					<TitleBackColor>style:ReportGroup1BackColor</TitleBackColor>
+					<TitleFont ref="style:NormalTextFont" height="9" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem" scale="100"/>
+					<EditMode>EnterOnInput</EditMode>
+					<Width>9</Width>
+					<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+					<Format>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>ЧЦ=15; ЧДЦ=2</v8:content>
+						</v8:item>
+					</Format>
+					<TextColor>style:SpecialTextColor</TextColor>
+					<ContextMenu name="РеестрыПлатежейПереплатаКонтекстноеМеню" id="42"/>
+					<ExtendedTooltip name="РеестрыПлатежейПереплатаРасширеннаяПодсказка" id="43"/>
+				</InputField>
+				<ColumnGroup name="РеестрыПлатежейГруппа5" id="64">
+					<ExtendedTooltip name="РеестрыПлатежейГруппа5РасширеннаяПодсказка" id="65"/>
+					<ChildItems>
+						<InputField name="РеестрыПлатежейКВозврату" id="44">
+							<DataPath>РеестрыПлатежей.КВозврату</DataPath>
+							<TitleBackColor>style:ReportGroup1BackColor</TitleBackColor>
+							<TitleFont ref="style:NormalTextFont" height="9" kind="StyleItem" scale="100"/>
+							<EditMode>EnterOnInput</EditMode>
+							<Width>11</Width>
+							<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+							<Format>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=2</v8:content>
+								</v8:item>
+							</Format>
+							<EditFormat>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=2</v8:content>
+								</v8:item>
+							</EditFormat>
+							<ContextMenu name="РеестрыПлатежейКВозвратуКонтекстноеМеню" id="45"/>
+							<ExtendedTooltip name="РеестрыПлатежейКВозвратуРасширеннаяПодсказка" id="46"/>
+						</InputField>
+						<InputField name="РеестрыПлатежейВозвращено" id="47">
+							<DataPath>РеестрыПлатежей.Возвращено</DataPath>
+							<TitleBackColor>style:ReportGroup1BackColor</TitleBackColor>
+							<TitleFont ref="style:NormalTextFont" height="9" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem" scale="100"/>
+							<EditMode>EnterOnInput</EditMode>
+							<Width>11</Width>
+							<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+							<Format>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=2</v8:content>
+								</v8:item>
+							</Format>
+							<ContextMenu name="РеестрыПлатежейВозвращеноКонтекстноеМеню" id="48"/>
+							<ExtendedTooltip name="РеестрыПлатежейВозвращеноРасширеннаяПодсказка" id="49"/>
+						</InputField>
+					</ChildItems>
+				</ColumnGroup>
+				<ColumnGroup name="РеестрыПлатежейГруппа6" id="66">
+					<ExtendedTooltip name="РеестрыПлатежейГруппа6РасширеннаяПодсказка" id="67"/>
+					<ChildItems>
+						<InputField name="РеестрыПлатежейДоВыяснения" id="50">
+							<DataPath>РеестрыПлатежей.ДоВыяснения</DataPath>
+							<TitleBackColor>style:ReportGroup1BackColor</TitleBackColor>
+							<TitleFont ref="style:NormalTextFont" height="9" kind="StyleItem" scale="100"/>
+							<EditMode>EnterOnInput</EditMode>
+							<Width>10</Width>
+							<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+							<Format>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=2</v8:content>
+								</v8:item>
+							</Format>
+							<Font bold="true" kind="AutoFont"/>
+							<ContextMenu name="РеестрыПлатежейДоВыясненияКонтекстноеМеню" id="51"/>
+							<ExtendedTooltip name="РеестрыПлатежейДоВыясненияРасширеннаяПодсказка" id="52"/>
+						</InputField>
+						<InputField name="РеестрыПлатежейОтнесеноВДоходы" id="53">
+							<DataPath>РеестрыПлатежей.ВДоходы</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Отнесено в доходы</v8:content>
+								</v8:item>
+							</Title>
+							<TitleBackColor>style:ReportGroup1BackColor</TitleBackColor>
+							<TitleFont ref="style:NormalTextFont" height="9" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem" scale="100"/>
+							<EditMode>EnterOnInput</EditMode>
+							<Width>17</Width>
+							<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+							<Format>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=2</v8:content>
+								</v8:item>
+							</Format>
+							<EditFormat>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=2</v8:content>
+								</v8:item>
+							</EditFormat>
+							<ContextMenu name="РеестрыПлатежейОтнесеноВДоходыКонтекстноеМеню" id="54"/>
+							<ExtendedTooltip name="РеестрыПлатежейОтнесеноВДоходыРасширеннаяПодсказка" id="55"/>
+						</InputField>
+					</ChildItems>
+				</ColumnGroup>
+				<LabelField name="РеестрыПлатежейОтменено" id="236">
+					<DataPath>РеестрыПлатежей.Отменено</DataPath>
+					<TitleBackColor>style:ReportGroup1BackColor</TitleBackColor>
+					<TitleFont ref="style:NormalTextFont" height="9" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem" scale="100"/>
+					<Width>9</Width>
+					<Format>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>ЧЦ=15; ЧДЦ=2</v8:content>
+						</v8:item>
+					</Format>
+					<ContextMenu name="РеестрыПлатежейОтмененоКонтекстноеМеню" id="237"/>
+					<ExtendedTooltip name="РеестрыПлатежейОтмененоРасширеннаяПодсказка" id="238"/>
+				</LabelField>
+				<ColumnGroup name="РеестрыПлатежейГруппа7" id="87">
+					<ExtendedTooltip name="РеестрыПлатежейГруппа7РасширеннаяПодсказка" id="88"/>
+					<ChildItems>
+						<LabelField name="РеестрыПлатежейДатаОтмена" id="89">
+							<DataPath>РеестрыПлатежей.ДатаОтмена</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Дата отмены реестра</v8:content>
+								</v8:item>
+							</Title>
+							<TitleBackColor>style:ReportGroup1BackColor</TitleBackColor>
+							<TitleFont ref="style:NormalTextFont" height="9" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem" scale="100"/>
+							<Width>20</Width>
+							<ContextMenu name="РеестрыПлатежейДатаОтменаКонтекстноеМеню" id="90"/>
+							<ExtendedTooltip name="РеестрыПлатежейДатаОтменаРасширеннаяПодсказка" id="91"/>
+						</LabelField>
+						<LabelField name="РеестрыПлатежейОтветственныйОтмена" id="92">
+							<DataPath>РеестрыПлатежей.ОтветственныйОтмена</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Исполнитель (отмена)</v8:content>
+								</v8:item>
+							</Title>
+							<TitleBackColor>style:ReportGroup1BackColor</TitleBackColor>
+							<TitleFont ref="style:NormalTextFont" height="9" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem" scale="100"/>
+							<Width>20</Width>
+							<ContextMenu name="РеестрыПлатежейОтветственныйОтменаКонтекстноеМеню" id="93"/>
+							<ExtendedTooltip name="РеестрыПлатежейОтветственныйОтменаРасширеннаяПодсказка" id="94"/>
+						</LabelField>
+					</ChildItems>
+				</ColumnGroup>
+				<LabelField name="РеестрыПлатежейРеестрПлатежей" id="174">
+					<DataPath>РеестрыПлатежей.РеестрПлатежей</DataPath>
+					<TitleBackColor>style:ReportHeaderBackColor</TitleBackColor>
+					<TitleFont ref="style:NormalTextFont" height="9" kind="StyleItem" scale="100"/>
+					<ContextMenu name="РеестрыПлатежейРеестрПлатежейКонтекстноеМеню" id="175"/>
+					<ExtendedTooltip name="РеестрыПлатежейРеестрПлатежейРасширеннаяПодсказка" id="176"/>
+				</LabelField>
+			</ChildItems>
+		</Table>
+		<Table name="РасшифровкаРеестра" id="95">
+			<Representation>List</Representation>
+			<Footer>true</Footer>
+			<EnableStartDrag>true</EnableStartDrag>
+			<EnableDrag>true</EnableDrag>
+			<DataPath>РасшифровкаРеестра</DataPath>
+			<CommandSet>
+				<ExcludedCommand>Add</ExcludedCommand>
+				<ExcludedCommand>Change</ExcludedCommand>
+				<ExcludedCommand>Copy</ExcludedCommand>
+				<ExcludedCommand>Delete</ExcludedCommand>
+				<ExcludedCommand>EndEdit</ExcludedCommand>
+				<ExcludedCommand>ShowRowRearrangement</ExcludedCommand>
+			</CommandSet>
+			<RowFilter xsi:nil="true"/>
+			<ContextMenu name="РасшифровкаРеестраКонтекстноеМеню" id="96"/>
+			<AutoCommandBar name="РасшифровкаРеестраКоманднаяПанель" id="97">
+				<Autofill>false</Autofill>
+				<ChildItems>
+					<Popup name="РасшифровкаРеестраГруппа9" id="239">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Отчеты</v8:content>
+							</v8:item>
+						</Title>
+						<BackColor>web:HoneyDew</BackColor>
+						<ExtendedTooltip name="РасшифровкаРеестраГруппа9РасширеннаяПодсказка" id="240"/>
+						<ChildItems>
+							<Button name="РасшифровкаРеестраИсторияЗБ" id="191">
+								<Type>CommandBarButton</Type>
+								<CommandName>Form.Command.ИсторияЗБ</CommandName>
+								<Title>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>История залогового билета</v8:content>
+									</v8:item>
+								</Title>
+								<ExtendedTooltip name="РасшифровкаРеестраИсторияЗБРасширеннаяПодсказка" id="192"/>
+							</Button>
+							<Button name="РасшифровкаРеестраРасчеты" id="241">
+								<Type>CommandBarButton</Type>
+								<CommandName>Form.Command.Расчеты</CommandName>
+								<Title>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Расчет начислений</v8:content>
+									</v8:item>
+								</Title>
+								<ExtendedTooltip name="РасшифровкаРеестраРасчетыРасширеннаяПодсказка" id="242"/>
+							</Button>
+						</ChildItems>
+					</Popup>
+					<Button name="РасшифровкаРеестраИсторияПлатежа" id="234">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Command.ИсторияПлатежа</CommandName>
+						<BackColor>style:ToolTipBackColor</BackColor>
+						<ExtendedTooltip name="РасшифровкаРеестраИсторияПлатежаРасширеннаяПодсказка" id="235"/>
+					</Button>
+					<Button name="РасшифровкаРеестраЗачислить" id="179">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Command.Зачислить</CommandName>
+						<BackColor>web:MediumGreen</BackColor>
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Зачислить</v8:content>
+							</v8:item>
+						</Title>
+						<ExtendedTooltip name="РасшифровкаРеестраЗачислитьРасширеннаяПодсказка" id="180"/>
+					</Button>
+					<Button name="РасшифровкаРеестраЗачислитьВсе" id="177">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Command.ЗачислитьВсе</CommandName>
+						<BackColor>web:MediumGreen</BackColor>
+						<ExtendedTooltip name="РасшифровкаРеестраЗачислитьВсеРасширеннаяПодсказка" id="178"/>
+					</Button>
+					<Button name="РасшифровкаРеестраУточнитьИЗачислить" id="181">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Command.УточнитьИЗачислить</CommandName>
+						<BackColor>web:Beige</BackColor>
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Уточнить и зачислить</v8:content>
+							</v8:item>
+						</Title>
+						<ExtendedTooltip name="РасшифровкаРеестраУточнитьИЗачислитьРасширеннаяПодсказка" id="182"/>
+					</Button>
+					<Button name="РасшифровкаРеестраДоВыяснения" id="187">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Command.ДоВыяснения</CommandName>
+						<ExtendedTooltip name="РасшифровкаРеестраДоВыясненияРасширеннаяПодсказка" id="188"/>
+					</Button>
+					<Button name="РасшифровкаРеестраКВозврату" id="183">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Command.КВозврату</CommandName>
+						<ExtendedTooltip name="РасшифровкаРеестраКВозвратуРасширеннаяПодсказка" id="184"/>
+					</Button>
+					<Button name="РасшифровкаРеестраВозврат1" id="185">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Command.Возврат</CommandName>
+						<BackColor>web:PowderBlue</BackColor>
+						<ExtendedTooltip name="РасшифровкаРеестраВозврат1РасширеннаяПодсказка" id="186"/>
+					</Button>
+					<Button name="РасшифровкаРеестраОтнесеноВДоходы" id="210">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Command.ОтнесеноВДоходы</CommandName>
+						<BackColor>web:Khaki</BackColor>
+						<ExtendedTooltip name="РасшифровкаРеестраОтнесеноВДоходыРасширеннаяПодсказка" id="211"/>
+					</Button>
+					<Button name="РасшифровкаРеестраОтменаПлатежа" id="189">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Command.ОтменаПлатежа</CommandName>
+						<TextColor>style:SpecialTextColor</TextColor>
+						<BackColor>web:Gainsboro</BackColor>
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Отменить</v8:content>
+							</v8:item>
+						</Title>
+						<ExtendedTooltip name="РасшифровкаРеестраОтменаПлатежаРасширеннаяПодсказка" id="190">
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Отменить текущий платеж</v8:content>
+								</v8:item>
+							</Title>
+						</ExtendedTooltip>
+					</Button>
+				</ChildItems>
+			</AutoCommandBar>
+			<ExtendedTooltip name="РасшифровкаРеестраРасширеннаяПодсказка" id="98"/>
+			<SearchStringAddition name="РасшифровкаРеестраСтрокаПоиска" id="99">
+				<AdditionSource>
+					<Item>РасшифровкаРеестра</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<Title>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>2222</v8:content>
+					</v8:item>
+				</Title>
+				<ContextMenu name="РасшифровкаРеестраСтрокаПоискаКонтекстноеМеню" id="100"/>
+				<ExtendedTooltip name="РасшифровкаРеестраСтрокаПоискаРасширеннаяПодсказка" id="101"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="РасшифровкаРеестраСостояниеПросмотра" id="102">
+				<AdditionSource>
+					<Item>РасшифровкаРеестра</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="РасшифровкаРеестраСостояниеПросмотраКонтекстноеМеню" id="103"/>
+				<ExtendedTooltip name="РасшифровкаРеестраСостояниеПросмотраРасширеннаяПодсказка" id="104"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="РасшифровкаРеестраУправлениеПоиском" id="105">
+				<AdditionSource>
+					<Item>РасшифровкаРеестра</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="РасшифровкаРеестраУправлениеПоискомКонтекстноеМеню" id="106"/>
+				<ExtendedTooltip name="РасшифровкаРеестраУправлениеПоискомРасширеннаяПодсказка" id="107"/>
+			</SearchControlAddition>
+			<Events>
+				<Event name="Selection">РасшифровкаРеестраВыбор</Event>
+			</Events>
+			<ChildItems>
+				<InputField name="РасшифровкаРеестраНомерПП" id="279">
+					<DataPath>РасшифровкаРеестра.НомерПП</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content> № п.п</v8:content>
+						</v8:item>
+					</Title>
+					<TitleBackColor>style:ReportGroup2BackColor</TitleBackColor>
+					<TitleFont ref="style:NormalTextFont" height="9" kind="StyleItem" scale="100"/>
+					<EditMode>EnterOnInput</EditMode>
+					<FooterDataPath>КоличествоИтог</FooterDataPath>
+					<FooterFont ref="style:NormalTextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem" scale="100"/>
+					<Width>2</Width>
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<HorizontalStretch>true</HorizontalStretch>
+					<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+					<ContextMenu name="РасшифровкаРеестраНомерППКонтекстноеМеню" id="280"/>
+					<ExtendedTooltip name="РасшифровкаРеестраНомерППРасширеннаяПодсказка" id="281"/>
+				</InputField>
+				<ColumnGroup name="РасшифровкаРеестраГруппа12" id="277">
+					<ExtendedTooltip name="РасшифровкаРеестраГруппа12РасширеннаяПодсказка" id="278"/>
+					<ChildItems>
+						<InputField name="РасшифровкаРеестраРеестрПлатежейНомерРеестра" id="274">
+							<DataPath>РасшифровкаРеестра.РеестрПлатежей.НомерРеестра</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>№ реестра</v8:content>
+								</v8:item>
+							</Title>
+							<TitleBackColor>style:ReportGroup2BackColor</TitleBackColor>
+							<TitleFont ref="style:NormalTextFont" height="9" kind="StyleItem" scale="100"/>
+							<EditMode>EnterOnInput</EditMode>
+							<ShowInFooter>false</ShowInFooter>
+							<Width>5</Width>
+							<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+							<ContextMenu name="РасшифровкаРеестраРеестрПлатежейНомерРеестраКонтекстноеМеню" id="275"/>
+							<ExtendedTooltip name="РасшифровкаРеестраРеестрПлатежейНомерРеестраРасширеннаяПодсказка" id="276"/>
+						</InputField>
+						<InputField name="РасшифровкаРеестраРеестрПлатежейНомер" id="271">
+							<DataPath>РасшифровкаРеестра.РеестрПлатежей.Number</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>№ систем.</v8:content>
+								</v8:item>
+							</Title>
+							<TitleBackColor>style:ReportGroup2BackColor</TitleBackColor>
+							<TitleFont ref="style:NormalTextFont" height="9" kind="StyleItem" scale="100"/>
+							<HorizontalAlign>Left</HorizontalAlign>
+							<EditMode>EnterOnInput</EditMode>
+							<ShowInFooter>false</ShowInFooter>
+							<Width>5</Width>
+							<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+							<ContextMenu name="РасшифровкаРеестраРеестрПлатежейНомерКонтекстноеМеню" id="272"/>
+							<ExtendedTooltip name="РасшифровкаРеестраРеестрПлатежейНомерРасширеннаяПодсказка" id="273"/>
+						</InputField>
+					</ChildItems>
+				</ColumnGroup>
+				<ColumnGroup name="РасшифровкаРеестраГруппа1" id="162">
+					<ExtendedTooltip name="РасшифровкаРеестраГруппа1РасширеннаяПодсказка" id="163"/>
+					<ChildItems>
+						<InputField name="РасшифровкаРеестраНачальныйСтатус" id="117">
+							<DataPath>РасшифровкаРеестра.НачальныйСтатус</DataPath>
+							<ReadOnly>true</ReadOnly>
+							<TitleBackColor>style:ReportGroup2BackColor</TitleBackColor>
+							<TitleFont ref="style:NormalTextFont" height="9" kind="StyleItem" scale="100"/>
+							<EditMode>EnterOnInput</EditMode>
+							<ShowInFooter>false</ShowInFooter>
+							<Width>14</Width>
+							<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+							<ContextMenu name="РасшифровкаРеестраНачальныйСтатусКонтекстноеМеню" id="118"/>
+							<ExtendedTooltip name="РасшифровкаРеестраНачальныйСтатусРасширеннаяПодсказка" id="119"/>
+						</InputField>
+						<InputField name="РасшифровкаРеестраИтоговыйСтатус" id="120">
+							<DataPath>РасшифровкаРеестра.ИтоговыйСтатус</DataPath>
+							<ReadOnly>true</ReadOnly>
+							<TitleBackColor>style:ReportGroup2BackColor</TitleBackColor>
+							<TitleFont ref="style:NormalTextFont" height="9" kind="StyleItem" scale="100"/>
+							<EditMode>EnterOnInput</EditMode>
+							<ShowInFooter>false</ShowInFooter>
+							<Width>14</Width>
+							<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+							<Font ref="style:NormalTextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem" scale="100"/>
+							<ContextMenu name="РасшифровкаРеестраИтоговыйСтатусКонтекстноеМеню" id="121"/>
+							<ExtendedTooltip name="РасшифровкаРеестраИтоговыйСтатусРасширеннаяПодсказка" id="122"/>
+						</InputField>
+					</ChildItems>
+				</ColumnGroup>
+				<ColumnGroup name="РасшифровкаРеестраГруппа2" id="164">
+					<ExtendedTooltip name="РасшифровкаРеестраГруппа2РасширеннаяПодсказка" id="165"/>
+					<ChildItems>
+						<InputField name="РасшифровкаРеестраОтделение" id="123">
+							<DataPath>РасшифровкаРеестра.Отделение</DataPath>
+							<ReadOnly>true</ReadOnly>
+							<TitleBackColor>style:ReportGroup2BackColor</TitleBackColor>
+							<TitleFont ref="style:NormalTextFont" height="9" kind="StyleItem" scale="100"/>
+							<EditMode>EnterOnInput</EditMode>
+							<ShowInFooter>false</ShowInFooter>
+							<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+							<ContextMenu name="РасшифровкаРеестраОтделениеКонтекстноеМеню" id="124"/>
+							<ExtendedTooltip name="РасшифровкаРеестраОтделениеРасширеннаяПодсказка" id="125"/>
+						</InputField>
+						<InputField name="РасшифровкаРеестраНомерЛомбарда" id="126">
+							<DataPath>РасшифровкаРеестра.НомерЛомбарда</DataPath>
+							<ReadOnly>true</ReadOnly>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>№ ломбарда</v8:content>
+								</v8:item>
+							</Title>
+							<TitleBackColor>style:ReportGroup2BackColor</TitleBackColor>
+							<TitleFont ref="style:NormalTextFont" height="9" kind="StyleItem" scale="100"/>
+							<EditMode>EnterOnInput</EditMode>
+							<ShowInFooter>false</ShowInFooter>
+							<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+							<ContextMenu name="РасшифровкаРеестраНомерЛомбардаКонтекстноеМеню" id="127"/>
+							<ExtendedTooltip name="РасшифровкаРеестраНомерЛомбардаРасширеннаяПодсказка" id="128"/>
+						</InputField>
+					</ChildItems>
+				</ColumnGroup>
+				<ColumnGroup name="РасшифровкаРеестраГруппа3" id="166">
+					<ExtendedTooltip name="РасшифровкаРеестраГруппа3РасширеннаяПодсказка" id="167"/>
+					<ChildItems>
+						<InputField name="РасшифровкаРеестраНомерЗБ" id="129">
+							<DataPath>РасшифровкаРеестра.НомерЗБ</DataPath>
+							<ReadOnly>true</ReadOnly>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>№ ЗБ</v8:content>
+								</v8:item>
+							</Title>
+							<TitleBackColor>style:ReportGroup2BackColor</TitleBackColor>
+							<TitleFont ref="style:NormalTextFont" height="9" kind="StyleItem" scale="100"/>
+							<EditMode>EnterOnInput</EditMode>
+							<ShowInFooter>false</ShowInFooter>
+							<Width>10</Width>
+							<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+							<ContextMenu name="РасшифровкаРеестраНомерЗБКонтекстноеМеню" id="130"/>
+							<ExtendedTooltip name="РасшифровкаРеестраНомерЗБРасширеннаяПодсказка" id="131"/>
+						</InputField>
+						<InputField name="РасшифровкаРеестраСтатусЗБ" id="135">
+							<DataPath>РасшифровкаРеестра.СтатусЗБ</DataPath>
+							<ReadOnly>true</ReadOnly>
+							<TitleBackColor>style:ReportGroup2BackColor</TitleBackColor>
+							<TitleFont ref="style:NormalTextFont" height="9" kind="StyleItem" scale="100"/>
+							<EditMode>EnterOnInput</EditMode>
+							<ShowInFooter>false</ShowInFooter>
+							<Width>10</Width>
+							<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+							<ContextMenu name="РасшифровкаРеестраСтатусЗБКонтекстноеМеню" id="136"/>
+							<ExtendedTooltip name="РасшифровкаРеестраСтатусЗБРасширеннаяПодсказка" id="137"/>
+						</InputField>
+					</ChildItems>
+				</ColumnGroup>
+				<ColumnGroup name="РасшифровкаРеестраГруппа4" id="168">
+					<ExtendedTooltip name="РасшифровкаРеестраГруппа4РасширеннаяПодсказка" id="169"/>
+					<ChildItems>
+						<InputField name="РасшифровкаРеестраИдентификаторПлатежа" id="111">
+							<DataPath>РасшифровкаРеестра.ИдентификаторПлатежа</DataPath>
+							<ReadOnly>true</ReadOnly>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Номер ПП / Идентификатор платежа </v8:content>
+								</v8:item>
+							</Title>
+							<TitleBackColor>style:ReportGroup2BackColor</TitleBackColor>
+							<TitleFont ref="style:NormalTextFont" height="9" kind="StyleItem" scale="100"/>
+							<EditMode>EnterOnInput</EditMode>
+							<ShowInFooter>false</ShowInFooter>
+							<Width>12</Width>
+							<HorizontalStretch>true</HorizontalStretch>
+							<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+							<ContextMenu name="РасшифровкаРеестраИдентификаторПлатежаКонтекстноеМеню" id="112"/>
+							<ExtendedTooltip name="РасшифровкаРеестраИдентификаторПлатежаРасширеннаяПодсказка" id="113"/>
+						</InputField>
+						<InputField name="РасшифровкаРеестраДатаПлатежа" id="114">
+							<DataPath>РасшифровкаРеестра.ДатаПлатежа</DataPath>
+							<ReadOnly>true</ReadOnly>
+							<TitleBackColor>style:ReportGroup2BackColor</TitleBackColor>
+							<TitleFont ref="style:NormalTextFont" height="9" kind="StyleItem" scale="100"/>
+							<EditMode>EnterOnInput</EditMode>
+							<ShowInFooter>false</ShowInFooter>
+							<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+							<ContextMenu name="РасшифровкаРеестраДатаПлатежаКонтекстноеМеню" id="115"/>
+							<ExtendedTooltip name="РасшифровкаРеестраДатаПлатежаРасширеннаяПодсказка" id="116"/>
+						</InputField>
+					</ChildItems>
+				</ColumnGroup>
+				<ColumnGroup name="РасшифровкаРеестраГруппа11" id="252">
+					<ExtendedTooltip name="РасшифровкаРеестраГруппа11РасширеннаяПодсказка" id="253"/>
+					<ChildItems>
+						<InputField name="РасшифровкаРеестраНомерЗБФакт" id="132">
+							<DataPath>РасшифровкаРеестра.НомерЗБФакт</DataPath>
+							<ReadOnly>true</ReadOnly>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Факт. № ЗБ</v8:content>
+								</v8:item>
+							</Title>
+							<TitleBackColor>style:ReportGroup2BackColor</TitleBackColor>
+							<TitleFont ref="style:NormalTextFont" height="9" kind="StyleItem" scale="100"/>
+							<EditMode>EnterOnInput</EditMode>
+							<ShowInFooter>false</ShowInFooter>
+							<Width>10</Width>
+							<MaxHeight>2</MaxHeight>
+							<HorizontalStretch>true</HorizontalStretch>
+							<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+							<ContextMenu name="РасшифровкаРеестраНомерЗБФактКонтекстноеМеню" id="133"/>
+							<ExtendedTooltip name="РасшифровкаРеестраНомерЗБФактРасширеннаяПодсказка" id="134"/>
+						</InputField>
+						<InputField name="РасшифровкаРеестраСтатусЗБФакт" id="254">
+							<DataPath>РасшифровкаРеестра.СтатусЗБФакт</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Статус факт. ЗБ</v8:content>
+								</v8:item>
+							</Title>
+							<TitleBackColor>style:ReportGroup2BackColor</TitleBackColor>
+							<TitleFont ref="style:NormalTextFont" height="9" kind="StyleItem" scale="100"/>
+							<EditMode>EnterOnInput</EditMode>
+							<ShowInFooter>false</ShowInFooter>
+							<Width>10</Width>
+							<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+							<ContextMenu name="РасшифровкаРеестраСтатусЗБФактКонтекстноеМеню" id="255"/>
+							<ExtendedTooltip name="РасшифровкаРеестраСтатусЗБФактРасширеннаяПодсказка" id="256"/>
+						</InputField>
+					</ChildItems>
+				</ColumnGroup>
+				<InputField name="РасшифровкаРеестраСуммаПлатежа" id="138">
+					<DataPath>РасшифровкаРеестра.СуммаПлатежа</DataPath>
+					<ReadOnly>true</ReadOnly>
+					<TitleBackColor>style:ReportGroup2BackColor</TitleBackColor>
+					<TitleFont ref="style:NormalTextFont" height="9" kind="StyleItem" scale="100"/>
+					<EditMode>EnterOnInput</EditMode>
+					<FooterDataPath>СуммаПлатежаИтог</FooterDataPath>
+					<FooterFont ref="style:NormalTextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem" scale="100"/>
+					<Width>8</Width>
+					<HorizontalStretch>true</HorizontalStretch>
+					<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+					<ContextMenu name="РасшифровкаРеестраСуммаПлатежаКонтекстноеМеню" id="139"/>
+					<ExtendedTooltip name="РасшифровкаРеестраСуммаПлатежаРасширеннаяПодсказка" id="140"/>
+				</InputField>
+				<ColumnGroup name="РасшифровкаРеестраГруппа5" id="170">
+					<ExtendedTooltip name="РасшифровкаРеестраГруппа5РасширеннаяПодсказка" id="171"/>
+					<ChildItems>
+						<InputField name="РасшифровкаРеестраОплатаПроценты" id="288">
+							<DataPath>РасшифровкаРеестра.ОплатаПроценты</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Оплата %%</v8:content>
+								</v8:item>
+							</Title>
+							<TitleBackColor>style:ReportGroup2BackColor</TitleBackColor>
+							<TitleFont ref="style:NormalTextFont" height="9" kind="StyleItem" scale="100"/>
+							<EditMode>EnterOnInput</EditMode>
+							<FooterDataPath>ОплатаПроцентыИтог</FooterDataPath>
+							<FooterFont ref="style:NormalTextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem" scale="100"/>
+							<Width>10</Width>
+							<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+							<ContextMenu name="РасшифровкаРеестраОплатаПроцентыКонтекстноеМеню" id="289"/>
+							<ExtendedTooltip name="РасшифровкаРеестраОплатаПроцентыРасширеннаяПодсказка" id="290"/>
+						</InputField>
+						<InputField name="РасшифровкаРеестраОплатаЗайм" id="291">
+							<DataPath>РасшифровкаРеестра.ОплатаЗайм</DataPath>
+							<TitleBackColor>style:ReportGroup2BackColor</TitleBackColor>
+							<TitleFont ref="style:NormalTextFont" height="9" kind="StyleItem" scale="100"/>
+							<EditMode>EnterOnInput</EditMode>
+							<FooterDataPath>ОплатаЗаймИтог</FooterDataPath>
+							<FooterFont ref="style:NormalTextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem" scale="100"/>
+							<Width>10</Width>
+							<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+							<ContextMenu name="РасшифровкаРеестраОплатаЗаймКонтекстноеМеню" id="292"/>
+							<ExtendedTooltip name="РасшифровкаРеестраОплатаЗаймРасширеннаяПодсказка" id="293"/>
+						</InputField>
+					</ChildItems>
+				</ColumnGroup>
+				<ColumnGroup name="РасшифровкаРеестраГруппа10" id="243">
+					<ExtendedTooltip name="РасшифровкаРеестраГруппа10РасширеннаяПодсказка" id="244"/>
+					<ChildItems>
+						<InputField name="РасшифровкаРеестраПереплата" id="282">
+							<DataPath>РасшифровкаРеестра.Переплата</DataPath>
+							<TitleBackColor>style:ReportGroup2BackColor</TitleBackColor>
+							<TitleFont ref="style:NormalTextFont" height="9" kind="StyleItem" scale="100"/>
+							<EditMode>EnterOnInput</EditMode>
+							<FooterDataPath>ПереплатаИтог</FooterDataPath>
+							<FooterTextColor>style:SpecialTextColor</FooterTextColor>
+							<FooterFont ref="style:NormalTextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem" scale="100"/>
+							<Width>10</Width>
+							<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+							<TextColor>style:SpecialTextColor</TextColor>
+							<ContextMenu name="РасшифровкаРеестраПереплатаКонтекстноеМеню" id="283"/>
+							<ExtendedTooltip name="РасшифровкаРеестраПереплатаРасширеннаяПодсказка" id="284"/>
+						</InputField>
+						<InputField name="РасшифровкаРеестраПереплатаОстаток" id="245">
+							<DataPath>РасшифровкаРеестра.ПереплатаРаспределено</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Зачет переплаты</v8:content>
+								</v8:item>
+							</Title>
+							<TitleBackColor>style:ReportGroup2BackColor</TitleBackColor>
+							<TitleFont ref="style:NormalTextFont" height="9" kind="StyleItem" scale="100"/>
+							<EditMode>EnterOnInput</EditMode>
+							<FooterDataPath>ЗачетПереплатыИтог</FooterDataPath>
+							<FooterTextColor>web:Green</FooterTextColor>
+							<FooterFont ref="style:NormalTextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem" scale="100"/>
+							<Width>10</Width>
+							<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+							<TextColor>web:Green</TextColor>
+							<ContextMenu name="РасшифровкаРеестраПереплатаОстатокКонтекстноеМеню" id="246"/>
+							<ExtendedTooltip name="РасшифровкаРеестраПереплатаОстатокРасширеннаяПодсказка" id="247"/>
+						</InputField>
+					</ChildItems>
+				</ColumnGroup>
+				<InputField name="РасшифровкаРеестраЧек" id="217">
+					<DataPath>РасшифровкаРеестра.Чек</DataPath>
+					<ReadOnly>true</ReadOnly>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Чек прихода</v8:content>
+						</v8:item>
+					</Title>
+					<TitleBackColor>style:ReportGroup2BackColor</TitleBackColor>
+					<TitleFont ref="style:NormalTextFont" height="9" kind="StyleItem" scale="100"/>
+					<EditMode>EnterOnInput</EditMode>
+					<ShowInFooter>false</ShowInFooter>
+					<Width>6</Width>
+					<HorizontalStretch>true</HorizontalStretch>
+					<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+					<ContextMenu name="РасшифровкаРеестраЧекКонтекстноеМеню" id="218"/>
+					<ExtendedTooltip name="РасшифровкаРеестраЧекРасширеннаяПодсказка" id="219"/>
+				</InputField>
+				<ColumnGroup name="РасшифровкаРеестраГруппа8" id="220">
+					<ExtendedTooltip name="РасшифровкаРеестраГруппа8РасширеннаяПодсказка" id="221"/>
+					<ChildItems>
+						<InputField name="РасшифровкаРеестраВозврат" id="285">
+							<DataPath>РасшифровкаРеестра.Возврат</DataPath>
+							<TitleBackColor>style:ReportGroup2BackColor</TitleBackColor>
+							<TitleFont ref="style:NormalTextFont" height="9" kind="StyleItem" scale="100"/>
+							<EditMode>EnterOnInput</EditMode>
+							<FooterDataPath>ВозвратИтог</FooterDataPath>
+							<FooterFont ref="style:NormalTextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem" scale="100"/>
+							<Width>10</Width>
+							<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+							<ContextMenu name="РасшифровкаРеестраВозвратКонтекстноеМеню" id="286"/>
+							<ExtendedTooltip name="РасшифровкаРеестраВозвратРасширеннаяПодсказка" id="287"/>
+						</InputField>
+						<InputField name="РасшифровкаРеестраЧекВозврата" id="222">
+							<DataPath>РасшифровкаРеестра.ЧекВозврата</DataPath>
+							<ReadOnly>true</ReadOnly>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Чек возврата</v8:content>
+								</v8:item>
+							</Title>
+							<TitleBackColor>style:ReportGroup2BackColor</TitleBackColor>
+							<TitleFont ref="style:NormalTextFont" height="9" kind="StyleItem" scale="100"/>
+							<EditMode>EnterOnInput</EditMode>
+							<ShowInFooter>false</ShowInFooter>
+							<Width>10</Width>
+							<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+							<ContextMenu name="РасшифровкаРеестраЧекВозвратаКонтекстноеМеню" id="223"/>
+							<ExtendedTooltip name="РасшифровкаРеестраЧекВозвратаРасширеннаяПодсказка" id="224"/>
+						</InputField>
+					</ChildItems>
+				</ColumnGroup>
+				<ColumnGroup name="РасшифровкаРеестраГруппа6" id="172">
+					<ExtendedTooltip name="РасшифровкаРеестраГруппа6РасширеннаяПодсказка" id="173"/>
+					<ChildItems>
+						<InputField name="РасшифровкаРеестраФИОЗаемщика" id="153">
+							<DataPath>РасшифровкаРеестра.ФИОЗаемщика</DataPath>
+							<ReadOnly>true</ReadOnly>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>ФИО заемщика</v8:content>
+								</v8:item>
+							</Title>
+							<TitleBackColor>style:ReportGroup2BackColor</TitleBackColor>
+							<TitleFont ref="style:NormalTextFont" height="9" kind="StyleItem" scale="100"/>
+							<EditMode>EnterOnInput</EditMode>
+							<ShowInFooter>false</ShowInFooter>
+							<Width>17</Width>
+							<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+							<ContextMenu name="РасшифровкаРеестраФИОЗаемщикаКонтекстноеМеню" id="154"/>
+							<ExtendedTooltip name="РасшифровкаРеестраФИОЗаемщикаРасширеннаяПодсказка" id="155"/>
+						</InputField>
+						<InputField name="РасшифровкаРеестраНомерТелефона" id="156">
+							<DataPath>РасшифровкаРеестра.НомерТелефона</DataPath>
+							<ReadOnly>true</ReadOnly>
+							<TitleBackColor>style:ReportGroup2BackColor</TitleBackColor>
+							<TitleFont ref="style:NormalTextFont" height="9" kind="StyleItem" scale="100"/>
+							<EditMode>EnterOnInput</EditMode>
+							<ShowInFooter>false</ShowInFooter>
+							<Width>17</Width>
+							<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+							<ContextMenu name="РасшифровкаРеестраНомерТелефонаКонтекстноеМеню" id="157"/>
+							<ExtendedTooltip name="РасшифровкаРеестраНомерТелефонаРасширеннаяПодсказка" id="158"/>
+						</InputField>
+					</ChildItems>
+				</ColumnGroup>
+				<ColumnGroup name="РасшифровкаРеестраГруппаФайл" id="202">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Расшифровка реестра группа файл</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Расшифровка реестра группа файл</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="РасшифровкаРеестраГруппаФайлРасширеннаяПодсказка" id="203"/>
+					<ChildItems>
+						<InputField name="РасшифровкаРеестраИнформацияФИОЗаемщика" id="204">
+							<DataPath>РасшифровкаРеестра.ИнформацияФИОЗаемщика</DataPath>
+							<ReadOnly>true</ReadOnly>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>ФИО заемщика из файла</v8:content>
+								</v8:item>
+							</Title>
+							<TitleBackColor>style:ReportGroup2BackColor</TitleBackColor>
+							<TitleFont ref="style:NormalTextFont" height="9" kind="StyleItem" scale="100"/>
+							<EditMode>EnterOnInput</EditMode>
+							<ShowInFooter>false</ShowInFooter>
+							<Width>20</Width>
+							<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+							<ContextMenu name="РасшифровкаРеестраИнформацияФИОЗаемщикаКонтекстноеМеню" id="205"/>
+							<ExtendedTooltip name="РасшифровкаРеестраИнформацияФИОЗаемщикаРасширеннаяПодсказка" id="206"/>
+						</InputField>
+						<InputField name="РасшифровкаРеестраИнформацияФИОПлательщика" id="207">
+							<DataPath>РасшифровкаРеестра.ИнформацияФИОПлательщика</DataPath>
+							<ReadOnly>true</ReadOnly>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>ФИО плательщика из файла</v8:content>
+								</v8:item>
+							</Title>
+							<TitleBackColor>style:ReportGroup2BackColor</TitleBackColor>
+							<TitleFont ref="style:NormalTextFont" height="9" kind="StyleItem" scale="100"/>
+							<EditMode>EnterOnInput</EditMode>
+							<ShowInFooter>false</ShowInFooter>
+							<Width>20</Width>
+							<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+							<ContextMenu name="РасшифровкаРеестраИнформацияФИОПлательщикаКонтекстноеМеню" id="208"/>
+							<ExtendedTooltip name="РасшифровкаРеестраИнформацияФИОПлательщикаРасширеннаяПодсказка" id="209"/>
+						</InputField>
+					</ChildItems>
+				</ColumnGroup>
+				<InputField name="РасшифровкаРеестраСпособПлатежа" id="294">
+					<DataPath>РасшифровкаРеестра.СпособПлатежа</DataPath>
+					<TitleBackColor>style:ReportGroup2BackColor</TitleBackColor>
+					<TitleFont ref="style:NormalTextFont" height="9" kind="StyleItem" scale="100"/>
+					<EditMode>EnterOnInput</EditMode>
+					<Width>20</Width>
+					<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+					<ContextMenu name="РасшифровкаРеестраСпособПлатежаКонтекстноеМеню" id="295"/>
+					<ExtendedTooltip name="РасшифровкаРеестраСпособПлатежаРасширеннаяПодсказка" id="296"/>
+				</InputField>
+				<ColumnGroup name="РасшифровкаРеестраГруппа7" id="212">
+					<ExtendedTooltip name="РасшифровкаРеестраГруппа7РасширеннаяПодсказка" id="213"/>
+					<ChildItems>
+						<InputField name="РасшифровкаРеестраДатаПеревода" id="159">
+							<DataPath>РасшифровкаРеестра.ДатаПеревода</DataPath>
+							<ReadOnly>true</ReadOnly>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Дата перевода платежа в итоговый статус</v8:content>
+								</v8:item>
+							</Title>
+							<TitleBackColor>style:ReportGroup2BackColor</TitleBackColor>
+							<TitleFont ref="style:NormalTextFont" height="9" kind="StyleItem" scale="100"/>
+							<EditMode>EnterOnInput</EditMode>
+							<ShowInFooter>false</ShowInFooter>
+							<Width>10</Width>
+							<HorizontalStretch>true</HorizontalStretch>
+							<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+							<ContextMenu name="РасшифровкаРеестраДатаПереводаКонтекстноеМеню" id="160"/>
+							<ExtendedTooltip name="РасшифровкаРеестраДатаПереводаРасширеннаяПодсказка" id="161"/>
+						</InputField>
+						<InputField name="РасшифровкаРеестраОтветственный" id="214">
+							<DataPath>РасшифровкаРеестра.Ответственный</DataPath>
+							<ReadOnly>true</ReadOnly>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Исполнитель</v8:content>
+								</v8:item>
+							</Title>
+							<TitleBackColor>style:ReportGroup2BackColor</TitleBackColor>
+							<TitleFont ref="style:NormalTextFont" height="9" kind="StyleItem" scale="100"/>
+							<EditMode>EnterOnInput</EditMode>
+							<ShowInFooter>false</ShowInFooter>
+							<Width>10</Width>
+							<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+							<ContextMenu name="РасшифровкаРеестраОтветственныйКонтекстноеМеню" id="215"/>
+							<ExtendedTooltip name="РасшифровкаРеестраОтветственныйРасширеннаяПодсказка" id="216"/>
+						</InputField>
+					</ChildItems>
+				</ColumnGroup>
+			</ChildItems>
+		</Table>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="РеестрыПлатежей" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Реестры платежей</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:DynamicList</v8:Type>
+			</Type>
+			<Settings xsi:type="DynamicList">
+				<ManualQuery>true</ManualQuery>
+				<DynamicDataRead>false</DynamicDataRead>
+				<QueryText>ВЫБРАТЬ
+	ЛБ_СостояниеРеестраПлатежейСрезПоследних.СтатусРеестра КАК СтатусРеестра,
+	ЛБ_СостояниеРеестраПлатежейСрезПоследних.РеестрПлатежей КАК РеестрПлатежей,
+	ЛБ_СостояниеРеестраПлатежейСрезПоследних.СуммаПлатежей КАК СуммаПлатежей,
+	ЛБ_СостояниеРеестраПлатежейСрезПоследних.РеестрПлатежей.Дата КАК Дата,
+	ЛБ_СостояниеРеестраПлатежейСрезПоследних.РеестрПлатежей.Номер КАК Номер,
+	ЛБ_СостояниеРеестраПлатежейСрезПоследних.РеестрПлатежей.НомерРеестра КАК НомерРеестра,
+	ЛБ_СостояниеРеестраПлатежейСрезПоследних.РеестрПлатежей.Ответственный КАК Ответственный,
+	ЛБ_СостояниеРеестраПлатежейСрезПоследних.РеестрПлатежей.ИмяФайла КАК ИмяФайла,
+	ВЫБОР
+		КОГДА ЛБ_СостояниеРеестраПлатежейСрезПоследних.СтатусРеестра = ЗНАЧЕНИЕ(Перечисление.ЛБ_СтатусыРеестраПлатежей.Отменен)
+			ТОГДА ЛБ_СостояниеРеестраПлатежейСрезПоследних.Ответственный
+		ИНАЧЕ НЕОПРЕДЕЛЕНО
+	КОНЕЦ КАК ОтветственныйОтмена,
+	ВЫБОР
+		КОГДА ЛБ_СостояниеРеестраПлатежейСрезПоследних.СтатусРеестра = ЗНАЧЕНИЕ(Перечисление.ЛБ_СтатусыРеестраПлатежей.Отменен)
+			ТОГДА ЛБ_СостояниеРеестраПлатежейСрезПоследних.Период
+		ИНАЧЕ НЕОПРЕДЕЛЕНО
+	КОНЕЦ КАК ДатаОтмена,
+	РаспределениеПлатежейОбороты.ОплатаПроцентыОборот КАК ОплатаПроценты,
+	РаспределениеПлатежейОбороты.ОплатаЗаймОборот КАК ОплатаЗайм,
+	РаспределениеПлатежейОбороты.ПереплатаОборот КАК Переплата,
+	РаспределениеПлатежейОбороты.ВозвращеноОборот КАК Возвращено,
+	РаспределениеПлатежейОбороты.КВозвратуОборот КАК КВозврату,
+	РаспределениеПлатежейОбороты.ДоВыясненияОборот КАК ДоВыяснения,
+	РаспределениеПлатежейОбороты.ВДоходыОборот КАК ВДоходы,
+	РаспределениеПлатежейОбороты.ОтменаОборот КАК Отменено,
+	ВЫБОР
+		КОГДА ЛБ_СостояниеРеестраПлатежейСрезПоследних.СтатусРеестра = ЗНАЧЕНИЕ(Перечисление.ЛБ_СтатусыРеестраПлатежей.Отменен)
+			ТОГДА 0
+		ИНАЧЕ ВЫБОР
+				КОГДА ЛБ_СостояниеРеестраПлатежейСрезПоследних.СуммаПлатежейРаспределить = РаспределениеПлатежейОбороты.ОплатаПроцентыОборот + РаспределениеПлатежейОбороты.ОплатаЗаймОборот + РаспределениеПлатежейОбороты.ВозвращеноОборот + РаспределениеПлатежейОбороты.ВДоходыОборот + РаспределениеПлатежейОбороты.ОтменаОборот
+					ТОГДА 2
+				ИНАЧЕ 1
+			КОНЕЦ
+	КОНЕЦ КАК Обработано
+ИЗ
+	РегистрСведений.ЛБ_СостояниеРеестраПлатежей.СрезПоследних(&amp;Дата2, ) КАК ЛБ_СостояниеРеестраПлатежейСрезПоследних
+		ЛЕВОЕ СОЕДИНЕНИЕ (ВЫБРАТЬ
+			ЛБ_РаспределенныеБезналичныеПлатежиОбороты.РеестрПлатежей КАК РеестрПлатежей,
+			СУММА(ЛБ_РаспределенныеБезналичныеПлатежиОбороты.ОплатаПроцентыОборот) КАК ОплатаПроцентыОборот,
+			СУММА(ЛБ_РаспределенныеБезналичныеПлатежиОбороты.ОплатаЗаймОборот) КАК ОплатаЗаймОборот,
+			СУММА(ЛБ_РаспределенныеБезналичныеПлатежиОбороты.ПереплатаОборот) КАК ПереплатаОборот,
+			СУММА(ЛБ_РаспределенныеБезналичныеПлатежиОбороты.ВозвращеноОборот) КАК ВозвращеноОборот,
+			СУММА(ЛБ_РаспределенныеБезналичныеПлатежиОбороты.КВозвратуОборот) КАК КВозвратуОборот,
+			СУММА(ЛБ_РаспределенныеБезналичныеПлатежиОбороты.ДоВыясненияОборот) КАК ДоВыясненияОборот,
+			СУММА(ЛБ_РаспределенныеБезналичныеПлатежиОбороты.ВДоходыОборот) КАК ВДоходыОборот,
+			СУММА(ЛБ_РаспределенныеБезналичныеПлатежиОбороты.ОтменаОборот) КАК ОтменаОборот
+		ИЗ
+			РегистрНакопления.ЛБ_РаспределенныеБезналичныеПлатежи.Обороты КАК ЛБ_РаспределенныеБезналичныеПлатежиОбороты
+		
+		СГРУППИРОВАТЬ ПО
+			ЛБ_РаспределенныеБезналичныеПлатежиОбороты.РеестрПлатежей) КАК РаспределениеПлатежейОбороты
+		ПО ЛБ_СостояниеРеестраПлатежейСрезПоследних.РеестрПлатежей = РаспределениеПлатежейОбороты.РеестрПлатежей
+ГДЕ
+	ЛБ_СостояниеРеестраПлатежейСрезПоследних.РеестрПлатежей.Дата МЕЖДУ &amp;Дата1 И &amp;Дата2</QueryText>
+				<ListSettings>
+					<dcsset:filter>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>dfcece9d-5077-440b-b6b3-45a5cb4538eb</dcsset:userSettingID>
+					</dcsset:filter>
+					<dcsset:order>
+						<dcsset:item xsi:type="dcsset:OrderItemField">
+							<dcsset:field>Дата</dcsset:field>
+							<dcsset:orderType>Desc</dcsset:orderType>
+						</dcsset:item>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>4789c436-aaca-4c0d-a881-9de1fd156753</dcsset:userSettingID>
+					</dcsset:order>
+					<dcsset:conditionalAppearance>
+						<dcsset:item>
+							<dcsset:selection>
+								<dcsset:item>
+									<dcsset:field>ВДоходы</dcsset:field>
+								</dcsset:item>
+								<dcsset:item>
+									<dcsset:field>Возвращено</dcsset:field>
+								</dcsset:item>
+								<dcsset:item>
+									<dcsset:field>Дата</dcsset:field>
+								</dcsset:item>
+								<dcsset:item>
+									<dcsset:field>ДатаОтмена</dcsset:field>
+								</dcsset:item>
+								<dcsset:item>
+									<dcsset:field>ДоВыяснения</dcsset:field>
+								</dcsset:item>
+								<dcsset:item>
+									<dcsset:field>ИмяФайла</dcsset:field>
+								</dcsset:item>
+								<dcsset:item>
+									<dcsset:field>КВозврату</dcsset:field>
+								</dcsset:item>
+								<dcsset:item>
+									<dcsset:field>Номер</dcsset:field>
+								</dcsset:item>
+								<dcsset:item>
+									<dcsset:field>НомерРеестра</dcsset:field>
+								</dcsset:item>
+								<dcsset:item>
+									<dcsset:field>ОплатаЗайм</dcsset:field>
+								</dcsset:item>
+								<dcsset:item>
+									<dcsset:field>ОплатаПроценты</dcsset:field>
+								</dcsset:item>
+								<dcsset:item>
+									<dcsset:field>Ответственный</dcsset:field>
+								</dcsset:item>
+								<dcsset:item>
+									<dcsset:field>ОтветственныйОтмена</dcsset:field>
+								</dcsset:item>
+								<dcsset:item>
+									<dcsset:field>Отменено</dcsset:field>
+								</dcsset:item>
+								<dcsset:item>
+									<dcsset:field>Переплата</dcsset:field>
+								</dcsset:item>
+								<dcsset:item>
+									<dcsset:field>РеестрПлатежей</dcsset:field>
+								</dcsset:item>
+								<dcsset:item>
+									<dcsset:field>СтатусРеестра</dcsset:field>
+								</dcsset:item>
+								<dcsset:item>
+									<dcsset:field>СуммаПлатежей</dcsset:field>
+								</dcsset:item>
+								<dcsset:item>
+									<dcsset:field>Обработано</dcsset:field>
+								</dcsset:item>
+							</dcsset:selection>
+							<dcsset:filter>
+								<dcsset:item xsi:type="dcsset:FilterItemComparison">
+									<dcsset:left xsi:type="dcscor:Field">СтатусРеестра</dcsset:left>
+									<dcsset:comparisonType>Equal</dcsset:comparisonType>
+									<dcsset:right xsi:type="dcscor:DesignTimeValue">Перечисление.ЛБ_СтатусыРеестраПлатежей.Отменен</dcsset:right>
+								</dcsset:item>
+							</dcsset:filter>
+							<dcsset:appearance>
+								<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+									<dcscor:parameter>ЦветФона</dcscor:parameter>
+									<dcscor:value xsi:type="v8ui:Color">web:Silver</dcscor:value>
+								</dcscor:item>
+							</dcsset:appearance>
+							<dcsset:userSettingID>c9d74b29-121f-46e8-83c9-4150a30c39d4</dcsset:userSettingID>
+						</dcsset:item>
+						<dcsset:item>
+							<dcsset:selection>
+								<dcsset:item>
+									<dcsset:field>НомерРеестра</dcsset:field>
+								</dcsset:item>
+							</dcsset:selection>
+							<dcsset:filter>
+								<dcsset:item xsi:type="dcsset:FilterItemComparison">
+									<dcsset:left xsi:type="dcscor:Field">СтатусРеестра</dcsset:left>
+									<dcsset:comparisonType>Equal</dcsset:comparisonType>
+									<dcsset:right xsi:type="dcscor:DesignTimeValue">Перечисление.ЛБ_СтатусыРеестраПлатежей.Отменен</dcsset:right>
+								</dcsset:item>
+							</dcsset:filter>
+							<dcsset:appearance>
+								<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+									<dcscor:parameter>ЦветТекста</dcscor:parameter>
+									<dcscor:value xsi:type="v8ui:Color">style:SpecialTextColor</dcscor:value>
+								</dcscor:item>
+							</dcsset:appearance>
+						</dcsset:item>
+						<dcsset:item>
+							<dcsset:selection>
+								<dcsset:item>
+									<dcsset:field>НомерРеестра</dcsset:field>
+								</dcsset:item>
+							</dcsset:selection>
+							<dcsset:filter>
+								<dcsset:item xsi:type="dcsset:FilterItemComparison">
+									<dcsset:left xsi:type="dcscor:Field">СтатусРеестра</dcsset:left>
+									<dcsset:comparisonType>Equal</dcsset:comparisonType>
+									<dcsset:right xsi:type="dcscor:DesignTimeValue">Перечисление.ЛБ_СтатусыРеестраПлатежей.Загружен</dcsset:right>
+								</dcsset:item>
+							</dcsset:filter>
+							<dcsset:appearance>
+								<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+									<dcscor:parameter>ЦветТекста</dcscor:parameter>
+									<dcscor:value xsi:type="v8ui:Color">style:АктуальнаяПодпискаЦвет</dcscor:value>
+								</dcscor:item>
+							</dcsset:appearance>
+						</dcsset:item>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>b75fecce-942b-4aed-abc9-e6a02e460fb3</dcsset:userSettingID>
+					</dcsset:conditionalAppearance>
+					<dcsset:itemsViewMode>Normal</dcsset:itemsViewMode>
+					<dcsset:itemsUserSettingID>911b6018-f537-43e8-a417-da56b22f9aec</dcsset:itemsUserSettingID>
+				</ListSettings>
+			</Settings>
+		</Attribute>
+		<Attribute name="РасшифровкаРеестра" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Расшифровка реестра</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="РеестрПлатежей" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Реестр платежей</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:DocumentRef.ЛБ_РеестрПлатежей</v8:Type>
+					</Type>
+				</Column>
+				<Column name="ИдентификаторПлатежа" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Идентификатор платежа</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>100</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="ДатаПлатежа" id="3">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Дата платежа</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:dateTime</v8:Type>
+						<v8:DateQualifiers>
+							<v8:DateFractions>DateTime</v8:DateFractions>
+						</v8:DateQualifiers>
+					</Type>
+				</Column>
+				<Column name="НачальныйСтатус" id="4">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Начальный статус</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:EnumRef.ЛБ_СтатусыБезналичныхПлатежей</v8:Type>
+					</Type>
+				</Column>
+				<Column name="ИтоговыйСтатус" id="5">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Итоговый статус</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:EnumRef.ЛБ_СтатусыБезналичныхПлатежей</v8:Type>
+					</Type>
+				</Column>
+				<Column name="Отделение" id="6">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Отделение</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.ЛБ_ОтделенияЛомбардов</v8:Type>
+					</Type>
+				</Column>
+				<Column name="НомерЛомбарда" id="7">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Номер ломбарда</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>4</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="НомерЗБ" id="8">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Номер ЗБ</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>10</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="НомерЗБФакт" id="9">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Номер ЗБ фактический</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>10</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="СтатусЗБ" id="10">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Статус ЗБ</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:EnumRef.ЛБ_СтатусыЗалоговыхБилетов</v8:Type>
+					</Type>
+				</Column>
+				<Column name="СуммаПлатежа" id="11">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Сумма платежа</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>15</v8:Digits>
+							<v8:FractionDigits>2</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="ОплатаПроценты" id="12">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Оплата проценты</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>15</v8:Digits>
+							<v8:FractionDigits>2</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="ОплатаЗайм" id="13">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Оплата займ</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>15</v8:Digits>
+							<v8:FractionDigits>2</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="Переплата" id="14">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Переплата</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>15</v8:Digits>
+							<v8:FractionDigits>2</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="Возврат" id="15">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Возврат</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>15</v8:Digits>
+							<v8:FractionDigits>2</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="ФИОЗаемщика" id="16">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>ФИОЗаемщика</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>100</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="НомерТелефона" id="17">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Номер телефона</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>15</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="ДатаПеревода" id="18">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Дата перевода</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:dateTime</v8:Type>
+						<v8:DateQualifiers>
+							<v8:DateFractions>DateTime</v8:DateFractions>
+						</v8:DateQualifiers>
+					</Type>
+				</Column>
+				<Column name="ЗалоговыйБилет" id="19">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Залоговый билет</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:DocumentRef.ЛБ_ОперацияПоЗалогу</v8:Type>
+					</Type>
+				</Column>
+				<Column name="ИнформацияФИОЗаемщика" id="21">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Информация ФИО заемщика</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="ИнформацияФИОПлательщика" id="22">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Информация ФИОПлательщика</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>100</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="Ответственный" id="23">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Ответственный</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.Пользователи</v8:Type>
+					</Type>
+				</Column>
+				<Column name="Чек" id="24">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Чек</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>10</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="ЧекВозврата" id="25">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Чек</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>10</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="ДокументОплаты" id="20">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Документ оплаты</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:DocumentRef.ЛБ_ОперацияПоЗалогу</v8:Type>
+					</Type>
+				</Column>
+				<Column name="ПереплатаРаспределено" id="26">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Переплата распределено</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>15</v8:Digits>
+							<v8:FractionDigits>2</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="СтатусЗБФакт" id="27">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Статус ЗБ факт</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:EnumRef.ЛБ_СтатусыЗалоговыхБилетов</v8:Type>
+					</Type>
+				</Column>
+				<Column name="НомерПП" id="28">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Номер ПП</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>3</v8:Digits>
+							<v8:FractionDigits>0</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="СпособПлатежа" id="29">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Способ платежа</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>30</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="ФайлЗагрузки" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Файл загрузки</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ДатаНач" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Дата нач.</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:dateTime</v8:Type>
+				<v8:DateQualifiers>
+					<v8:DateFractions>Date</v8:DateFractions>
+				</v8:DateQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ДатаКон" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Дата кон.</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:dateTime</v8:Type>
+				<v8:DateQualifiers>
+					<v8:DateFractions>Date</v8:DateFractions>
+				</v8:DateQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ПлатежиДляЗагрузки" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Платежи для загрузки</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="ИдентификаторПлатежа" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Идентификатор платежа</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>100</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="ДатаПлатежа" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Дата платежа</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:dateTime</v8:Type>
+						<v8:DateQualifiers>
+							<v8:DateFractions>DateTime</v8:DateFractions>
+						</v8:DateQualifiers>
+					</Type>
+				</Column>
+				<Column name="НомерЗБ" id="3">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Номер ЗБ</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>10</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="СуммаПлатежа" id="4">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Сумма платежа</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>15</v8:Digits>
+							<v8:FractionDigits>2</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="ФИОЗаемщика" id="5">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>ФИОЗаемщика</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>100</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="ФИОПлательщика" id="6">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>ФИОПлательщика</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>100</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="СпособПлатежа" id="7">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Способ платежа</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>30</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="ИмяФайлаЗагрузки" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Имя файла загрузки</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>100</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="СотрудникЦО" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сотрудник ЦО</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="СуммаПлатежаИтог" id="9">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сумма платежа итог</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>15</v8:Digits>
+					<v8:FractionDigits>2</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ПлатежиЛКОтменить" id="10">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Платежи ЛК отменить</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="ИдентификаторПлатежа" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Идентификатор платежа</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>100</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="ДатаПлатежа" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Дата платежа</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:dateTime</v8:Type>
+						<v8:DateQualifiers>
+							<v8:DateFractions>DateTime</v8:DateFractions>
+						</v8:DateQualifiers>
+					</Type>
+				</Column>
+				<Column name="НомерЗБ" id="3">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Номер ЗБ</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>10</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="СуммаПлатежа" id="4">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Сумма платежа</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>15</v8:Digits>
+							<v8:FractionDigits>2</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="РеестрПлатежей" id="5">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Реестр платежей</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:DocumentRef.ЛБ_РеестрПлатежей</v8:Type>
+					</Type>
+				</Column>
+				<Column name="ЗалоговыйБилет" id="6">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Залоговый билет</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:DocumentRef.ЛБ_ОперацияПоЗалогу</v8:Type>
+					</Type>
+				</Column>
+				<Column name="ДокументОплаты" id="7">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Документ оплаты</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:DocumentRef.ЛБ_ОперацияПоЗалогу</v8:Type>
+					</Type>
+				</Column>
+				<Column name="СтатусПлатежа" id="8">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Статус платежа</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:EnumRef.ЛБ_СтатусыБезналичныхПлатежей</v8:Type>
+					</Type>
+				</Column>
+				<Column name="СтатусПереплаты" id="9">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Статус переплаты</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:EnumRef.ЛБ_СтатусыБезналичныхПлатежей</v8:Type>
+					</Type>
+				</Column>
+				<Column name="НеПроверять" id="10">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Не проверять</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="КоличествоИтог" id="11">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Количество итог</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>3</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ОплатаПроцентыИтог" id="12">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Оплата  проценты итог</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>15</v8:Digits>
+					<v8:FractionDigits>2</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ОплатаЗаймИтог" id="13">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Оплата займ итог</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>15</v8:Digits>
+					<v8:FractionDigits>2</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ПереплатаИтог" id="14">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Переплата итог</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>15</v8:Digits>
+					<v8:FractionDigits>2</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ЗачетПереплатыИтог" id="15">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Зачет переплаты итог</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>15</v8:Digits>
+					<v8:FractionDigits>2</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ВозвратИтог" id="16">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Возврат итог</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>15</v8:Digits>
+					<v8:FractionDigits>2</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<ConditionalAppearance>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>РасшифровкаРеестра</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">РасшифровкаРеестра.ИтоговыйСтатус</dcsset:left>
+						<dcsset:comparisonType>Equal</dcsset:comparisonType>
+						<dcsset:right xsi:type="dcscor:DesignTimeValue">Перечисление.ЛБ_СтатусыБезналичныхПлатежей.ЗачисленоПолностью</dcsset:right>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>ЦветФона</dcscor:parameter>
+						<dcscor:value xsi:type="v8ui:Color">web:MediumGreen</dcscor:value>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+			<dcsset:item>
+				<dcsset:use>false</dcsset:use>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>РасшифровкаРеестра</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">РасшифровкаРеестра.ИтоговыйСтатус</dcsset:left>
+						<dcsset:comparisonType>Equal</dcsset:comparisonType>
+						<dcsset:right xsi:type="dcscor:DesignTimeValue">Перечисление.ЛБ_СтатусыБезналичныхПлатежей.ЗачисленоЧастично</dcsset:right>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>ЦветФона</dcscor:parameter>
+						<dcscor:value xsi:type="v8ui:Color">web:HoneyDew</dcscor:value>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>РасшифровкаРеестра</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">РасшифровкаРеестра.ИтоговыйСтатус</dcsset:left>
+						<dcsset:comparisonType>Equal</dcsset:comparisonType>
+						<dcsset:right xsi:type="dcscor:DesignTimeValue">Перечисление.ЛБ_СтатусыБезналичныхПлатежей.Возвращено</dcsset:right>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>ЦветФона</dcscor:parameter>
+						<dcscor:value xsi:type="v8ui:Color">web:PowderBlue</dcscor:value>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>РасшифровкаРеестра</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">РасшифровкаРеестра.ИтоговыйСтатус</dcsset:left>
+						<dcsset:comparisonType>Equal</dcsset:comparisonType>
+						<dcsset:right xsi:type="dcscor:DesignTimeValue">Перечисление.ЛБ_СтатусыБезналичныхПлатежей.Отменен</dcsset:right>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>ЦветФона</dcscor:parameter>
+						<dcscor:value xsi:type="v8ui:Color">web:Gainsboro</dcscor:value>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>РасшифровкаРеестра</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">РасшифровкаРеестра.ИтоговыйСтатус</dcsset:left>
+						<dcsset:comparisonType>Equal</dcsset:comparisonType>
+						<dcsset:right xsi:type="dcscor:DesignTimeValue">Перечисление.ЛБ_СтатусыБезналичныхПлатежей.ОтнесеноВДоходы</dcsset:right>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>ЦветФона</dcscor:parameter>
+						<dcscor:value xsi:type="v8ui:Color">web:Khaki</dcscor:value>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>РасшифровкаРеестраНомерЗБФакт</dcsset:field>
+					</dcsset:item>
+					<dcsset:item>
+						<dcsset:field>РасшифровкаРеестраСтатусЗБФакт</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">РасшифровкаРеестра.НомерЗБФакт</dcsset:left>
+						<dcsset:comparisonType>Filled</dcsset:comparisonType>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>ЦветТекста</dcscor:parameter>
+						<dcscor:value xsi:type="v8ui:Color">style:SpecialTextColor</dcscor:value>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+		</ConditionalAppearance>
+	</Attributes>
+	<Commands>
+		<Command name="ЗагрузитьБН" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Загрузить БН</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Загрузить БН</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ЗагрузитьБН</Action>
+		</Command>
+		<Command name="ЗагрузитьЛК" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Загрузить ЛК</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Загрузить ЛК</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ЗагрузитьЛК</Action>
+		</Command>
+		<Command name="УстановитьИнтервал" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Установить интервал</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Установить интервал</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>УстановитьИнтервал</Action>
+		</Command>
+		<Command name="ЗачислитьВсе" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Зачислить все</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Зачислить все</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ЗачислитьВсе</Action>
+		</Command>
+		<Command name="Зачислить" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Зачислить</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Зачислить</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>Зачислить</Action>
+		</Command>
+		<Command name="УточнитьИЗачислить" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Уточнить и зачислить</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Уточнить и зачислить</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>УточнитьИЗачислить</Action>
+		</Command>
+		<Command name="КВозврату" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>К возврату</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>К возврату</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>КВозврату</Action>
+		</Command>
+		<Command name="Возврат" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Возврат</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Возврат</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ВозвратПлатежа</Action>
+		</Command>
+		<Command name="ДоВыяснения" id="9">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>До выяснения</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>До выяснения</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ДоВыяснения</Action>
+		</Command>
+		<Command name="ОтменаПлатежа" id="10">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отмена платежа</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отмена платежа</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ОтменаПлатежа</Action>
+		</Command>
+		<Command name="ИсторияЗБ" id="11">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>История ЗБ</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>История ЗБ</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ИсторияЗалоговогоБилета</Action>
+		</Command>
+		<Command name="ПоискПоНомеруЗБ" id="12">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Поиск по номеру ЗБ</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Поиск по номеру ЗБ</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ПоискПоНомеруЗБ</Action>
+		</Command>
+		<Command name="ОтменитьРеестр" id="13">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отменить реестр</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отменить реестр</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ОтменитьРеестр</Action>
+		</Command>
+		<Command name="ОтменитьПоискПоНомеруЗБ" id="14">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отменить поиск по номеру ЗБ</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отменить поиск по номеру ЗБ</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ОтменитьПоискПоНомеруЗБ</Action>
+		</Command>
+		<Command name="ОтнесеноВДоходы" id="15">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отнесено в доходы</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отнесено в доходы</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ОтнесеноВДоходы</Action>
+		</Command>
+		<Command name="ИсторияПлатежа" id="17">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>История платежа</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>История платежа</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ИсторияПлатежа</Action>
+		</Command>
+		<Command name="Расчеты" id="16">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Расчеты</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Расчеты</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>Расчеты</Action>
+		</Command>
+		<Command name="ПлатежиЛККОтмене" id="18">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Платежи ЛККОтмене</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Платежи ЛККОтмене</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ПлатежиЛККОтмене</Action>
+		</Command>
+		<Command name="Обновить" id="19">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Обновить</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Обновить</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>Обновить</Action>
+		</Command>
+	</Commands>
+</Form>

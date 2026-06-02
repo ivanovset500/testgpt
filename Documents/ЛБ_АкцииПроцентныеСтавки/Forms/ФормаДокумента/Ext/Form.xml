@@ -1,0 +1,565 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.20">
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<AutoTime>CurrentOrLast</AutoTime>
+	<UsePostingMode>Auto</UsePostingMode>
+	<RepostOnWrite>true</RepostOnWrite>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<ChildItems>
+			<ButtonGroup name="ГруппаВажныеКоманды" id="117">
+				<Title>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Важные команды</v8:content>
+					</v8:item>
+				</Title>
+				<ToolTip>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Важные команды</v8:content>
+					</v8:item>
+				</ToolTip>
+				<ExtendedTooltip name="ГруппаВажныеКомандыРасширеннаяПодсказка" id="118"/>
+				<ChildItems>
+					<Button name="ФормаОбщаКомандаПоказатьДвиженияДокумента" id="119">
+						<Type>CommandBarButton</Type>
+						<CommandName>CommonCommand.ПоказатьДвиженияДокумента</CommandName>
+						<ExtendedTooltip name="ФормаОбщаКомандаПоказатьДвиженияДокументаРасширеннаяПодсказка" id="120"/>
+					</Button>
+					<Popup name="ПодменюПечать" id="121">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Печать</v8:content>
+							</v8:item>
+						</Title>
+						<Picture>
+							<xr:Ref>StdPicture.Print</xr:Ref>
+							<xr:LoadTransparent>true</xr:LoadTransparent>
+						</Picture>
+						<Representation>PictureAndText</Representation>
+						<ExtendedTooltip name="ПодменюПечатьРасширеннаяПодсказка" id="122"/>
+					</Popup>
+				</ChildItems>
+			</ButtonGroup>
+			<ButtonGroup name="ГруппаГлобальныеКоманды" id="123">
+				<Title>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Глобальные команды</v8:content>
+					</v8:item>
+				</Title>
+				<ToolTip>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Глобальные команды</v8:content>
+					</v8:item>
+				</ToolTip>
+				<ExtendedTooltip name="ГруппаГлобальныеКомандыРасширеннаяПодсказка" id="124"/>
+				<ChildItems>
+					<Button name="ОбщаяКомандаСтруктураПодчиненности" id="125">
+						<Type>CommandBarButton</Type>
+						<CommandName>CommonCommand.СвязанныеДокументы</CommandName>
+						<ExtendedTooltip name="ОбщаяКомандаСтруктураПодчиненностиРасширеннаяПодсказка" id="126"/>
+					</Button>
+				</ChildItems>
+			</ButtonGroup>
+		</ChildItems>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnOpen">ПриОткрытии</Event>
+		<Event name="BeforeWriteAtServer">ПередЗаписьюНаСервере</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+		<Event name="OnWriteAtServer">ПриЗаписиНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="ГруппаДатаНомер" id="58">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа дата номер</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа дата номер</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>AlwaysHorizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаДатаНомерРасширеннаяПодсказка" id="59"/>
+			<ChildItems>
+				<PictureField name="СостояниеДокумента" id="130">
+					<DataPath>СостояниеДокумента</DataPath>
+					<TitleLocation>None</TitleLocation>
+					<Width>2</Width>
+					<Height>1</Height>
+					<HorizontalStretch>false</HorizontalStretch>
+					<VerticalStretch>false</VerticalStretch>
+					<Border width="1">
+						<v8ui:style xsi:type="v8ui:ControlBorderType">WithoutBorder</v8ui:style>
+					</Border>
+					<FileDragMode>AsFile</FileDragMode>
+					<ContextMenu name="СостояниеДокументаКонтекстноеМеню" id="131">
+						<Autofill>false</Autofill>
+					</ContextMenu>
+					<ExtendedTooltip name="СостояниеДокументаРасширеннаяПодсказка" id="132"/>
+				</PictureField>
+				<InputField name="Номер" id="1">
+					<DataPath>Объект.Number</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>   Номер</v8:content>
+						</v8:item>
+					</Title>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="НомерКонтекстноеМеню" id="2"/>
+					<ExtendedTooltip name="НомерРасширеннаяПодсказка" id="3"/>
+				</InputField>
+				<InputField name="Дата" id="4">
+					<DataPath>Объект.Date</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>от</v8:content>
+						</v8:item>
+					</Title>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ДатаКонтекстноеМеню" id="5"/>
+					<ExtendedTooltip name="ДатаРасширеннаяПодсказка" id="6"/>
+					<Events>
+						<Event name="OnChange">ДатаПриИзменении</Event>
+					</Events>
+				</InputField>
+				<InputField name="ДатаНачалаДействия" id="145">
+					<DataPath>Объект.ДатаНачалаДействия</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Действует с</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="ДатаНачалаДействияКонтекстноеМеню" id="146"/>
+					<ExtendedTooltip name="ДатаНачалаДействияРасширеннаяПодсказка" id="147"/>
+				</InputField>
+				<InputField name="ДатаОкончанияДействия" id="248">
+					<DataPath>Объект.ДатаОкончанияДействия</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>по</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="ДатаОкончанияДействияКонтекстноеМеню" id="249"/>
+					<ExtendedTooltip name="ДатаОкончанияДействияРасширеннаяПодсказка" id="250"/>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаАкция" id="246">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа акция</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа акция</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаАкцияРасширеннаяПодсказка" id="247"/>
+			<ChildItems>
+				<InputField name="Акция" id="243">
+					<DataPath>Объект.Акция</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>           Акция</v8:content>
+						</v8:item>
+					</Title>
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<ContextMenu name="АкцияКонтекстноеМеню" id="244"/>
+					<ExtendedTooltip name="АкцияРасширеннаяПодсказка" id="245"/>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаЛомбарды" id="54">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа ломбарды</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа ломбарды</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаЛомбардыРасширеннаяПодсказка" id="55"/>
+			<ChildItems>
+				<InputField name="СписокЛомбардов" id="127">
+					<DataPath>СписокЛомбардов</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>    Ломбарды</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTipRepresentation>Balloon</ToolTipRepresentation>
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<ChoiceButton>true</ChoiceButton>
+					<Font ref="style:SmallTextFont" kind="StyleItem"/>
+					<ContextMenu name="СписокЛомбардовКонтекстноеМеню" id="128"/>
+					<ExtendedTooltip name="СписокЛомбардовРасширеннаяПодсказка" id="129"/>
+					<Events>
+						<Event name="StartChoice">СписокЛомбардовНачалоВыбора</Event>
+					</Events>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+		<Pages name="ГруппаСтраницы" id="136">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа страницы</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа страницы</v8:content>
+				</v8:item>
+			</ToolTip>
+			<PagesRepresentation>TabsOnTop</PagesRepresentation>
+			<ExtendedTooltip name="ГруппаСтраницыРасширеннаяПодсказка" id="137"/>
+			<ChildItems>
+				<Page name="ГруппаСтраницаОсн" id="138">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Условия акции</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа страница осн</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="ГруппаСтраницаОснРасширеннаяПодсказка" id="139"/>
+					<ChildItems>
+						<UsualGroup name="ГруппаОсновная" id="56">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа основная</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа основная</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Group>Vertical</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаОсновнаяРасширеннаяПодсказка" id="57"/>
+							<ChildItems>
+								<UsualGroup name="ГруппаЦены" id="60">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа цены</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа цены</v8:content>
+										</v8:item>
+									</ToolTip>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ГруппаЦеныРасширеннаяПодсказка" id="61"/>
+									<ChildItems>
+										<Table name="СтавкиПроцентов" id="200">
+											<AutoInsertNewRow>true</AutoInsertNewRow>
+											<EnableStartDrag>true</EnableStartDrag>
+											<EnableDrag>true</EnableDrag>
+											<DataPath>Объект.УсловияСтавкиПроцентов</DataPath>
+											<RowFilter xsi:nil="true"/>
+											<ContextMenu name="СтавкиПроцентовКонтекстноеМеню" id="201"/>
+											<AutoCommandBar name="СтавкиПроцентовКоманднаяПанель" id="202"/>
+											<ExtendedTooltip name="СтавкиПроцентовРасширеннаяПодсказка" id="203"/>
+											<SearchStringAddition name="СтавкиПроцентовСтрокаПоиска" id="204">
+												<AdditionSource>
+													<Item>СтавкиПроцентов</Item>
+													<Type>SearchStringRepresentation</Type>
+												</AdditionSource>
+												<ContextMenu name="СтавкиПроцентовСтрокаПоискаКонтекстноеМеню" id="205"/>
+												<ExtendedTooltip name="СтавкиПроцентовСтрокаПоискаРасширеннаяПодсказка" id="206"/>
+											</SearchStringAddition>
+											<ViewStatusAddition name="СтавкиПроцентовСостояниеПросмотра" id="207">
+												<AdditionSource>
+													<Item>СтавкиПроцентов</Item>
+													<Type>ViewStatusRepresentation</Type>
+												</AdditionSource>
+												<ContextMenu name="СтавкиПроцентовСостояниеПросмотраКонтекстноеМеню" id="208"/>
+												<ExtendedTooltip name="СтавкиПроцентовСостояниеПросмотраРасширеннаяПодсказка" id="209"/>
+											</ViewStatusAddition>
+											<SearchControlAddition name="СтавкиПроцентовУправлениеПоиском" id="210">
+												<AdditionSource>
+													<Item>СтавкиПроцентов</Item>
+													<Type>SearchControl</Type>
+												</AdditionSource>
+												<ContextMenu name="СтавкиПроцентовУправлениеПоискомКонтекстноеМеню" id="211"/>
+												<ExtendedTooltip name="СтавкиПроцентовУправлениеПоискомРасширеннаяПодсказка" id="212"/>
+											</SearchControlAddition>
+											<Events>
+												<Event name="OnEditEnd">СтавкиПроцентовПриОкончанииРедактирования</Event>
+												<Event name="OnStartEdit">СтавкиПроцентовПриНачалеРедактирования</Event>
+											</Events>
+											<ChildItems>
+												<LabelField name="СтавкиПроцентовНомерСтроки" id="251">
+													<DataPath>Объект.УсловияСтавкиПроцентов.LineNumber</DataPath>
+													<EditMode>EnterOnInput</EditMode>
+													<Width>2</Width>
+													<ContextMenu name="СтавкиПроцентовНомерСтрокиКонтекстноеМеню" id="252"/>
+													<ExtendedTooltip name="СтавкиПроцентовНомерСтрокиРасширеннаяПодсказка" id="253"/>
+												</LabelField>
+												<InputField name="СтавкиПроцентовПричинаПрименения" id="216">
+													<DataPath>Объект.УсловияСтавкиПроцентов.ПричинаПрименения</DataPath>
+													<EditMode>EnterOnInput</EditMode>
+													<ContextMenu name="СтавкиПроцентовПричинаПримененияКонтекстноеМеню" id="217"/>
+													<ExtendedTooltip name="СтавкиПроцентовПричинаПримененияРасширеннаяПодсказка" id="218"/>
+												</InputField>
+												<InputField name="СтавкиПроцентовСхемаКредитования" id="219">
+													<DataPath>Объект.УсловияСтавкиПроцентов.СхемаКредитования</DataPath>
+													<EditMode>EnterOnInput</EditMode>
+													<ClearButton>true</ClearButton>
+													<OpenButton>false</OpenButton>
+													<CreateButton>false</CreateButton>
+													<QuickChoice>true</QuickChoice>
+													<ContextMenu name="СтавкиПроцентовСхемаКредитованияКонтекстноеМеню" id="220"/>
+													<ExtendedTooltip name="СтавкиПроцентовСхемаКредитованияРасширеннаяПодсказка" id="221"/>
+												</InputField>
+												<InputField name="СтавкиПроцентовСтатусЗалогодателя" id="222">
+													<DataPath>Объект.УсловияСтавкиПроцентов.СтатусЗалогодателя</DataPath>
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Статус клиента</v8:content>
+														</v8:item>
+													</Title>
+													<EditMode>EnterOnInput</EditMode>
+													<ClearButton>true</ClearButton>
+													<OpenButton>false</OpenButton>
+													<CreateButton>false</CreateButton>
+													<ContextMenu name="СтавкиПроцентовСтатусЗалогодателяКонтекстноеМеню" id="223"/>
+													<ExtendedTooltip name="СтавкиПроцентовСтатусЗалогодателяРасширеннаяПодсказка" id="224"/>
+												</InputField>
+												<InputField name="СтавкиПроцентовДиапазонСумм" id="225">
+													<DataPath>Объект.УсловияСтавкиПроцентов.ДиапазонСумм</DataPath>
+													<EditMode>EnterOnInput</EditMode>
+													<OpenButton>false</OpenButton>
+													<CreateButton>false</CreateButton>
+													<ContextMenu name="СтавкиПроцентовДиапазонСуммКонтекстноеМеню" id="226"/>
+													<ExtendedTooltip name="СтавкиПроцентовДиапазонСуммРасширеннаяПодсказка" id="227"/>
+												</InputField>
+												<InputField name="СтавкиПроцентовУстановитьЗначениеИлиОтконение" id="231">
+													<DataPath>Объект.УсловияСтавкиПроцентов.УстановитьЗначениеИлиОтконение</DataPath>
+													<EditMode>EnterOnInput</EditMode>
+													<ContextMenu name="СтавкиПроцентовУстановитьЗначениеИлиОтконениеКонтекстноеМеню" id="232"/>
+													<ExtendedTooltip name="СтавкиПроцентовУстановитьЗначениеИлиОтконениеРасширеннаяПодсказка" id="233"/>
+													<Events>
+														<Event name="OnChange">СтавкиПроцентовУстановитьЗначениеИлиОтконениеПриИзменении</Event>
+													</Events>
+												</InputField>
+												<InputField name="СтавкиПроцентовСтавка" id="234">
+													<DataPath>Объект.УсловияСтавкиПроцентов.Ставка</DataPath>
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>% ставка</v8:content>
+														</v8:item>
+													</Title>
+													<EditMode>EnterOnInput</EditMode>
+													<ContextMenu name="СтавкиПроцентовСтавкаКонтекстноеМеню" id="235"/>
+													<ExtendedTooltip name="СтавкиПроцентовСтавкаРасширеннаяПодсказка" id="236"/>
+												</InputField>
+												<InputField name="СтавкиПроцентовОтклонение" id="237">
+													<DataPath>Объект.УсловияСтавкиПроцентов.Отклонение</DataPath>
+													<EditMode>EnterOnInput</EditMode>
+													<ContextMenu name="СтавкиПроцентовОтклонениеКонтекстноеМеню" id="238"/>
+													<ExtendedTooltip name="СтавкиПроцентовОтклонениеРасширеннаяПодсказка" id="239"/>
+												</InputField>
+												<InputField name="СтавкиПроцентовЗначениеОтклонения" id="240">
+													<DataPath>Объект.УсловияСтавкиПроцентов.ЗначениеОтклонения</DataPath>
+													<EditMode>EnterOnInput</EditMode>
+													<ContextMenu name="СтавкиПроцентовЗначениеОтклоненияКонтекстноеМеню" id="241"/>
+													<ExtendedTooltip name="СтавкиПроцентовЗначениеОтклоненияРасширеннаяПодсказка" id="242"/>
+												</InputField>
+											</ChildItems>
+										</Table>
+									</ChildItems>
+								</UsualGroup>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</Page>
+				<Page name="ГруппаСтраницаДоп" id="140">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Дополнительно</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа страница доп</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="ГруппаСтраницаДопРасширеннаяПодсказка" id="141"/>
+					<ChildItems>
+						<InputField name="Ответственный" id="81">
+							<DataPath>Объект.Ответственный</DataPath>
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<ContextMenu name="ОтветственныйКонтекстноеМеню" id="82"/>
+							<ExtendedTooltip name="ОтветственныйРасширеннаяПодсказка" id="83"/>
+						</InputField>
+						<InputField name="Комментарий" id="84">
+							<DataPath>Объект.Комментарий</DataPath>
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<ContextMenu name="КомментарийКонтекстноеМеню" id="85"/>
+							<ExtendedTooltip name="КомментарийРасширеннаяПодсказка" id="86"/>
+						</InputField>
+					</ChildItems>
+				</Page>
+			</ChildItems>
+		</Pages>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:DocumentObject.ЛБ_АкцииПроцентныеСтавки</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+			<UseAlways>
+				<Field>Объект.RegisterRecords</Field>
+			</UseAlways>
+		</Attribute>
+		<Attribute name="СписокЛомбардов" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Список ломбардов</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="СостояниеДокумента" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Состояние документа</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>10</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<ConditionalAppearance>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>СтавкиПроцентовОтклонение</dcsset:field>
+					</dcsset:item>
+					<dcsset:item>
+						<dcsset:field>СтавкиПроцентовЗначениеОтклонения</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">Объект.УсловияСтавкиПроцентов.УстановитьЗначениеИлиОтконение</dcsset:left>
+						<dcsset:comparisonType>Equal</dcsset:comparisonType>
+						<dcsset:right xsi:type="dcscor:DesignTimeValue">Перечисление.ЛБ_УстановкаЗначенияИлиОтклонения.Значение</dcsset:right>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>ТолькоПросмотр</dcscor:parameter>
+						<dcscor:value xsi:type="xs:boolean">true</dcscor:value>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>СтавкиПроцентовСтавка</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">Объект.УсловияСтавкиПроцентов.УстановитьЗначениеИлиОтконение</dcsset:left>
+						<dcsset:comparisonType>Equal</dcsset:comparisonType>
+						<dcsset:right xsi:type="dcscor:DesignTimeValue">Перечисление.ЛБ_УстановкаЗначенияИлиОтклонения.Отклонение</dcsset:right>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>ТолькоПросмотр</dcscor:parameter>
+						<dcscor:value xsi:type="xs:boolean">true</dcscor:value>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>СтавкиПроцентовУстановитьЗначениеИлиОтконение</dcsset:field>
+					</dcsset:item>
+					<dcsset:item>
+						<dcsset:field>СтавкиПроцентовОтклонение</dcsset:field>
+					</dcsset:item>
+					<dcsset:item>
+						<dcsset:field>СтавкиПроцентовЗначениеОтклонения</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">Объект.УсловияСтавкиПроцентов.СхемаКредитования</dcsset:left>
+						<dcsset:comparisonType>NotFilled</dcsset:comparisonType>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>ТолькоПросмотр</dcscor:parameter>
+						<dcscor:value xsi:type="xs:boolean">true</dcscor:value>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+		</ConditionalAppearance>
+	</Attributes>
+</Form>

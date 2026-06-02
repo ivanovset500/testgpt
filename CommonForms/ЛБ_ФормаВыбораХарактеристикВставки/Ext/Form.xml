@@ -1,0 +1,623 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.20">
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<Autofill>false</Autofill>
+		<ChildItems>
+			<Button name="ФормаВыбрать" id="63">
+				<Type>CommandBarButton</Type>
+				<DefaultButton>true</DefaultButton>
+				<CommandName>Form.Command.Выбрать</CommandName>
+				<ExtendedTooltip name="ФормаВыбратьРасширеннаяПодсказка" id="64"/>
+			</Button>
+			<Button name="ФормаОтмена" id="65">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.Command.Отмена</CommandName>
+				<ExtendedTooltip name="ФормаОтменаРасширеннаяПодсказка" id="66"/>
+			</Button>
+		</ChildItems>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<LabelField name="Вставка" id="1">
+			<DataPath>Вставка</DataPath>
+			<TitleLocation>None</TitleLocation>
+			<TextColor>web:DarkBlue</TextColor>
+			<Font ref="style:NormalTextFont" height="12" kind="StyleItem" scale="100"/>
+			<ContextMenu name="ВставкаКонтекстноеМеню" id="2"/>
+			<ExtendedTooltip name="ВставкаРасширеннаяПодсказка" id="3"/>
+		</LabelField>
+		<Table name="ФормыОгранки" id="4">
+			<Representation>List</Representation>
+			<HeightControlVariant>UseContentHeight</HeightControlVariant>
+			<AutoInsertNewRow>true</AutoInsertNewRow>
+			<EnableStartDrag>true</EnableStartDrag>
+			<EnableDrag>true</EnableDrag>
+			<DataPath>ФормыОгранки</DataPath>
+			<CommandSet>
+				<ExcludedCommand>Add</ExcludedCommand>
+				<ExcludedCommand>Change</ExcludedCommand>
+				<ExcludedCommand>Copy</ExcludedCommand>
+				<ExcludedCommand>Delete</ExcludedCommand>
+				<ExcludedCommand>EndEdit</ExcludedCommand>
+				<ExcludedCommand>ShowRowRearrangement</ExcludedCommand>
+			</CommandSet>
+			<RowFilter xsi:nil="true"/>
+			<ContextMenu name="ФормыОгранкиКонтекстноеМеню" id="5"/>
+			<AutoCommandBar name="ФормыОгранкиКоманднаяПанель" id="6">
+				<Autofill>false</Autofill>
+				<ChildItems>
+					<Button name="ФормыОгранкиВключитьФлажкиФО" id="67">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Command.ВключитьФлажкиФО</CommandName>
+						<Picture>
+							<xr:Ref>StdPicture.CheckAll</xr:Ref>
+							<xr:LoadTransparent>true</xr:LoadTransparent>
+						</Picture>
+						<ExtendedTooltip name="ФормыОгранкиВключитьФлажкиФОРасширеннаяПодсказка" id="68"/>
+					</Button>
+					<Button name="ФормыОгранкиОтменитьФлажкиФО" id="69">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Command.ОтменитьФлажкиФО</CommandName>
+						<Picture>
+							<xr:Ref>StdPicture.UncheckAll</xr:Ref>
+							<xr:LoadTransparent>true</xr:LoadTransparent>
+						</Picture>
+						<ExtendedTooltip name="ФормыОгранкиОтменитьФлажкиФОРасширеннаяПодсказка" id="70"/>
+					</Button>
+				</ChildItems>
+			</AutoCommandBar>
+			<ExtendedTooltip name="ФормыОгранкиРасширеннаяПодсказка" id="7"/>
+			<SearchStringAddition name="ФормыОгранкиСтрокаПоиска" id="8">
+				<AdditionSource>
+					<Item>ФормыОгранки</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ФормыОгранкиСтрокаПоискаКонтекстноеМеню" id="9"/>
+				<ExtendedTooltip name="ФормыОгранкиСтрокаПоискаРасширеннаяПодсказка" id="10"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="ФормыОгранкиСостояниеПросмотра" id="11">
+				<AdditionSource>
+					<Item>ФормыОгранки</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ФормыОгранкиСостояниеПросмотраКонтекстноеМеню" id="12"/>
+				<ExtendedTooltip name="ФормыОгранкиСостояниеПросмотраРасширеннаяПодсказка" id="13"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="ФормыОгранкиУправлениеПоиском" id="14">
+				<AdditionSource>
+					<Item>ФормыОгранки</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="ФормыОгранкиУправлениеПоискомКонтекстноеМеню" id="15"/>
+				<ExtendedTooltip name="ФормыОгранкиУправлениеПоискомРасширеннаяПодсказка" id="16"/>
+			</SearchControlAddition>
+			<Events>
+				<Event name="OnActivateRow">ФормыОгранкиПриАктивизацииСтроки</Event>
+			</Events>
+			<ChildItems>
+				<CheckBoxField name="ФормыОгранкиВкл" id="17">
+					<DataPath>ФормыОгранки.Вкл</DataPath>
+					<TitleLocation>None</TitleLocation>
+					<EditMode>EnterOnInput</EditMode>
+					<HeaderPicture>
+						<xr:Ref>CommonPicture.ВнешняяКомпонентаДоступна</xr:Ref>
+						<xr:LoadTransparent>true</xr:LoadTransparent>
+					</HeaderPicture>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ФормыОгранкиВклКонтекстноеМеню" id="18"/>
+					<ExtendedTooltip name="ФормыОгранкиВклРасширеннаяПодсказка" id="19"/>
+					<Events>
+						<Event name="OnChange">ФормыОгранкиВклПриИзменении</Event>
+					</Events>
+				</CheckBoxField>
+				<InputField name="ФормыОгранкиКачествоОгранки" id="20">
+					<DataPath>ФормыОгранки.ФормаОгранки</DataPath>
+					<ReadOnly>true</ReadOnly>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ФормыОгранкиКачествоОгранкиКонтекстноеМеню" id="21"/>
+					<ExtendedTooltip name="ФормыОгранкиКачествоОгранкиРасширеннаяПодсказка" id="22"/>
+				</InputField>
+			</ChildItems>
+		</Table>
+		<UsualGroup name="ГруппаОснВыбор" id="61">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа осн выбор</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа осн выбор</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>AlwaysHorizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаОснВыборРасширеннаяПодсказка" id="62"/>
+			<ChildItems>
+				<Table name="ВидыОгранки" id="23">
+					<Representation>List</Representation>
+					<HeightControlVariant>UseHeightInFormRows</HeightControlVariant>
+					<AutoInsertNewRow>true</AutoInsertNewRow>
+					<EnableStartDrag>true</EnableStartDrag>
+					<EnableDrag>true</EnableDrag>
+					<DataPath>ВидыОгранки</DataPath>
+					<CommandSet>
+						<ExcludedCommand>Add</ExcludedCommand>
+						<ExcludedCommand>Change</ExcludedCommand>
+						<ExcludedCommand>Copy</ExcludedCommand>
+						<ExcludedCommand>Delete</ExcludedCommand>
+						<ExcludedCommand>EndEdit</ExcludedCommand>
+						<ExcludedCommand>ShowRowRearrangement</ExcludedCommand>
+					</CommandSet>
+					<RowFilter xsi:nil="true"/>
+					<ContextMenu name="ВидыОгранкиКонтекстноеМеню" id="24"/>
+					<AutoCommandBar name="ВидыОгранкиКоманднаяПанель" id="25">
+						<Autofill>false</Autofill>
+						<ChildItems>
+							<Button name="ВидыОгранкиВключитьФлажкиВО" id="71">
+								<Type>CommandBarButton</Type>
+								<CommandName>Form.Command.ВключитьФлажкиВО</CommandName>
+								<Picture>
+									<xr:Ref>StdPicture.CheckAll</xr:Ref>
+									<xr:LoadTransparent>true</xr:LoadTransparent>
+								</Picture>
+								<ExtendedTooltip name="ВидыОгранкиВключитьФлажкиВОРасширеннаяПодсказка" id="72"/>
+							</Button>
+							<Button name="ВидыОгранкиОтменитьФлажкиВО" id="73">
+								<Type>CommandBarButton</Type>
+								<CommandName>Form.Command.ОтменитьФлажкиВО</CommandName>
+								<Picture>
+									<xr:Ref>StdPicture.UncheckAll</xr:Ref>
+									<xr:LoadTransparent>true</xr:LoadTransparent>
+								</Picture>
+								<ExtendedTooltip name="ВидыОгранкиОтменитьФлажкиВОРасширеннаяПодсказка" id="74"/>
+							</Button>
+						</ChildItems>
+					</AutoCommandBar>
+					<ExtendedTooltip name="ВидыОгранкиРасширеннаяПодсказка" id="26"/>
+					<SearchStringAddition name="ВидыОгранкиСтрокаПоиска" id="27">
+						<AdditionSource>
+							<Item>ВидыОгранки</Item>
+							<Type>SearchStringRepresentation</Type>
+						</AdditionSource>
+						<ContextMenu name="ВидыОгранкиСтрокаПоискаКонтекстноеМеню" id="28"/>
+						<ExtendedTooltip name="ВидыОгранкиСтрокаПоискаРасширеннаяПодсказка" id="29"/>
+					</SearchStringAddition>
+					<ViewStatusAddition name="ВидыОгранкиСостояниеПросмотра" id="30">
+						<AdditionSource>
+							<Item>ВидыОгранки</Item>
+							<Type>ViewStatusRepresentation</Type>
+						</AdditionSource>
+						<ContextMenu name="ВидыОгранкиСостояниеПросмотраКонтекстноеМеню" id="31"/>
+						<ExtendedTooltip name="ВидыОгранкиСостояниеПросмотраРасширеннаяПодсказка" id="32"/>
+					</ViewStatusAddition>
+					<SearchControlAddition name="ВидыОгранкиУправлениеПоиском" id="33">
+						<AdditionSource>
+							<Item>ВидыОгранки</Item>
+							<Type>SearchControl</Type>
+						</AdditionSource>
+						<ContextMenu name="ВидыОгранкиУправлениеПоискомКонтекстноеМеню" id="34"/>
+						<ExtendedTooltip name="ВидыОгранкиУправлениеПоискомРасширеннаяПодсказка" id="35"/>
+					</SearchControlAddition>
+					<Events>
+						<Event name="OnActivateRow">ВидыОгранкиПриАктивизацииСтроки</Event>
+					</Events>
+					<ChildItems>
+						<CheckBoxField name="ВидыОгранкиВкл" id="36">
+							<DataPath>ВидыОгранки.Вкл</DataPath>
+							<TitleLocation>None</TitleLocation>
+							<EditMode>EnterOnInput</EditMode>
+							<HeaderPicture>
+								<xr:Ref>CommonPicture.ВнешняяКомпонентаДоступна</xr:Ref>
+								<xr:LoadTransparent>true</xr:LoadTransparent>
+							</HeaderPicture>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="ВидыОгранкиВклКонтекстноеМеню" id="37"/>
+							<ExtendedTooltip name="ВидыОгранкиВклРасширеннаяПодсказка" id="38"/>
+							<Events>
+								<Event name="OnChange">ВидыОгранкиВклПриИзменении</Event>
+							</Events>
+						</CheckBoxField>
+						<InputField name="ВидыОгранкиВидОгранки" id="39">
+							<DataPath>ВидыОгранки.ВидОгранки</DataPath>
+							<ReadOnly>true</ReadOnly>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ВидыОгранкиВидОгранкиКонтекстноеМеню" id="40"/>
+							<ExtendedTooltip name="ВидыОгранкиВидОгранкиРасширеннаяПодсказка" id="41"/>
+						</InputField>
+					</ChildItems>
+				</Table>
+				<Table name="КачествоОгранки" id="42">
+					<Representation>List</Representation>
+					<HeightControlVariant>UseHeightInFormRows</HeightControlVariant>
+					<AutoInsertNewRow>true</AutoInsertNewRow>
+					<EnableStartDrag>true</EnableStartDrag>
+					<EnableDrag>true</EnableDrag>
+					<DataPath>КачествоОгранки</DataPath>
+					<CommandSet>
+						<ExcludedCommand>Add</ExcludedCommand>
+						<ExcludedCommand>Change</ExcludedCommand>
+						<ExcludedCommand>Copy</ExcludedCommand>
+						<ExcludedCommand>Delete</ExcludedCommand>
+						<ExcludedCommand>EndEdit</ExcludedCommand>
+						<ExcludedCommand>ShowRowRearrangement</ExcludedCommand>
+					</CommandSet>
+					<RowFilter xsi:nil="true"/>
+					<ContextMenu name="КачествоОгранкиКонтекстноеМеню" id="43"/>
+					<AutoCommandBar name="КачествоОгранкиКоманднаяПанель" id="44">
+						<Autofill>false</Autofill>
+						<ChildItems>
+							<Button name="КачествоОгранкиВключитьФлажкиКО" id="75">
+								<Type>CommandBarButton</Type>
+								<CommandName>Form.Command.ВключитьФлажкиКО</CommandName>
+								<Picture>
+									<xr:Ref>StdPicture.CheckAll</xr:Ref>
+									<xr:LoadTransparent>true</xr:LoadTransparent>
+								</Picture>
+								<ExtendedTooltip name="КачествоОгранкиВключитьФлажкиКОРасширеннаяПодсказка" id="76"/>
+							</Button>
+							<Button name="КачествоОгранкиОтменитьФлажкиКО" id="77">
+								<Type>CommandBarButton</Type>
+								<CommandName>Form.Command.ОтменитьФлажкиКО</CommandName>
+								<Picture>
+									<xr:Ref>StdPicture.UncheckAll</xr:Ref>
+									<xr:LoadTransparent>true</xr:LoadTransparent>
+								</Picture>
+								<ExtendedTooltip name="КачествоОгранкиОтменитьФлажкиКОРасширеннаяПодсказка" id="78"/>
+							</Button>
+						</ChildItems>
+					</AutoCommandBar>
+					<ExtendedTooltip name="КачествоОгранкиРасширеннаяПодсказка" id="45"/>
+					<SearchStringAddition name="КачествоОгранкиСтрокаПоиска" id="46">
+						<AdditionSource>
+							<Item>КачествоОгранки</Item>
+							<Type>SearchStringRepresentation</Type>
+						</AdditionSource>
+						<ContextMenu name="КачествоОгранкиСтрокаПоискаКонтекстноеМеню" id="47"/>
+						<ExtendedTooltip name="КачествоОгранкиСтрокаПоискаРасширеннаяПодсказка" id="48"/>
+					</SearchStringAddition>
+					<ViewStatusAddition name="КачествоОгранкиСостояниеПросмотра" id="49">
+						<AdditionSource>
+							<Item>КачествоОгранки</Item>
+							<Type>ViewStatusRepresentation</Type>
+						</AdditionSource>
+						<ContextMenu name="КачествоОгранкиСостояниеПросмотраКонтекстноеМеню" id="50"/>
+						<ExtendedTooltip name="КачествоОгранкиСостояниеПросмотраРасширеннаяПодсказка" id="51"/>
+					</ViewStatusAddition>
+					<SearchControlAddition name="КачествоОгранкиУправлениеПоиском" id="52">
+						<AdditionSource>
+							<Item>КачествоОгранки</Item>
+							<Type>SearchControl</Type>
+						</AdditionSource>
+						<ContextMenu name="КачествоОгранкиУправлениеПоискомКонтекстноеМеню" id="53"/>
+						<ExtendedTooltip name="КачествоОгранкиУправлениеПоискомРасширеннаяПодсказка" id="54"/>
+					</SearchControlAddition>
+					<ChildItems>
+						<CheckBoxField name="КачестваОгранкиВкл" id="55">
+							<DataPath>КачествоОгранки.Вкл</DataPath>
+							<TitleLocation>None</TitleLocation>
+							<EditMode>EnterOnInput</EditMode>
+							<HeaderPicture>
+								<xr:Ref>CommonPicture.ВнешняяКомпонентаДоступна</xr:Ref>
+								<xr:LoadTransparent>true</xr:LoadTransparent>
+							</HeaderPicture>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="КачестваОгранкиВклКонтекстноеМеню" id="56"/>
+							<ExtendedTooltip name="КачестваОгранкиВклРасширеннаяПодсказка" id="57"/>
+						</CheckBoxField>
+						<InputField name="КачестваОгранкиКачествоОгранки" id="58">
+							<DataPath>КачествоОгранки.КачествоОгранки</DataPath>
+							<ReadOnly>true</ReadOnly>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="КачестваОгранкиКачествоОгранкиКонтекстноеМеню" id="59"/>
+							<ExtendedTooltip name="КачестваОгранкиКачествоОгранкиРасширеннаяПодсказка" id="60"/>
+						</InputField>
+					</ChildItems>
+				</Table>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Вставка" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Вставка</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.ЛБ_ДрагоценныеКамни</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ФормыОгранки" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Формы огранки</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="Вкл" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Вкл</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+				<Column name="ФормаОгранки" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Форма огранки</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.ЛБ_ФормыОгранки</v8:Type>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="ВидыОгранки" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Виды огранки</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="Вкл" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Вкл</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+				<Column name="ВидОгранки" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Вид огранки</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.ЛБ_ВидыОгранки</v8:Type>
+					</Type>
+				</Column>
+				<Column name="ФормаОгранки" id="3">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Форма огранки</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.ЛБ_ФормыОгранки</v8:Type>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="КачествоОгранки" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Качество огранки</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="Вкл" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Вкл</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+				<Column name="КачествоОгранки" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Качество огранки</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.ЛБ_КачествоОгранки</v8:Type>
+					</Type>
+				</Column>
+				<Column name="ФормаОгранки" id="3">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Форма огранки</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.ЛБ_ФормыОгранки</v8:Type>
+					</Type>
+				</Column>
+				<Column name="ВидОгранки" id="4">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Вид огранки</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.ЛБ_ВидыОгранки</v8:Type>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<ConditionalAppearance>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>ВидыОгранкиВкл</dcsset:field>
+					</dcsset:item>
+					<dcsset:item>
+						<dcsset:field>КачестваОгранкиВкл</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">ФормыОгранки.Вкл</dcsset:left>
+						<dcsset:comparisonType>Equal</dcsset:comparisonType>
+						<dcsset:right xsi:type="xs:boolean">false</dcsset:right>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>ТолькоПросмотр</dcscor:parameter>
+						<dcscor:value xsi:type="xs:boolean">true</dcscor:value>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+		</ConditionalAppearance>
+	</Attributes>
+	<Commands>
+		<Command name="Выбрать" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выбрать</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выбрать</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>Выбрать</Action>
+		</Command>
+		<Command name="Отмена" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отмена</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отмена</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>Отмена</Action>
+		</Command>
+		<Command name="ВключитьФлажкиФО" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Включить флажки ФО</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Включить флажки ФО</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ВключитьФлажкиФО</Action>
+		</Command>
+		<Command name="ОтменитьФлажкиФО" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отменить флажки ФО</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отменить флажки ФО</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ОтменитьФлажкиФО</Action>
+		</Command>
+		<Command name="ВключитьФлажкиВО" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Включить флажки ВО</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Включить флажки ВО</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ВключитьФлажкиВО</Action>
+		</Command>
+		<Command name="ОтменитьФлажкиВО" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отменить флажки ВО</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отменить флажки ВО</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ОтменитьФлажкиВО</Action>
+		</Command>
+		<Command name="ВключитьФлажкиКО" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Включить флажки КО</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Включить флажки КО</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ВключитьФлажкиКО</Action>
+		</Command>
+		<Command name="ОтменитьФлажкиКО" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отменить флажки КО</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отменить флажки КО</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ОтменитьФлажкиКО</Action>
+		</Command>
+	</Commands>
+</Form>

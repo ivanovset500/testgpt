@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<CommandInterface xmlns="http://v8.1c.ru/8.3/xcf/extrnprops" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.20">
+	<CommandsOrder>
+		<Command name="CommonCommand.ЛБ_ОперацияПоЗалогу">
+			<CommandGroup>NavigationPanelImportant</CommandGroup>
+		</Command>
+		<Command name="CommonCommand.ЛБ_НовыйЗалогодатель">
+			<CommandGroup>NavigationPanelImportant</CommandGroup>
+		</Command>
+		<Command name="CommonCommand.ЛБ_ИзменениеЗалогодателя">
+			<CommandGroup>NavigationPanelImportant</CommandGroup>
+		</Command>
+		<Command name="CommonCommand.ЛБ_РабочееМестоПриемщика">
+			<CommandGroup>NavigationPanelImportant</CommandGroup>
+		</Command>
+		<Command name="Catalog.ЛБ_Настройки.StandardCommand.OpenList">
+			<CommandGroup>NavigationPanelOrdinary</CommandGroup>
+		</Command>
+		<Command name="Catalog.ПроизводственныеКалендари.StandardCommand.OpenList">
+			<CommandGroup>NavigationPanelOrdinary</CommandGroup>
+		</Command>
+		<Command name="Document.ЛБ_КассовыеЛимиты.StandardCommand.OpenList">
+			<CommandGroup>NavigationPanelOrdinary</CommandGroup>
+		</Command>
+		<Command name="DataProcessor.ЛБ_ВыбратьЛомбард.StandardCommand.Open">
+			<CommandGroup>ActionsPanelTools</CommandGroup>
+		</Command>
+		<Command name="DataProcessor.ЛБ_СозданиеНакладныхНаОтгрузку.StandardCommand.Open">
+			<CommandGroup>ActionsPanelTools</CommandGroup>
+		</Command>
+		<Command name="DataProcessor.ЛБ_ЗаполнитьПереченьЦБ.StandardCommand.Open">
+			<CommandGroup>ActionsPanelTools</CommandGroup>
+		</Command>
+	</CommandsOrder>
+	<SubsystemsOrder>
+		<Subsystem>Subsystem.Ломбард.Subsystem.ГФМ</Subsystem>
+		<Subsystem>Subsystem.Ломбард.Subsystem.КРО</Subsystem>
+		<Subsystem>Subsystem.Ломбард.Subsystem.ЛомбардОтчеты</Subsystem>
+		<Subsystem>Subsystem.Ломбард.Subsystem.ОРНЗ</Subsystem>
+		<Subsystem>Subsystem.Ломбард.Subsystem.ОСБ</Subsystem>
+		<Subsystem>Subsystem.Ломбард.Subsystem.ОРБ</Subsystem>
+		<Subsystem>Subsystem.Ломбард.Subsystem.ФЭО</Subsystem>
+	</SubsystemsOrder>
+	<GroupsOrder>
+		<Group>NavigationPanelImportant</Group>
+		<Group>NavigationPanelOrdinary</Group>
+		<Group>ActionsPanelTools</Group>
+	</GroupsOrder>
+</CommandInterface>

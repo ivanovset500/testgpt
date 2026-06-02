@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<PredefinedData xmlns="http://v8.1c.ru/8.3/xcf/predef" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="PlanOfCharacteristicKindPredefinedItems" version="2.20">
+	<Item id="a8da67e6-6a29-48be-b12f-8faf49032447">
+		<Name>НастройкиЛомбарда</Name>
+		<Code>000000004</Code>
+		<Description>Настройки (ломбард)</Description>
+		<Type/>
+		<IsFolder>true</IsFolder>
+		<ChildItems>
+			<Item id="2bf7fa7f-5f4b-4637-af43-bdf4cccd0ad5">
+				<Name>СписокПечатныхФормКарточкиКлиента</Name>
+				<Code>000000005</Code>
+				<Description>Список печатных форм карточки клиента</Description>
+				<Type>
+					<v8:Type xmlns:d6p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d6p1:EnumRef.ЛБ_ПечатныеФормыКарточкиКлиента</v8:Type>
+				</Type>
+				<IsFolder>false</IsFolder>
+			</Item>
+		</ChildItems>
+	</Item>
+	<Item id="f9efdf7d-3435-4b76-8170-b19ebaca5169">
+		<Name>СлужебныеПараметры</Name>
+		<Code>000000002</Code>
+		<Description>Служебные параметры</Description>
+		<Type/>
+		<IsFolder>true</IsFolder>
+		<ChildItems>
+			<Item id="5816306c-6da4-4977-804e-fb5d3361b9b6">
+				<Name>ЭтоТестоваяБаза</Name>
+				<Code>000000003</Code>
+				<Description>Это тестовая база</Description>
+				<Type>
+					<v8:Type>xs:boolean</v8:Type>
+				</Type>
+				<IsFolder>false</IsFolder>
+			</Item>
+		</ChildItems>
+	</Item>
+</PredefinedData>

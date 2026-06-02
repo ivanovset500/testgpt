@@ -1,0 +1,318 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.20">
+	<CommandSet>
+		<ExcludedCommand>Copy</ExcludedCommand>
+		<ExcludedCommand>Write</ExcludedCommand>
+	</CommandSet>
+	<AutoTime>CurrentOrLast</AutoTime>
+	<UsePostingMode>Auto</UsePostingMode>
+	<RepostOnWrite>true</RepostOnWrite>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="ГруппаНомер" id="58">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа номер</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа номер</v8:content>
+				</v8:item>
+			</ToolTip>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаНомерРасширеннаяПодсказка" id="59"/>
+			<ChildItems>
+				<LabelField name="ВидОперации" id="142">
+					<DataPath>Объект.ВидОперации</DataPath>
+					<TitleLocation>None</TitleLocation>
+					<TextColor>style:АктуальнаяПодпискаЦвет</TextColor>
+					<Font ref="style:NormalTextFont" height="12" bold="true" italic="true" underline="false" strikeout="false" kind="StyleItem" scale="100"/>
+					<ContextMenu name="ВидОперацииКонтекстноеМеню" id="143"/>
+					<ExtendedTooltip name="ВидОперацииРасширеннаяПодсказка" id="144"/>
+				</LabelField>
+				<InputField name="Номер" id="102">
+					<DataPath>Объект.Number</DataPath>
+					<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+					<ContextMenu name="НомерКонтекстноеМеню" id="103"/>
+					<ExtendedTooltip name="НомерРасширеннаяПодсказка" id="104"/>
+				</InputField>
+				<InputField name="Дата" id="4">
+					<DataPath>Объект.Date</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>от</v8:content>
+						</v8:item>
+					</Title>
+					<EditMode>EnterOnInput</EditMode>
+					<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+					<ContextMenu name="ДатаКонтекстноеМеню" id="5"/>
+					<ExtendedTooltip name="ДатаРасширеннаяПодсказка" id="6"/>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+		<InputField name="Организация" id="7">
+			<DataPath>Объект.Организация</DataPath>
+			<ReadOnly>true</ReadOnly>
+			<EditMode>EnterOnInput</EditMode>
+			<AutoMaxWidth>false</AutoMaxWidth>
+			<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+			<ContextMenu name="ОрганизацияКонтекстноеМеню" id="8"/>
+			<ExtendedTooltip name="ОрганизацияРасширеннаяПодсказка" id="9"/>
+		</InputField>
+		<InputField name="Ломбард" id="10">
+			<DataPath>Объект.Ломбард</DataPath>
+			<Visible>false</Visible>
+			<ReadOnly>true</ReadOnly>
+			<EditMode>EnterOnInput</EditMode>
+			<AutoMaxWidth>false</AutoMaxWidth>
+			<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+			<ContextMenu name="ЛомбардКонтекстноеМеню" id="11"/>
+			<ExtendedTooltip name="ЛомбардРасширеннаяПодсказка" id="12"/>
+		</InputField>
+		<InputField name="Инкассатор" id="157">
+			<DataPath>Объект.Инкассатор</DataPath>
+			<Visible>false</Visible>
+			<ReadOnly>true</ReadOnly>
+			<AutoMaxWidth>false</AutoMaxWidth>
+			<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+			<ContextMenu name="ИнкассаторКонтекстноеМеню" id="158"/>
+			<ExtendedTooltip name="ИнкассаторРасширеннаяПодсказка" id="159"/>
+		</InputField>
+		<InputField name="Получатель" id="160">
+			<DataPath>Объект.Получатель</DataPath>
+			<Visible>false</Visible>
+			<ReadOnly>true</ReadOnly>
+			<AutoMaxWidth>false</AutoMaxWidth>
+			<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+			<ContextMenu name="ПолучательКонтекстноеМеню" id="161"/>
+			<ExtendedTooltip name="ПолучательРасширеннаяПодсказка" id="162"/>
+		</InputField>
+		<InputField name="СкладПолучатель" id="166">
+			<DataPath>Объект.СкладПолучатель</DataPath>
+			<Visible>false</Visible>
+			<ReadOnly>true</ReadOnly>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Склад-получатель</v8:content>
+				</v8:item>
+			</Title>
+			<AutoMaxWidth>false</AutoMaxWidth>
+			<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+			<ContextMenu name="СкладПолучательКонтекстноеМеню" id="167"/>
+			<ExtendedTooltip name="СкладПолучательРасширеннаяПодсказка" id="168"/>
+		</InputField>
+		<Table name="ЗалоговыеБилеты" id="105">
+			<AutoInsertNewRow>true</AutoInsertNewRow>
+			<EnableStartDrag>true</EnableStartDrag>
+			<EnableDrag>true</EnableDrag>
+			<DataPath>Объект.ЗалоговыеБилеты</DataPath>
+			<RowFilter xsi:nil="true"/>
+			<ContextMenu name="ЗалоговыеБилетыКонтекстноеМеню" id="106"/>
+			<AutoCommandBar name="ЗалоговыеБилетыКоманднаяПанель" id="107">
+				<Autofill>false</Autofill>
+			</AutoCommandBar>
+			<ExtendedTooltip name="ЗалоговыеБилетыРасширеннаяПодсказка" id="108"/>
+			<SearchStringAddition name="ЗалоговыеБилетыСтрокаПоиска" id="109">
+				<AdditionSource>
+					<Item>ЗалоговыеБилеты</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ЗалоговыеБилетыСтрокаПоискаКонтекстноеМеню" id="110"/>
+				<ExtendedTooltip name="ЗалоговыеБилетыСтрокаПоискаРасширеннаяПодсказка" id="111"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="ЗалоговыеБилетыСостояниеПросмотра" id="112">
+				<AdditionSource>
+					<Item>ЗалоговыеБилеты</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ЗалоговыеБилетыСостояниеПросмотраКонтекстноеМеню" id="113"/>
+				<ExtendedTooltip name="ЗалоговыеБилетыСостояниеПросмотраРасширеннаяПодсказка" id="114"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="ЗалоговыеБилетыУправлениеПоиском" id="115">
+				<AdditionSource>
+					<Item>ЗалоговыеБилеты</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="ЗалоговыеБилетыУправлениеПоискомКонтекстноеМеню" id="116"/>
+				<ExtendedTooltip name="ЗалоговыеБилетыУправлениеПоискомРасширеннаяПодсказка" id="117"/>
+			</SearchControlAddition>
+			<ChildItems>
+				<InputField name="ЗалоговыеБилетыЛомбард" id="121">
+					<DataPath>Объект.ЗалоговыеБилеты.Ломбард</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+					<ContextMenu name="ЗалоговыеБилетыЛомбардКонтекстноеМеню" id="122"/>
+					<ExtendedTooltip name="ЗалоговыеБилетыЛомбардРасширеннаяПодсказка" id="123"/>
+				</InputField>
+				<InputField name="ЗалоговыеБилетыНакладнаяНаОтгрузку" id="124">
+					<DataPath>Объект.ЗалоговыеБилеты.НакладнаяНаОтгрузку.ПредставлениеНомераНакладной</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>№ накладной</v8:content>
+						</v8:item>
+					</Title>
+					<EditMode>EnterOnInput</EditMode>
+					<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+					<ContextMenu name="ЗалоговыеБилетыНакладнаяНаОтгрузкуКонтекстноеМеню" id="125"/>
+					<ExtendedTooltip name="ЗалоговыеБилетыНакладнаяНаОтгрузкуРасширеннаяПодсказка" id="126"/>
+				</InputField>
+				<InputField name="ЗалоговыеБилетыЗалоговыйБилет" id="127">
+					<DataPath>Объект.ЗалоговыеБилеты.ЗалоговыйБилет.НомерЗалоговогоБилета</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>№ залогового билета</v8:content>
+						</v8:item>
+					</Title>
+					<EditMode>EnterOnInput</EditMode>
+					<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+					<ContextMenu name="ЗалоговыеБилетыЗалоговыйБилетКонтекстноеМеню" id="128"/>
+					<ExtendedTooltip name="ЗалоговыеБилетыЗалоговыйБилетРасширеннаяПодсказка" id="129"/>
+				</InputField>
+				<InputField name="ЗалоговыеБилетыОбъектЗалога" id="130">
+					<DataPath>Объект.ЗалоговыеБилеты.ОбъектЗалога</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+					<ContextMenu name="ЗалоговыеБилетыОбъектЗалогаКонтекстноеМеню" id="131"/>
+					<ExtendedTooltip name="ЗалоговыеБилетыОбъектЗалогаРасширеннаяПодсказка" id="132"/>
+				</InputField>
+				<InputField name="ЗалоговыеБилетыКоличество" id="133">
+					<DataPath>Объект.ЗалоговыеБилеты.Количество</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Кол--во</v8:content>
+						</v8:item>
+					</Title>
+					<EditMode>EnterOnInput</EditMode>
+					<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+					<ContextMenu name="ЗалоговыеБилетыКоличествоКонтекстноеМеню" id="134"/>
+					<ExtendedTooltip name="ЗалоговыеБилетыКоличествоРасширеннаяПодсказка" id="135"/>
+				</InputField>
+				<InputField name="ЗалоговыеБилетыВес" id="136">
+					<DataPath>Объект.ЗалоговыеБилеты.Вес</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<Width>7</Width>
+					<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+					<ContextMenu name="ЗалоговыеБилетыВесКонтекстноеМеню" id="137"/>
+					<ExtendedTooltip name="ЗалоговыеБилетыВесРасширеннаяПодсказка" id="138"/>
+				</InputField>
+				<InputField name="ЗалоговыеБилетыСуммаОценки" id="139">
+					<DataPath>Объект.ЗалоговыеБилеты.СуммаОценки</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+					<ContextMenu name="ЗалоговыеБилетыСуммаОценкиКонтекстноеМеню" id="140"/>
+					<ExtendedTooltip name="ЗалоговыеБилетыСуммаОценкиРасширеннаяПодсказка" id="141"/>
+				</InputField>
+				<CheckBoxField name="ЗалоговыеБилетыЗаблокировать" id="145">
+					<DataPath>Объект.ЗалоговыеБилеты.Заблокировать</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ЗалоговыеБилетыЗаблокироватьКонтекстноеМеню" id="146"/>
+					<ExtendedTooltip name="ЗалоговыеБилетыЗаблокироватьРасширеннаяПодсказка" id="147"/>
+				</CheckBoxField>
+				<InputField name="ЗалоговыеБилетыДатаБлокировки" id="151">
+					<DataPath>Объект.ЗалоговыеБилеты.ДатаБлокировки</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Дата окончания .блок.</v8:content>
+						</v8:item>
+					</Title>
+					<EditMode>EnterOnInput</EditMode>
+					<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+					<ContextMenu name="ЗалоговыеБилетыДатаБлокировкиКонтекстноеМеню" id="152"/>
+					<ExtendedTooltip name="ЗалоговыеБилетыДатаБлокировкиРасширеннаяПодсказка" id="153"/>
+				</InputField>
+				<CheckBoxField name="ЗалоговыеБилетыОтменитьБлокировку" id="163">
+					<DataPath>Объект.ЗалоговыеБилеты.ОтменитьБлокировку</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ЗалоговыеБилетыОтменитьБлокировкуКонтекстноеМеню" id="164"/>
+					<ExtendedTooltip name="ЗалоговыеБилетыОтменитьБлокировкуРасширеннаяПодсказка" id="165"/>
+				</CheckBoxField>
+				<InputField name="ЗалоговыеБилетыОснованиеБлокировки" id="154">
+					<DataPath>Объект.ЗалоговыеБилеты.ОснованиеБлокировки</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Основание блокировки</v8:content>
+						</v8:item>
+					</Title>
+					<EditMode>EnterOnInput</EditMode>
+					<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+					<ContextMenu name="ЗалоговыеБилетыОснованиеБлокировкиКонтекстноеМеню" id="155"/>
+					<ExtendedTooltip name="ЗалоговыеБилетыОснованиеБлокировкиРасширеннаяПодсказка" id="156"/>
+				</InputField>
+				<InputField name="ЗалоговыеБилетыДатаОплаты" id="169">
+					<DataPath>Объект.ЗалоговыеБилеты.ДатаОплаты</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+					<ContextMenu name="ЗалоговыеБилетыДатаОплатыКонтекстноеМеню" id="170"/>
+					<ExtendedTooltip name="ЗалоговыеБилетыДатаОплатыРасширеннаяПодсказка" id="171"/>
+				</InputField>
+				<InputField name="ЗалоговыеБилетыОснованиеОплаты" id="172">
+					<DataPath>Объект.ЗалоговыеБилеты.ОснованиеОплаты</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+					<ContextMenu name="ЗалоговыеБилетыОснованиеОплатыКонтекстноеМеню" id="173"/>
+					<ExtendedTooltip name="ЗалоговыеБилетыОснованиеОплатыРасширеннаяПодсказка" id="174"/>
+				</InputField>
+			</ChildItems>
+		</Table>
+		<UsualGroup name="ГруппаПодвал" id="56">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа подвал</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа подвал</v8:content>
+				</v8:item>
+			</ToolTip>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаПодвалРасширеннаяПодсказка" id="57"/>
+			<ChildItems>
+				<InputField name="Ответственный" id="99">
+					<DataPath>Объект.Ответственный</DataPath>
+					<ReadOnly>true</ReadOnly>
+					<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+					<ContextMenu name="ОтветственныйКонтекстноеМеню" id="100"/>
+					<ExtendedTooltip name="ОтветственныйРасширеннаяПодсказка" id="101"/>
+				</InputField>
+				<InputField name="Комментарий" id="16">
+					<DataPath>Объект.Комментарий</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+					<ContextMenu name="КомментарийКонтекстноеМеню" id="17"/>
+					<ExtendedTooltip name="КомментарийРасширеннаяПодсказка" id="18"/>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:DocumentObject.ЛБ_КорректировкаНакладной</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+			<UseAlways>
+				<Field>Объект.RegisterRecords</Field>
+			</UseAlways>
+		</Attribute>
+	</Attributes>
+</Form>

@@ -1,0 +1,287 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.20">
+	<AutoTime>CurrentOrLast</AutoTime>
+	<UsePostingMode>Auto</UsePostingMode>
+	<RepostOnWrite>true</RepostOnWrite>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="OnReadAtServer">ПриЧтенииНаСервере</Event>
+		<Event name="OnOpen">ПриОткрытии</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="ГруппаВажныеКоманды" id="34">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Важные команды</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Важные команды</v8:content>
+				</v8:item>
+			</ToolTip>
+			<ExtendedTooltip name="ГруппаВажныеКомандыРасширеннаяПодсказка" id="35"/>
+			<ChildItems>
+				<Button name="ФормаОбщаКомандаПоказатьДвиженияДокумента" id="36">
+					<Type>UsualButton</Type>
+					<CommandName>CommonCommand.ПоказатьДвиженияДокумента</CommandName>
+					<ExtendedTooltip name="ФормаОбщаКомандаПоказатьДвиженияДокументаРасширеннаяПодсказка" id="37"/>
+				</Button>
+				<UsualGroup name="ПодменюПечать" id="38">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Печать</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="ПодменюПечатьРасширеннаяПодсказка" id="39"/>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаНомер" id="29">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа номер</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа номер</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаНомерРасширеннаяПодсказка" id="30"/>
+			<ChildItems>
+				<PictureField name="СостояниеДокумента" id="31">
+					<DataPath>СостояниеДокумента</DataPath>
+					<TitleLocation>None</TitleLocation>
+					<Width>2</Width>
+					<Height>1</Height>
+					<HorizontalStretch>false</HorizontalStretch>
+					<VerticalStretch>false</VerticalStretch>
+					<Border width="1">
+						<v8ui:style xsi:type="v8ui:ControlBorderType">WithoutBorder</v8ui:style>
+					</Border>
+					<FileDragMode>AsFile</FileDragMode>
+					<ContextMenu name="СостояниеДокументаКонтекстноеМеню" id="32">
+						<Autofill>false</Autofill>
+					</ContextMenu>
+					<ExtendedTooltip name="СостояниеДокументаРасширеннаяПодсказка" id="33"/>
+				</PictureField>
+				<LabelDecoration name="Декорация1" id="40">
+					<Width>1</Width>
+					<ContextMenu name="Декорация1КонтекстноеМеню" id="41"/>
+					<ExtendedTooltip name="Декорация1РасширеннаяПодсказка" id="42"/>
+				</LabelDecoration>
+				<InputField name="Номер" id="1">
+					<DataPath>Объект.Number</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>№</v8:content>
+						</v8:item>
+					</Title>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="НомерКонтекстноеМеню" id="2"/>
+					<ExtendedTooltip name="НомерРасширеннаяПодсказка" id="3"/>
+				</InputField>
+				<InputField name="Дата" id="4">
+					<DataPath>Объект.Date</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>от</v8:content>
+						</v8:item>
+					</Title>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ДатаКонтекстноеМеню" id="5"/>
+					<ExtendedTooltip name="ДатаРасширеннаяПодсказка" id="6"/>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+		<InputField name="Отделение" id="7">
+			<DataPath>Объект.Отделение</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<AutoMaxWidth>false</AutoMaxWidth>
+			<CreateButton>false</CreateButton>
+			<QuickChoice>true</QuickChoice>
+			<ContextMenu name="ОтделениеКонтекстноеМеню" id="8"/>
+			<ExtendedTooltip name="ОтделениеРасширеннаяПодсказка" id="9"/>
+			<Events>
+				<Event name="OnChange">ОтделениеПриИзменении</Event>
+			</Events>
+		</InputField>
+		<Table name="Ломбарды" id="10">
+			<Representation>List</Representation>
+			<AutoInsertNewRow>true</AutoInsertNewRow>
+			<EnableStartDrag>true</EnableStartDrag>
+			<EnableDrag>true</EnableDrag>
+			<DataPath>Объект.Ломбарды</DataPath>
+			<RowFilter xsi:nil="true"/>
+			<ContextMenu name="ЛомбардыКонтекстноеМеню" id="11"/>
+			<AutoCommandBar name="ЛомбардыКоманднаяПанель" id="12">
+				<ChildItems>
+					<Button name="ЛомбардыЗаполнитьПоОтделению" id="45">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Command.ЗаполнитьПоОтделению</CommandName>
+						<ExtendedTooltip name="ЛомбардыЗаполнитьПоОтделениюРасширеннаяПодсказка" id="46"/>
+					</Button>
+					<Button name="ВыбратьЛомбарды" id="43">
+						<Type>CommandBarButton</Type>
+						<Representation>PictureAndText</Representation>
+						<CommandName>Form.Command.ВыбратьЛомбарды</CommandName>
+						<ExtendedTooltip name="ВыбратьЛомбардыРасширеннаяПодсказка" id="44"/>
+					</Button>
+				</ChildItems>
+			</AutoCommandBar>
+			<ExtendedTooltip name="ЛомбардыРасширеннаяПодсказка" id="13"/>
+			<SearchStringAddition name="ЛомбардыСтрокаПоиска" id="14">
+				<AdditionSource>
+					<Item>Ломбарды</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ЛомбардыСтрокаПоискаКонтекстноеМеню" id="15"/>
+				<ExtendedTooltip name="ЛомбардыСтрокаПоискаРасширеннаяПодсказка" id="16"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="ЛомбардыСостояниеПросмотра" id="17">
+				<AdditionSource>
+					<Item>Ломбарды</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ЛомбардыСостояниеПросмотраКонтекстноеМеню" id="18"/>
+				<ExtendedTooltip name="ЛомбардыСостояниеПросмотраРасширеннаяПодсказка" id="19"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="ЛомбардыУправлениеПоиском" id="20">
+				<AdditionSource>
+					<Item>Ломбарды</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="ЛомбардыУправлениеПоискомКонтекстноеМеню" id="21"/>
+				<ExtendedTooltip name="ЛомбардыУправлениеПоискомРасширеннаяПодсказка" id="22"/>
+			</SearchControlAddition>
+			<ChildItems>
+				<LabelField name="ЛомбардыНомерСтроки" id="23">
+					<DataPath>Объект.Ломбарды.LineNumber</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ЛомбардыНомерСтрокиКонтекстноеМеню" id="24"/>
+					<ExtendedTooltip name="ЛомбардыНомерСтрокиРасширеннаяПодсказка" id="25"/>
+				</LabelField>
+				<InputField name="ЛомбардыЛомбард" id="26">
+					<DataPath>Объект.Ломбарды.Ломбард</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ЛомбардыЛомбардКонтекстноеМеню" id="27"/>
+					<ExtendedTooltip name="ЛомбардыЛомбардРасширеннаяПодсказка" id="28"/>
+				</InputField>
+				<CheckBoxField name="ЛомбардыЦентральныйЛомбард" id="47">
+					<DataPath>Объект.Ломбарды.ЦентральныйЛомбард</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Центральный</v8:content>
+						</v8:item>
+					</Title>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ЛомбардыЦентральныйЛомбардКонтекстноеМеню" id="48"/>
+					<ExtendedTooltip name="ЛомбардыЦентральныйЛомбардРасширеннаяПодсказка" id="49"/>
+					<Events>
+						<Event name="OnChange">ЛомбардыЦентральныйЛомбардПриИзменении</Event>
+					</Events>
+				</CheckBoxField>
+			</ChildItems>
+		</Table>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:DocumentObject.ЛБ_УстановитьЛомбардыВОтделение</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+			<UseAlways>
+				<Field>Объект.RegisterRecords</Field>
+			</UseAlways>
+		</Attribute>
+		<Attribute name="СостояниеДокумента" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Состояние документа</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>10</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="СписокЛомбардов" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Список ломбардов</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="ВыбратьЛомбарды" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выбрать ломбарды</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выбрать ломбарды</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ВыбратьЛомбарды</Action>
+		</Command>
+		<Command name="ЗаполнитьПоОтделению" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заполнить по отделению</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заполнить по отделению</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ЗаполнитьПоОтделению</Action>
+		</Command>
+	</Commands>
+	<CommandInterface>
+		<CommandBar>
+			<Item>
+				<Command>CommonCommand.ПоказатьДвиженияДокумента</Command>
+				<Type>Auto</Type>
+				<CommandGroup>FormCommandBarImportant</CommandGroup>
+				<DefaultVisible>false</DefaultVisible>
+				<Visible>
+					<xr:Common>false</xr:Common>
+				</Visible>
+			</Item>
+		</CommandBar>
+	</CommandInterface>
+</Form>

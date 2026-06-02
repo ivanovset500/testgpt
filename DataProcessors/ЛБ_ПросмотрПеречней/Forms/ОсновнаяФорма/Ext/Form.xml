@@ -1,0 +1,235 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.20">
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<Autofill>false</Autofill>
+	</AutoCommandBar>
+	<ChildItems>
+		<Table name="Перечень" id="4">
+			<UseAlternationRowColor>true</UseAlternationRowColor>
+			<EnableStartDrag>true</EnableStartDrag>
+			<DataPath>Перечень</DataPath>
+			<RowPictureDataPath>Перечень.DefaultPicture</RowPictureDataPath>
+			<CommandSet>
+				<ExcludedCommand>CopyToClipboard</ExcludedCommand>
+				<ExcludedCommand>Refresh</ExcludedCommand>
+				<ExcludedCommand>ShowMultipleSelection</ExcludedCommand>
+			</CommandSet>
+			<AutoRefresh>false</AutoRefresh>
+			<AutoRefreshPeriod>60</AutoRefreshPeriod>
+			<Period>
+				<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+				<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+				<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+			</Period>
+			<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+			<RestoreCurrentRow>false</RestoreCurrentRow>
+			<TopLevelParent xsi:nil="true"/>
+			<ShowRoot>true</ShowRoot>
+			<AllowRootChoice>false</AllowRootChoice>
+			<UpdateOnDataChange>Auto</UpdateOnDataChange>
+			<AllowGettingCurrentRowURL>true</AllowGettingCurrentRowURL>
+			<ContextMenu name="ПереченьКонтекстноеМеню" id="5"/>
+			<AutoCommandBar name="ПереченьКоманднаяПанель" id="6"/>
+			<ExtendedTooltip name="ПереченьРасширеннаяПодсказка" id="7"/>
+			<SearchStringAddition name="ПереченьСтрокаПоиска" id="8">
+				<AdditionSource>
+					<Item>Перечень</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ПереченьСтрокаПоискаКонтекстноеМеню" id="9"/>
+				<ExtendedTooltip name="ПереченьСтрокаПоискаРасширеннаяПодсказка" id="10"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="ПереченьСостояниеПросмотра" id="11">
+				<AdditionSource>
+					<Item>Перечень</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ПереченьСостояниеПросмотраКонтекстноеМеню" id="12"/>
+				<ExtendedTooltip name="ПереченьСостояниеПросмотраРасширеннаяПодсказка" id="13"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="ПереченьУправлениеПоиском" id="14">
+				<AdditionSource>
+					<Item>Перечень</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="ПереченьУправлениеПоискомКонтекстноеМеню" id="15"/>
+				<ExtendedTooltip name="ПереченьУправлениеПоискомРасширеннаяПодсказка" id="16"/>
+			</SearchControlAddition>
+			<Events>
+				<Event name="Selection">ПереченьВыбор</Event>
+			</Events>
+			<ChildItems>
+				<LabelField name="ПереченьПериод" id="41">
+					<DataPath>Перечень.Период</DataPath>
+					<ContextMenu name="ПереченьПериодКонтекстноеМеню" id="42"/>
+					<ExtendedTooltip name="ПереченьПериодРасширеннаяПодсказка" id="43"/>
+				</LabelField>
+				<LabelField name="ПереченьВидПеречня" id="17">
+					<DataPath>Перечень.ВидПеречня</DataPath>
+					<ContextMenu name="ПереченьВидПеречняКонтекстноеМеню" id="18"/>
+					<ExtendedTooltip name="ПереченьВидПеречняРасширеннаяПодсказка" id="19"/>
+				</LabelField>
+				<LabelField name="ПереченьДатаПеречня" id="26">
+					<DataPath>Перечень.ДатаПеречня</DataPath>
+					<ContextMenu name="ПереченьДатаПеречняКонтекстноеМеню" id="27"/>
+					<ExtendedTooltip name="ПереченьДатаПеречняРасширеннаяПодсказка" id="28"/>
+				</LabelField>
+				<LabelField name="ПереченьИД" id="32">
+					<DataPath>Перечень.ИД</DataPath>
+					<Width>15</Width>
+					<ContextMenu name="ПереченьИДКонтекстноеМеню" id="33"/>
+					<ExtendedTooltip name="ПереченьИДРасширеннаяПодсказка" id="34"/>
+				</LabelField>
+				<LabelField name="ПереченьВидРешения" id="47">
+					<DataPath>~Перечень.ВидРешения</DataPath>
+					<Visible>false</Visible>
+					<ContextMenu name="ПереченьВидРешенияКонтекстноеМеню" id="48"/>
+					<ExtendedTooltip name="ПереченьВидРешенияРасширеннаяПодсказка" id="49"/>
+				</LabelField>
+				<LabelField name="ПереченьНаименование" id="38">
+					<DataPath>Перечень.Наименование</DataPath>
+					<ContextMenu name="ПереченьНаименованиеКонтекстноеМеню" id="39"/>
+					<ExtendedTooltip name="ПереченьНаименованиеРасширеннаяПодсказка" id="40"/>
+				</LabelField>
+				<LabelField name="ПереченьНаименованиеЛат" id="65">
+					<DataPath>Перечень.НаименованиеЛат</DataPath>
+					<ContextMenu name="ПереченьНаименованиеЛатКонтекстноеМеню" id="66"/>
+					<ExtendedTooltip name="ПереченьНаименованиеЛатРасширеннаяПодсказка" id="67"/>
+				</LabelField>
+				<LabelField name="ПереченьДрНаименование" id="68">
+					<DataPath>Перечень.ДрНаименование</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Другое наименование</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="ПереченьДрНаименованиеКонтекстноеМеню" id="69"/>
+					<ExtendedTooltip name="ПереченьДрНаименованиеРасширеннаяПодсказка" id="70"/>
+				</LabelField>
+				<LabelField name="ПереченьДатаРождения" id="29">
+					<DataPath>Перечень.ДатаРождения</DataPath>
+					<ContextMenu name="ПереченьДатаРожденияКонтекстноеМеню" id="30"/>
+					<ExtendedTooltip name="ПереченьДатаРожденияРасширеннаяПодсказка" id="31"/>
+				</LabelField>
+				<LabelField name="ПереченьГодРождения" id="20">
+					<DataPath>Перечень.ГодРождения</DataPath>
+					<ContextMenu name="ПереченьГодРожденияКонтекстноеМеню" id="21"/>
+					<ExtendedTooltip name="ПереченьГодРожденияРасширеннаяПодсказка" id="22"/>
+				</LabelField>
+				<LabelField name="ПереченьМестоРождения" id="35">
+					<DataPath>Перечень.МестоРождения</DataPath>
+					<ContextMenu name="ПереченьМестоРожденияКонтекстноеМеню" id="36"/>
+					<ExtendedTooltip name="ПереченьМестоРожденияРасширеннаяПодсказка" id="37"/>
+				</LabelField>
+				<LabelField name="ПереченьДатаВключенияВПеречень" id="23">
+					<DataPath>Перечень.ДатаВключенияВПеречень</DataPath>
+					<ContextMenu name="ПереченьДатаВключенияВПереченьКонтекстноеМеню" id="24"/>
+					<ExtendedTooltip name="ПереченьДатаВключенияВПереченьРасширеннаяПодсказка" id="25"/>
+				</LabelField>
+				<LabelField name="ПереченьСтатус" id="44">
+					<DataPath>Перечень.Статус</DataPath>
+					<ContextMenu name="ПереченьСтатусКонтекстноеМеню" id="45"/>
+					<ExtendedTooltip name="ПереченьСтатусРасширеннаяПодсказка" id="46"/>
+				</LabelField>
+				<LabelField name="ПереченьДатаРешения" id="59">
+					<DataPath>Перечень.ДатаРешения</DataPath>
+					<ContextMenu name="ПереченьДатаРешенияКонтекстноеМеню" id="60"/>
+					<ExtendedTooltip name="ПереченьДатаРешенияРасширеннаяПодсказка" id="61"/>
+				</LabelField>
+				<LabelField name="ПереченьНомерРешения" id="62">
+					<DataPath>Перечень.НомерРешения</DataPath>
+					<ContextMenu name="ПереченьНомерРешенияКонтекстноеМеню" id="63"/>
+					<ExtendedTooltip name="ПереченьНомерРешенияРасширеннаяПодсказка" id="64"/>
+				</LabelField>
+				<LabelField name="ПереченьПримечание" id="56">
+					<DataPath>Перечень.Примечание</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Доп. информация</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="ПереченьПримечаниеКонтекстноеМеню" id="57"/>
+					<ExtendedTooltip name="ПереченьПримечаниеРасширеннаяПодсказка" id="58"/>
+				</LabelField>
+			</ChildItems>
+		</Table>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:DataProcessorObject.ЛБ_ПросмотрПеречней</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+		</Attribute>
+		<Attribute name="Перечень" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Перечень</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:DynamicList</v8:Type>
+			</Type>
+			<Settings xsi:type="DynamicList">
+				<ManualQuery>true</ManualQuery>
+				<DynamicDataRead>false</DynamicDataRead>
+				<QueryText>ВЫБРАТЬ
+	ЛБ_ПереченьНежелательныхЛиц.Период КАК Период,
+	ЛБ_ПереченьНежелательныхЛиц.ВидПеречня КАК ВидПеречня,
+	ЛБ_ПереченьНежелательныхЛиц.ДатаПеречня КАК ДатаПеречня,
+	ЛБ_ПереченьНежелательныхЛиц.ИД КАК ИД,
+	ЛБ_ПереченьНежелательныхЛиц.Статус КАК Статус,
+	ЛБ_ПереченьНежелательныхЛиц.ДатаВключенияВПеречень КАК ДатаВключенияВПеречень,
+	ЛБ_ПереченьНежелательныхЛиц.Наименование КАК Наименование,
+	ЛБ_ПереченьНежелательныхЛиц.НаименованиеЛат КАК НаименованиеЛат,
+	ЛБ_ПереченьНежелательныхЛицДрНаименования.Наименование КАК ДрНаименование,
+	ЛБ_ПереченьНежелательныхЛиц.ДатаРождения КАК ДатаРождения,
+	ЛБ_ПереченьНежелательныхЛиц.ГодРождения КАК ГодРождения,
+	ЛБ_ПереченьНежелательныхЛиц.МестоРождения КАК МестоРождения,
+	ЛБ_ПереченьНежелательныхЛиц.Примечание КАК Примечание,
+	ЛБ_ПереченьНежелательныхЛиц.ДатаРешения КАК ДатаРешения,
+	ЛБ_ПереченьНежелательныхЛиц.НомерРешения КАК НомерРешения
+ИЗ
+	РегистрСведений.ЛБ_ПереченьНежелательныхЛиц КАК ЛБ_ПереченьНежелательныхЛиц
+		ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.ЛБ_ПереченьНежелательныхЛицДрНаименования КАК ЛБ_ПереченьНежелательныхЛицДрНаименования
+		ПО ЛБ_ПереченьНежелательныхЛиц.ИД = ЛБ_ПереченьНежелательныхЛицДрНаименования.ИД
+
+СГРУППИРОВАТЬ ПО
+	ЛБ_ПереченьНежелательныхЛиц.Наименование,
+	ЛБ_ПереченьНежелательныхЛиц.Период,
+	ЛБ_ПереченьНежелательныхЛиц.ВидПеречня,
+	ЛБ_ПереченьНежелательныхЛиц.ДатаПеречня,
+	ЛБ_ПереченьНежелательныхЛиц.ИД,
+	ЛБ_ПереченьНежелательныхЛиц.Статус,
+	ЛБ_ПереченьНежелательныхЛиц.ДатаВключенияВПеречень,
+	ЛБ_ПереченьНежелательныхЛиц.НаименованиеЛат,
+	ЛБ_ПереченьНежелательныхЛицДрНаименования.Наименование,
+	ЛБ_ПереченьНежелательныхЛиц.ДатаРождения,
+	ЛБ_ПереченьНежелательныхЛиц.ГодРождения,
+	ЛБ_ПереченьНежелательныхЛиц.МестоРождения,
+	ЛБ_ПереченьНежелательныхЛиц.Примечание,
+	ЛБ_ПереченьНежелательныхЛиц.ДатаРешения,
+	ЛБ_ПереченьНежелательныхЛиц.НомерРешения</QueryText>
+				<ListSettings>
+					<dcsset:filter>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>dfcece9d-5077-440b-b6b3-45a5cb4538eb</dcsset:userSettingID>
+					</dcsset:filter>
+					<dcsset:order>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>88619765-ccb3-46c6-ac52-38e9c992ebd4</dcsset:userSettingID>
+					</dcsset:order>
+					<dcsset:conditionalAppearance>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>b75fecce-942b-4aed-abc9-e6a02e460fb3</dcsset:userSettingID>
+					</dcsset:conditionalAppearance>
+					<dcsset:itemsViewMode>Normal</dcsset:itemsViewMode>
+					<dcsset:itemsUserSettingID>911b6018-f537-43e8-a417-da56b22f9aec</dcsset:itemsUserSettingID>
+				</ListSettings>
+			</Settings>
+		</Attribute>
+	</Attributes>
+</Form>

@@ -1,0 +1,1356 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.20">
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<UseForFoldersAndItems>Items</UseForFoldersAndItems>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="BeforeClose">ПередЗакрытием</Event>
+		<Event name="BeforeWrite">ПередЗаписью</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+		<Event name="BeforeWriteAtServer">ПередЗаписьюНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="ГруппаШапка" id="301">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа шапка</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа шапка</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>AlwaysHorizontal</Group>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаШапкаРасширеннаяПодсказка" id="302"/>
+			<ChildItems>
+				<InputField name="ДатаСоздания" id="294">
+					<DataPath>Объект.ДатаСоздания</DataPath>
+					<ReadOnly>true</ReadOnly>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Дата создания</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+					<ContextMenu name="ДатаСозданияКонтекстноеМеню" id="295"/>
+					<ExtendedTooltip name="ДатаСозданияРасширеннаяПодсказка" id="296"/>
+				</InputField>
+				<InputField name="Код" id="1">
+					<DataPath>Объект.Code</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="КодКонтекстноеМеню" id="2"/>
+					<ExtendedTooltip name="КодРасширеннаяПодсказка" id="3"/>
+				</InputField>
+				<InputField name="Родитель" id="275">
+					<DataPath>Объект.Parent</DataPath>
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<ContextMenu name="РодительКонтекстноеМеню" id="276"/>
+					<ExtendedTooltip name="РодительРасширеннаяПодсказка" id="277"/>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаНаименование" id="297">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа наименование</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа наименование</v8:content>
+				</v8:item>
+			</ToolTip>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаНаименованиеРасширеннаяПодсказка" id="298"/>
+			<ChildItems>
+				<UsualGroup name="ГруппаНаименованиеОсн" id="105">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа наименование осн</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа наименование осн</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>Vertical</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаНаименованиеОснРасширеннаяПодсказка" id="106"/>
+					<ChildItems>
+						<InputField name="Наименование" id="4">
+							<DataPath>Объект.Description</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<ContextMenu name="НаименованиеКонтекстноеМеню" id="5"/>
+							<ExtendedTooltip name="НаименованиеРасширеннаяПодсказка" id="6"/>
+						</InputField>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="ГруппаНаименованиеДоп" id="292">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа наименование доп</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа наименование доп</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>Vertical</Group>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаНаименованиеДопРасширеннаяПодсказка" id="293"/>
+					<ChildItems>
+						<InputField name="НаименованиеКраткое" id="119">
+							<DataPath>Объект.НаименованиеКраткое</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Кратко</v8:content>
+								</v8:item>
+							</Title>
+							<Width>15</Width>
+							<AutoMarkIncomplete>true</AutoMarkIncomplete>
+							<ContextMenu name="НаименованиеКраткоеКонтекстноеМеню" id="120"/>
+							<ExtendedTooltip name="НаименованиеКраткоеРасширеннаяПодсказка" id="121"/>
+						</InputField>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+		<InputField name="НаименованиеДляПечати" id="278">
+			<DataPath>Объект.НаименованиеДляПечати</DataPath>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>      Для печати</v8:content>
+				</v8:item>
+			</Title>
+			<AutoMaxWidth>false</AutoMaxWidth>
+			<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+			<ContextMenu name="НаименованиеДляПечатиКонтекстноеМеню" id="279"/>
+			<ExtendedTooltip name="НаименованиеДляПечатиРасширеннаяПодсказка" id="280"/>
+		</InputField>
+		<UsualGroup name="ГруппаГалочки" id="133">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа галочки</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа галочки</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаГалочкиРасширеннаяПодсказка" id="134"/>
+			<ChildItems>
+				<CheckBoxField name="БезПродленияДоговора" id="135">
+					<DataPath>Объект.БезПродленияДоговора</DataPath>
+					<TitleLocation>Right</TitleLocation>
+					<CheckBoxType>Switcher</CheckBoxType>
+					<ContextMenu name="БезПродленияДоговораКонтекстноеМеню" id="136"/>
+					<ExtendedTooltip name="БезПродленияДоговораРасширеннаяПодсказка" id="137"/>
+					<Events>
+						<Event name="OnChange">БезПродленияДоговораПриИзменении</Event>
+					</Events>
+				</CheckBoxField>
+				<CheckBoxField name="ПризнакПримененияГибкогоПроцента" id="141">
+					<DataPath>Объект.ПризнакПримененияГибкогоПроцента</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Применяется гибкий процент</v8:content>
+						</v8:item>
+					</Title>
+					<TitleLocation>Right</TitleLocation>
+					<CheckBoxType>Switcher</CheckBoxType>
+					<ContextMenu name="ПризнакПримененияГибкогоПроцентаКонтекстноеМеню" id="142"/>
+					<ExtendedTooltip name="ПризнакПримененияГибкогоПроцентаРасширеннаяПодсказка" id="143"/>
+					<Events>
+						<Event name="OnChange">ПризнакПримененияГибкогоПроцентаПриИзменении</Event>
+					</Events>
+				</CheckBoxField>
+				<CheckBoxField name="ОтказОтВыкупа" id="244">
+					<DataPath>Объект.ОтказОтВыкупа</DataPath>
+					<TitleLocation>Right</TitleLocation>
+					<CheckBoxType>Switcher</CheckBoxType>
+					<ContextMenu name="ОтказОтВыкупаКонтекстноеМеню" id="245"/>
+					<ExtendedTooltip name="ОтказОтВыкупаРасширеннаяПодсказка" id="246"/>
+				</CheckBoxField>
+				<CheckBoxField name="НеПрименятьАкции" id="138">
+					<DataPath>Объект.НеПрименятьАкции</DataPath>
+					<TitleLocation>Right</TitleLocation>
+					<CheckBoxType>Switcher</CheckBoxType>
+					<ContextMenu name="НеПрименятьАкцииКонтекстноеМеню" id="139"/>
+					<ExtendedTooltip name="НеПрименятьАкцииРасширеннаяПодсказка" id="140"/>
+				</CheckBoxField>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаПричинаПрименения" id="144">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа причина применения</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа причина применения</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Vertical</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаПричинаПримененияРасширеннаяПодсказка" id="145"/>
+			<ChildItems>
+				<Table name="ПричиныПримененияПроцентнойСхемы" id="148">
+					<HeightControlVariant>UseContentHeight</HeightControlVariant>
+					<EnableStartDrag>true</EnableStartDrag>
+					<EnableDrag>true</EnableDrag>
+					<DataPath>Объект.ПричиныПримененияПроцентнойСхемы</DataPath>
+					<RowFilter xsi:nil="true"/>
+					<ContextMenu name="ПричиныПримененияПроцентнойСхемыКонтекстноеМеню" id="149"/>
+					<AutoCommandBar name="ПричиныПримененияПроцентнойСхемыКоманднаяПанель" id="150">
+						<Autofill>false</Autofill>
+						<ChildItems>
+							<Button name="ПричиныПримененияПроцентнойСхемыДобавить" id="326">
+								<Type>CommandBarButton</Type>
+								<CommandName>Form.Item.ПричиныПримененияПроцентнойСхемы.StandardCommand.Add</CommandName>
+								<ExtendedTooltip name="ПричиныПримененияПроцентнойСхемыДобавитьРасширеннаяПодсказка" id="327"/>
+							</Button>
+						</ChildItems>
+					</AutoCommandBar>
+					<ExtendedTooltip name="ПричиныПримененияПроцентнойСхемыРасширеннаяПодсказка" id="151"/>
+					<SearchStringAddition name="ПричиныПримененияПроцентнойСхемыСтрокаПоиска" id="152">
+						<AdditionSource>
+							<Item>ПричиныПримененияПроцентнойСхемы</Item>
+							<Type>SearchStringRepresentation</Type>
+						</AdditionSource>
+						<ContextMenu name="ПричиныПримененияПроцентнойСхемыСтрокаПоискаКонтекстноеМеню" id="153"/>
+						<ExtendedTooltip name="ПричиныПримененияПроцентнойСхемыСтрокаПоискаРасширеннаяПодсказка" id="154"/>
+					</SearchStringAddition>
+					<ViewStatusAddition name="ПричиныПримененияПроцентнойСхемыСостояниеПросмотра" id="155">
+						<AdditionSource>
+							<Item>ПричиныПримененияПроцентнойСхемы</Item>
+							<Type>ViewStatusRepresentation</Type>
+						</AdditionSource>
+						<ContextMenu name="ПричиныПримененияПроцентнойСхемыСостояниеПросмотраКонтекстноеМеню" id="156"/>
+						<ExtendedTooltip name="ПричиныПримененияПроцентнойСхемыСостояниеПросмотраРасширеннаяПодсказка" id="157"/>
+					</ViewStatusAddition>
+					<SearchControlAddition name="ПричиныПримененияПроцентнойСхемыУправлениеПоиском" id="158">
+						<AdditionSource>
+							<Item>ПричиныПримененияПроцентнойСхемы</Item>
+							<Type>SearchControl</Type>
+						</AdditionSource>
+						<ContextMenu name="ПричиныПримененияПроцентнойСхемыУправлениеПоискомКонтекстноеМеню" id="159"/>
+						<ExtendedTooltip name="ПричиныПримененияПроцентнойСхемыУправлениеПоискомРасширеннаяПодсказка" id="160"/>
+					</SearchControlAddition>
+					<ChildItems>
+						<InputField name="ПричиныПримененияПроцентнойСхемыПричинаПрименения" id="164">
+							<DataPath>Объект.ПричиныПримененияПроцентнойСхемы.ПричинаПрименения</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Причина применения процентной схемы</v8:content>
+								</v8:item>
+							</Title>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ПричиныПримененияПроцентнойСхемыПричинаПримененияКонтекстноеМеню" id="165"/>
+							<ExtendedTooltip name="ПричиныПримененияПроцентнойСхемыПричинаПримененияРасширеннаяПодсказка" id="166"/>
+							<Events>
+								<Event name="ChoiceProcessing">ПричиныПримененияПроцентнойСхемыПричинаПримененияОбработкаВыбора</Event>
+							</Events>
+						</InputField>
+						<InputField name="ПричиныПримененияПроцентнойСхемыСтатусЗалоговогоБилета" id="241">
+							<DataPath>Объект.ПричиныПримененияПроцентнойСхемы.СтатусЗалоговогоБилета</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Устанавливать по статусу залогового билета</v8:content>
+								</v8:item>
+							</Title>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ПричиныПримененияПроцентнойСхемыСтатусЗалоговогоБилетаКонтекстноеМеню" id="242"/>
+							<ExtendedTooltip name="ПричиныПримененияПроцентнойСхемыСтатусЗалоговогоБилетаРасширеннаяПодсказка" id="243"/>
+							<Events>
+								<Event name="StartChoice">ПричиныПримененияПроцентнойСхемыСтатусЗалоговогоБилетаНачалоВыбора</Event>
+							</Events>
+						</InputField>
+					</ChildItems>
+				</Table>
+			</ChildItems>
+		</UsualGroup>
+		<CommandBar name="КоманднаяПанельДокумент" id="303">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Командная панель документ</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Командная панель документ</v8:content>
+				</v8:item>
+			</ToolTip>
+			<ExtendedTooltip name="КоманднаяПанельДокументРасширеннаяПодсказка" id="304"/>
+			<ChildItems>
+				<Button name="Добавить" id="305">
+					<Type>CommandBarButton</Type>
+					<Representation>PictureAndText</Representation>
+					<CommandName>Form.Command.ДобавитьУсловие</CommandName>
+					<BackColor>style:ActivityColor</BackColor>
+					<Picture>
+						<xr:Ref>CommonPicture.ЛБ_ЗначокПлюс</xr:Ref>
+						<xr:LoadTransparent>true</xr:LoadTransparent>
+					</Picture>
+					<ExtendedTooltip name="ДобавитьРасширеннаяПодсказка" id="306"/>
+				</Button>
+				<Button name="ДобавитьКопированием" id="307">
+					<Type>CommandBarButton</Type>
+					<Representation>PictureAndText</Representation>
+					<CommandName>Form.Command.СкопироватьУсловие</CommandName>
+					<Picture>
+						<xr:Ref>StdPicture.CloneObject</xr:Ref>
+						<xr:LoadTransparent>true</xr:LoadTransparent>
+					</Picture>
+					<ExtendedTooltip name="ДобавитьКопированиемРасширеннаяПодсказка" id="308"/>
+				</Button>
+			</ChildItems>
+		</CommandBar>
+		<Pages name="Страницы" id="48">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Страницы</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Страницы</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Height>20</Height>
+			<PagesRepresentation>TabsOnTop</PagesRepresentation>
+			<ExtendedTooltip name="СтраницыРасширеннаяПодсказка" id="49"/>
+			<ChildItems>
+				<Page name="Страница1" id="50">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Условия кредита</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Условия кредита</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="Страница1РасширеннаяПодсказка" id="51"/>
+					<ChildItems>
+						<Table name="Схема" id="10">
+							<Representation>List</Representation>
+							<ReadOnly>true</ReadOnly>
+							<HeightControlVariant>UseContentHeight</HeightControlVariant>
+							<UseAlternationRowColor>true</UseAlternationRowColor>
+							<EnableStartDrag>true</EnableStartDrag>
+							<DataPath>Схема</DataPath>
+							<RowPictureDataPath>Схема.DefaultPicture</RowPictureDataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Условия кредита</v8:content>
+								</v8:item>
+							</Title>
+							<AutoRefresh>false</AutoRefresh>
+							<AutoRefreshPeriod>60</AutoRefreshPeriod>
+							<Period>
+								<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+								<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+								<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+							</Period>
+							<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+							<RestoreCurrentRow>false</RestoreCurrentRow>
+							<TopLevelParent xsi:nil="true"/>
+							<ShowRoot>true</ShowRoot>
+							<AllowRootChoice>false</AllowRootChoice>
+							<UpdateOnDataChange>Auto</UpdateOnDataChange>
+							<AllowGettingCurrentRowURL>true</AllowGettingCurrentRowURL>
+							<ContextMenu name="СхемаКонтекстноеМеню" id="11"/>
+							<AutoCommandBar name="СхемаКоманднаяПанель" id="12">
+								<Autofill>false</Autofill>
+							</AutoCommandBar>
+							<ExtendedTooltip name="СхемаРасширеннаяПодсказка" id="13"/>
+							<SearchStringAddition name="СхемаСтрокаПоиска" id="14">
+								<AdditionSource>
+									<Item>Схема</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="СхемаСтрокаПоискаКонтекстноеМеню" id="15"/>
+								<ExtendedTooltip name="СхемаСтрокаПоискаРасширеннаяПодсказка" id="16"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="СхемаСостояниеПросмотра" id="17">
+								<AdditionSource>
+									<Item>Схема</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="СхемаСостояниеПросмотраКонтекстноеМеню" id="18"/>
+								<ExtendedTooltip name="СхемаСостояниеПросмотраРасширеннаяПодсказка" id="19"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="СхемаУправлениеПоиском" id="20">
+								<AdditionSource>
+									<Item>Схема</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="СхемаУправлениеПоискомКонтекстноеМеню" id="21"/>
+								<ExtendedTooltip name="СхемаУправлениеПоискомРасширеннаяПодсказка" id="22"/>
+							</SearchControlAddition>
+							<ChildItems>
+								<LabelField name="СхемаПериод" id="29">
+									<DataPath>Схема.Дата</DataPath>
+									<Width>10</Width>
+									<ContextMenu name="СхемаПериодКонтекстноеМеню" id="30"/>
+									<ExtendedTooltip name="СхемаПериодРасширеннаяПодсказка" id="31"/>
+								</LabelField>
+								<LabelField name="СхемаСрокЗалога" id="32">
+									<DataPath>Схема.СрокЗалога</DataPath>
+									<ContextMenu name="СхемаСрокЗалогаКонтекстноеМеню" id="33"/>
+									<ExtendedTooltip name="СхемаСрокЗалогаРасширеннаяПодсказка" id="34"/>
+								</LabelField>
+								<LabelField name="СхемаРегистратор" id="311">
+									<DataPath>Схема.Регистратор</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Документ установки</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="СхемаРегистраторКонтекстноеМеню" id="312"/>
+									<ExtendedTooltip name="СхемаРегистраторРасширеннаяПодсказка" id="313"/>
+								</LabelField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</Page>
+				<Page name="Страница2" id="52">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Настройки расчета суммы залога</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Настройки расчета оценки залога</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="Страница2РасширеннаяПодсказка" id="53"/>
+					<ChildItems>
+						<Table name="Ссуда" id="54">
+							<Representation>List</Representation>
+							<UseAlternationRowColor>true</UseAlternationRowColor>
+							<EnableStartDrag>true</EnableStartDrag>
+							<DataPath>Ссуда</DataPath>
+							<RowPictureDataPath>Ссуда.DefaultPicture</RowPictureDataPath>
+							<AutoRefresh>false</AutoRefresh>
+							<AutoRefreshPeriod>60</AutoRefreshPeriod>
+							<Period>
+								<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+								<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+								<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+							</Period>
+							<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+							<RestoreCurrentRow>false</RestoreCurrentRow>
+							<TopLevelParent xsi:nil="true"/>
+							<ShowRoot>true</ShowRoot>
+							<AllowRootChoice>false</AllowRootChoice>
+							<UpdateOnDataChange>Auto</UpdateOnDataChange>
+							<AllowGettingCurrentRowURL>true</AllowGettingCurrentRowURL>
+							<ContextMenu name="СсудаКонтекстноеМеню" id="55"/>
+							<AutoCommandBar name="СсудаКоманднаяПанель" id="56">
+								<Autofill>false</Autofill>
+							</AutoCommandBar>
+							<ExtendedTooltip name="СсудаРасширеннаяПодсказка" id="57"/>
+							<SearchStringAddition name="СсудаСтрокаПоиска" id="58">
+								<AdditionSource>
+									<Item>Ссуда</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="СсудаСтрокаПоискаКонтекстноеМеню" id="59"/>
+								<ExtendedTooltip name="СсудаСтрокаПоискаРасширеннаяПодсказка" id="60"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="СсудаСостояниеПросмотра" id="61">
+								<AdditionSource>
+									<Item>Ссуда</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="СсудаСостояниеПросмотраКонтекстноеМеню" id="62"/>
+								<ExtendedTooltip name="СсудаСостояниеПросмотраРасширеннаяПодсказка" id="63"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="СсудаУправлениеПоиском" id="64">
+								<AdditionSource>
+									<Item>Ссуда</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="СсудаУправлениеПоискомКонтекстноеМеню" id="65"/>
+								<ExtendedTooltip name="СсудаУправлениеПоискомРасширеннаяПодсказка" id="66"/>
+							</SearchControlAddition>
+							<ChildItems>
+								<LabelField name="СсудаПериод" id="79">
+									<DataPath>Ссуда.Период</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Дата</v8:content>
+										</v8:item>
+									</Title>
+									<Width>10</Width>
+									<ContextMenu name="СсудаПериодКонтекстноеМеню" id="80"/>
+									<ExtendedTooltip name="СсудаПериодРасширеннаяПодсказка" id="81"/>
+								</LabelField>
+								<LabelField name="СсудаСтатусЗалогодателя" id="96">
+									<DataPath>Ссуда.СтатусЗалогодателя</DataPath>
+									<ContextMenu name="СсудаСтатусЗалогодателяКонтекстноеМеню" id="97"/>
+									<ExtendedTooltip name="СсудаСтатусЗалогодателяРасширеннаяПодсказка" id="98"/>
+								</LabelField>
+								<LabelField name="СсудаУвеличениеСтоимостиЗалога" id="99">
+									<DataPath>Ссуда.УвеличениеСтоимостиЗалога</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>% увеличения стоимости залога</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="СсудаУвеличениеСтоимостиЗалогаКонтекстноеМеню" id="100"/>
+									<ExtendedTooltip name="СсудаУвеличениеСтоимостиЗалогаРасширеннаяПодсказка" id="101"/>
+								</LabelField>
+								<LabelField name="СсудаРегистратор" id="314">
+									<DataPath>Ссуда.Регистратор</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Документ установки</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="СсудаРегистраторКонтекстноеМеню" id="315"/>
+									<ExtendedTooltip name="СсудаРегистраторРасширеннаяПодсказка" id="316"/>
+								</LabelField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</Page>
+				<Page name="Страница3" id="206">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Технические ставки</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Страница3</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="Страница3РасширеннаяПодсказка" id="207"/>
+					<ChildItems>
+						<Table name="ТехническиеСтавки" id="208">
+							<UseAlternationRowColor>true</UseAlternationRowColor>
+							<EnableStartDrag>true</EnableStartDrag>
+							<DataPath>ТехническиеСтавки</DataPath>
+							<RowPictureDataPath>ТехническиеСтавки.DefaultPicture</RowPictureDataPath>
+							<AutoRefresh>false</AutoRefresh>
+							<AutoRefreshPeriod>60</AutoRefreshPeriod>
+							<Period>
+								<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+								<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+								<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+							</Period>
+							<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+							<RestoreCurrentRow>false</RestoreCurrentRow>
+							<TopLevelParent xsi:nil="true"/>
+							<ShowRoot>true</ShowRoot>
+							<AllowRootChoice>false</AllowRootChoice>
+							<UpdateOnDataChange>Auto</UpdateOnDataChange>
+							<AllowGettingCurrentRowURL>true</AllowGettingCurrentRowURL>
+							<ContextMenu name="ТехническиеСтавкиКонтекстноеМеню" id="209"/>
+							<AutoCommandBar name="ТехническиеСтавкиКоманднаяПанель" id="210">
+								<Autofill>false</Autofill>
+							</AutoCommandBar>
+							<ExtendedTooltip name="ТехническиеСтавкиРасширеннаяПодсказка" id="211"/>
+							<SearchStringAddition name="ТехническиеСтавкиСтрокаПоиска" id="212">
+								<AdditionSource>
+									<Item>ТехническиеСтавки</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ТехническиеСтавкиСтрокаПоискаКонтекстноеМеню" id="213"/>
+								<ExtendedTooltip name="ТехническиеСтавкиСтрокаПоискаРасширеннаяПодсказка" id="214"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="ТехническиеСтавкиСостояниеПросмотра" id="215">
+								<AdditionSource>
+									<Item>ТехническиеСтавки</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ТехническиеСтавкиСостояниеПросмотраКонтекстноеМеню" id="216"/>
+								<ExtendedTooltip name="ТехническиеСтавкиСостояниеПросмотраРасширеннаяПодсказка" id="217"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="ТехническиеСтавкиУправлениеПоиском" id="218">
+								<AdditionSource>
+									<Item>ТехническиеСтавки</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="ТехническиеСтавкиУправлениеПоискомКонтекстноеМеню" id="219"/>
+								<ExtendedTooltip name="ТехническиеСтавкиУправлениеПоискомРасширеннаяПодсказка" id="220"/>
+							</SearchControlAddition>
+							<ChildItems>
+								<LabelField name="ТехническиеСтавкиПериод" id="221">
+									<DataPath>ТехническиеСтавки.Период</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Дата</v8:content>
+										</v8:item>
+									</Title>
+									<Width>10</Width>
+									<ContextMenu name="ТехническиеСтавкиПериодКонтекстноеМеню" id="222"/>
+									<ExtendedTooltip name="ТехническиеСтавкиПериодРасширеннаяПодсказка" id="223"/>
+								</LabelField>
+								<LabelField name="ТехническиеСтавкиДеньНачалаПрименения" id="227">
+									<DataPath>ТехническиеСтавки.ДеньНачалаПрименения</DataPath>
+									<ContextMenu name="ТехническиеСтавкиДеньНачалаПримененияКонтекстноеМеню" id="228"/>
+									<ExtendedTooltip name="ТехническиеСтавкиДеньНачалаПримененияРасширеннаяПодсказка" id="229"/>
+								</LabelField>
+								<LabelField name="ТехническиеСтавкиПроцентнаяСтавка" id="230">
+									<DataPath>ТехническиеСтавки.ПроцентнаяСтавка</DataPath>
+									<ContextMenu name="ТехническиеСтавкиПроцентнаяСтавкаКонтекстноеМеню" id="231"/>
+									<ExtendedTooltip name="ТехническиеСтавкиПроцентнаяСтавкаРасширеннаяПодсказка" id="232"/>
+								</LabelField>
+								<LabelField name="ТехническиеСтавкиРегистратор" id="317">
+									<DataPath>ТехническиеСтавки.Регистратор</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Документ установки</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="ТехническиеСтавкиРегистраторКонтекстноеМеню" id="318"/>
+									<ExtendedTooltip name="ТехническиеСтавкиРегистраторРасширеннаяПодсказка" id="319"/>
+								</LabelField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</Page>
+				<Page name="Страница4" id="247">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Участие в расчетах статуса лояльности</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Страница4</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Width>10</Width>
+					<ExtendedTooltip name="Страница4РасширеннаяПодсказка" id="248"/>
+					<ChildItems>
+						<Table name="УчастиеВРасчетах" id="249">
+							<UseAlternationRowColor>true</UseAlternationRowColor>
+							<EnableStartDrag>true</EnableStartDrag>
+							<DataPath>УчастиеВРасчетах</DataPath>
+							<RowPictureDataPath>УчастиеВРасчетах.DefaultPicture</RowPictureDataPath>
+							<AutoRefresh>false</AutoRefresh>
+							<AutoRefreshPeriod>60</AutoRefreshPeriod>
+							<Period>
+								<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+								<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+								<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+							</Period>
+							<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+							<RestoreCurrentRow>false</RestoreCurrentRow>
+							<TopLevelParent xsi:nil="true"/>
+							<ShowRoot>true</ShowRoot>
+							<AllowRootChoice>false</AllowRootChoice>
+							<UpdateOnDataChange>Auto</UpdateOnDataChange>
+							<AllowGettingCurrentRowURL>true</AllowGettingCurrentRowURL>
+							<ContextMenu name="УчастиеВРасчетахКонтекстноеМеню" id="250"/>
+							<AutoCommandBar name="УчастиеВРасчетахКоманднаяПанель" id="251">
+								<Autofill>false</Autofill>
+							</AutoCommandBar>
+							<ExtendedTooltip name="УчастиеВРасчетахРасширеннаяПодсказка" id="252"/>
+							<SearchStringAddition name="УчастиеВРасчетахСтрокаПоиска" id="253">
+								<AdditionSource>
+									<Item>УчастиеВРасчетах</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="УчастиеВРасчетахСтрокаПоискаКонтекстноеМеню" id="254"/>
+								<ExtendedTooltip name="УчастиеВРасчетахСтрокаПоискаРасширеннаяПодсказка" id="255"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="УчастиеВРасчетахСостояниеПросмотра" id="256">
+								<AdditionSource>
+									<Item>УчастиеВРасчетах</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="УчастиеВРасчетахСостояниеПросмотраКонтекстноеМеню" id="257"/>
+								<ExtendedTooltip name="УчастиеВРасчетахСостояниеПросмотраРасширеннаяПодсказка" id="258"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="УчастиеВРасчетахУправлениеПоиском" id="259">
+								<AdditionSource>
+									<Item>УчастиеВРасчетах</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="УчастиеВРасчетахУправлениеПоискомКонтекстноеМеню" id="260"/>
+								<ExtendedTooltip name="УчастиеВРасчетахУправлениеПоискомРасширеннаяПодсказка" id="261"/>
+							</SearchControlAddition>
+							<ChildItems>
+								<LabelField name="УчастиеВРасчетахПериод" id="262">
+									<DataPath>УчастиеВРасчетах.Период</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Дата</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="УчастиеВРасчетахПериодКонтекстноеМеню" id="263"/>
+									<ExtendedTooltip name="УчастиеВРасчетахПериодРасширеннаяПодсказка" id="264"/>
+								</LabelField>
+								<LabelField name="УчастиеВРасчетахУчаствует" id="265">
+									<DataPath>УчастиеВРасчетах.Участвует</DataPath>
+									<Format>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>БЛ=Нет; БИ=Да</v8:content>
+										</v8:item>
+									</Format>
+									<ContextMenu name="УчастиеВРасчетахУчаствуетКонтекстноеМеню" id="266"/>
+									<ExtendedTooltip name="УчастиеВРасчетахУчаствуетРасширеннаяПодсказка" id="267"/>
+								</LabelField>
+								<LabelField name="УчастиеВРасчетахРегистратор" id="323">
+									<DataPath>УчастиеВРасчетах.Регистратор</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Документ установки</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="УчастиеВРасчетахРегистраторКонтекстноеМеню" id="324"/>
+									<ExtendedTooltip name="УчастиеВРасчетахРегистраторРасширеннаяПодсказка" id="325"/>
+								</LabelField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</Page>
+				<Page name="Страница5" id="328">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Все условия по кред. схеме</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Страница5</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="Страница5РасширеннаяПодсказка" id="329"/>
+					<ChildItems>
+						<Table name="ВсеУсловия" id="330">
+							<ReadOnly>true</ReadOnly>
+							<UseAlternationRowColor>true</UseAlternationRowColor>
+							<EnableStartDrag>true</EnableStartDrag>
+							<DataPath>ВсеУсловия</DataPath>
+							<RowPictureDataPath>ВсеУсловия.DefaultPicture</RowPictureDataPath>
+							<AutoRefresh>false</AutoRefresh>
+							<AutoRefreshPeriod>60</AutoRefreshPeriod>
+							<Period>
+								<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+								<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+								<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+							</Period>
+							<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+							<RestoreCurrentRow>false</RestoreCurrentRow>
+							<TopLevelParent xsi:nil="true"/>
+							<ShowRoot>true</ShowRoot>
+							<AllowRootChoice>false</AllowRootChoice>
+							<UpdateOnDataChange>Auto</UpdateOnDataChange>
+							<AllowGettingCurrentRowURL>true</AllowGettingCurrentRowURL>
+							<ContextMenu name="ВсеУсловияКонтекстноеМеню" id="331"/>
+							<AutoCommandBar name="ВсеУсловияКоманднаяПанель" id="332">
+								<ChildItems>
+									<Button name="ВсеУсловияКопировать" id="370">
+										<Type>CommandBarButton</Type>
+										<Visible>false</Visible>
+										<Representation>PictureAndText</Representation>
+										<CommandName>Form.Command.СкопироватьДокумент</CommandName>
+										<Picture>
+											<xr:Ref>StdPicture.CloneObject</xr:Ref>
+											<xr:LoadTransparent>true</xr:LoadTransparent>
+										</Picture>
+										<ExtendedTooltip name="ВсеУсловияКопироватьРасширеннаяПодсказка" id="371"/>
+									</Button>
+								</ChildItems>
+							</AutoCommandBar>
+							<ExtendedTooltip name="ВсеУсловияРасширеннаяПодсказка" id="333"/>
+							<SearchStringAddition name="ВсеУсловияСтрокаПоиска" id="334">
+								<AdditionSource>
+									<Item>ВсеУсловия</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ВсеУсловияСтрокаПоискаКонтекстноеМеню" id="335"/>
+								<ExtendedTooltip name="ВсеУсловияСтрокаПоискаРасширеннаяПодсказка" id="336"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="ВсеУсловияСостояниеПросмотра" id="337">
+								<AdditionSource>
+									<Item>ВсеУсловия</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ВсеУсловияСостояниеПросмотраКонтекстноеМеню" id="338"/>
+								<ExtendedTooltip name="ВсеУсловияСостояниеПросмотраРасширеннаяПодсказка" id="339"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="ВсеУсловияУправлениеПоиском" id="340">
+								<AdditionSource>
+									<Item>ВсеУсловия</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="ВсеУсловияУправлениеПоискомКонтекстноеМеню" id="341"/>
+								<ExtendedTooltip name="ВсеУсловияУправлениеПоискомРасширеннаяПодсказка" id="342"/>
+							</SearchControlAddition>
+							<Events>
+								<Event name="Selection">ВсеУсловияВыбор</Event>
+							</Events>
+							<ChildItems>
+								<PictureField name="ВсеУсловияДействует" id="372">
+									<DataPath>ВсеУсловия.Действует</DataPath>
+									<TitleLocation>None</TitleLocation>
+									<ValuesPicture>
+										<xr:Ref>CommonPicture.ЗанятьФайл</xr:Ref>
+										<xr:LoadTransparent>true</xr:LoadTransparent>
+									</ValuesPicture>
+									<ContextMenu name="ВсеУсловияДействуетКонтекстноеМеню" id="373"/>
+									<ExtendedTooltip name="ВсеУсловияДействуетРасширеннаяПодсказка" id="374"/>
+								</PictureField>
+								<LabelField name="ВсеУсловияДата" id="343">
+									<DataPath>ВсеУсловия.Дата</DataPath>
+									<Width>10</Width>
+									<ContextMenu name="ВсеУсловияДатаКонтекстноеМеню" id="344"/>
+									<ExtendedTooltip name="ВсеУсловияДатаРасширеннаяПодсказка" id="345"/>
+								</LabelField>
+								<LabelField name="ВсеУсловияНомер" id="349">
+									<DataPath>ВсеУсловия.Номер</DataPath>
+									<ContextMenu name="ВсеУсловияНомерКонтекстноеМеню" id="350"/>
+									<ExtendedTooltip name="ВсеУсловияНомерРасширеннаяПодсказка" id="351"/>
+								</LabelField>
+								<LabelField name="ВсеУсловияСрокЗалога" id="355">
+									<DataPath>ВсеУсловия.СрокЗалога</DataPath>
+									<ContextMenu name="ВсеУсловияСрокЗалогаКонтекстноеМеню" id="356"/>
+									<ExtendedTooltip name="ВсеУсловияСрокЗалогаРасширеннаяПодсказка" id="357"/>
+								</LabelField>
+								<LabelField name="ВсеУсловияНасторойкаРасчетаСуммыЗалога" id="375">
+									<DataPath>ВсеУсловия.НасторойкаРасчетаСуммыЗалога</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Настройка расчета суммы залога</v8:content>
+										</v8:item>
+									</Title>
+									<HorizontalAlign>Center</HorizontalAlign>
+									<Format>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>БЛ=Нет; БИ=Да</v8:content>
+										</v8:item>
+									</Format>
+									<TextColor>style:AccentColor</TextColor>
+									<ContextMenu name="ВсеУсловияНасторойкаРасчетаСуммыЗалогаКонтекстноеМеню" id="376"/>
+									<ExtendedTooltip name="ВсеУсловияНасторойкаРасчетаСуммыЗалогаРасширеннаяПодсказка" id="377"/>
+								</LabelField>
+								<LabelField name="ВсеУсловияТехническиеСтавки" id="378">
+									<DataPath>ВсеУсловия.ТехническиеСтавки</DataPath>
+									<HorizontalAlign>Center</HorizontalAlign>
+									<Format>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>БЛ=Нет; БИ=Да</v8:content>
+										</v8:item>
+									</Format>
+									<TextColor>style:AccentColor</TextColor>
+									<ContextMenu name="ВсеУсловияТехническиеСтавкиКонтекстноеМеню" id="379"/>
+									<ExtendedTooltip name="ВсеУсловияТехническиеСтавкиРасширеннаяПодсказка" id="380"/>
+								</LabelField>
+								<CheckBoxField name="ВсеУсловияУчастиеВРасчетах" id="364">
+									<DataPath>ВсеУсловия.УчастиеВРасчетах</DataPath>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="ВсеУсловияУчастиеВРасчетахКонтекстноеМеню" id="365"/>
+									<ExtendedTooltip name="ВсеУсловияУчастиеВРасчетахРасширеннаяПодсказка" id="366"/>
+								</CheckBoxField>
+								<LabelField name="ВсеУсловияОтветственный" id="352">
+									<DataPath>ВсеУсловия.Ответственный</DataPath>
+									<ContextMenu name="ВсеУсловияОтветственныйКонтекстноеМеню" id="353"/>
+									<ExtendedTooltip name="ВсеУсловияОтветственныйРасширеннаяПодсказка" id="354"/>
+								</LabelField>
+								<LabelField name="ВсеУсловияКомментарий" id="346">
+									<DataPath>ВсеУсловия.Комментарий</DataPath>
+									<ContextMenu name="ВсеУсловияКомментарийКонтекстноеМеню" id="347"/>
+									<ExtendedTooltip name="ВсеУсловияКомментарийРасширеннаяПодсказка" id="348"/>
+								</LabelField>
+								<LabelField name="ВсеУсловияСсылка" id="367">
+									<DataPath>ВсеУсловия.Ссылка</DataPath>
+									<ContextMenu name="ВсеУсловияСсылкаКонтекстноеМеню" id="368"/>
+									<ExtendedTooltip name="ВсеУсловияСсылкаРасширеннаяПодсказка" id="369"/>
+								</LabelField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</Page>
+			</ChildItems>
+		</Pages>
+		<UsualGroup name="ГруппаПодвал" id="290">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа подвал</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа подвал</v8:content>
+				</v8:item>
+			</ToolTip>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаПодвалРасширеннаяПодсказка" id="291"/>
+			<ChildItems>
+				<InputField name="Ответственный" id="287">
+					<DataPath>Объект.Ответственный</DataPath>
+					<ReadOnly>true</ReadOnly>
+					<OpenButton>false</OpenButton>
+					<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+					<ContextMenu name="ОтветственныйКонтекстноеМеню" id="288"/>
+					<ExtendedTooltip name="ОтветственныйРасширеннаяПодсказка" id="289"/>
+				</InputField>
+				<InputField name="Комментарий" id="284">
+					<DataPath>Объект.Комментарий</DataPath>
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+					<ContextMenu name="КомментарийКонтекстноеМеню" id="285"/>
+					<ExtendedTooltip name="КомментарийРасширеннаяПодсказка" id="286"/>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:CatalogObject.ЛБ_СхемыКредитования</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+		</Attribute>
+		<Attribute name="Схема" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Схема</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:DynamicList</v8:Type>
+			</Type>
+			<Settings xsi:type="DynamicList">
+				<ManualQuery>true</ManualQuery>
+				<DynamicDataRead>false</DynamicDataRead>
+				<QueryText>ВЫБРАТЬ
+	ЛБ_УсловияПредоставленияКредитаСрезПоследних.Период КАК Дата,
+	ЛБ_УсловияПредоставленияКредитаСрезПоследних.СрокЗалога КАК СрокЗалога,
+	ЛБ_УсловияПредоставленияКредитаСрезПоследних.Регистратор КАК Регистратор
+ИЗ
+	РегистрСведений.ЛБ_УсловияПредоставленияКредита.СрезПоследних(, СхемаКредитования = &amp;Ссылка) КАК ЛБ_УсловияПредоставленияКредитаСрезПоследних
+ГДЕ
+	ЛБ_УсловияПредоставленияКредитаСрезПоследних.Регистратор = &amp;Регистратор</QueryText>
+				<MainTable>InformationRegister.ЛБ_УсловияПредоставленияКредита.SliceLast</MainTable>
+				<ListSettings>
+					<dcsset:filter>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>dfcece9d-5077-440b-b6b3-45a5cb4538eb</dcsset:userSettingID>
+					</dcsset:filter>
+					<dcsset:order>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>88619765-ccb3-46c6-ac52-38e9c992ebd4</dcsset:userSettingID>
+					</dcsset:order>
+					<dcsset:conditionalAppearance>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>b75fecce-942b-4aed-abc9-e6a02e460fb3</dcsset:userSettingID>
+					</dcsset:conditionalAppearance>
+					<dcsset:itemsViewMode>Normal</dcsset:itemsViewMode>
+					<dcsset:itemsUserSettingID>911b6018-f537-43e8-a417-da56b22f9aec</dcsset:itemsUserSettingID>
+				</ListSettings>
+			</Settings>
+		</Attribute>
+		<Attribute name="Ссуда" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Ссуда</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:DynamicList</v8:Type>
+			</Type>
+			<Settings xsi:type="DynamicList">
+				<ManualQuery>true</ManualQuery>
+				<DynamicDataRead>false</DynamicDataRead>
+				<QueryText>ВЫБРАТЬ
+	ЛБ_НастройкаУвеличенияЗалогаПоСтатусамЗалогодателейСрезПоследних.Период КАК Период,
+	ЛБ_НастройкаУвеличенияЗалогаПоСтатусамЗалогодателейСрезПоследних.СхемаКредитования КАК СхемаКредитования,
+	ЛБ_НастройкаУвеличенияЗалогаПоСтатусамЗалогодателейСрезПоследних.СтатусЗалогодателя КАК СтатусЗалогодателя,
+	ЛБ_НастройкаУвеличенияЗалогаПоСтатусамЗалогодателейСрезПоследних.УвеличениеСтоимостиЗалога КАК УвеличениеСтоимостиЗалога,
+	ЛБ_НастройкаУвеличенияЗалогаПоСтатусамЗалогодателейСрезПоследних.Регистратор КАК Регистратор
+ИЗ
+	РегистрСведений.ЛБ_НастройкаУвеличенияЗалогаПоСтатусамЗалогодателей.СрезПоследних(, СхемаКредитования = &amp;Ссылка) КАК ЛБ_НастройкаУвеличенияЗалогаПоСтатусамЗалогодателейСрезПоследних
+ГДЕ
+	ЛБ_НастройкаУвеличенияЗалогаПоСтатусамЗалогодателейСрезПоследних.Регистратор = &amp;Регистратор</QueryText>
+				<MainTable>InformationRegister.ЛБ_НастройкаУвеличенияЗалогаПоСтатусамЗалогодателей.SliceLast</MainTable>
+				<ListSettings>
+					<dcsset:filter>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>dfcece9d-5077-440b-b6b3-45a5cb4538eb</dcsset:userSettingID>
+					</dcsset:filter>
+					<dcsset:order>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>88619765-ccb3-46c6-ac52-38e9c992ebd4</dcsset:userSettingID>
+					</dcsset:order>
+					<dcsset:conditionalAppearance>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>b75fecce-942b-4aed-abc9-e6a02e460fb3</dcsset:userSettingID>
+					</dcsset:conditionalAppearance>
+					<dcsset:itemsViewMode>Normal</dcsset:itemsViewMode>
+					<dcsset:itemsUserSettingID>911b6018-f537-43e8-a417-da56b22f9aec</dcsset:itemsUserSettingID>
+				</ListSettings>
+			</Settings>
+		</Attribute>
+		<Attribute name="ТехническиеСтавки" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Технические ставки</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:DynamicList</v8:Type>
+			</Type>
+			<Settings xsi:type="DynamicList">
+				<ManualQuery>true</ManualQuery>
+				<DynamicDataRead>false</DynamicDataRead>
+				<QueryText>ВЫБРАТЬ
+	ЛБ_ТехническиеСтавкиСрезПоследних.Период КАК Период,
+	ЛБ_ТехническиеСтавкиСрезПоследних.СхемаКредитования КАК СхемаКредитования,
+	ЛБ_ТехническиеСтавкиСрезПоследних.ДеньНачалаПрименения КАК ДеньНачалаПрименения,
+	ЛБ_ТехническиеСтавкиСрезПоследних.ПроцентнаяСтавка КАК ПроцентнаяСтавка,
+	ЛБ_ТехническиеСтавкиСрезПоследних.Регистратор КАК Регистратор
+ИЗ
+	РегистрСведений.ЛБ_ТехническиеСтавки.СрезПоследних(, СхемаКредитования = &amp;Ссылка) КАК ЛБ_ТехническиеСтавкиСрезПоследних
+ГДЕ
+	ЛБ_ТехническиеСтавкиСрезПоследних.Регистратор = &amp;Регистратор</QueryText>
+				<MainTable>InformationRegister.ЛБ_ТехническиеСтавки.SliceLast</MainTable>
+				<ListSettings>
+					<dcsset:filter>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>dfcece9d-5077-440b-b6b3-45a5cb4538eb</dcsset:userSettingID>
+					</dcsset:filter>
+					<dcsset:order>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>88619765-ccb3-46c6-ac52-38e9c992ebd4</dcsset:userSettingID>
+					</dcsset:order>
+					<dcsset:conditionalAppearance>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>b75fecce-942b-4aed-abc9-e6a02e460fb3</dcsset:userSettingID>
+					</dcsset:conditionalAppearance>
+					<dcsset:itemsViewMode>Normal</dcsset:itemsViewMode>
+					<dcsset:itemsUserSettingID>911b6018-f537-43e8-a417-da56b22f9aec</dcsset:itemsUserSettingID>
+				</ListSettings>
+			</Settings>
+		</Attribute>
+		<Attribute name="УчастиеВРасчетах" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Участие в расчетах</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:DynamicList</v8:Type>
+			</Type>
+			<Settings xsi:type="DynamicList">
+				<ManualQuery>true</ManualQuery>
+				<DynamicDataRead>false</DynamicDataRead>
+				<QueryText>ВЫБРАТЬ
+	ЛБ_УчастиеВРасчетеСтатусовПоСистемеЛояльностиСрезПоследних.Период КАК Период,
+	ЛБ_УчастиеВРасчетеСтатусовПоСистемеЛояльностиСрезПоследних.Участвует КАК Участвует,
+	ЛБ_УчастиеВРасчетеСтатусовПоСистемеЛояльностиСрезПоследних.Регистратор КАК Регистратор
+ИЗ
+	РегистрСведений.ЛБ_УчастиеВРасчетеСтатусовПоСистемеЛояльности.СрезПоследних(, СхемаКредитования = &amp;Ссылка) КАК ЛБ_УчастиеВРасчетеСтатусовПоСистемеЛояльностиСрезПоследних
+ГДЕ
+	ЛБ_УчастиеВРасчетеСтатусовПоСистемеЛояльностиСрезПоследних.Регистратор = &amp;Регистратор</QueryText>
+				<MainTable>InformationRegister.ЛБ_УчастиеВРасчетеСтатусовПоСистемеЛояльности.SliceLast</MainTable>
+				<ListSettings>
+					<dcsset:filter>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>dfcece9d-5077-440b-b6b3-45a5cb4538eb</dcsset:userSettingID>
+					</dcsset:filter>
+					<dcsset:order>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>88619765-ccb3-46c6-ac52-38e9c992ebd4</dcsset:userSettingID>
+					</dcsset:order>
+					<dcsset:conditionalAppearance>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>b75fecce-942b-4aed-abc9-e6a02e460fb3</dcsset:userSettingID>
+					</dcsset:conditionalAppearance>
+					<dcsset:itemsViewMode>Normal</dcsset:itemsViewMode>
+					<dcsset:itemsUserSettingID>911b6018-f537-43e8-a417-da56b22f9aec</dcsset:itemsUserSettingID>
+				</ListSettings>
+			</Settings>
+		</Attribute>
+		<Attribute name="ВсеУсловия" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Все условия</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:DynamicList</v8:Type>
+			</Type>
+			<Settings xsi:type="DynamicList">
+				<ManualQuery>true</ManualQuery>
+				<DynamicDataRead>false</DynamicDataRead>
+				<QueryText>ВЫБРАТЬ
+	ДокументЛБ_УстановкаУсловийСхемыКредитования.Ссылка КАК Ссылка,
+	ДокументЛБ_УстановкаУсловийСхемыКредитования.ПометкаУдаления КАК ПометкаУдаления,
+	ДокументЛБ_УстановкаУсловийСхемыКредитования.Номер КАК Номер,
+	ДокументЛБ_УстановкаУсловийСхемыКредитования.Дата КАК Дата,
+	ДокументЛБ_УстановкаУсловийСхемыКредитования.Проведен КАК Проведен,
+	ДокументЛБ_УстановкаУсловийСхемыКредитования.СхемаКредитования КАК СхемаКредитования,
+	ДокументЛБ_УстановкаУсловийСхемыКредитования.Ответственный КАК Ответственный,
+	ДокументЛБ_УстановкаУсловийСхемыКредитования.Комментарий КАК Комментарий,
+	ДокументЛБ_УстановкаУсловийСхемыКредитования.СрокЗалога КАК СрокЗалога,
+	ДокументЛБ_УстановкаУсловийСхемыКредитования.УчастиеВРасчетах КАК УчастиеВРасчетах,
+	ДокументЛБ_УстановкаУсловийСхемыКредитования.МоментВремени КАК МоментВремени,
+	ВЫБОР
+		КОГДА ВложенныйЗапрос.ТекущаяУстановкаУсловийПоСхемеКредитования ЕСТЬ NULL
+			ТОГДА ЛОЖЬ
+		ИНАЧЕ ИСТИНА
+	КОНЕЦ КАК Действует,
+	ВложенныйЗапросСсуда.НасторойкаРасчетаСуммыЗалога КАК НасторойкаРасчетаСуммыЗалога,
+	ВложенныйЗапросТехСтавки.ТехническиеСтавки КАК ТехническиеСтавки
+ИЗ
+	Документ.ЛБ_УстановкаУсловийСхемыКредитования КАК ДокументЛБ_УстановкаУсловийСхемыКредитования
+		ЛЕВОЕ СОЕДИНЕНИЕ (ВЫБРАТЬ
+			ЛБ_ОперацияПоЗалогу.ТекущаяУстановкаУсловийПоСхемеКредитования КАК ТекущаяУстановкаУсловийПоСхемеКредитования
+		ИЗ
+			Документ.ЛБ_ОперацияПоЗалогу КАК ЛБ_ОперацияПоЗалогу
+		ГДЕ
+			ЛБ_ОперацияПоЗалогу.Проведен = ИСТИНА
+		
+		СГРУППИРОВАТЬ ПО
+			ЛБ_ОперацияПоЗалогу.ТекущаяУстановкаУсловийПоСхемеКредитования) КАК ВложенныйЗапрос
+		ПО ДокументЛБ_УстановкаУсловийСхемыКредитования.Ссылка = ВложенныйЗапрос.ТекущаяУстановкаУсловийПоСхемеКредитования
+		ЛЕВОЕ СОЕДИНЕНИЕ (ВЫБРАТЬ
+			ВЫБОР
+				КОГДА МАКСИМУМ(ЛБ_УстановкаУсловийСхемыКредитованияСсуда.НомерСтроки) = 0
+					ТОГДА ЛОЖЬ
+				ИНАЧЕ ИСТИНА
+			КОНЕЦ КАК НасторойкаРасчетаСуммыЗалога,
+			ЛБ_УстановкаУсловийСхемыКредитованияСсуда.Ссылка КАК Ссылка
+		ИЗ
+			Документ.ЛБ_УстановкаУсловийСхемыКредитования.Ссуда КАК ЛБ_УстановкаУсловийСхемыКредитованияСсуда
+		
+		СГРУППИРОВАТЬ ПО
+			ЛБ_УстановкаУсловийСхемыКредитованияСсуда.Ссылка) КАК ВложенныйЗапросСсуда
+		ПО ДокументЛБ_УстановкаУсловийСхемыКредитования.Ссылка = ВложенныйЗапросСсуда.Ссылка
+		ЛЕВОЕ СОЕДИНЕНИЕ (ВЫБРАТЬ
+			ВЫБОР
+				КОГДА МАКСИМУМ(ЛБ_УстановкаУсловийСхемыКредитованияТехническиеСтавки.НомерСтроки) = 0
+					ТОГДА ЛОЖЬ
+				ИНАЧЕ ИСТИНА
+			КОНЕЦ КАК ТехническиеСтавки,
+			ЛБ_УстановкаУсловийСхемыКредитованияТехническиеСтавки.Ссылка КАК Ссылка
+		ИЗ
+			Документ.ЛБ_УстановкаУсловийСхемыКредитования.ТехническиеСтавки КАК ЛБ_УстановкаУсловийСхемыКредитованияТехническиеСтавки
+		
+		СГРУППИРОВАТЬ ПО
+			ЛБ_УстановкаУсловийСхемыКредитованияТехническиеСтавки.Ссылка) КАК ВложенныйЗапросТехСтавки
+		ПО ДокументЛБ_УстановкаУсловийСхемыКредитования.Ссылка = ВложенныйЗапросТехСтавки.Ссылка
+ГДЕ
+	ДокументЛБ_УстановкаУсловийСхемыКредитования.Проведен = ИСТИНА
+	И ДокументЛБ_УстановкаУсловийСхемыКредитования.СхемаКредитования = &amp;Ссылка
+
+УПОРЯДОЧИТЬ ПО
+	Дата УБЫВ</QueryText>
+				<ListSettings>
+					<dcsset:filter>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>dfcece9d-5077-440b-b6b3-45a5cb4538eb</dcsset:userSettingID>
+					</dcsset:filter>
+					<dcsset:order>
+						<dcsset:item xsi:type="dcsset:OrderItemField">
+							<dcsset:field>Дата</dcsset:field>
+							<dcsset:orderType>Desc</dcsset:orderType>
+						</dcsset:item>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>88619765-ccb3-46c6-ac52-38e9c992ebd4</dcsset:userSettingID>
+					</dcsset:order>
+					<dcsset:conditionalAppearance>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>b75fecce-942b-4aed-abc9-e6a02e460fb3</dcsset:userSettingID>
+					</dcsset:conditionalAppearance>
+					<dcsset:itemsViewMode>Normal</dcsset:itemsViewMode>
+					<dcsset:itemsUserSettingID>911b6018-f537-43e8-a417-da56b22f9aec</dcsset:itemsUserSettingID>
+				</ListSettings>
+			</Settings>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="ДобавитьУсловие" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Добавить новые условия</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Добавить условие</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ДобавитьУсловие</Action>
+		</Command>
+		<Command name="СкопироватьУсловие" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Скопировать условия</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Скопировать условие</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>СкопироватьУсловие</Action>
+		</Command>
+		<Command name="СкопироватьДокумент" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Скопировать документ</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Скопировать документ</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>СкопироватьДокумент</Action>
+		</Command>
+	</Commands>
+	<CommandInterface>
+		<NavigationPanel>
+			<Item>
+				<Command>InformationRegister.ЛБ_НастройкаРасчетаОценкиЗалога.StandardCommand.OpenByValue.ДатаНачалаДействия</Command>
+				<Type>Auto</Type>
+				<CommandGroup>FormNavigationPanelGoTo</CommandGroup>
+				<DefaultVisible>false</DefaultVisible>
+				<Visible>
+					<xr:Common>false</xr:Common>
+				</Visible>
+			</Item>
+			<Item>
+				<Command>InformationRegister.ЛБ_НастройкаУвеличенияЗалогаПоСтатусамЗалогодателей.StandardCommand.OpenByValue.СхемаКредитования</Command>
+				<Type>Auto</Type>
+				<CommandGroup>FormNavigationPanelGoTo</CommandGroup>
+				<Index>1</Index>
+				<DefaultVisible>false</DefaultVisible>
+				<Visible>
+					<xr:Common>false</xr:Common>
+				</Visible>
+			</Item>
+			<Item>
+				<Command>InformationRegister.ЛБ_ПрейскурантПроцентныхСтавок.StandardCommand.OpenByValue.СтатусЗалогодателя</Command>
+				<Type>Auto</Type>
+				<CommandGroup>FormNavigationPanelGoTo</CommandGroup>
+				<Index>2</Index>
+				<DefaultVisible>false</DefaultVisible>
+				<Visible>
+					<xr:Common>false</xr:Common>
+				</Visible>
+			</Item>
+			<Item>
+				<Command>InformationRegister.ЛБ_АкцииПроцентныеСтавки.StandardCommand.OpenByValue.СхемаКредитования</Command>
+				<Type>Auto</Type>
+				<CommandGroup>FormNavigationPanelGoTo</CommandGroup>
+				<Index>5</Index>
+				<DefaultVisible>false</DefaultVisible>
+				<Visible>
+					<xr:Common>false</xr:Common>
+				</Visible>
+			</Item>
+			<Item>
+				<Command>InformationRegister.ЛБ_ПрейскурантПроцентныхСтавок.StandardCommand.OpenByValue.СхемаКредитования</Command>
+				<Type>Auto</Type>
+				<CommandGroup>FormNavigationPanelGoTo</CommandGroup>
+				<Index>4</Index>
+				<DefaultVisible>false</DefaultVisible>
+				<Visible>
+					<xr:Common>false</xr:Common>
+				</Visible>
+			</Item>
+			<Item>
+				<Command>InformationRegister.ЛБ_ОтносительныеОтклоненияОтБазовыхЦенМеталлы.StandardCommand.OpenByValue.СхемаКредитования</Command>
+				<Type>Auto</Type>
+				<CommandGroup>FormNavigationPanelGoTo</CommandGroup>
+				<Index>3</Index>
+				<DefaultVisible>false</DefaultVisible>
+				<Visible>
+					<xr:Common>false</xr:Common>
+				</Visible>
+			</Item>
+			<Item>
+				<Command>InformationRegister.ЛБ_ИндивидуальнаяНастройкаПрейскурантаПроцентныхСтавок.StandardCommand.OpenByValue.СхемаКредитования</Command>
+				<Type>Auto</Type>
+				<CommandGroup>FormNavigationPanelGoTo</CommandGroup>
+				<Index>6</Index>
+				<DefaultVisible>false</DefaultVisible>
+				<Visible>
+					<xr:Common>false</xr:Common>
+				</Visible>
+			</Item>
+		</NavigationPanel>
+	</CommandInterface>
+</Form>

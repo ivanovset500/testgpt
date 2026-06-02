@@ -1,0 +1,549 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.20">
+	<AutoTitle>false</AutoTitle>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<Autofill>false</Autofill>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<Table name="ТаблицаДоверенностей" id="1">
+			<ReadOnly>true</ReadOnly>
+			<UseAlternationRowColor>true</UseAlternationRowColor>
+			<EnableStartDrag>true</EnableStartDrag>
+			<DataPath>ТаблицаДоверенностей</DataPath>
+			<RowFilter xsi:nil="true"/>
+			<ContextMenu name="ТаблицаДоверенностейКонтекстноеМеню" id="2"/>
+			<AutoCommandBar name="ТаблицаДоверенностейКоманднаяПанель" id="3">
+				<Autofill>false</Autofill>
+				<ChildItems>
+					<Button name="ТаблицаДоверенностейСоздать" id="44">
+						<Type>CommandBarButton</Type>
+						<Representation>PictureAndText</Representation>
+						<CommandName>Form.Command.Создать</CommandName>
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Создать доверенность</v8:content>
+							</v8:item>
+						</Title>
+						<ExtendedTooltip name="ТаблицаДоверенностейСоздатьРасширеннаяПодсказка" id="45"/>
+					</Button>
+					<Button name="ТаблицаДоверенностейАнулировать" id="46">
+						<Type>CommandBarButton</Type>
+						<Representation>PictureAndText</Representation>
+						<CommandName>Form.Command.Анулировать</CommandName>
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Аннулировать доверенность</v8:content>
+							</v8:item>
+						</Title>
+						<ExtendedTooltip name="ТаблицаДоверенностейАнулироватьРасширеннаяПодсказка" id="47"/>
+					</Button>
+					<Button name="ТаблицаДоверенностейПечать" id="48">
+						<Type>CommandBarButton</Type>
+						<Representation>PictureAndText</Representation>
+						<CommandName>Form.Command.Печать</CommandName>
+						<Picture>
+							<xr:Ref>StdPicture.Print</xr:Ref>
+							<xr:LoadTransparent>true</xr:LoadTransparent>
+						</Picture>
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Просмотр и печать</v8:content>
+							</v8:item>
+						</Title>
+						<ExtendedTooltip name="ТаблицаДоверенностейПечатьРасширеннаяПодсказка" id="49"/>
+					</Button>
+					<Button name="ТаблицаДоверенностейПрисединитьСкан" id="50">
+						<Type>CommandBarButton</Type>
+						<Representation>PictureAndText</Representation>
+						<CommandName>Form.Command.ПрисединитьСкан</CommandName>
+						<Picture>
+							<xr:Ref>CommonPicture.Скрепка</xr:Ref>
+							<xr:LoadTransparent>true</xr:LoadTransparent>
+						</Picture>
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Присоединить скан</v8:content>
+							</v8:item>
+						</Title>
+						<ExtendedTooltip name="ТаблицаДоверенностейПрисединитьСканРасширеннаяПодсказка" id="51"/>
+					</Button>
+				</ChildItems>
+			</AutoCommandBar>
+			<ExtendedTooltip name="ТаблицаДоверенностейРасширеннаяПодсказка" id="4"/>
+			<SearchStringAddition name="ТаблицаДоверенностейСтрокаПоиска" id="5">
+				<AdditionSource>
+					<Item>ТаблицаДоверенностей</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ТаблицаДоверенностейСтрокаПоискаКонтекстноеМеню" id="6"/>
+				<ExtendedTooltip name="ТаблицаДоверенностейСтрокаПоискаРасширеннаяПодсказка" id="7"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="ТаблицаДоверенностейСостояниеПросмотра" id="8">
+				<AdditionSource>
+					<Item>ТаблицаДоверенностей</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ТаблицаДоверенностейСостояниеПросмотраКонтекстноеМеню" id="9"/>
+				<ExtendedTooltip name="ТаблицаДоверенностейСостояниеПросмотраРасширеннаяПодсказка" id="10"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="ТаблицаДоверенностейУправлениеПоиском" id="11">
+				<AdditionSource>
+					<Item>ТаблицаДоверенностей</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="ТаблицаДоверенностейУправлениеПоискомКонтекстноеМеню" id="12"/>
+				<ExtendedTooltip name="ТаблицаДоверенностейУправлениеПоискомРасширеннаяПодсказка" id="13"/>
+			</SearchControlAddition>
+			<Events>
+				<Event name="Selection">ТаблицаДоверенностейВыбор</Event>
+				<Event name="OnActivateRow">ТаблицаДоверенностейПриАктивизацииСтроки</Event>
+			</Events>
+			<ChildItems>
+				<InputField name="ТаблицаДоверенностейЗалоговыйБилетНомерЗалоговогоБилета" id="14">
+					<DataPath>ТаблицаДоверенностей.ЗалоговыйБилет.НомерЗалоговогоБилета</DataPath>
+					<Visible>false</Visible>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>№ зал. билета</v8:content>
+						</v8:item>
+					</Title>
+					<Width>10</Width>
+					<ContextMenu name="ТаблицаДоверенностейЗалоговыйБилетНомерЗалоговогоБилетаКонтекстноеМеню" id="15"/>
+					<ExtendedTooltip name="ТаблицаДоверенностейЗалоговыйБилетНомерЗалоговогоБилетаРасширеннаяПодсказка" id="16"/>
+				</InputField>
+				<InputField name="ТаблицаДоверенностейКлиент" id="17">
+					<DataPath>ТаблицаДоверенностей.ЗалоговыйБилет.Залогодатель</DataPath>
+					<Visible>false</Visible>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Заемщик</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="ТаблицаДоверенностейКлиентКонтекстноеМеню" id="18"/>
+					<ExtendedTooltip name="ТаблицаДоверенностейКлиентРасширеннаяПодсказка" id="19"/>
+				</InputField>
+				<InputField name="ТаблицаДоверенностейСтатусДоверенности" id="38">
+					<DataPath>ТаблицаДоверенностей.СтатусДоверенности</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ТаблицаДоверенностейСтатусДоверенностиКонтекстноеМеню" id="39"/>
+					<ExtendedTooltip name="ТаблицаДоверенностейСтатусДоверенностиРасширеннаяПодсказка" id="40"/>
+				</InputField>
+				<InputField name="ТаблицаДоверенностейДоверенностьВидДоверенности" id="41">
+					<DataPath>ТаблицаДоверенностей.ВидДоверенности</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ТаблицаДоверенностейДоверенностьВидДоверенностиКонтекстноеМеню" id="42"/>
+					<ExtendedTooltip name="ТаблицаДоверенностейДоверенностьВидДоверенностиРасширеннаяПодсказка" id="43"/>
+				</InputField>
+				<InputField name="ТаблицаДоверенностейДоверенностьПредставительКлиента" id="20">
+					<DataPath>ТаблицаДоверенностей.Доверенность.ПредставительКлиента</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Доверенное лицо</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="ТаблицаДоверенностейДоверенностьПредставительКлиентаКонтекстноеМеню" id="21"/>
+					<ExtendedTooltip name="ТаблицаДоверенностейДоверенностьПредставительКлиентаРасширеннаяПодсказка" id="22"/>
+				</InputField>
+				<InputField name="ТаблицаДоверенностейДоверенностьДокументПредставителяКлиента" id="23">
+					<DataPath>ТаблицаДоверенностей.Доверенность.ДокументПредставителяКлиента</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>ДУЛ доверенного лица</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="ТаблицаДоверенностейДоверенностьДокументПредставителяКлиентаКонтекстноеМеню" id="24"/>
+					<ExtendedTooltip name="ТаблицаДоверенностейДоверенностьДокументПредставителяКлиентаРасширеннаяПодсказка" id="25"/>
+				</InputField>
+				<LabelField name="ТаблицаДоверенностейДоверенностьДатаДоверенности" id="26">
+					<DataPath>ТаблицаДоверенностей.Доверенность.ДатаДоверенности</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Начало действия </v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="ТаблицаДоверенностейДоверенностьДатаДоверенностиКонтекстноеМеню" id="27"/>
+					<ExtendedTooltip name="ТаблицаДоверенностейДоверенностьДатаДоверенностиРасширеннаяПодсказка" id="28"/>
+				</LabelField>
+				<LabelField name="ТаблицаДоверенностейДоверенностьСрокДействияДоверенности" id="29">
+					<DataPath>ТаблицаДоверенностей.Доверенность.СрокДействияДоверенности</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Окончание действия</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="ТаблицаДоверенностейДоверенностьСрокДействияДоверенностиКонтекстноеМеню" id="30"/>
+					<ExtendedTooltip name="ТаблицаДоверенностейДоверенностьСрокДействияДоверенностиРасширеннаяПодсказка" id="31"/>
+				</LabelField>
+				<LabelField name="ТаблицаДоверенностейДоверенностьНомерДоверенности" id="32">
+					<DataPath>ТаблицаДоверенностей.Доверенность.НомерДоверенности</DataPath>
+					<ContextMenu name="ТаблицаДоверенностейДоверенностьНомерДоверенностиКонтекстноеМеню" id="33"/>
+					<ExtendedTooltip name="ТаблицаДоверенностейДоверенностьНомерДоверенностиРасширеннаяПодсказка" id="34"/>
+				</LabelField>
+				<PictureField name="ТаблицаДоверенностейЕстьФайлы" id="52">
+					<DataPath>ТаблицаДоверенностей.ЕстьФайлы</DataPath>
+					<TitleLocation>None</TitleLocation>
+					<EditMode>EnterOnInput</EditMode>
+					<HeaderPicture>
+						<xr:Ref>CommonPicture.Скрепка</xr:Ref>
+						<xr:LoadTransparent>true</xr:LoadTransparent>
+					</HeaderPicture>
+					<ValuesPicture>
+						<xr:Ref>CommonPicture.Скрепка</xr:Ref>
+						<xr:LoadTransparent>true</xr:LoadTransparent>
+					</ValuesPicture>
+					<ContextMenu name="ТаблицаДоверенностейЕстьФайлыКонтекстноеМеню" id="53"/>
+					<ExtendedTooltip name="ТаблицаДоверенностейЕстьФайлыРасширеннаяПодсказка" id="54"/>
+				</PictureField>
+				<LabelField name="ТаблицаДоверенностейДоверенностьКомментарий" id="35">
+					<DataPath>ТаблицаДоверенностей.Доверенность.Комментарий</DataPath>
+					<ContextMenu name="ТаблицаДоверенностейДоверенностьКомментарийКонтекстноеМеню" id="36"/>
+					<ExtendedTooltip name="ТаблицаДоверенностейДоверенностьКомментарийРасширеннаяПодсказка" id="37"/>
+				</LabelField>
+			</ChildItems>
+		</Table>
+		<LabelField name="ИсторияДоверенности" id="55">
+			<DataPath>ИсторияДоверенности</DataPath>
+			<TitleLocation>None</TitleLocation>
+			<AutoMaxWidth>false</AutoMaxWidth>
+			<Font ref="style:NormalTextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem" scale="100"/>
+			<ContextMenu name="ИсторияДоверенностиКонтекстноеМеню" id="56"/>
+			<ExtendedTooltip name="ИсторияДоверенностиРасширеннаяПодсказка" id="57"/>
+		</LabelField>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="ТаблицаДоверенностей" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Таблица доверенностей</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="ЗалоговыйБилет" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Залоговый билет</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:DocumentRef.ЛБ_ОперацияПоЗалогу</v8:Type>
+					</Type>
+				</Column>
+				<Column name="Доверенность" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Доверенность</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:DocumentRef.ЛБ_Доверенности</v8:Type>
+					</Type>
+				</Column>
+				<Column name="СтатусДоверенности" id="3">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Статус доверенности</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:EnumRef.ЛБ_СтатусыДоверенностей</v8:Type>
+					</Type>
+				</Column>
+				<Column name="ЕстьФайлы" id="4">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Есть файлы</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+				<Column name="ВидДоверенности" id="5">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Вид доверенности</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:EnumRef.ЛБ_ВидыДоверенностей</v8:Type>
+					</Type>
+				</Column>
+				<Column name="ВидОперации" id="6">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Вид операции</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:EnumRef.ЛБ_ВидыОперацийДоверенность</v8:Type>
+					</Type>
+				</Column>
+				<Column name="Действует" id="7">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Действует</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="ЗалоговыйБилет" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Залоговый билет</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:DocumentRef.ЛБ_ОперацияПоЗалогу</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="Клиент" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Клиент</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.ЛБ_Залогодатели</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ИсторияДоверенности" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>История доверенности</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="СтатусЗалоговогоБилета" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Статус залогового билета</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:EnumRef.ЛБ_СтатусыЗалоговыхБилетов</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ДатаСмерти" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Дата смерти</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:dateTime</v8:Type>
+				<v8:DateQualifiers>
+					<v8:DateFractions>Date</v8:DateFractions>
+				</v8:DateQualifiers>
+			</Type>
+		</Attribute>
+		<ConditionalAppearance>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>ТаблицаДоверенностейЗалоговыйБилетНомерЗалоговогоБилета</dcsset:field>
+					</dcsset:item>
+					<dcsset:item>
+						<dcsset:field>ТаблицаДоверенностейКлиент</dcsset:field>
+					</dcsset:item>
+					<dcsset:item>
+						<dcsset:field>ТаблицаДоверенностейСтатусДоверенности</dcsset:field>
+					</dcsset:item>
+					<dcsset:item>
+						<dcsset:field>ТаблицаДоверенностейДоверенностьВидДоверенности</dcsset:field>
+					</dcsset:item>
+					<dcsset:item>
+						<dcsset:field>ТаблицаДоверенностейДоверенностьПредставительКлиента</dcsset:field>
+					</dcsset:item>
+					<dcsset:item>
+						<dcsset:field>ТаблицаДоверенностейДоверенностьДокументПредставителяКлиента</dcsset:field>
+					</dcsset:item>
+					<dcsset:item>
+						<dcsset:field>ТаблицаДоверенностейДоверенностьДатаДоверенности</dcsset:field>
+					</dcsset:item>
+					<dcsset:item>
+						<dcsset:field>ТаблицаДоверенностейДоверенностьСрокДействияДоверенности</dcsset:field>
+					</dcsset:item>
+					<dcsset:item>
+						<dcsset:field>ТаблицаДоверенностейДоверенностьКомментарий</dcsset:field>
+					</dcsset:item>
+					<dcsset:item>
+						<dcsset:field>ТаблицаДоверенностейДоверенностьНомерДоверенности</dcsset:field>
+					</dcsset:item>
+					<dcsset:item>
+						<dcsset:field>ТаблицаДоверенностейЕстьФайлы</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">ТаблицаДоверенностей.Действует</dcsset:left>
+						<dcsset:comparisonType>Equal</dcsset:comparisonType>
+						<dcsset:right xsi:type="xs:boolean">true</dcsset:right>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>ЦветФона</dcscor:parameter>
+						<dcscor:value xsi:type="v8ui:Color">web:PaleGreen</dcscor:value>
+					</dcscor:item>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:use>false</dcscor:use>
+						<dcscor:parameter>ЦветТекста</dcscor:parameter>
+						<dcscor:value xsi:type="v8ui:Color">web:Green</dcscor:value>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>ТаблицаДоверенностейЗалоговыйБилетНомерЗалоговогоБилета</dcsset:field>
+					</dcsset:item>
+					<dcsset:item>
+						<dcsset:field>ТаблицаДоверенностейКлиент</dcsset:field>
+					</dcsset:item>
+					<dcsset:item>
+						<dcsset:field>ТаблицаДоверенностейСтатусДоверенности</dcsset:field>
+					</dcsset:item>
+					<dcsset:item>
+						<dcsset:field>ТаблицаДоверенностейДоверенностьВидДоверенности</dcsset:field>
+					</dcsset:item>
+					<dcsset:item>
+						<dcsset:field>ТаблицаДоверенностейДоверенностьПредставительКлиента</dcsset:field>
+					</dcsset:item>
+					<dcsset:item>
+						<dcsset:field>ТаблицаДоверенностейДоверенностьДокументПредставителяКлиента</dcsset:field>
+					</dcsset:item>
+					<dcsset:item>
+						<dcsset:field>ТаблицаДоверенностейДоверенностьДатаДоверенности</dcsset:field>
+					</dcsset:item>
+					<dcsset:item>
+						<dcsset:field>ТаблицаДоверенностейДоверенностьСрокДействияДоверенности</dcsset:field>
+					</dcsset:item>
+					<dcsset:item>
+						<dcsset:field>ТаблицаДоверенностейДоверенностьНомерДоверенности</dcsset:field>
+					</dcsset:item>
+					<dcsset:item>
+						<dcsset:field>ТаблицаДоверенностейЕстьФайлы</dcsset:field>
+					</dcsset:item>
+					<dcsset:item>
+						<dcsset:field>ТаблицаДоверенностейДоверенностьКомментарий</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">ТаблицаДоверенностей.Действует</dcsset:left>
+						<dcsset:comparisonType>Equal</dcsset:comparisonType>
+						<dcsset:right xsi:type="xs:boolean">false</dcsset:right>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>ЦветФона</dcscor:parameter>
+						<dcscor:value xsi:type="v8ui:Color">web:Pink</dcscor:value>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+		</ConditionalAppearance>
+	</Attributes>
+	<Commands>
+		<Command name="ПрисединитьСкан" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Присединить скан</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Присединить скан</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ПрисединитьСкан</Action>
+		</Command>
+		<Command name="Печать" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Печать</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Печать</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>Печать</Action>
+		</Command>
+		<Command name="Создать" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Создать</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Создать</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>Создать</Action>
+		</Command>
+		<Command name="Анулировать" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Анулировать</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Анулировать</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>Анулировать</Action>
+		</Command>
+	</Commands>
+</Form>

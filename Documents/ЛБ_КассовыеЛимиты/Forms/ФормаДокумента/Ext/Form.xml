@@ -1,0 +1,757 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.20">
+	<AutoTime>CurrentOrLast</AutoTime>
+	<UsePostingMode>Auto</UsePostingMode>
+	<RepostOnWrite>true</RepostOnWrite>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="AfterWrite">ПослеЗаписи</Event>
+		<Event name="BeforeWrite">ПередЗаписью</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="ГруппаОсновная" id="35">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа основная</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа основная</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>AlwaysHorizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаОсновнаяРасширеннаяПодсказка" id="36"/>
+			<ChildItems>
+				<LabelDecoration name="ДекорацияСтатусДокумента" id="90">
+					<Width>6</Width>
+					<HorizontalStretch>false</HorizontalStretch>
+					<TextColor>web:DarkGreen</TextColor>
+					<Font ref="style:NormalTextFont" height="11" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem" scale="100"/>
+					<Title formatted="false">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Проект   </v8:content>
+						</v8:item>
+					</Title>
+					<HorizontalAlign>Center</HorizontalAlign>
+					<BackColor>web:HoneyDew</BackColor>
+					<Border width="1">
+						<v8ui:style xsi:type="v8ui:ControlBorderType">Embossed</v8ui:style>
+					</Border>
+					<ContextMenu name="ДекорацияСтатусДокументаКонтекстноеМеню" id="91"/>
+					<ExtendedTooltip name="ДекорацияСтатусДокументаРасширеннаяПодсказка" id="92"/>
+				</LabelDecoration>
+				<InputField name="Номер" id="1">
+					<DataPath>Объект.Number</DataPath>
+					<ReadOnly>true</ReadOnly>
+					<EditMode>EnterOnInput</EditMode>
+					<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+					<ContextMenu name="НомерКонтекстноеМеню" id="2"/>
+					<ExtendedTooltip name="НомерРасширеннаяПодсказка" id="3"/>
+				</InputField>
+				<InputField name="Дата" id="4">
+					<DataPath>Объект.Date</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Дата начала действия</v8:content>
+						</v8:item>
+					</Title>
+					<EditMode>EnterOnInput</EditMode>
+					<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+					<ContextMenu name="ДатаКонтекстноеМеню" id="5"/>
+					<ExtendedTooltip name="ДатаРасширеннаяПодсказка" id="6"/>
+				</InputField>
+				<InputField name="Организация" id="64">
+					<DataPath>Объект.Организация</DataPath>
+					<ReadOnly>true</ReadOnly>
+					<OpenButton>false</OpenButton>
+					<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+					<ContextMenu name="ОрганизацияКонтекстноеМеню" id="65"/>
+					<ExtendedTooltip name="ОрганизацияРасширеннаяПодсказка" id="66"/>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+		<LabelDecoration name="РасчетныеДанные" id="93">
+			<TextColor>#006931</TextColor>
+			<Font ref="style:NormalTextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem" scale="100"/>
+			<Title formatted="false">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Расчетные данные:</v8:content>
+				</v8:item>
+			</Title>
+			<ContextMenu name="РасчетныеДанныеКонтекстноеМеню" id="94"/>
+			<ExtendedTooltip name="РасчетныеДанныеРасширеннаяПодсказка" id="95"/>
+		</LabelDecoration>
+		<UsualGroup name="ГруппаШапка" id="62">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа шапка</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа шапка</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Vertical</Group>
+			<Representation>StrongSeparation</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаШапкаРасширеннаяПодсказка" id="63"/>
+			<ChildItems>
+				<UsualGroup name="ГруппаПериод" id="60">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа период</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа период</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>AlwaysHorizontal</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаПериодРасширеннаяПодсказка" id="61"/>
+					<ChildItems>
+						<RadioButtonField name="Квартал" id="84">
+							<DataPath>Объект.Квартал</DataPath>
+							<RadioButtonType>Tumbler</RadioButtonType>
+							<ItemWidth>3</ItemWidth>
+							<EqualColumnsWidth>true</EqualColumnsWidth>
+							<ChoiceList>
+								<xr:Item>
+									<xr:Presentation/>
+									<xr:CheckState>0</xr:CheckState>
+									<xr:Value xsi:type="FormChoiceListDesTimeValue">
+										<Presentation>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>1</v8:content>
+											</v8:item>
+										</Presentation>
+										<Value xsi:type="xs:decimal">1</Value>
+									</xr:Value>
+								</xr:Item>
+								<xr:Item>
+									<xr:Presentation/>
+									<xr:CheckState>0</xr:CheckState>
+									<xr:Value xsi:type="FormChoiceListDesTimeValue">
+										<Presentation>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>2</v8:content>
+											</v8:item>
+										</Presentation>
+										<Value xsi:type="xs:decimal">2</Value>
+									</xr:Value>
+								</xr:Item>
+								<xr:Item>
+									<xr:Presentation/>
+									<xr:CheckState>0</xr:CheckState>
+									<xr:Value xsi:type="FormChoiceListDesTimeValue">
+										<Presentation>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>3</v8:content>
+											</v8:item>
+										</Presentation>
+										<Value xsi:type="xs:decimal">3</Value>
+									</xr:Value>
+								</xr:Item>
+								<xr:Item>
+									<xr:Presentation/>
+									<xr:CheckState>0</xr:CheckState>
+									<xr:Value xsi:type="FormChoiceListDesTimeValue">
+										<Presentation>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>4</v8:content>
+											</v8:item>
+										</Presentation>
+										<Value xsi:type="xs:decimal">4</Value>
+									</xr:Value>
+								</xr:Item>
+							</ChoiceList>
+							<ContextMenu name="КварталКонтекстноеМеню" id="85"/>
+							<ExtendedTooltip name="КварталРасширеннаяПодсказка" id="86"/>
+							<Events>
+								<Event name="OnChange">КварталПриИзменении</Event>
+							</Events>
+						</RadioButtonField>
+						<InputField name="Год" id="81">
+							<DataPath>Объект.Год</DataPath>
+							<HorizontalStretch>false</HorizontalStretch>
+							<ChoiceButton>false</ChoiceButton>
+							<ClearButton>false</ClearButton>
+							<ListChoiceMode>true</ListChoiceMode>
+							<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+							<TextEdit>false</TextEdit>
+							<ChoiceList>
+								<xr:Item>
+									<xr:Presentation/>
+									<xr:CheckState>0</xr:CheckState>
+									<xr:Value xsi:type="FormChoiceListDesTimeValue">
+										<Presentation>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>2016</v8:content>
+											</v8:item>
+										</Presentation>
+										<Value xsi:type="xs:decimal">2016</Value>
+									</xr:Value>
+								</xr:Item>
+								<xr:Item>
+									<xr:Presentation/>
+									<xr:CheckState>0</xr:CheckState>
+									<xr:Value xsi:type="FormChoiceListDesTimeValue">
+										<Presentation>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>2017</v8:content>
+											</v8:item>
+										</Presentation>
+										<Value xsi:type="xs:decimal">2017</Value>
+									</xr:Value>
+								</xr:Item>
+								<xr:Item>
+									<xr:Presentation/>
+									<xr:CheckState>0</xr:CheckState>
+									<xr:Value xsi:type="FormChoiceListDesTimeValue">
+										<Presentation>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>2018</v8:content>
+											</v8:item>
+										</Presentation>
+										<Value xsi:type="xs:decimal">2018</Value>
+									</xr:Value>
+								</xr:Item>
+								<xr:Item>
+									<xr:Presentation/>
+									<xr:CheckState>0</xr:CheckState>
+									<xr:Value xsi:type="FormChoiceListDesTimeValue">
+										<Presentation>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>2019</v8:content>
+											</v8:item>
+										</Presentation>
+										<Value xsi:type="xs:decimal">2019</Value>
+									</xr:Value>
+								</xr:Item>
+								<xr:Item>
+									<xr:Presentation/>
+									<xr:CheckState>0</xr:CheckState>
+									<xr:Value xsi:type="FormChoiceListDesTimeValue">
+										<Presentation>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>2020</v8:content>
+											</v8:item>
+										</Presentation>
+										<Value xsi:type="xs:decimal">2020</Value>
+									</xr:Value>
+								</xr:Item>
+								<xr:Item>
+									<xr:Presentation/>
+									<xr:CheckState>0</xr:CheckState>
+									<xr:Value xsi:type="FormChoiceListDesTimeValue">
+										<Presentation>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>2021</v8:content>
+											</v8:item>
+										</Presentation>
+										<Value xsi:type="xs:decimal">2021</Value>
+									</xr:Value>
+								</xr:Item>
+								<xr:Item>
+									<xr:Presentation/>
+									<xr:CheckState>0</xr:CheckState>
+									<xr:Value xsi:type="FormChoiceListDesTimeValue">
+										<Presentation>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>2022</v8:content>
+											</v8:item>
+										</Presentation>
+										<Value xsi:type="xs:decimal">2022</Value>
+									</xr:Value>
+								</xr:Item>
+								<xr:Item>
+									<xr:Presentation/>
+									<xr:CheckState>0</xr:CheckState>
+									<xr:Value xsi:type="FormChoiceListDesTimeValue">
+										<Presentation>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>2023</v8:content>
+											</v8:item>
+										</Presentation>
+										<Value xsi:type="xs:decimal">2023</Value>
+									</xr:Value>
+								</xr:Item>
+								<xr:Item>
+									<xr:Presentation/>
+									<xr:CheckState>0</xr:CheckState>
+									<xr:Value xsi:type="FormChoiceListDesTimeValue">
+										<Presentation>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>2024</v8:content>
+											</v8:item>
+										</Presentation>
+										<Value xsi:type="xs:decimal">2024</Value>
+									</xr:Value>
+								</xr:Item>
+								<xr:Item>
+									<xr:Presentation/>
+									<xr:CheckState>0</xr:CheckState>
+									<xr:Value xsi:type="FormChoiceListDesTimeValue">
+										<Presentation>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>2025</v8:content>
+											</v8:item>
+										</Presentation>
+										<Value xsi:type="xs:decimal">2025</Value>
+									</xr:Value>
+								</xr:Item>
+								<xr:Item>
+									<xr:Presentation/>
+									<xr:CheckState>0</xr:CheckState>
+									<xr:Value xsi:type="FormChoiceListDesTimeValue">
+										<Presentation>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>2026</v8:content>
+											</v8:item>
+										</Presentation>
+										<Value xsi:type="xs:decimal">2026</Value>
+									</xr:Value>
+								</xr:Item>
+								<xr:Item>
+									<xr:Presentation/>
+									<xr:CheckState>0</xr:CheckState>
+									<xr:Value xsi:type="FormChoiceListDesTimeValue">
+										<Presentation>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>2027</v8:content>
+											</v8:item>
+										</Presentation>
+										<Value xsi:type="xs:decimal">2027</Value>
+									</xr:Value>
+								</xr:Item>
+								<xr:Item>
+									<xr:Presentation/>
+									<xr:CheckState>0</xr:CheckState>
+									<xr:Value xsi:type="FormChoiceListDesTimeValue">
+										<Presentation>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>2028</v8:content>
+											</v8:item>
+										</Presentation>
+										<Value xsi:type="xs:decimal">2028</Value>
+									</xr:Value>
+								</xr:Item>
+								<xr:Item>
+									<xr:Presentation/>
+									<xr:CheckState>0</xr:CheckState>
+									<xr:Value xsi:type="FormChoiceListDesTimeValue">
+										<Presentation>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>2029</v8:content>
+											</v8:item>
+										</Presentation>
+										<Value xsi:type="xs:decimal">2029</Value>
+									</xr:Value>
+								</xr:Item>
+								<xr:Item>
+									<xr:Presentation/>
+									<xr:CheckState>0</xr:CheckState>
+									<xr:Value xsi:type="FormChoiceListDesTimeValue">
+										<Presentation>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>2030</v8:content>
+											</v8:item>
+										</Presentation>
+										<Value xsi:type="xs:decimal">2030</Value>
+									</xr:Value>
+								</xr:Item>
+								<xr:Item>
+									<xr:Presentation/>
+									<xr:CheckState>0</xr:CheckState>
+									<xr:Value xsi:type="FormChoiceListDesTimeValue">
+										<Presentation>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>2031</v8:content>
+											</v8:item>
+										</Presentation>
+										<Value xsi:type="xs:decimal">2031</Value>
+									</xr:Value>
+								</xr:Item>
+								<xr:Item>
+									<xr:Presentation/>
+									<xr:CheckState>0</xr:CheckState>
+									<xr:Value xsi:type="FormChoiceListDesTimeValue">
+										<Presentation>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>2032</v8:content>
+											</v8:item>
+										</Presentation>
+										<Value xsi:type="xs:decimal">2032</Value>
+									</xr:Value>
+								</xr:Item>
+								<xr:Item>
+									<xr:Presentation/>
+									<xr:CheckState>0</xr:CheckState>
+									<xr:Value xsi:type="FormChoiceListDesTimeValue">
+										<Presentation>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>2033</v8:content>
+											</v8:item>
+										</Presentation>
+										<Value xsi:type="xs:decimal">2033</Value>
+									</xr:Value>
+								</xr:Item>
+								<xr:Item>
+									<xr:Presentation/>
+									<xr:CheckState>0</xr:CheckState>
+									<xr:Value xsi:type="FormChoiceListDesTimeValue">
+										<Presentation>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>2034</v8:content>
+											</v8:item>
+										</Presentation>
+										<Value xsi:type="xs:decimal">2034</Value>
+									</xr:Value>
+								</xr:Item>
+								<xr:Item>
+									<xr:Presentation/>
+									<xr:CheckState>0</xr:CheckState>
+									<xr:Value xsi:type="FormChoiceListDesTimeValue">
+										<Presentation>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>2035</v8:content>
+											</v8:item>
+										</Presentation>
+										<Value xsi:type="xs:decimal">2035</Value>
+									</xr:Value>
+								</xr:Item>
+								<xr:Item>
+									<xr:Presentation/>
+									<xr:CheckState>0</xr:CheckState>
+									<xr:Value xsi:type="FormChoiceListDesTimeValue">
+										<Presentation>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>2036</v8:content>
+											</v8:item>
+										</Presentation>
+										<Value xsi:type="xs:decimal">2036</Value>
+									</xr:Value>
+								</xr:Item>
+							</ChoiceList>
+							<ChoiceHistoryOnInput>DontUse</ChoiceHistoryOnInput>
+							<ContextMenu name="ГодКонтекстноеМеню" id="82"/>
+							<ExtendedTooltip name="ГодРасширеннаяПодсказка" id="83"/>
+							<Events>
+								<Event name="OnChange">ГодПриИзменении</Event>
+							</Events>
+						</InputField>
+						<InputField name="ДатаНачала" id="54">
+							<DataPath>Объект.ДатаНачала</DataPath>
+							<Visible>false</Visible>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Период с</v8:content>
+								</v8:item>
+							</Title>
+							<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+							<ContextMenu name="ДатаНачалаКонтекстноеМеню" id="55"/>
+							<ExtendedTooltip name="ДатаНачалаРасширеннаяПодсказка" id="56"/>
+						</InputField>
+						<InputField name="ДатаКонца" id="57">
+							<DataPath>Объект.ДатаКонца</DataPath>
+							<Visible>false</Visible>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>по</v8:content>
+								</v8:item>
+							</Title>
+							<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+							<ContextMenu name="ДатаКонцаКонтекстноеМеню" id="58"/>
+							<ExtendedTooltip name="ДатаКонцаРасширеннаяПодсказка" id="59"/>
+						</InputField>
+					</ChildItems>
+				</UsualGroup>
+				<InputField name="ОтделениеСтрока" id="48">
+					<DataPath>Объект.ОтделениеСтрока</DataPath>
+					<ChoiceButton>true</ChoiceButton>
+					<ClearButton>true</ClearButton>
+					<OpenButton>false</OpenButton>
+					<CreateButton>false</CreateButton>
+					<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+					<TextEdit>false</TextEdit>
+					<ContextMenu name="ОтделениеСтрокаКонтекстноеМеню" id="49"/>
+					<ExtendedTooltip name="ОтделениеСтрокаРасширеннаяПодсказка" id="50"/>
+					<Events>
+						<Event name="StartChoice">ОтделениеНачалоВыбора</Event>
+						<Event name="Clearing">ОтделениеОчистка</Event>
+					</Events>
+				</InputField>
+				<InputField name="ЛомбардСтрока" id="51">
+					<DataPath>Объект.ЛомбардСтрока</DataPath>
+					<ChoiceButton>true</ChoiceButton>
+					<ClearButton>true</ClearButton>
+					<OpenButton>false</OpenButton>
+					<CreateButton>false</CreateButton>
+					<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+					<TextEdit>false</TextEdit>
+					<ContextMenu name="ЛомбардСтрокаКонтекстноеМеню" id="52"/>
+					<ExtendedTooltip name="ЛомбардСтрокаРасширеннаяПодсказка" id="53"/>
+					<Events>
+						<Event name="StartChoice">ЛомбардНачалоВыбора</Event>
+						<Event name="Clearing">ЛомбардОчистка</Event>
+					</Events>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+		<Table name="Лимиты" id="10">
+			<Representation>List</Representation>
+			<Footer>true</Footer>
+			<UseAlternationRowColor>true</UseAlternationRowColor>
+			<AutoInsertNewRow>true</AutoInsertNewRow>
+			<EnableStartDrag>true</EnableStartDrag>
+			<EnableDrag>true</EnableDrag>
+			<DataPath>Объект.Лимиты</DataPath>
+			<RowFilter xsi:nil="true"/>
+			<ContextMenu name="ЛимитыКонтекстноеМеню" id="11">
+				<Autofill>false</Autofill>
+			</ContextMenu>
+			<AutoCommandBar name="ЛимитыКоманднаяПанель" id="12">
+				<Autofill>false</Autofill>
+				<ChildItems>
+					<Button name="ЛимитыЗаполнить" id="40">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Command.Заполнить</CommandName>
+						<ExtendedTooltip name="ЛимитыЗаполнитьРасширеннаяПодсказка" id="41"/>
+					</Button>
+					<Button name="ЛимитыДобавить" id="79">
+						<Type>CommandBarButton</Type>
+						<Visible>false</Visible>
+						<CommandName>Form.Item.Лимиты.StandardCommand.Add</CommandName>
+						<ExtendedTooltip name="ЛимитыДобавитьРасширеннаяПодсказка" id="80"/>
+					</Button>
+				</ChildItems>
+			</AutoCommandBar>
+			<ExtendedTooltip name="ЛимитыРасширеннаяПодсказка" id="13"/>
+			<SearchStringAddition name="ЛимитыСтрокаПоиска" id="14">
+				<AdditionSource>
+					<Item>Лимиты</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ЛимитыСтрокаПоискаКонтекстноеМеню" id="15"/>
+				<ExtendedTooltip name="ЛимитыСтрокаПоискаРасширеннаяПодсказка" id="16"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="ЛимитыСостояниеПросмотра" id="17">
+				<AdditionSource>
+					<Item>Лимиты</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ЛимитыСостояниеПросмотраКонтекстноеМеню" id="18"/>
+				<ExtendedTooltip name="ЛимитыСостояниеПросмотраРасширеннаяПодсказка" id="19"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="ЛимитыУправлениеПоиском" id="20">
+				<AdditionSource>
+					<Item>Лимиты</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="ЛимитыУправлениеПоискомКонтекстноеМеню" id="21"/>
+				<ExtendedTooltip name="ЛимитыУправлениеПоискомРасширеннаяПодсказка" id="22"/>
+			</SearchControlAddition>
+			<Events>
+				<Event name="BeforeAddRow">ЛимитыПередНачаломДобавления</Event>
+				<Event name="BeforeDeleteRow">ЛимитыПередУдалением</Event>
+			</Events>
+			<ChildItems>
+				<LabelField name="ЛимитыНомерСтроки" id="23">
+					<DataPath>Объект.Лимиты.LineNumber</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ShowInFooter>false</ShowInFooter>
+					<ContextMenu name="ЛимитыНомерСтрокиКонтекстноеМеню" id="24"/>
+					<ExtendedTooltip name="ЛимитыНомерСтрокиРасширеннаяПодсказка" id="25"/>
+				</LabelField>
+				<InputField name="ЛимитыОтделение" id="37">
+					<DataPath>Объект.Лимиты.Отделение</DataPath>
+					<ReadOnly>true</ReadOnly>
+					<EditMode>EnterOnInput</EditMode>
+					<ShowInFooter>false</ShowInFooter>
+					<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+					<ContextMenu name="ЛимитыОтделениеКонтекстноеМеню" id="38"/>
+					<ExtendedTooltip name="ЛимитыОтделениеРасширеннаяПодсказка" id="39"/>
+				</InputField>
+				<InputField name="ЛимитыЛомбард" id="26">
+					<DataPath>Объект.Лимиты.Ломбард</DataPath>
+					<ReadOnly>true</ReadOnly>
+					<EditMode>EnterOnInput</EditMode>
+					<FooterText>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Сумма:</v8:content>
+						</v8:item>
+					</FooterText>
+					<FooterHorizontalAlign>Right</FooterHorizontalAlign>
+					<OpenButton>false</OpenButton>
+					<CreateButton>false</CreateButton>
+					<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+					<ContextMenu name="ЛимитыЛомбардКонтекстноеМеню" id="27"/>
+					<ExtendedTooltip name="ЛимитыЛомбардРасширеннаяПодсказка" id="28"/>
+				</InputField>
+				<InputField name="ЛимитыСуммаВыданныхЗаймов" id="67">
+					<DataPath>Объект.Лимиты.СуммаВыданныхЗаймов</DataPath>
+					<Visible>false</Visible>
+					<ReadOnly>true</ReadOnly>
+					<EditMode>EnterOnInput</EditMode>
+					<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+					<ContextMenu name="ЛимитыСуммаВыданныхЗаймовКонтекстноеМеню" id="68"/>
+					<ExtendedTooltip name="ЛимитыСуммаВыданныхЗаймовРасширеннаяПодсказка" id="69"/>
+				</InputField>
+				<InputField name="ЛимитыКоличествоРабочихДней" id="70">
+					<DataPath>Объект.Лимиты.КоличествоРабочихДней</DataPath>
+					<Visible>false</Visible>
+					<ReadOnly>true</ReadOnly>
+					<EditMode>EnterOnInput</EditMode>
+					<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+					<ContextMenu name="ЛимитыКоличествоРабочихДнейКонтекстноеМеню" id="71"/>
+					<ExtendedTooltip name="ЛимитыКоличествоРабочихДнейРасширеннаяПодсказка" id="72"/>
+				</InputField>
+				<InputField name="ЛимитыКоличествоДнейСнятий" id="73">
+					<DataPath>Объект.Лимиты.КоличествоДнейСнятий</DataPath>
+					<Visible>false</Visible>
+					<ReadOnly>true</ReadOnly>
+					<EditMode>EnterOnInput</EditMode>
+					<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+					<ContextMenu name="ЛимитыКоличествоДнейСнятийКонтекстноеМеню" id="74"/>
+					<ExtendedTooltip name="ЛимитыКоличествоДнейСнятийРасширеннаяПодсказка" id="75"/>
+				</InputField>
+				<InputField name="ЛимитыДатаНачала" id="42">
+					<DataPath>Объект.Лимиты.ДатаНачала</DataPath>
+					<Visible>false</Visible>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>с</v8:content>
+						</v8:item>
+					</Title>
+					<EditMode>EnterOnInput</EditMode>
+					<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+					<ContextMenu name="ЛимитыДатаНачалаКонтекстноеМеню" id="43"/>
+					<ExtendedTooltip name="ЛимитыДатаНачалаРасширеннаяПодсказка" id="44"/>
+				</InputField>
+				<InputField name="ЛимитыДатаКонца" id="45">
+					<DataPath>Объект.Лимиты.ДатаКонца</DataPath>
+					<Visible>false</Visible>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>по</v8:content>
+						</v8:item>
+					</Title>
+					<EditMode>EnterOnInput</EditMode>
+					<FooterHorizontalAlign>Right</FooterHorizontalAlign>
+					<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+					<ContextMenu name="ЛимитыДатаКонцаКонтекстноеМеню" id="46"/>
+					<ExtendedTooltip name="ЛимитыДатаКонцаРасширеннаяПодсказка" id="47"/>
+				</InputField>
+				<InputField name="ЛимитыПериодМеждуДнямиПолученияСредств" id="76">
+					<DataPath>Объект.Лимиты.ПериодМеждуДнямиПолученияСредств</DataPath>
+					<Visible>false</Visible>
+					<ReadOnly>true</ReadOnly>
+					<EditMode>EnterOnInput</EditMode>
+					<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+					<ContextMenu name="ЛимитыПериодМеждуДнямиПолученияСредствКонтекстноеМеню" id="77"/>
+					<ExtendedTooltip name="ЛимитыПериодМеждуДнямиПолученияСредствРасширеннаяПодсказка" id="78"/>
+				</InputField>
+				<InputField name="ЛимитыРассчетныйЛимит" id="29">
+					<DataPath>Объект.Лимиты.РассчетныйЛимит</DataPath>
+					<ReadOnly>true</ReadOnly>
+					<EditMode>EnterOnInput</EditMode>
+					<FooterDataPath>Объект.Лимиты.TotalРассчетныйЛимит</FooterDataPath>
+					<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+					<ContextMenu name="ЛимитыРассчетныйЛимитКонтекстноеМеню" id="30"/>
+					<ExtendedTooltip name="ЛимитыРассчетныйЛимитРасширеннаяПодсказка" id="31"/>
+				</InputField>
+				<InputField name="ЛимитыФактическийЛимит" id="32">
+					<DataPath>Объект.Лимиты.ФактическийЛимит</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<FooterDataPath>Объект.Лимиты.TotalФактическийЛимит</FooterDataPath>
+					<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+					<ContextMenu name="ЛимитыФактическийЛимитКонтекстноеМеню" id="33"/>
+					<ExtendedTooltip name="ЛимитыФактическийЛимитРасширеннаяПодсказка" id="34"/>
+				</InputField>
+			</ChildItems>
+		</Table>
+		<InputField name="Ответственный" id="87">
+			<DataPath>Объект.Ответственный</DataPath>
+			<ReadOnly>true</ReadOnly>
+			<OpenButton>false</OpenButton>
+			<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+			<ContextMenu name="ОтветственныйКонтекстноеМеню" id="88"/>
+			<ExtendedTooltip name="ОтветственныйРасширеннаяПодсказка" id="89"/>
+		</InputField>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:DocumentObject.ЛБ_КассовыеЛимиты</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+			<UseAlways>
+				<Field>Объект.RegisterRecords</Field>
+			</UseAlways>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="Заполнить" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заполнить</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заполнить</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>Заполнить</Action>
+		</Command>
+	</Commands>
+</Form>

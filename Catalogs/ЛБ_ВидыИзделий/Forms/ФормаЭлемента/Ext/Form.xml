@@ -1,0 +1,183 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.20">
+	<Title>
+		<v8:item>
+			<v8:lang>ru</v8:lang>
+			<v8:content>Тип изделия</v8:content>
+		</v8:item>
+	</Title>
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<UseForFoldersAndItems>Items</UseForFoldersAndItems>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="OnOpen">ПриОткрытии</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="Общая" id="12">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Общая</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Общая</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Horizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ОбщаяРасширеннаяПодсказка" id="13"/>
+			<ChildItems>
+				<UsualGroup name="Реквизиты" id="10">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Реквизиты</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Реквизиты</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>Vertical</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="РеквизитыРасширеннаяПодсказка" id="11"/>
+					<ChildItems>
+						<InputField name="Наименование" id="4">
+							<DataPath>Объект.Description</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<Width>10</Width>
+							<ContextMenu name="НаименованиеКонтекстноеМеню" id="5"/>
+							<ExtendedTooltip name="НаименованиеРасширеннаяПодсказка" id="6"/>
+						</InputField>
+						<InputField name="ТипОбеспечения" id="14">
+							<DataPath>Объект.ТипОбеспечения</DataPath>
+							<ContextMenu name="ТипОбеспеченияКонтекстноеМеню" id="15"/>
+							<ExtendedTooltip name="ТипОбеспеченияРасширеннаяПодсказка" id="16"/>
+						</InputField>
+						<CheckBoxField name="Весовое" id="7">
+							<DataPath>Объект.Весовое</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="ВесовоеКонтекстноеМеню" id="8"/>
+							<ExtendedTooltip name="ВесовоеРасширеннаяПодсказка" id="9"/>
+						</CheckBoxField>
+						<CheckBoxField name="НеИспользуется" id="17">
+							<DataPath>Объект.НеИспользуется</DataPath>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="НеИспользуетсяКонтекстноеМеню" id="18"/>
+							<ExtendedTooltip name="НеИспользуетсяРасширеннаяПодсказка" id="19"/>
+						</CheckBoxField>
+						<InputField name="Коэффициент" id="20">
+							<DataPath>Объект.Коэффициент</DataPath>
+							<ToolTipRepresentation>ShowRight</ToolTipRepresentation>
+							<ContextMenu name="КоэффициентКонтекстноеМеню" id="21"/>
+							<ExtendedTooltip name="КоэффициентРасширеннаяПодсказка" id="22"/>
+						</InputField>
+						<UsualGroup name="ГруппаДанныеДляГИИСДМДК" id="29">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Данные для ГИИС ДМДК</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа данные для ГИИСДМДК</v8:content>
+								</v8:item>
+							</ToolTip>
+							<ExtendedTooltip name="ГруппаДанныеДляГИИСДМДКРасширеннаяПодсказка" id="30"/>
+							<ChildItems>
+								<UsualGroup name="ГруппаНаименованиеГИИСДМДК" id="42">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа наименование ГИИС ДМДК</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа наименование ГИИСДМДК</v8:content>
+										</v8:item>
+									</ToolTip>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ГруппаНаименованиеГИИСДМДКРасширеннаяПодсказка" id="43"/>
+									<ChildItems>
+										<InputField name="НаименованиеДляГИИСДМДК" id="26">
+											<DataPath>Объект.НаименованиеДляГИИСДМДК</DataPath>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Наименование, которое будет использоваться при передаче данных в ГИИС ДМДК</v8:content>
+												</v8:item>
+											</ToolTip>
+											<ToolTipRepresentation>Button</ToolTipRepresentation>
+											<ContextMenu name="НаименованиеДляГИИСДМДККонтекстноеМеню" id="27"/>
+											<ExtendedTooltip name="НаименованиеДляГИИСДМДКРасширеннаяПодсказка" id="28"/>
+										</InputField>
+										<CheckBoxField name="НаименованиеВоМножественномЧисле" id="39">
+											<DataPath>Объект.НаименованиеВоМножественномЧисле</DataPath>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Множественное число</v8:content>
+												</v8:item>
+											</Title>
+											<TitleLocation>Right</TitleLocation>
+											<CheckBoxType>Auto</CheckBoxType>
+											<ContextMenu name="НаименованиеВоМножественномЧислеКонтекстноеМеню" id="40"/>
+											<ExtendedTooltip name="НаименованиеВоМножественномЧислеРасширеннаяПодсказка" id="41"/>
+											<Events>
+												<Event name="OnChange">НаименованиеВоМножественномЧислеПриИзменении</Event>
+											</Events>
+										</CheckBoxField>
+									</ChildItems>
+								</UsualGroup>
+								<InputField name="РодНаименования" id="31">
+									<DataPath>Объект.РодНаименования</DataPath>
+									<ContextMenu name="РодНаименованияКонтекстноеМеню" id="32"/>
+									<ExtendedTooltip name="РодНаименованияРасширеннаяПодсказка" id="33"/>
+								</InputField>
+								<InputField name="ВидПартииГИИС" id="23">
+									<DataPath>Объект.ВидПартииГИИС</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Вид партии (не используется)</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="ВидПартииГИИСКонтекстноеМеню" id="24"/>
+									<ExtendedTooltip name="ВидПартииГИИСРасширеннаяПодсказка" id="25"/>
+								</InputField>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</UsualGroup>
+				<InputField name="Код" id="1">
+					<DataPath>Объект.Code</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="КодКонтекстноеМеню" id="2"/>
+					<ExtendedTooltip name="КодРасширеннаяПодсказка" id="3"/>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:CatalogObject.ЛБ_ВидыИзделий</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+		</Attribute>
+	</Attributes>
+</Form>
